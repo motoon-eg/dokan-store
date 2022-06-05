@@ -1,2 +1,2 @@
-# dokan-store
+# Dokan Store
 An educational project for Motoon Mentorship Program team.
