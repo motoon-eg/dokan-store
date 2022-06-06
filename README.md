@@ -8,4 +8,4 @@ Original [design](https://www.figma.com/community/file/1020869651724237430) was 
  
 
 ## License
-Dokan Store is licensed under the [MIT license](https://github.com/ahmdmhasn/NRView/blob/master/LICENSE).
+Dokan Store is licensed under the [MIT license](README.md).
