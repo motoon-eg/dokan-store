@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:DKFoundation/DKFoundation.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Dokan/Dokan.xcodeproj">
    </FileRef>
 </Workspace>
