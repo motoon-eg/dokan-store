@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:UIDokan">
+   </FileRef>
+   <FileRef
+      location = "group:Networking">
+   </FileRef>
+   <FileRef
+      location = "group:DKFoundation/DKFoundation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Dokan/Dokan.xcodeproj">
+   </FileRef>
+</Workspace>
