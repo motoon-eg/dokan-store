@@ -15,6 +15,13 @@
 		27B22BF22856638100F0E2CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B22BF02856638100F0E2CC /* LaunchScreen.storyboard */; };
 		27B22C2B285E46D200F0E2CC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 27B22C2A285E46D200F0E2CC /* FirebaseAnalytics */; };
 		27B22C2D285E46D200F0E2CC /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 27B22C2C285E46D200F0E2CC /* FirebaseCrashlytics */; };
+		27B22C32285E4CFE00F0E2CC /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 27B22C31285E4CFE00F0E2CC /* Networking */; };
+		27B22C34285E4D0200F0E2CC /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = 27B22C33285E4D0200F0E2CC /* UIDokan */; };
+		27B22C35285E4D0F00F0E2CC /* DKFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B22C23285666D900F0E2CC /* DKFoundation.framework */; };
+		27B22C36285E4D0F00F0E2CC /* DKFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27B22C23285666D900F0E2CC /* DKFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		27B22C3C285E6C8700F0E2CC /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B22C3A285E6C8700F0E2CC /* CustomView.xib */; };
+		27B22C3E285E6DB800F0E2CC /* UIViewFromNIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B22C3D285E6DB800F0E2CC /* UIViewFromNIB.swift */; };
+		27B22C41285E6FA200F0E2CC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B22C40285E6FA200F0E2CC /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		27B22C37285E4D0F00F0E2CC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				27B22C36285E4D0F00F0E2CC /* DKFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		27B22BE22856637E00F0E2CC /* DokanStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DokanStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B22BE52856637E00F0E2CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +67,9 @@
 		27B22C1D285666D800F0E2CC /* DKFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DKFoundation.xcodeproj; path = DKFoundation/DKFoundation.xcodeproj; sourceTree = "<group>"; };
 		27B22C26285668CB00F0E2CC /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		27B22C272856695C00F0E2CC /* UIDokan */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIDokan; sourceTree = "<group>"; };
+		27B22C3A285E6C8700F0E2CC /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		27B22C3D285E6DB800F0E2CC /* UIViewFromNIB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewFromNIB.swift; sourceTree = "<group>"; };
+		27B22C40285E6FA200F0E2CC /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +77,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B22C32285E4CFE00F0E2CC /* Networking in Frameworks */,
 				27B22C2B285E46D200F0E2CC /* FirebaseAnalytics in Frameworks */,
+				27B22C34285E4D0200F0E2CC /* UIDokan in Frameworks */,
 				27B22C2D285E46D200F0E2CC /* FirebaseCrashlytics in Frameworks */,
+				27B22C35285E4D0F00F0E2CC /* DKFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +96,7 @@
 				27B22C1D285666D800F0E2CC /* DKFoundation.xcodeproj */,
 				27B22BE42856637E00F0E2CC /* DokanStore */,
 				27B22BE32856637E00F0E2CC /* Products */,
+				27B22C30285E4CFE00F0E2CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +111,8 @@
 		27B22BE42856637E00F0E2CC /* DokanStore */ = {
 			isa = PBXGroup;
 			children = (
+				27B22C3F285E6DCA00F0E2CC /* Helper */,
+				27B22C38285E697C00F0E2CC /* XIB */,
 				27B22BE52856637E00F0E2CC /* AppDelegate.swift */,
 				27B22BE72856637E00F0E2CC /* SceneDelegate.swift */,
 				27B22BE92856637E00F0E2CC /* ViewController.swift */,
@@ -103,6 +133,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		27B22C30285E4CFE00F0E2CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27B22C38285E697C00F0E2CC /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				27B22C3A285E6C8700F0E2CC /* CustomView.xib */,
+				27B22C40285E6FA200F0E2CC /* CustomView.swift */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		27B22C3F285E6DCA00F0E2CC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				27B22C3D285E6DB800F0E2CC /* UIViewFromNIB.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +167,7 @@
 				27B22BDE2856637E00F0E2CC /* Sources */,
 				27B22BDF2856637E00F0E2CC /* Frameworks */,
 				27B22BE02856637E00F0E2CC /* Resources */,
+				27B22C37285E4D0F00F0E2CC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +177,8 @@
 			packageProductDependencies = (
 				27B22C2A285E46D200F0E2CC /* FirebaseAnalytics */,
 				27B22C2C285E46D200F0E2CC /* FirebaseCrashlytics */,
+				27B22C31285E4CFE00F0E2CC /* Networking */,
+				27B22C33285E4D0200F0E2CC /* UIDokan */,
 			);
 			productName = DokanStore;
 			productReference = 27B22BE22856637E00F0E2CC /* DokanStore.app */;
@@ -193,6 +250,7 @@
 			files = (
 				27B22BF22856638100F0E2CC /* LaunchScreen.storyboard in Resources */,
 				27B22BEF2856638100F0E2CC /* Assets.xcassets in Resources */,
+				27B22C3C285E6C8700F0E2CC /* CustomView.xib in Resources */,
 				27B22BED2856637E00F0E2CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B22C41285E6FA200F0E2CC /* CustomView.swift in Sources */,
 				27B22BEA2856637E00F0E2CC /* ViewController.swift in Sources */,
+				27B22C3E285E6DB800F0E2CC /* UIViewFromNIB.swift in Sources */,
 				27B22BE62856637E00F0E2CC /* AppDelegate.swift in Sources */,
 				27B22BE82856637E00F0E2CC /* SceneDelegate.swift in Sources */,
 			);
@@ -448,6 +508,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 27B22C29285E46D200F0E2CC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		27B22C31285E4CFE00F0E2CC /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		27B22C33285E4D0200F0E2CC /* UIDokan */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIDokan;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
