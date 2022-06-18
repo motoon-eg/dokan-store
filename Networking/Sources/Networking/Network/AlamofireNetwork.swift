@@ -11,7 +11,7 @@ import Alamofire
 
 /// AlamofireWrapper: Encapsulates all of the Alamofire OP's
 ///
-struct AlamofireNetwork: Network {
+class AlamofireNetwork: Network {
     
     public init() { }
     
