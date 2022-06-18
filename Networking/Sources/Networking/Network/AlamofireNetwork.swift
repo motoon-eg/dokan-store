@@ -15,20 +15,20 @@ struct AlamofireNetwork: Network {
     
     public init() { }
     
-    /// Executes the specified Network Request. Upon completion, the payload will be sent back to the caller as a Decodable instance.
+    /// Executes the specified Network Request. Upon completion, the payload will be sent back to the caller as a Data instance.
     ///
-    public func responseDecodable<T: Decodable>(for request: Alamofire.URLRequestConvertible, completion: @escaping (Result<T, Error>) -> Void) {
-        AF.request(request).responseDecodable(of: T.self) { response in
+    func responseData(for request: URLRequestConvertible, completion: @escaping (Result<Data, Error>) -> Void) {
+        AF.request(request).responseData { response in
             completion(response.result.toSwiftResult())
         }
     }
-        
+    
     /// Executes the specified Network Request. Upon completion, the payload or error will be emitted to the publisher.
     /// Only one value will be emitted and the request cannot be retried.
     ///
-    public func responseDecodablePublisher<T: Decodable>(for request: URLRequestConvertible) -> AnyPublisher<Result<T, Error>, Never> {
+    func responseDataPublisher(for request: URLRequestConvertible) -> AnyPublisher<Result<Data, Error>, Never> {
         return Future { promise in
-            AF.request(request).responseDecodable(of: T.self) { response in
+            AF.request(request).responseData { response in
                 let result = response.result.toSwiftResult()
                 promise(.success(result))
             }
