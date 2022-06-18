@@ -21,6 +21,8 @@
 		AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
 		AAE1A1C3285E1A4900A4EBB0 /* DKFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */; };
 		AAE1A1C4285E1A4900A4EBB0 /* DKFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAE1A1D2285E5DE300A4EBB0 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1A1D0285E5DE300A4EBB0 /* ProductListViewController.swift */; };
+		AAE1A1D3285E5DE300A4EBB0 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE1A1D1285E5DE300A4EBB0 /* ProductListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		AA4B15032853F4A500F1C3EF /* DokanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokanTests.swift; sourceTree = "<group>"; };
 		AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE1A1D0285E5DE300A4EBB0 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		AAE1A1D1285E5DE300A4EBB0 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */,
 				AA21B44328537E0500E4F217 /* Info.plist */,
 				AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */,
+				AAE1A1D0285E5DE300A4EBB0 /* ProductListViewController.swift */,
+				AAE1A1D1285E5DE300A4EBB0 /* ProductListViewController.xib */,
 			);
 			path = Dokan;
 			sourceTree = "<group>";
@@ -230,6 +236,7 @@
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
+				AAE1A1D3285E5DE300A4EBB0 /* ProductListViewController.xib in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +280,7 @@
 			files = (
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
+				AAE1A1D2285E5DE300A4EBB0 /* ProductListViewController.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
