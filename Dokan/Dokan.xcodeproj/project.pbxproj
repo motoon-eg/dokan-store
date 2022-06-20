@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85C025A7285E45F400C77670 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = 85C025A6285E45F400C77670 /* UIDokan */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
@@ -19,6 +18,7 @@
 		AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E17F285CBFCA00EAD189 /* FirebaseAnalytics */; };
 		AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */; };
 		AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1BE285E1A3A00A4EBB0 /* Networking */; };
+		AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
 		AAE1A1C3285E1A4900A4EBB0 /* DKFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */; };
 		AAE1A1C4285E1A4900A4EBB0 /* DKFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -68,8 +68,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */,
-				85C025A7285E45F400C77670 /* UIDokan in Frameworks */,
 				AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */,
+				AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */,
 				AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */,
 				AAE1A1C3285E1A4900A4EBB0 /* DKFoundation.framework in Frameworks */,
 			);
@@ -147,7 +147,6 @@
 				AA21B43028537E0400E4F217 /* Resources */,
 				AAA2E183285CC0BB00EAD189 /* Crashlytics */,
 				AAE1A1C5285E1A4900A4EBB0 /* Embed Frameworks */,
-				E2F3F6C6285E53B600343A78 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -158,7 +157,7 @@
 				AAA2E17F285CBFCA00EAD189 /* FirebaseAnalytics */,
 				AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */,
 				AAE1A1BE285E1A3A00A4EBB0 /* Networking */,
-				85C025A6285E45F400C77670 /* UIDokan */,
+				AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */,
 			);
 			productName = Dokan;
 			productReference = AA21B43228537E0400E4F217 /* Dokan.app */;
@@ -264,24 +263,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
-		};
-		E2F3F6C6285E53B600343A78 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -590,10 +571,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		85C025A6285E45F400C77670 /* UIDokan */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UIDokan;
-		};
 		AAA2E17F285CBFCA00EAD189 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AAA2E17E285CBFCA00EAD189 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -607,6 +584,10 @@
 		AAE1A1BE285E1A3A00A4EBB0 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
+		};
+		AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIDokan;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
