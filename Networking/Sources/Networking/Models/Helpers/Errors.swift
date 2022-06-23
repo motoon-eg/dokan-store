@@ -10,6 +10,7 @@ import Foundation
 enum GeneralErrors: Error {
     case connection
     case callingAPI
+    case failedData
 }
 
 enum AuthErrors: Error {
