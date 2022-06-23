@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Product: Codable {
+public struct Product: Codable {
     let id: Int?
     let title: String?
     let price: Double?
@@ -26,7 +26,7 @@ struct Product: Codable {
         case rating = "rating"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(Int.self, forKey: .id)
         title = try values.decodeIfPresent(String.self, forKey: .title)

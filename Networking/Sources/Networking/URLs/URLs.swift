@@ -7,19 +7,23 @@
 
 import Foundation
 
-protocol URLProtocol {
+protocol APIProtocol {
     var baseURL: String { get }
 }
 
-struct URLs: URLProtocol {
+struct URLs: APIProtocol {
     static let shared = URLs()
 
-    var baseURL = "https://fakestoreapi.com/"
+    internal var baseURL = "https://fakestoreapi.com/"
 }
 
 
 extension URLs {
-    func getProducts() -> URL? {
+    func getProductsURL() -> URL? {
         return URL(string: baseURL + "products")
+    }
+    
+    func getSingleProductURL(productId: Int) -> URL? {
+        return URL(string: baseURL + "products/\(productId)")
     }
 }

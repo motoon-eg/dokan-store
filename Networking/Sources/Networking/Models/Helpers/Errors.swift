@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum GeneralErrors: Error {
+public enum GeneralErrors: Error {
     case connection
     case callingAPI
     case failedData
 }
 
-enum AuthErrors: Error {
+public enum AuthErrors: Error {
     case invalidToken
     case unauthorized
 }
