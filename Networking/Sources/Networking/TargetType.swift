@@ -23,7 +23,7 @@ public enum Task { //wrapper for my reqeust parameter
 public protocol TargetType { //wrapper that carries request properties
     var baseURL : String {get}
     var path: String {get}
-    var method:HTTPMethodd {get}
+    var method: HTTPMethodd { get }
     var task:Task {get}
     var headers: [String:String]? {get}
 }
