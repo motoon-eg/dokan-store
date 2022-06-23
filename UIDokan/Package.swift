@@ -7,13 +7,13 @@ let package = Package(
     name: "UIDokan",
     platforms: [
         .macOS(.v10_12),
-        .iOS(.v10),
+        .iOS(.v10)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "UIDokan",
-            targets: ["UIDokan"]),
+            targets: ["UIDokan"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -27,6 +27,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "UIDokanTests",
-            dependencies: ["UIDokan"]),
+            dependencies: ["UIDokan"])
     ]
 )

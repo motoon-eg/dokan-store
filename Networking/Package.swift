@@ -7,18 +7,18 @@ let package = Package(
     name: "Networking",
     platforms: [
         .macOS(.v10_12),
-        .iOS(.v10),
+        .iOS(.v10)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Networking",
-            targets: ["Networking"]),
+            targets: ["Networking"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.1")),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.1"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -26,10 +26,10 @@ let package = Package(
         .target(
             name: "Networking",
             dependencies: [
-                "Alamofire",
+                "Alamofire"
             ]),
         .testTarget(
             name: "NetworkingTests",
-            dependencies: ["Networking"]),
+            dependencies: ["Networking"])
     ]
 )

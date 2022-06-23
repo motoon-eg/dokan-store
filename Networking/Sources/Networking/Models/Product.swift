@@ -16,7 +16,7 @@ struct Product: Codable {
     let image: String
     let rating: Rating
     
-    enum CodingKeys: String, CodingKeys {
+    enum CodingKeys: String, CodingKey {
         case id = "id"
         case title = "title"
         case price = "price"
