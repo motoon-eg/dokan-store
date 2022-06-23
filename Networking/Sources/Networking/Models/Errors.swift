@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+enum GeneralErrors: Error {
+    case connection
+    case callingAPI
+}
+
+enum AuthErrors: Error {
+    case invalidToken
+    case unauthorized
+}
