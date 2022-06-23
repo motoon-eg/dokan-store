@@ -17,7 +17,7 @@ public enum HTTPMethodd: String {  //to map alamofire http methods so if there a
 
 public enum Task { //wrapper for my reqeust parameter
     case requestPlain
-    case requestParameters(parameters:[String:Any],encoding: ParameterEncoding )
+    case requestParameters(parameters: [String: Any], encoding: ParameterEncoding)
 }
 
 public protocol TargetType { //wrapper that carries request properties
