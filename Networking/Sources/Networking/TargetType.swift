@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-public enum HTTPMethodd : String {  //to map alamofire http methods so if there any change in alamofire I will change here only
+public enum HTTPMethodd: String {  //to map alamofire http methods so if there any change in alamofire I will change here only
     case get = "GET"
     case post = "POST"
     case put = "PUT"
