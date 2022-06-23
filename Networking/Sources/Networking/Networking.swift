@@ -7,7 +7,7 @@ public struct Networking {
     public init() {
     }
     
-    public func perform<M: Decodable, T: TargetType>(target: T, responseClass: M.Type, completion: @escaping (Result<M?,NSError>)->()){
+    public func perform<M: Decodable, T: TargetType>(target: T, responseClass: M.Type, completion: @escaping (Result<M?, NSError>) -> ()){
         let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
         let headers = Alamofire.HTTPHeaders(target.headers ?? [:])
         let params = buildParams(task: target.task)
