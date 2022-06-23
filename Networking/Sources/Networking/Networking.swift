@@ -7,7 +7,7 @@ public struct Networking {
     public init() {
     }
     
-    public func fetchAllProducts<T: Decodable>(completion: @escaping (Result<T?,Error>) -> Void){
+    public func fetchAllProducts<T: Codable>(expectingReturnType: T.Type, completion: @escaping ((Result<T?,Error>) -> Void)){
         guard let url = URLs.shared.getProductsURL() else { return }
         
         let method = Alamofire.HTTPMethod(rawValue: HTTPMethod.get.rawValue)
