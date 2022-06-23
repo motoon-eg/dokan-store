@@ -20,7 +20,7 @@ public struct Networking {
             }
             
             if statusCode == 200 {
-                guard let jsonResponse = try? response.result.get() else{
+                guard let jsonResponse = try? response.result.get() else {
                     completion(.failure(NSError()))
                     return
                 }
