@@ -21,8 +21,8 @@ public struct Networking {
             case .success(_):
                 guard let data = response.data else {return}
                 do{
-                    let jsonData = try JSONDecoder().decode(Products.self, from: data)
-                    completion(.success(jsonData as? T))
+                    let jsonData = try JSONDecoder().decode(T.self, from: data)
+                    completion(.success(jsonData))
                     print(jsonData)
                 }catch{
                     completion(.failure(GeneralErrors.failedData))
