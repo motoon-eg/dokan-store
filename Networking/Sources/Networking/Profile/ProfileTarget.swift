@@ -1,17 +1,14 @@
 //
 //  ProfileTarget.swift
-//  Rakwa
+
 //
-//  Created by heba isaa on 18/11/2021.
+//  Created by heba isaa on  24/06/2022.
 //
 
 import Foundation
 import Moya
 
 enum ProfileTarget : TargetType {
-    
-    
-    
     
     case contact(firstname:String,lastname:String,email:String,message:String,phone:String)
     
@@ -24,10 +21,8 @@ enum ProfileTarget : TargetType {
     var path: String{
         switch self {
         case .contact:return "ContactUs"
-
-            
+   
         }
-        
     }
     
     var method: Moya.Method {
@@ -46,7 +41,6 @@ enum ProfileTarget : TargetType {
             
         }
     }
-    
     
     var headers: [String : String]?{
         switch self{

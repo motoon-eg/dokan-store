@@ -1,8 +1,8 @@
 //
 //  ProfileNetworkable.swift
-//  Rakwa
+
 //
-//  Created by heba isaa on 18/11/2021.
+//  Created by heba isaa on  24/06/2022.
 //
 
 import Foundation
@@ -12,8 +12,8 @@ protocol ProfileNetworkable:Networkable{
 func contact(firstname:String,lastname:String,email:String,message:String,phone:String,completion: @escaping (Result<BaseResponse<User>, Error>) -> ())
     
 }
-final class ProfileManager:ProfileNetworkable{
 
+final class ProfileManager:ProfileNetworkable{
 
     var provider =  MoyaProvider<ProfileTarget>(plugins: [NetworkLoggerPlugin()])
     
