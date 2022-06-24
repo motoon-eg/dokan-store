@@ -45,10 +45,8 @@ enum ProfileTarget : TargetType {
     var headers: [String : String]?{
         switch self{
         
-        case .contact:
-     
-      
         default:return ["Accept":"application/json"]
+            
         }
     }
     
