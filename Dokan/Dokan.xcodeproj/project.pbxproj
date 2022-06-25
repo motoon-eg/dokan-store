@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
-		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
-		AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA21B43B28537E0400E4F217 /* Main.storyboard */; };
 		AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA21B43E28537E0500E4F217 /* Assets.xcassets */; };
 		AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */; };
 		AA4B15042853F4A500F1C3EF /* DokanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4B15032853F4A500F1C3EF /* DokanTests.swift */; };
@@ -55,8 +53,6 @@
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA21B43728537E0400E4F217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA21B43928537E0400E4F217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA21B43C28537E0400E4F217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA21B43E28537E0500E4F217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA21B44128537E0500E4F217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA21B44328537E0500E4F217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,8 +114,6 @@
 				AA9E20A728678B51002FA207 /* Scenes */,
 				AA21B43528537E0400E4F217 /* AppDelegate.swift */,
 				AA21B43728537E0400E4F217 /* SceneDelegate.swift */,
-				AA21B43928537E0400E4F217 /* ViewController.swift */,
-				AA21B43B28537E0400E4F217 /* Main.storyboard */,
 				AA21B43E28537E0500E4F217 /* Assets.xcassets */,
 				AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */,
 				AA21B44328537E0500E4F217 /* Info.plist */,
@@ -260,7 +254,6 @@
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
-				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +312,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
 				AA71CE2428679EFF00BB4E20 /* LoginViewModelType.swift in Sources */,
 				AA9E20AD28678E96002FA207 /* LoginViewModel.swift in Sources */,
 				AA9E20AA28678B6A002FA207 /* LoginViewController.swift in Sources */,
@@ -347,14 +339,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AA21B43B28537E0400E4F217 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA21B43C28537E0400E4F217 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -493,7 +477,6 @@
 				INFOPLIST_FILE = Dokan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -523,7 +506,6 @@
 				INFOPLIST_FILE = Dokan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
