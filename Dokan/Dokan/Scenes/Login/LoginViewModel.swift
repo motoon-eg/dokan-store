@@ -7,9 +7,6 @@
 
 import Foundation
 
-// View      -- (Action) --> ViewModel
-// ViewModel -- (Update) --> View
-
 // MARK: LoginViewModel
 //
 class LoginViewModel {
@@ -24,7 +21,7 @@ extension LoginViewModel: LoginViewModelInput {
     
     func updateEmail(_ text: String) {
         emailText = text
-//        updateEnabledState()
+        updateEnabledState()
     }
     
     func updatePassword(_ text: String) {
