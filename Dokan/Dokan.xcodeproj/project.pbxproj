@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27A983BF28662BEF00B59E94 /* CustomViewData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A983BD28662BEF00B59E94 /* CustomViewData.xib */; };
-		27A983C028662BEF00B59E94 /* CustomViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A983BE28662BEF00B59E94 /* CustomViewData.swift */; };
-		27A983C228662CC000B59E94 /* UIViewFromNIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A983C128662CBF00B59E94 /* UIViewFromNIB.swift */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
@@ -51,9 +48,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		27A983BD28662BEF00B59E94 /* CustomViewData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomViewData.xib; sourceTree = "<group>"; };
-		27A983BE28662BEF00B59E94 /* CustomViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewData.swift; sourceTree = "<group>"; };
-		27A983C128662CBF00B59E94 /* UIViewFromNIB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewFromNIB.swift; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA21B43728537E0400E4F217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,15 +85,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27A983BC28662B6700B59E94 /* XIB */ = {
-			isa = PBXGroup;
-			children = (
-				27A983BE28662BEF00B59E94 /* CustomViewData.swift */,
-				27A983BD28662BEF00B59E94 /* CustomViewData.xib */,
-			);
-			path = XIB;
-			sourceTree = "<group>";
-		};
 		AA21B42928537E0400E4F217 = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +107,6 @@
 		AA21B43428537E0400E4F217 /* Dokan */ = {
 			isa = PBXGroup;
 			children = (
-				27A983C128662CBF00B59E94 /* UIViewFromNIB.swift */,
-				27A983BC28662B6700B59E94 /* XIB */,
 				AA21B43528537E0400E4F217 /* AppDelegate.swift */,
 				AA21B43728537E0400E4F217 /* SceneDelegate.swift */,
 				AA21B43928537E0400E4F217 /* ViewController.swift */,
@@ -247,7 +230,6 @@
 			files = (
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
-				27A983BF28662BEF00B59E94 /* CustomViewData.xib in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 			);
@@ -309,10 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
-				27A983C228662CC000B59E94 /* UIViewFromNIB.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
-				27A983C028662BEF00B59E94 /* CustomViewData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
