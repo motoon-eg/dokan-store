@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Dokan/Dokan/Domain">
+   </FileRef>
+   <FileRef
       location = "group:UIDokan">
    </FileRef>
    <FileRef
