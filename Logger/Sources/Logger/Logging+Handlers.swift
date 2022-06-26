@@ -11,7 +11,7 @@ public func LogDebug(_ message: @autoclosure () -> String,
                      file: StaticString = #file,
                      function: StaticString = #function,
                      line: UInt = #line,
-                     logger: Logging = Logger.default) {
+                     logger: Logging = DefaultLogger.shared) {
     logger.log(message(),
                level: .debug,
                file: file,
@@ -23,7 +23,7 @@ public func LogInfo(_ message: @autoclosure () -> String,
                     file: StaticString = #file,
                     function: StaticString = #function,
                     line: UInt = #line,
-                    logger: Logging = Logger.default) {
+                    logger: Logging = DefaultLogger.shared) {
     logger.log(message(),
                level: .info,
                file: file,
@@ -35,7 +35,7 @@ public func LogWarn(_ message: @autoclosure () -> String,
                     file: StaticString = #file,
                     function: StaticString = #function,
                     line: UInt = #line,
-                    logger: Logging = Logger.default) {
+                    logger: Logging = DefaultLogger.shared) {
     logger.log(message(),
                level: .warn,
                file: file,
@@ -47,7 +47,7 @@ public func LogVerbose(_ message: @autoclosure () -> String,
                        file: StaticString = #file,
                        function: StaticString = #function,
                        line: UInt = #line,
-                       logger: Logging = Logger.default) {
+                       logger: Logging = DefaultLogger.shared) {
     logger.log(message(),
                level: .verbose,
                file: file,
@@ -59,7 +59,7 @@ public func LogError(_ message: @autoclosure () -> String,
                      file: StaticString = #file,
                      function: StaticString = #function,
                      line: UInt = #line,
-                     logger: Logging = Logger.default) {
+                     logger: Logging = DefaultLogger.shared) {
     logger.log(message(),
                level: .error,
                file: file,

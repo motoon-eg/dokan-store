@@ -1,5 +1,5 @@
-public struct Logger: Logging {
-    public static let `default` = Logger()
+public struct DefaultLogger: Logging {
+    public static let shared = DefaultLogger()
     
     public init() {
         
@@ -11,5 +11,6 @@ public struct Logger: Logging {
                     function: StaticString,
                     line: UInt) {
         #warning("Implement logger")
+        print(message())
     }
 }
