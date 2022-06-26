@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DKFoundation">
+      location = "group:Logging">
    </FileRef>
    <FileRef
-      location = "group:Logger">
+      location = "group:DKFoundation">
    </FileRef>
    <FileRef
       location = "group:UIDokan">

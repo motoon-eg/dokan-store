@@ -1,3 +1,0 @@
-# Logger
-
-Log events
