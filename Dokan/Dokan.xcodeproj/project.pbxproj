@@ -95,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				AA98C0742867EAB7004C5967 /* Internal */,
+				AAF5F1DA286F76F2002DA8ED /* Scenes */,
+				AAF5F1DB286F76FD002DA8ED /* System */,
 				AA21B43528537E0400E4F217 /* AppDelegate.swift */,
 				AA21B43728537E0400E4F217 /* SceneDelegate.swift */,
 				AA21B43928537E0400E4F217 /* ViewController.swift */,
@@ -110,6 +112,7 @@
 		AA4B15022853F4A500F1C3EF /* DokanTests */ = {
 			isa = PBXGroup;
 			children = (
+				AAF5F1DC286F770C002DA8ED /* Scenes */,
 				AA4B15032853F4A500F1C3EF /* DokanTests.swift */,
 			);
 			path = DokanTests;
@@ -129,6 +132,27 @@
 				AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAF5F1DA286F76F2002DA8ED /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AAF5F1DB286F76FD002DA8ED /* System */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		AAF5F1DC286F770C002DA8ED /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +198,8 @@
 				AA4B15062853F4A500F1C3EF /* PBXTargetDependency */,
 			);
 			name = DokanTests;
+			packageProductDependencies = (
+			);
 			productName = DokanTests;
 			productReference = AA4B15012853F4A500F1C3EF /* DokanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
