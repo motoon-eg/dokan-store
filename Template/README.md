@@ -5,18 +5,13 @@
 
 `mkdir -p ~/Library/Developer/Xcode/Templates/File\ Templates/Custom`
 
-2- Next, open Finder, press Shift +Command + G and paste the following path:
+2- After that, on Finder press Shift + Command + G again and paste the following:
 
-`/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates`
+`~/Library/Developer/Xcode/Templates/Custom`
 
-3- Then, go to Source and copy the folder Package Swift File.xctemplate somewhere on your Desktop
+3- Download the `MVVM File Generator.xctemplate` and paste it into Custom folder
 
-4- After that, on Finder press Shift + Command + G again and paste the following:
-
-`~/Library/Developer/Xcode/Templates`
-
-
-5- Inside the Custom folder, paste the Package Swift File.xctemplate you copied before on your Desktop. and if you want template to storyboard file go to Storyboard and copy the .storyboard , xib copy the .xib template file.
+4- Open Xcode and command+N into any folder and drag to bottom and you will find there
 
 
 ### Note :- 
