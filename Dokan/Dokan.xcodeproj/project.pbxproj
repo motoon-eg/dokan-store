@@ -123,14 +123,6 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
-		AA9E20A728678B51002FA207 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				AA71CE2528679F2700BB4E20 /* Login */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		AAE1A1BD285E1A3A00A4EBB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
