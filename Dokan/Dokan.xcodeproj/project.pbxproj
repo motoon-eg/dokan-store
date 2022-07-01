@@ -13,11 +13,11 @@
 		AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */; };
 		AA71CE2428679EFF00BB4E20 /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71CE2328679EFF00BB4E20 /* LoginViewModelType.swift */; };
 		AA7DB20A286F6A9C00319D19 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7DB209286F6A9C00319D19 /* LoginViewModelTests.swift */; };
+		AA98C0702867E660004C5967 /* DKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = AA98C06F2867E660004C5967 /* DKFoundation */; };
+		AA98C0762867EAC0004C5967 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98C0752867EAC0004C5967 /* Logging.swift */; };
 		AA9E20AA28678B6A002FA207 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E20A828678B6A002FA207 /* LoginViewController.swift */; };
 		AA9E20AB28678B6A002FA207 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9E20A928678B6A002FA207 /* LoginViewController.xib */; };
 		AA9E20AD28678E96002FA207 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E20AC28678E96002FA207 /* LoginViewModel.swift */; };
-		AA98C0702867E660004C5967 /* DKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = AA98C06F2867E660004C5967 /* DKFoundation */; };
-		AA98C0762867EAC0004C5967 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98C0752867EAC0004C5967 /* Logging.swift */; };
 		AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */; };
 		AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E17F285CBFCA00EAD189 /* FirebaseAnalytics */; };
 		AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */; };
@@ -45,10 +45,10 @@
 		AA4B15012853F4A500F1C3EF /* DokanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DokanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA71CE2328679EFF00BB4E20 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		AA7DB209286F6A9C00319D19 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		AA98C0752867EAC0004C5967 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		AA9E20A828678B6A002FA207 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AA9E20A928678B6A002FA207 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		AA9E20AC28678E96002FA207 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		AA98C0752867EAC0004C5967 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,20 +145,20 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		AA9E20A728678B51002FA207 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				AA71CE2528679F2700BB4E20 /* Login */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		AA98C0742867EAB7004C5967 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
 				AA98C0752867EAC0004C5967 /* Logging.swift */,
 			);
 			path = Internal;
+			sourceTree = "<group>";
+		};
+		AA9E20A728678B51002FA207 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AA71CE2528679F2700BB4E20 /* Login */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		AAE1A1BD285E1A3A00A4EBB0 /* Frameworks */ = {
@@ -212,6 +212,8 @@
 				AA4B15062853F4A500F1C3EF /* PBXTargetDependency */,
 			);
 			name = DokanTests;
+			packageProductDependencies = (
+			);
 			productName = DokanTests;
 			productReference = AA4B15012853F4A500F1C3EF /* DokanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
