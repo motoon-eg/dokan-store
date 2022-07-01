@@ -11,8 +11,8 @@
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA21B43E28537E0500E4F217 /* Assets.xcassets */; };
 		AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */; };
-		AA4B15042853F4A500F1C3EF /* DokanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4B15032853F4A500F1C3EF /* DokanTests.swift */; };
 		AA71CE2428679EFF00BB4E20 /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71CE2328679EFF00BB4E20 /* LoginViewModelType.swift */; };
+		AA7DB20A286F6A9C00319D19 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7DB209286F6A9C00319D19 /* LoginViewModelTests.swift */; };
 		AA9E20AA28678B6A002FA207 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E20A828678B6A002FA207 /* LoginViewController.swift */; };
 		AA9E20AB28678B6A002FA207 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9E20A928678B6A002FA207 /* LoginViewController.xib */; };
 		AA9E20AD28678E96002FA207 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E20AC28678E96002FA207 /* LoginViewModel.swift */; };
@@ -57,8 +57,8 @@
 		AA21B44128537E0500E4F217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA21B44328537E0500E4F217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA4B15012853F4A500F1C3EF /* DokanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DokanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA4B15032853F4A500F1C3EF /* DokanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokanTests.swift; sourceTree = "<group>"; };
 		AA71CE2328679EFF00BB4E20 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
+		AA7DB209286F6A9C00319D19 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		AA9E20A828678B6A002FA207 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AA9E20A928678B6A002FA207 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		AA9E20AC28678E96002FA207 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		AA4B15022853F4A500F1C3EF /* DokanTests */ = {
 			isa = PBXGroup;
 			children = (
-				AA4B15032853F4A500F1C3EF /* DokanTests.swift */,
+				AA7DB207286F6A9C00319D19 /* Scenes */,
 			);
 			path = DokanTests;
 			sourceTree = "<group>";
@@ -137,6 +137,22 @@
 				AA9E20A928678B6A002FA207 /* LoginViewController.xib */,
 				AA9E20AC28678E96002FA207 /* LoginViewModel.swift */,
 				AA71CE2328679EFF00BB4E20 /* LoginViewModelType.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AA7DB207286F6A9C00319D19 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AA7DB208286F6A9C00319D19 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AA7DB208286F6A9C00319D19 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AA7DB209286F6A9C00319D19 /* LoginViewModelTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -324,7 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4B15042853F4A500F1C3EF /* DokanTests.swift in Sources */,
+				AA7DB20A286F6A9C00319D19 /* LoginViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
