@@ -32,9 +32,7 @@ final class LoginViewModelTests: XCTestCase {
     func testConfigureOnButtonEnabled_WhenEmailIsEmpty_ShouldBeDisabled() {
         // Given
         var isEnabled: Bool?
-        sut.configureOnButtonEnabled { _isEnabled in
-            isEnabled = _isEnabled
-        }
+        sut.configureOnButtonEnabled { isEnabled = $0 }
         
         // When
         sut.updateEmail("")
@@ -46,9 +44,7 @@ final class LoginViewModelTests: XCTestCase {
     
     func testConfigureObButtonEnabled_WhenPasswordIsEmpty_ShouldBeDisabled() {
         var isEnabled: Bool?
-        sut.configureOnButtonEnabled { _isEnabled in
-            isEnabled = _isEnabled
-        }
+        sut.configureOnButtonEnabled { isEnabled = $0 }
         
         // When
         sut.updatePassword("")
