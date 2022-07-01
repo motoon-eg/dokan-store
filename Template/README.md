@@ -11,7 +11,7 @@
 
 3- Download the `MVVM File Generator.xctemplate` and paste it into Custom folder
 
-4- The .xctemplate contains two main files WithXIB & WithoutXIB and we can switch between them and that's made with Templateinfo.plist file
+4- The .xctemplate contains two main files WithXIB & WithoutXIB and we can switch between them and that's made with TemplateInfo.plist file
 
 4- Open Xcode and command+N into any folder and drag to bottom and you will find there
 
