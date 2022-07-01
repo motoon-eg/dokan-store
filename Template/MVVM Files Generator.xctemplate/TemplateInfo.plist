@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Your module name:</string>
+			<key>Description</key>
+			<string>The name of the MVVM-AC to create</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>MyModel</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>viewType</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>View type:</string>
+			<key>Description</key>
+			<string>The type of view to use</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>WithXIB</string>
+			<key>Values</key>
+			<array>
+				<string>WithXIB</string>
+				<string>WithoutXIB</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
