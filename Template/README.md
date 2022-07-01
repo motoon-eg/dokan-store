@@ -3,7 +3,7 @@
 ## Create A Custom File Template
 1- Open the Terminal and paste the following line to create a folder named 'Custom' inside Xcode.
 
-`mkdir -p ~/Library/Developer/Xcode/Templates/File\ Templates/Custom `
+`mkdir -p ~/Library/Developer/Xcode/Templates/File\ Templates/Custom`
 
 2- Next, open Finder, press Shift +Command + G and paste the following path:
 
@@ -18,11 +18,6 @@
 
 5- Inside the Custom folder, paste the Package Swift File.xctemplate you copied before on your Desktop. and if you want template to storyboard file go to Storyboard and copy the .storyboard , xib copy the .xib template file.
 
-6- Now, change the name of the Package Swift File.xctemplate folder to a different name, for example MVVM Template Generator.xctemplate
-
-7- Add png photos if you want and customize TemplateInfo.plist
-
-8- Open the ___BASENAMEFILE___.swift and customize your template code 
 
 ### Note :- 
 In your code if you want to use the File name we use `___BASENAMEFILE___` and if we want to use only name we use `___VARIABLE_productName___`
