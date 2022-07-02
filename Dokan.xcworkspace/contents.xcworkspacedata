@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Domain">
+   </FileRef>
+   <FileRef
       location = "group:Logger">
    </FileRef>
    <FileRef
