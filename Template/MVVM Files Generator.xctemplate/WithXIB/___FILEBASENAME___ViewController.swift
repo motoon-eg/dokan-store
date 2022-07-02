@@ -5,8 +5,6 @@ import UIKit
 class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
     
     // MARK: Outlets
-        
-    // omaaaarrrrr
 
     // MARK: Properties
         
@@ -20,32 +18,29 @@ class ___FILEBASENAMEASIDENTIFIER___: UIViewController {
     }
 
     required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder:) has not been implemented")
     }
 
-        // MARK: Lifecycle
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
 }
 
 // MARK: - Actions
+//
 extension ___FILEBASENAMEASIDENTIFIER___ {
     
 }
 
-// MARK: - Bind ViewModel
+// MARK: - Configurations
+//
 extension ___FILEBASENAMEASIDENTIFIER___ {
     
 }
 
-//MARK: - Ojective C Functions
-extension ___FILEBASENAMEASIDENTIFIER___ {
-    
-    
+// MARK: - Private Handlers
+//
+private extension ___FILEBASENAMEASIDENTIFIER___ {
 }
-
-
-
