@@ -40,12 +40,20 @@ public struct Networking {
             return (params,encoding)
         }
     }
-    
-    private enum NetworkingError: LocalizedError {
+}
+
+// MARK: - NetworkingError
+//
+private extension Networking {
+
+    enum NetworkingError: LocalizedError {
         case networkError(Error)
         case responseValidationFailed
         case responseSerializationFailed
         case responseDecoderFailed
+        
+        /// Localized Text
+        ///
         public var errorDescription: String? {
             switch self {
             case .networkError(let error):
