@@ -1,5 +1,6 @@
 import Foundation
 import Alamofire
+
 public struct Networking {
 
     public init() {
