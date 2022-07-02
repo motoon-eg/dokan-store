@@ -22,6 +22,6 @@ extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName___ViewModelOut
 
 // MARK: Private Handlers
 //
-extension ___FILEBASENAMEASIDENTIFIER___ {
+private extension ___FILEBASENAMEASIDENTIFIER___ {
 
 }
