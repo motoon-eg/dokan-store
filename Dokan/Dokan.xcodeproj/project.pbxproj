@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
@@ -59,6 +60,7 @@
 				AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */,
 				AA98C0702867E660004C5967 /* DKFoundation in Frameworks */,
 				AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */,
+				437D1B1E2870F2C400B972BC /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +181,7 @@
 				AAE1A1BE285E1A3A00A4EBB0 /* Networking */,
 				AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */,
 				AA98C06F2867E660004C5967 /* DKFoundation */,
+				437D1B1D2870F2C400B972BC /* Core */,
 			);
 			productName = Dokan;
 			productReference = AA21B43228537E0400E4F217 /* Dokan.app */;
@@ -613,6 +616,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		437D1B1D2870F2C400B972BC /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
 		AA98C06F2867E660004C5967 /* DKFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DKFoundation;
