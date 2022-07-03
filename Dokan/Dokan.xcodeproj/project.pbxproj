@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
+		99CD4B6228720BB90039898E /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99CD4B6128720B7F0039898E /* DMSans-Bold.ttf */; };
+		99CD4B6328720BB90039898E /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99CD4B6028720B7F0039898E /* DMSans-Medium.ttf */; };
+		99CD4B6428720BB90039898E /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99CD4B5F28720B7F0039898E /* DMSans-Regular.ttf */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA21B43E28537E0500E4F217 /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99CD4B5F28720B7F0039898E /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		99CD4B6028720B7F0039898E /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		99CD4B6128720B7F0039898E /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA21B43728537E0400E4F217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99CD4B5E28720B650039898E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				99CD4B6128720B7F0039898E /* DMSans-Bold.ttf */,
+				99CD4B6028720B7F0039898E /* DMSans-Medium.ttf */,
+				99CD4B5F28720B7F0039898E /* DMSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		AA21B42928537E0400E4F217 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +116,7 @@
 		AA21B43428537E0400E4F217 /* Dokan */ = {
 			isa = PBXGroup;
 			children = (
+				99CD4B5E28720B650039898E /* Fonts */,
 				AA9E20A728678B51002FA207 /* Scenes */,
 				AA98C0742867EAB7004C5967 /* Internal */,
 				AA21B43528537E0400E4F217 /* AppDelegate.swift */,
@@ -267,6 +284,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99CD4B6228720BB90039898E /* DMSans-Bold.ttf in Resources */,
+				99CD4B6328720BB90039898E /* DMSans-Medium.ttf in Resources */,
+				99CD4B6428720BB90039898E /* DMSans-Regular.ttf in Resources */,
 				AA9E20AB28678B6A002FA207 /* LoginViewController.xib in Resources */,
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
