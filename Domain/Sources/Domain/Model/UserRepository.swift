@@ -8,7 +8,5 @@
 import Foundation
 
 protocol UserRepository{
-    
     func fetchUserData() -> [User]
-    
 }
