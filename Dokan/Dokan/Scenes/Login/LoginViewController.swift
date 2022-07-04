@@ -10,7 +10,13 @@ import UIKit
 class LoginViewController: UIViewController {
     
     // MARK: Outlets
-
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInBtn: UIButton!
+    @IBOutlet weak var forgotPasswordBtn: UIButton!
+    @IBOutlet weak var signUpBtn: UIButton!
+    
     // MARK: Properties
         
     private let viewModel: LoginViewModelType
