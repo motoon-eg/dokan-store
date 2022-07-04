@@ -36,12 +36,28 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindTextFields()
+        bindSignInBtn()
+        bindViewModel()
     }
 }
 
 // MARK: - Actions
 //
 extension LoginViewController {
+    
+    func bindTextFields(){
+        emailTextField.addTarget(self, action: #selector(didTextChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(didTextChanged), for: .editingChanged)
+    }
+    
+    func bindSignInBtn(){
+        signInBtn.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
+    }
+    
+    func bindViewModel(){
+        
+    }
     
 }
 
@@ -54,4 +70,18 @@ extension LoginViewController {
 // MARK: - Private Handlers
 //
 private extension LoginViewController {
+    
+    @objc func didTextChanged(_ sender: UITextField){
+        if sender == emailTextField{
+            
+        }else{
+            
+        }
+    }
+    
+    @objc func handleSignIn(){
+        guard let email = emailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        print(email,password)
+    }
 }
