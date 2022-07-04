@@ -22,6 +22,8 @@
 		AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */; };
 		AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1BE285E1A3A00A4EBB0 /* Networking */; };
 		AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
+		E239C71F2873440A008D9CE2 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239C71D2873440A008D9CE2 /* VerificationViewController.swift */; };
+		E239C7202873440A008D9CE2 /* VerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E239C71E2873440A008D9CE2 /* VerificationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		AA98C0752867EAC0004C5967 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E239C71D2873440A008D9CE2 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		E239C71E2873440A008D9CE2 /* VerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		AAF5F1DA286F76F2002DA8ED /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E2156C24287342F000A92325 /* Verification */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -155,6 +160,15 @@
 			children = (
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E2156C24287342F000A92325 /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				E239C71D2873440A008D9CE2 /* VerificationViewController.swift */,
+				E239C71E2873440A008D9CE2 /* VerificationViewController.xib */,
+			);
+			path = Verification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E239C7202873440A008D9CE2 /* VerificationViewController.xib in Resources */,
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
@@ -317,6 +332,7 @@
 			files = (
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
+				E239C71F2873440A008D9CE2 /* VerificationViewController.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
 				AA98C0762867EAC0004C5967 /* Logging.swift in Sources */,
 			);
