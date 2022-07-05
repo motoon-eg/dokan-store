@@ -10,20 +10,43 @@ import XCTest
 
 class LoginViewModelTests: XCTestCase {
 
+    // MARK: Properties
+    
+    var sut: LoginViewModel! // System Under Test
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = LoginViewModel()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testConfigureOnButtonEnabled_WhenEmailIsEmpty_ShouldBeDisabled() {
+        // Given
+        var isEnabled: Bool?
+        sut.configureOnButtonEnabled { isEnabled = $0 }
+        
+        // When
+        sut.updateEmail("")
+        
+        // Then
+        XCTAssertTrue(isEnabled == false)
+        XCTAssertNotNil(isEnabled)
     }
-
+    func testConfigureObButtonEnabled_WhenPasswordIsEmpty_ShouldBeDisabled() {
+        //Given
+        var isEnabled: Bool?
+        sut.configureOnButtonEnabled { isEnabled = $0 }
+        
+        // When
+        sut.updatePassword("")
+        
+        // Then
+        XCTAssertTrue(isEnabled == false)
+        XCTAssertNotNil(isEnabled)
+       }
 }
