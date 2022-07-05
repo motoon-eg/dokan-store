@@ -93,7 +93,7 @@ Dokan</string>
                     <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIO-8b-h93">
-                    <rect key="frame" x="16" y="766" width="156" height="20"/>
+                    <rect key="frame" x="16" y="794" width="156" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="GcQ-ID-Gec"/>
                     </constraints>
@@ -104,7 +104,7 @@ Dokan</string>
                     </buttonConfiguration>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orr-xh-n4W">
-                    <rect key="frame" x="284.33333333333331" y="766" width="89.666666666666686" height="20"/>
+                    <rect key="frame" x="284.33333333333331" y="794" width="89.666666666666686" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="JSt-R4-kYY"/>
                     </constraints>
@@ -125,15 +125,15 @@ Dokan</string>
                 <constraint firstItem="Snq-hb-b2V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="171" id="CX4-Ys-CQa"/>
                 <constraint firstAttribute="trailing" secondItem="orr-xh-n4W" secondAttribute="trailing" constant="16" id="KTc-eI-WOv"/>
                 <constraint firstItem="3Fv-Gf-cQ1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KaX-j5-VL2"/>
-                <constraint firstItem="WIO-8b-h93" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="766" id="OTr-Dp-zCD"/>
                 <constraint firstItem="HoT-fI-jJe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="332" id="T2S-jO-ymU"/>
                 <constraint firstItem="WIO-8b-h93" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="YXA-Pt-nRF"/>
                 <constraint firstItem="JM8-HK-019" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bg8-Ii-uhM"/>
                 <constraint firstItem="Lu0-T8-6vG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eou-Pd-qke"/>
+                <constraint firstAttribute="bottom" secondItem="orr-xh-n4W" secondAttribute="bottom" constant="30" id="jjk-Yf-S1Y"/>
                 <constraint firstItem="JM8-HK-019" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="451" id="kTa-z9-kpC"/>
                 <constraint firstItem="Lu0-T8-6vG" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.821" id="l16-aO-Hkc"/>
                 <constraint firstItem="orr-xh-n4W" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.23" id="ll4-0s-lfq"/>
-                <constraint firstItem="orr-xh-n4W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="766" id="mJf-vC-rMh"/>
+                <constraint firstAttribute="bottom" secondItem="WIO-8b-h93" secondAttribute="bottom" constant="30" id="nEB-z6-68J"/>
                 <constraint firstItem="3Fv-Gf-cQ1" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.821" id="nXw-Nl-yVj"/>
                 <constraint firstItem="Snq-hb-b2V" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.821" id="owq-hX-x0U"/>
                 <constraint firstItem="HoT-fI-jJe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.821" id="yeV-EZ-xse"/>
