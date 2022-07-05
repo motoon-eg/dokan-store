@@ -46,6 +46,12 @@ class LoginViewController: UIViewController {
 //
 extension LoginViewController {
     
+}
+
+// MARK: - Configurations
+//
+extension LoginViewController {
+    
     func bindTextFields(){
         emailTextField.addTarget(self, action: #selector(didTextChanged), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(didTextChanged), for: .editingChanged)
@@ -56,15 +62,10 @@ extension LoginViewController {
     }
     
     func bindViewModel(){
-        
+        viewModel.configureOnButtonEnabled { [weak self] onEnabled in
+            self?.signInBtn.isEnabled = onEnabled
+        }
     }
-    
-}
-
-// MARK: - Configurations
-//
-extension LoginViewController {
-    
 }
 
 // MARK: - Private Handlers
@@ -72,10 +73,12 @@ extension LoginViewController {
 private extension LoginViewController {
     
     @objc func didTextChanged(_ sender: UITextField){
+        guard let email = emailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
         if sender == emailTextField{
-            
+            viewModel.updateEmail(email)
         }else{
-            
+            viewModel.updatePassword(password)
         }
     }
     

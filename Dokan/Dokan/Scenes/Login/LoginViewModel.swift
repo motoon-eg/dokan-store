@@ -21,12 +21,12 @@ class LoginViewModel {
 extension LoginViewModel: LoginViewModelInput {
     func updateEmail(_ text: String) {
         email = text
-     updateEnabledStateButton()
+        updateEnabledStateButton()
     }
     
     func updatePassword(_ text: String) {
         password = text
-       updateEnabledStateButton()
+        updateEnabledStateButton()
     }
     
 
