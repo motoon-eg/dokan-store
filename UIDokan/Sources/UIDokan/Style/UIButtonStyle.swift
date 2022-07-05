@@ -57,7 +57,7 @@ extension UIButton {
         frame.size = CGSize(width: 275, height: 50)
     }
     
-    // MARK: - Border Buttons style
+    // MARK: - plain Buttons style
     
     public func plainBlueStyleSignUp() {
         backgroundColor = .clear
