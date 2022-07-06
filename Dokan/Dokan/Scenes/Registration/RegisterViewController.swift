@@ -47,11 +47,11 @@ extension RegisterViewController {
 }
 
 extension RegisterViewController {
-        @objc  func txtFieldTap(_ senser: UITextField) {
-        viewModel.updatePhoneOrEmail(input: senser.text ?? "")
+        @objc  func txtFieldTap(_ sender: UITextField) {
+        viewModel.updatePhoneOrEmail(input: sender.text ?? "")
     }
-    @objc  func buttonTap(_ senser: UIButton) {
-        if senser == signInBtn {
+    @objc  func buttonTap(_ sender: UIButton) {
+        if sender == signInBtn {
             // navigate to signin screen
         }else {
             guard let email = email_phoneText.text else {return}
