@@ -11,10 +11,9 @@ import Foundation
 
 typealias RegisterViewModelType = RegisterViewModelInput & RegisterViewModelOutput
 
-protocol RegisterViewModelInput{
-    func updatePhoneOrEmail(input:String)
-    
+protocol RegisterViewModelInput {
+    func updatePhoneOrEmail (input: String)
 }
-protocol RegisterViewModelOutput{
+protocol RegisterViewModelOutput {
     func ConfigureButtonEnabled(isEnabled: @escaping (Bool) -> Void)
 }
