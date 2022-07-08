@@ -28,7 +28,6 @@ extension LoginViewModel: LoginViewModelInput {
         password = text
         updateEnabledStateButton()
     }
-    
 
 }
 
