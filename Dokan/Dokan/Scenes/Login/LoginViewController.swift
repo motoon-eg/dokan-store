@@ -13,9 +13,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signInBtn: UIButton!
-    @IBOutlet weak var forgotPasswordBtn: UIButton!
-    @IBOutlet weak var signUpBtn: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     // MARK: Properties
         
@@ -58,12 +58,12 @@ extension LoginViewController {
     }
     
     func bindSignInBtn(){
-        signInBtn.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
     }
     
     func bindViewModel(){
         viewModel.configureOnButtonEnabled { [weak self] onEnabled in
-            self?.signInBtn.isEnabled = onEnabled
+            self?.signInButton.isEnabled = onEnabled
         }
     }
 }

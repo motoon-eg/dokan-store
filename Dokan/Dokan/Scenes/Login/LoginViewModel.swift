@@ -40,7 +40,6 @@ extension LoginViewModel: LoginViewModelOutput {
         self.onButtonEnabled = onEnabled
         updateEnabledStateButton()
     }
-    
 
 }
 

@@ -10,10 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Dokan" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="KaL-25-XCg" id="cQr-XV-Nkd"/>
-                <outlet property="forgotPasswordBtn" destination="WIO-8b-h93" id="gim-Wq-hA3"/>
+                <outlet property="forgotPasswordButton" destination="WIO-8b-h93" id="vkc-YF-WNc"/>
                 <outlet property="passwordTextField" destination="5TI-5I-f3b" id="TPB-oa-enM"/>
-                <outlet property="signInBtn" destination="Lu0-T8-6vG" id="kKU-Sh-01X"/>
-                <outlet property="signUpBtn" destination="orr-xh-n4W" id="4IR-Wm-ZeY"/>
+                <outlet property="signInButton" destination="Lu0-T8-6vG" id="i1a-va-zsl"/>
+                <outlet property="signUpButton" destination="orr-xh-n4W" id="cQe-UQ-JKJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
