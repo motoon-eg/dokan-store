@@ -7,13 +7,18 @@
 
 import XCTest
 @testable import Dokan
+
 class RegisterViewControllerTests: XCTestCase {
+    // MARK: - Properties
+
     var sut: RegisterViewModel!
     // MARK: - life cycle
+
     override func setUpWithError() throws {
-         sut = RegisterViewModel()
+        sut = RegisterViewModel()
     }
-        override func tearDownWithError() throws {
+
+    override func tearDownWithError() throws {
         sut = nil
     }
 
@@ -22,10 +27,12 @@ class RegisterViewControllerTests: XCTestCase {
         //Given
         var isEnabled: Bool?
         sut.ConfigureButtonEnabled { _isEnabled in
-            isEnabled=_isEnabled
+            isEnabled = _isEnabled
         }
+
         //When
         sut.updatePhoneOrEmail(input: "hebaaisaa2000@gmail.com")
+
         //Then
         XCTAssertTrue(isEnabled == true)
     }

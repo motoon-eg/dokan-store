@@ -8,18 +8,17 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-    @IBOutlet weak var signInBtn: UIButton!
-    @IBOutlet weak var email_phoneText: UITextField!
-    @IBOutlet weak var continueBtn: UIButton!
-        private let viewModel: RegisterViewModelType
-    override func viewDidLoad() {
 
-        super.viewDidLoad()
-        bindEmail_phoneTxt()
-        bindContinueButton()
-        bindViewModel()
-        bindSigninButton()
-    }
+    // MARK: - Outlets
+
+    @IBOutlet private weak var signInButton: UIButton!
+    @IBOutlet private weak var email_phoneTextField: UITextField!
+    @IBOutlet private weak var continueButton: UIButton!
+
+    // MARK: - Properties
+
+    private let viewModel: RegisterViewModelType
+
     init(model: RegisterViewModelType) {
         self.viewModel = model
         super.init(nibName: nil, bundle: nil)
@@ -27,35 +26,54 @@ class RegisterViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    // MARK: - Life Cycle
+
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+        bindEmailOrphoneText()
+        bindContinueButton()
+        bindViewModel()
+        bindSigninButton()
     }
+}
 
 extension RegisterViewController {
-        func bindEmail_phoneTxt() {
-        email_phoneText.addTarget(self, action: #selector(txtFieldTap), for: .editingChanged)
+
+    func bindEmailOrphoneText() {
+        email_phoneTextField.addTarget(self, action: #selector(emailOrPhoneTextChanged), for: .editingChanged)
     }
+
     func bindContinueButton() {
-        continueBtn.addTarget(self, action: #selector(buttonTap), for: .touchUpInside)
+        continueButton.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
+
     func bindSigninButton() {
-        signInBtn.addTarget(self, action: #selector(buttonTap), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
+
     func bindViewModel() {
         viewModel.ConfigureButtonEnabled { [weak self] onEnabled in
-            self?.continueBtn.isEnabled = onEnabled
+            self?.continueButton.isEnabled = onEnabled
         }
     }
 }
 
 extension RegisterViewController {
-        @objc  func txtFieldTap(_ sender: UITextField) {
+
+    @objc  func emailOrPhoneTextChanged(_ sender: UITextField) {
         viewModel.updatePhoneOrEmail(input: sender.text ?? "")
     }
-    @objc  func buttonTap(_ sender: UIButton) {
-        if sender == signInBtn {
+
+    @objc  func buttonWasTapped(_ sender: UIButton) {
+        switch sender {
+        case signInButton :
+            print("")
             // navigate to signin screen
-        }else {
-            guard let email = email_phoneText.text else {return}
+        default:
+            guard let email = email_phoneTextField.text else { return }
             // navigate to verification screen
+
         }
-            }
+    }
 }

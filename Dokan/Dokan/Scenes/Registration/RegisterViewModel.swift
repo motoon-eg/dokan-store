@@ -8,28 +8,29 @@
 import Foundation
 
 class RegisterViewModel {
-        private var emailOrPhoneTxt: String = ""
-    private var isButtonEnabled: (Bool) -> Void = {_ in}
+    private var emailOrPhoneText: String = ""
+    private var isButtonEnabled: (Bool) -> Void = { _ in }
 }
 
 extension RegisterViewModel: RegisterViewModelInput {
     func updatePhoneOrEmail(input: String) {
-        emailOrPhoneTxt=input
+        emailOrPhoneText = input
         updateIsEnabledButton()
     }
 }
 
+// MARK: - RegisterViewModelOutput
+
 extension RegisterViewModel: RegisterViewModelOutput {
-func ConfigureButtonEnabled(isEnabled: @escaping (Bool) -> Void) {
-    self.isButtonEnabled = isEnabled
-    updateIsEnabledButton()
+    func ConfigureButtonEnabled(isEnabled: @escaping (Bool) -> Void) {
+        self.isButtonEnabled = isEnabled
+        updateIsEnabledButton()
+    }
 }
 
-}
-
-extension RegisterViewModel {
+private extension RegisterViewModel {
     func updateIsEnabledButton() {
-        let isEmailValid = !emailOrPhoneTxt.isEmpty
+        let isEmailValid = !emailOrPhoneText.isEmpty
         isButtonEnabled(isEmailValid)
     }
 }
