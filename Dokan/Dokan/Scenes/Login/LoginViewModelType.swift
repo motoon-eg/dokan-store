@@ -16,12 +16,10 @@ typealias LoginViewModelType = LoginViewModelInput & LoginViewModelOutput
 protocol LoginViewModelInput {
     func updateEmail(_ text: String)
     func updatePassword(_ text: String)
-    
 }
 
 /// Login ViewModel Output
 ///
 protocol LoginViewModelOutput {
     func configureOnButtonEnabled(onEnabled: @escaping (Bool) -> Void)
-   
 }
