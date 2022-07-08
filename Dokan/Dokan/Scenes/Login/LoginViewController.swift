@@ -72,13 +72,15 @@ extension LoginViewController {
 //
 private extension LoginViewController {
     
-    @objc func didTextChanged(_ sender: UITextField){
-        guard let email = emailTextField.text else {return}
-        guard let password = passwordTextField.text else {return}
-        if sender == emailTextField{
-            viewModel.updateEmail(email)
-        }else{
-            viewModel.updatePassword(password)
+    @objc func textDidChange(_ sender: UITextField) {
+        guard let text = sender.text else { 
+            return
+        }
+        
+        if sender == emailTextField {
+            viewModel.updateEmail(text)
+        } else if sender == passwordTextField {
+            viewModel.updatePassword(text)
         }
     }
     
