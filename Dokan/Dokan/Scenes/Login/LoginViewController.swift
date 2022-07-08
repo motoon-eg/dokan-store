@@ -58,7 +58,7 @@ extension LoginViewController {
     }
     
     func bindSignInBtn(){
-        signInButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(signInWasTapped), for: .touchUpInside)
     }
     
     func bindViewModel(){
@@ -82,7 +82,7 @@ private extension LoginViewController {
         }
     }
     
-    @objc func handleSignIn(){
+    @objc func signInWasTapped(){
         guard let email = emailTextField.text else {return}
         guard let password = passwordTextField.text else {return}
         print(email,password)
