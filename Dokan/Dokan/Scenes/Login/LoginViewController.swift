@@ -53,8 +53,8 @@ extension LoginViewController {
 extension LoginViewController {
     
     func bindTextFields(){
-        emailTextField.addTarget(self, action: #selector(didTextChanged), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(didTextChanged), for: .editingChanged)
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
     
     func bindSignInBtn(){
