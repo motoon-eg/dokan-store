@@ -19,6 +19,9 @@ class RegisterViewController: UIViewController {
 
     private let viewModel: RegisterViewModelType
 
+
+    // MARK: - Init
+    
     init(model: RegisterViewModelType) {
         self.viewModel = model
         super.init(nibName: nil, bundle: nil)
