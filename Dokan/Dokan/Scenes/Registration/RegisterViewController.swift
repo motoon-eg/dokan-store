@@ -35,7 +35,7 @@ class RegisterViewController: UIViewController {
         bindContinueButton()
         bindViewModel()
         bindSigninButton()
-    }
+        }
 }
 
 private extension RegisterViewController {
