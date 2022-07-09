@@ -12,7 +12,7 @@ class RegisterViewController: UIViewController {
     // MARK: - Outlets
 
     @IBOutlet private weak var signInButton: UIButton!
-    @IBOutlet private weak var email_phoneTextField: UITextField!
+    @IBOutlet private weak var emailOrPhoneTextField: UITextField!
     @IBOutlet private weak var continueButton: UIButton!
 
     // MARK: - Properties
