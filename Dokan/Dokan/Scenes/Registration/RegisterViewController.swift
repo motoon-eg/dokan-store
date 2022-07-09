@@ -65,6 +65,8 @@ private extension RegisterViewController {
     }
 }
 
+// MARK: - Actions
+//
 private extension RegisterViewController {
 
     @objc func emailOrPhoneTextChanged(_ sender: UITextField) {
