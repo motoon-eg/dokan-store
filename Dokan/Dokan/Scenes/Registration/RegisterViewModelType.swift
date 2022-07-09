@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 typealias RegisterViewModelType = RegisterViewModelInput & RegisterViewModelOutput
 
 protocol RegisterViewModelInput {
