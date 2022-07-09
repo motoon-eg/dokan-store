@@ -42,6 +42,8 @@ class RegisterViewController: UIViewController {
         }
 }
 
+// MARK: Binding
+//
 private extension RegisterViewController {
 
     func bindEmailOrphoneText() {
