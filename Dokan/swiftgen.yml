@@ -1,0 +1,10 @@
+xcassets:
+  inputs: Dokan/
+  outputs:
+    templateName: swift5
+    output: Assets.swift
+colors:
+  inputs: Dokan/colors.txt
+  outputs:
+    templateName: swift5
+    output: Colors.swift
