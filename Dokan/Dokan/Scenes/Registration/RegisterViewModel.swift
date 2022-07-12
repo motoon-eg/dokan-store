@@ -28,6 +28,8 @@ extension RegisterViewModel: RegisterViewModelOutput {
     }
 }
 
+// MARK: - Private Handlers
+
 private extension RegisterViewModel {
     func updateIsEnabledButton() {
         let isEmailValid = !emailOrPhoneText.isEmpty

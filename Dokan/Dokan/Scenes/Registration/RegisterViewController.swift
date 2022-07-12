@@ -12,36 +12,43 @@ class RegisterViewController: UIViewController {
     // MARK: - Outlets
 
     @IBOutlet private weak var signInButton: UIButton!
-    @IBOutlet private weak var email_phoneTextField: UITextField!
+    @IBOutlet private weak var emailOrphoneTextField: UITextField!
     @IBOutlet private weak var continueButton: UIButton!
 
     // MARK: - Properties
 
     private let viewModel: RegisterViewModelType
 
+    // MARK: - initializer
+
     init(model: RegisterViewModelType) {
         self.viewModel = model
         super.init(nibName: nil, bundle: nil)
     }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         bindEmailOrphoneText()
         bindContinueButton()
         bindViewModel()
         bindSigninButton()
     }
+
 }
+
+// MARK: - Binding
 
 private extension RegisterViewController {
 
     func bindEmailOrphoneText() {
-        email_phoneTextField.addTarget(self, action: #selector(emailOrPhoneTextChanged), for: .editingChanged)
+        emailOrphoneTextField.addTarget(self, action: #selector(emailOrPhoneTextChanged), for: .editingChanged)
     }
 
     func bindContinueButton() {
@@ -57,7 +64,10 @@ private extension RegisterViewController {
             self?.continueButton.isEnabled = onEnabled
         }
     }
+
 }
+
+// MARK: - Actions
 
 private extension RegisterViewController {
 
@@ -71,7 +81,7 @@ private extension RegisterViewController {
             print("")
             // navigate to signin screen
         default:
-            guard let email = email_phoneTextField.text else { return }
+            guard let email = emailOrphoneTextField.text else { return }
             // navigate to verification screen
 
         }

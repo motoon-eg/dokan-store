@@ -12,7 +12,7 @@ class RegisterViewControllerTests: XCTestCase {
     // MARK: - Properties
 
     var sut: RegisterViewModel!
-    
+
     // MARK: - life cycle
 
     override func setUpWithError() throws {
@@ -24,7 +24,7 @@ class RegisterViewControllerTests: XCTestCase {
     }
 
     // MARK: - Tests
-    
+
     func testConfigureIsButtonEnabled_WhenEmailOrPhoneIsEmpty_ShouldBeDisabled() {
         // Given
         var isEnabled: Bool?
