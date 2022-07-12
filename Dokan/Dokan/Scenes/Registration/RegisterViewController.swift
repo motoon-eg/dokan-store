@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController {
 //
 private extension RegisterViewController {
 
-    func bindEmailOrphoneText() {
+    func bindEmailOrPhoneText() {
         email_phoneTextField.addTarget(self, action: #selector(emailOrPhoneTextChanged), for: .editingChanged)
     }
 
