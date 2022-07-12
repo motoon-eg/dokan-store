@@ -60,8 +60,8 @@ private extension RegisterViewController {
     }
 
     func bindViewModel() {
-        viewModel.ConfigureButtonEnabled { [weak self] onEnabled in
-            self?.continueButton.isEnabled = onEnabled
+        viewModel.ConfigureButtonEnabled { [weak self] isEnabled in
+            self?.continueButton.isEnabled = isEnabled
         }
     }
 }
