@@ -16,7 +16,7 @@ extension UIFont{
         return UIFont(name: "DMSans-Medium", size: 14)!
     }
     
-    class public var dokansmallButton: UIFont{
+    class public var dokanSmallButton: UIFont{
         return UIFont(name: "DMSans-Medium", size: 12)!
     }
 }
