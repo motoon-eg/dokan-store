@@ -17,7 +17,7 @@ extension UIButton {
         case filledRed
         case border
         case plainBlueProductTitle
-        case plainBlueSmallBtn
+        case plainBlueSmallButton
         case plainBlack
     }
     
@@ -33,7 +33,7 @@ extension UIButton {
             BorderStyle(buttonName)
         case .plainBlueProductTitle:
             plainBlueStyleProductTitle(buttonName)
-        case .plainBlueSmallBtn:
+        case .plainBlueSmallButton:
             plainBlueStylesmallButton(buttonName)
         case .plainBlack:
             plainBlackStyle(buttonName)
