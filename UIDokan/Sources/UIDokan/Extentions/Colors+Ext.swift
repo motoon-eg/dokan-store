@@ -32,5 +32,9 @@ extension UIColor{
     class public var halfGrey: UIColor {
         return UIColor(named: "Half Grey")!
     }
+    
+    class public var offGrey: UIColor {
+        return UIColor(named: "Off Grey")!
+    }
 
 }
