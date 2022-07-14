@@ -23,6 +23,9 @@ extension UITextField {
         rightViewMode = .always
         let heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute  , multiplier: 1, constant: 48)
         addConstraint(heightConstraint)
+        let paddingView = UIView(frame: CGRect(x: 0,y: 0,width: 20,height: self.frame.height))
+        leftView = paddingView
+        leftViewMode = .always
     }
-        
+    
 }
