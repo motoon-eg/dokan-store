@@ -73,14 +73,14 @@ extension UIStackView {
         case titleLabelAndBodyLabel
     }
     
-    public func applyStackViewStyle(_ style: stackViewStyle, labelTitle: String, placeholderOrBodyLabel: String) {
+    public func applyStackViewStyle(_ style: stackViewStyle, labelTitle: String, placeholderOrLabelBody: String) {
         switch style {
         case .labelAndTextField:
-            labelAndTextField(labelTitle, placeholderOrBodyLabel)
+            labelAndTextField(labelTitle, placeholderOrLabelBody)
         case .labelAndPasswordTextField:
-            labelAndPasswordTextField(labelTitle, placeholderOrBodyLabel)
+            labelAndPasswordTextField(labelTitle, placeholderOrLabelBody)
         case .titleLabelAndBodyLabel:
-            titleLabelAndBodyLabel(labelTitle, placeholderOrBodyLabel)
+            titleLabelAndBodyLabel(labelTitle, placeholderOrLabelBody)
         }
     }
 }
