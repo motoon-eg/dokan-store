@@ -8,6 +8,7 @@
 import XCTest
 @testable import Dokan
 
+
 class RegisterViewControllerTests: XCTestCase {
     // MARK: - Properties
 
