@@ -9,27 +9,27 @@ import UIKit
 
 extension UIColor{
 
-    class var blueOcean: UIColor {
+    class public var blueOcean: UIColor {
         return UIColor(named: "Blue Ocean")!
     }
 
-    class var orangeFresh: UIColor {
+    class public var orangeFresh: UIColor {
         return UIColor(named: "Orange Fresh")!
     }
 
-    class var navyBlack: UIColor {
+    class public var navyBlack: UIColor {
         return UIColor(named: "Navy Black")!
     }
 
-    class var pureWhite: UIColor {
+    class public var pureWhite: UIColor {
         return UIColor(named: "Pure White")!
     }
 
-    class var redVelvet: UIColor {
+    class public var redVelvet: UIColor {
         return UIColor(named: "Red Velvet")!
     }
 
-    class var halfGrey: UIColor {
+    class public var halfGrey: UIColor {
         return UIColor(named: "Half Grey")!
     }
 
