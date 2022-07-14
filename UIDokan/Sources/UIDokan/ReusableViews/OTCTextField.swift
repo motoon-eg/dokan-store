@@ -7,19 +7,19 @@
 
 import UIKit
 
-class OTCTextField: UITextField {
+public class OTCTextField: UITextField {
     
-    var didEnterLastDigit: ((String) -> Void)?
+    public var didEnterLastDigit: ((String) -> Void)?
     var defaultCharacter = "-"
     private var isConfigured = false
-    private var digitsLabels = [UILabel]()
+    private var digitsLabels: [UILabel] = []
     private lazy var tapRecognizer: UITapGestureRecognizer = {
         let recognizer = UITapGestureRecognizer()
         recognizer.addTarget(self, action: #selector(becomeFirstResponder))
         return recognizer
     }()
     
-    func configure(with slotCount: Int = 4) {
+    public func configure(with slotCount: Int = 4) {
         guard isConfigured == false else { return }
         isConfigured.toggle()
         configureTextField()
@@ -53,7 +53,6 @@ class OTCTextField: UITextField {
             label.translatesAutoresizingMaskIntoConstraints = false
             label.textAlignment = .center
             label.font = .systemFont(ofSize: 40)
-            label.isUserInteractionEnabled = true
             label.text = defaultCharacter
             stackView.addArrangedSubview(label)
             
@@ -80,16 +79,14 @@ class OTCTextField: UITextField {
             didEnterLastDigit?(text)
         }
     }
-    
 }
 
+// MARK: - UITextFieldDelegate
+//
 extension OTCTextField: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let charachterCount = textField.text?.count else { return false }
         return charachterCount < digitsLabels.count || string == ""
     }
 }
-
-
-
-
