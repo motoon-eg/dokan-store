@@ -21,7 +21,72 @@
                     <rect key="frame" x="20" y="64" width="374" height="1383"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-gD-2z3">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="1501"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="1058"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-ec-rsE" userLabel="SliderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="vFA-wY-lIi"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-mJ-zfW" userLabel="TitleView">
+                                    <rect key="frame" x="0.0" y="148" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="hjG-F1-rCl"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUV-ot-6hy" userLabel="SeparatorView">
+                                    <rect key="frame" x="0.0" y="296" width="374" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Ax5-cL-rIP"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-vx-s8d" userLabel="SellerView">
+                                    <rect key="frame" x="0.0" y="317" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="ISq-dd-bbb"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6U-sc-JgH" userLabel="SeparatorView">
+                                    <rect key="frame" x="0.0" y="465" width="374" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="epr-7K-bnm"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0z8-QI-qT0" userLabel="DescriptionView">
+                                    <rect key="frame" x="0.0" y="486" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="dQb-YF-jh9"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-ct-O8i" userLabel="ReviewsView">
+                                    <rect key="frame" x="0.0" y="634" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="cPa-9n-Hm8"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auT-ob-9ds" userLabel="FeaturedView">
+                                    <rect key="frame" x="0.0" y="782" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="hcM-eU-p4e"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqs-7W-PR8" userLabel="ButtonsView">
+                                    <rect key="frame" x="0.0" y="930" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="wMX-Bb-fpF"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
                         </stackView>
                     </subviews>
                     <constraints>
