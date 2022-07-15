@@ -12,11 +12,11 @@ import UIKit
 //
 public extension UIFont {
     
-    class var button: UIFont {
+    static var button: UIFont {
         return UIFont(name: "DMSans-Medium", size: 14)!
     }
     
-    class var smallButton: UIFont {
+    static var smallButton: UIFont {
         return UIFont(name: "DMSans-Medium", size: 12)!
     }
 }
@@ -26,31 +26,31 @@ public extension UIFont {
 //
 public extension UIFont {
     
-    class var title1: UIFont {
+    static var title1: UIFont {
         return UIFont(name: "DMSans-Bold", size: 26)!
     }
     
-    class var title2: UIFont {
+    static var title2: UIFont {
         return UIFont(name: "DMSans-Bold", size: 20)!
     }
     
-    class var title3: UIFont {
+    static var title3: UIFont {
         return UIFont(name: "DMSans-Medium", size: 18)!
     }
     
-    class var callOut: UIFont {
+    static var callOut: UIFont {
         return UIFont(name: "DMSans-Medium", size: 14)!
     }
     
-    class var footnote: UIFont {
+    static var footnote: UIFont {
         return UIFont(name: "DMSans-Bold", size: 12)!
     }
 
-    class var body: UIFont {
+    static var body: UIFont {
         return UIFont(name: "DMSans-Regular", size: 14)!
     }
 
-    class var caption1: UIFont {
+    static var caption1: UIFont {
         return UIFont(name: "DMSans-Regular", size: 10)!
     }
 }
@@ -59,7 +59,7 @@ public extension UIFont {
 //
 public extension UIFont {
     
-    class var textFeild: UIFont {
+    static var textFeild: UIFont {
         return UIFont(name: "DMSans-Medium", size: 14)!
     }
     

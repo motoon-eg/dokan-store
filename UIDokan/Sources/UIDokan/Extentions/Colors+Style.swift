@@ -9,31 +9,31 @@ import UIKit
 
 public extension UIColor {
 
-    class var blueOcean: UIColor {
+    static var blueOcean: UIColor {
         return UIColor(named: "Blue Ocean")!
     }
 
-    class var orangeFresh: UIColor {
+    static var orangeFresh: UIColor {
         return UIColor(named: "Orange Fresh")!
     }
 
-    class var navyBlack: UIColor {
+    static var navyBlack: UIColor {
         return UIColor(named: "Navy Black")!
     }
 
-    class var pureWhite: UIColor {
+    static var pureWhite: UIColor {
         return UIColor(named: "Pure White")!
     }
 
-    class var redVelvet: UIColor {
+    static var redVelvet: UIColor {
         return UIColor(named: "Red Velvet")!
     }
 
-    class var halfGrey: UIColor {
+    static var halfGrey: UIColor {
         return UIColor(named: "Half Grey")!
     }
     
-    class var offGrey: UIColor {
+    static var offGrey: UIColor {
         return UIColor(named: "Off Grey")!
     }
 
