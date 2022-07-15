@@ -139,12 +139,20 @@
 		AA57CB322881B22000FE62C8 /* ProductDetails */ = {
 			isa = PBXGroup;
 			children = (
+				AA57CB332881B50500FE62C8 /* Views */,
 				AA57CB2B2881B21800FE62C8 /* ProductDetailsViewController.swift */,
 				AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */,
 				AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */,
 				AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */,
 			);
 			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		AA57CB332881B50500FE62C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AA98C0742867EAB7004C5967 /* Internal */ = {
