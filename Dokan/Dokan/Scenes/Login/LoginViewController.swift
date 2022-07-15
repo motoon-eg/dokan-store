@@ -83,8 +83,6 @@ private extension LoginViewController {
     }
     
     @objc func signInWasTapped(){
-        guard let email = emailTextField.text else {return}
-        guard let password = passwordTextField.text else {return}
-        print(email,password)
+      
     }
 }
