@@ -11,11 +11,11 @@ class LoginViewController: UIViewController {
     
     // MARK: Outlets
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var forgotPasswordButton: UIButton!
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet private(set) weak var emailTextField: UITextField!
+    @IBOutlet private(set) weak var passwordTextField: UITextField!
+    @IBOutlet private(set) weak var signInButton: UIButton!
+    @IBOutlet private(set) weak var forgotPasswordButton: UIButton!
+    @IBOutlet private(set) weak var signUpButton: UIButton!
     
     // MARK: Properties
         
@@ -73,9 +73,7 @@ extension LoginViewController {
 private extension LoginViewController {
     
     @objc func textDidChange(_ sender: UITextField) {
-        guard let text = sender.text else { 
-            return
-        }
+        guard let text = sender.text else { return}
         
         if sender == emailTextField {
             viewModel.updateEmail(text)
