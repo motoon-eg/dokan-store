@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
-		99FDE87F287C573A00E09EB2 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FDE87E287C573A00E09EB2 /* Assets.swift */; };
-		99FDE881287C590000E09EB2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FDE880287C590000E09EB2 /* Colors.swift */; };
 		99FDE883287C594E00E09EB2 /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99FDE882287C594E00E09EB2 /* colors.txt */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
@@ -42,8 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		99FDE87E287C573A00E09EB2 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = SOURCE_ROOT; };
-		99FDE880287C590000E09EB2 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = SOURCE_ROOT; };
 		99FDE882287C594E00E09EB2 /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colors.txt; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,8 +118,6 @@
 				AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */,
 				AA21B44328537E0500E4F217 /* Info.plist */,
 				AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */,
-				99FDE87E287C573A00E09EB2 /* Assets.swift */,
-				99FDE880287C590000E09EB2 /* Colors.swift */,
 			);
 			path = Dokan;
 			sourceTree = "<group>";
@@ -367,12 +361,10 @@
 			files = (
 				E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */,
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
-				99FDE881287C590000E09EB2 /* Colors.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
 				E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */,
 				E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
-				99FDE87F287C573A00E09EB2 /* Assets.swift in Sources */,
 				AA98C0762867EAC0004C5967 /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
