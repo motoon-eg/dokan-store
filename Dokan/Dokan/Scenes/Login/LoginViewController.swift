@@ -82,7 +82,5 @@ private extension LoginViewController {
         }
     }
     
-    @objc func signInWasTapped(){
-      
-    }
+    @objc func signInWasTapped(){}
 }
