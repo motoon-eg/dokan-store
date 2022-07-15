@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let imageContent = Asset.comics.image
         let blueOceanColor = ColorName.blueOcean.color
+        
     }
 
 }
