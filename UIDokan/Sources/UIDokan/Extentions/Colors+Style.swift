@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Color+Style.swift
 //  
 //
 //  Created by ziad on 14/07/2022.
@@ -7,33 +7,33 @@
 
 import UIKit
 
-extension UIColor{
+public extension UIColor {
 
-    class public var blueOcean: UIColor {
+    class var blueOcean: UIColor {
         return UIColor(named: "Blue Ocean")!
     }
 
-    class public var orangeFresh: UIColor {
+    class var orangeFresh: UIColor {
         return UIColor(named: "Orange Fresh")!
     }
 
-    class public var navyBlack: UIColor {
+    class var navyBlack: UIColor {
         return UIColor(named: "Navy Black")!
     }
 
-    class public var pureWhite: UIColor {
+    class var pureWhite: UIColor {
         return UIColor(named: "Pure White")!
     }
 
-    class public var redVelvet: UIColor {
+    class var redVelvet: UIColor {
         return UIColor(named: "Red Velvet")!
     }
 
-    class public var halfGrey: UIColor {
+    class var halfGrey: UIColor {
         return UIColor(named: "Half Grey")!
     }
     
-    class public var offGrey: UIColor {
+    class var offGrey: UIColor {
         return UIColor(named: "Off Grey")!
     }
 
