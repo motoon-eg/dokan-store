@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
@@ -14,13 +15,21 @@
 		AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA21B43E28537E0500E4F217 /* Assets.xcassets */; };
 		AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */; };
 		AA4B15042853F4A500F1C3EF /* DokanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4B15032853F4A500F1C3EF /* DokanTests.swift */; };
+		AA57CB2E2881B21800FE62C8 /* ProductDetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */; };
+		AA57CB2F2881B21800FE62C8 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA57CB2B2881B21800FE62C8 /* ProductDetailsViewController.swift */; };
+		AA57CB302881B21800FE62C8 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */; };
+		AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */; };
+		AA98C0702867E660004C5967 /* DKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = AA98C06F2867E660004C5967 /* DKFoundation */; };
+		AA98C0762867EAC0004C5967 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98C0752867EAC0004C5967 /* Logging.swift */; };
 		AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */; };
 		AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E17F285CBFCA00EAD189 /* FirebaseAnalytics */; };
 		AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */; };
 		AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1BE285E1A3A00A4EBB0 /* Networking */; };
 		AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
-		AAE1A1C3285E1A4900A4EBB0 /* DKFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */; };
-		AAE1A1C4285E1A4900A4EBB0 /* DKFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04928784A050065C852 /* VerificationViewModelType.swift */; };
+		E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04A28784A050065C852 /* VerificationViewController.swift */; };
+		E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04B28784A050065C852 /* VerificationViewModel.swift */; };
+		E251D05028784A050065C852 /* VerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E251D04C28784A050065C852 /* VerificationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,20 +42,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		AAE1A1C5285E1A4900A4EBB0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				AAE1A1C4285E1A4900A4EBB0 /* DKFoundation.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,8 +53,17 @@
 		AA21B44328537E0500E4F217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA4B15012853F4A500F1C3EF /* DokanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DokanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4B15032853F4A500F1C3EF /* DokanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokanTests.swift; sourceTree = "<group>"; };
+		AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModelType.swift; sourceTree = "<group>"; };
+		AA57CB2B2881B21800FE62C8 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsViewController.xib; sourceTree = "<group>"; };
+		AA98C0752867EAC0004C5967 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E251D04928784A050065C852 /* VerificationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModelType.swift; sourceTree = "<group>"; };
+		E251D04A28784A050065C852 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		E251D04B28784A050065C852 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
+		E251D04C28784A050065C852 /* VerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +74,9 @@
 				AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */,
 				AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */,
 				AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */,
+				AA98C0702867E660004C5967 /* DKFoundation in Frameworks */,
 				AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */,
-				AAE1A1C3285E1A4900A4EBB0 /* DKFoundation.framework in Frameworks */,
+				437D1B1E2870F2C400B972BC /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,9 @@
 		AA21B43428537E0400E4F217 /* Dokan */ = {
 			isa = PBXGroup;
 			children = (
+				AA98C0742867EAB7004C5967 /* Internal */,
+				AAF5F1DA286F76F2002DA8ED /* Scenes */,
+				AAF5F1DB286F76FD002DA8ED /* System */,
 				AA21B43528537E0400E4F217 /* AppDelegate.swift */,
 				AA21B43728537E0400E4F217 /* SceneDelegate.swift */,
 				AA21B43928537E0400E4F217 /* ViewController.swift */,
@@ -122,9 +130,37 @@
 		AA4B15022853F4A500F1C3EF /* DokanTests */ = {
 			isa = PBXGroup;
 			children = (
+				AAF5F1DC286F770C002DA8ED /* Scenes */,
 				AA4B15032853F4A500F1C3EF /* DokanTests.swift */,
 			);
 			path = DokanTests;
+			sourceTree = "<group>";
+		};
+		AA57CB322881B22000FE62C8 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AA57CB332881B50500FE62C8 /* Views */,
+				AA57CB2B2881B21800FE62C8 /* ProductDetailsViewController.swift */,
+				AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */,
+				AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */,
+				AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		AA57CB332881B50500FE62C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA98C0742867EAB7004C5967 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				AA98C0752867EAC0004C5967 /* Logging.swift */,
+			);
+			path = Internal;
 			sourceTree = "<group>";
 		};
 		AAE1A1BD285E1A3A00A4EBB0 /* Frameworks */ = {
@@ -133,6 +169,40 @@
 				AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAF5F1DA286F76F2002DA8ED /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E2156C24287342F000A92325 /* Verification */,
+				AA57CB322881B22000FE62C8 /* ProductDetails */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AAF5F1DB286F76FD002DA8ED /* System */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		AAF5F1DC286F770C002DA8ED /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E2156C24287342F000A92325 /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				E251D04928784A050065C852 /* VerificationViewModelType.swift */,
+				E251D04A28784A050065C852 /* VerificationViewController.swift */,
+				E251D04B28784A050065C852 /* VerificationViewModel.swift */,
+				E251D04C28784A050065C852 /* VerificationViewController.xib */,
+			);
+			path = Verification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +216,7 @@
 				AA21B42F28537E0400E4F217 /* Frameworks */,
 				AA21B43028537E0400E4F217 /* Resources */,
 				AAA2E183285CC0BB00EAD189 /* Crashlytics */,
-				AAE1A1C5285E1A4900A4EBB0 /* Embed Frameworks */,
+				E2F3F6C6285E53B600343A78 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -158,6 +228,8 @@
 				AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */,
 				AAE1A1BE285E1A3A00A4EBB0 /* Networking */,
 				AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */,
+				AA98C06F2867E660004C5967 /* DKFoundation */,
+				437D1B1D2870F2C400B972BC /* Core */,
 			);
 			productName = Dokan;
 			productReference = AA21B43228537E0400E4F217 /* Dokan.app */;
@@ -177,6 +249,8 @@
 				AA4B15062853F4A500F1C3EF /* PBXTargetDependency */,
 			);
 			name = DokanTests;
+			packageProductDependencies = (
+			);
 			productName = DokanTests;
 			productReference = AA4B15012853F4A500F1C3EF /* DokanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -227,9 +301,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E251D05028784A050065C852 /* VerificationViewController.xib in Resources */,
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
+				AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +340,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
+		E2F3F6C6285E53B600343A78 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nCONFIG_FILE=\"${SRCROOT}/../.swiftlint.yml\"\nif which swiftlint > /dev/null; then\n  swiftlint --config $CONFIG_FILE\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -271,9 +365,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */,
+				AA57CB302881B21800FE62C8 /* ProductDetailsViewModel.swift in Sources */,
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
+				AA57CB2E2881B21800FE62C8 /* ProductDetailsViewModelType.swift in Sources */,
+				E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */,
+				E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */,
+				AA57CB2F2881B21800FE62C8 /* ProductDetailsViewController.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
+				AA98C0762867EAC0004C5967 /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +672,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		437D1B1D2870F2C400B972BC /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		AA98C06F2867E660004C5967 /* DKFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DKFoundation;
+		};
 		AAA2E17F285CBFCA00EAD189 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AAA2E17E285CBFCA00EAD189 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

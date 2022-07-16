@@ -2,13 +2,22 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Domain">
+   </FileRef>
+   <FileRef
+      location = "group:Core">
+   </FileRef>
+   <FileRef
+      location = "group:Logger">
+   </FileRef>
+   <FileRef
+      location = "group:DKFoundation">
+   </FileRef>
+   <FileRef
       location = "group:UIDokan">
    </FileRef>
    <FileRef
       location = "group:Networking">
-   </FileRef>
-   <FileRef
-      location = "group:DKFoundation/DKFoundation.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Dokan/Dokan.xcodeproj">

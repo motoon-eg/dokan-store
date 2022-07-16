@@ -35,7 +35,8 @@ timeline.xctimeline
 playground.xcworkspace
 
 # Swift Package Manager
-#
+*.resolved
+
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
 # Package.pins
@@ -88,3 +89,7 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+# System files
+
+.DS_Store
