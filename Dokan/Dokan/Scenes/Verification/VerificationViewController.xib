@@ -59,6 +59,9 @@
                                     <rect key="frame" x="260.66666666666669" y="0.0" width="116.66666666666669" height="31"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Re-send Code"/>
+                                    <connections>
+                                        <action selector="resendVerificationCode:" destination="-1" eventType="touchUpInside" id="hNt-mK-SGR"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -82,6 +85,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <connections>
+                        <action selector="confirmVerificationCode:" destination="-1" eventType="touchUpInside" id="qPF-cc-is6"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
