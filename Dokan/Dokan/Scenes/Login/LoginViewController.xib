@@ -126,6 +126,7 @@ Dokan</string>
                             <constraints>
                                 <constraint firstItem="djn-Ts-LA2" firstAttribute="top" secondItem="669-Sm-Ep0" secondAttribute="top" id="5uP-xq-ZAa"/>
                                 <constraint firstAttribute="trailing" secondItem="djn-Ts-LA2" secondAttribute="trailing" id="Ela-gb-37A"/>
+                                <constraint firstItem="73V-a4-E4U" firstAttribute="width" secondItem="669-Sm-Ep0" secondAttribute="width" id="Fkt-md-69T"/>
                                 <constraint firstItem="djn-Ts-LA2" firstAttribute="leading" secondItem="669-Sm-Ep0" secondAttribute="leading" id="cOR-y7-g38"/>
                                 <constraint firstAttribute="bottom" secondItem="djn-Ts-LA2" secondAttribute="bottom" id="vQz-u7-Zq9"/>
                             </constraints>
