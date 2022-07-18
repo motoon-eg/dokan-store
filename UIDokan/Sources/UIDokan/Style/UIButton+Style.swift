@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 
+// MARK: - Style Helper
+//
 extension UIButton {
     
     public enum buttonStyle {
@@ -42,10 +44,10 @@ extension UIButton {
 }
 
 
-
+// MARK: - Filled Buttons style
+//
 extension UIButton {
     
-    // MARK: - Filled Buttons style
     private func filledPrimaryStyle(_ buttonTitle: String) {
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20 ) // ProductTitle_Btn_TF.font
         tintColor = UIColor.white// pureWhite.color
@@ -71,8 +73,12 @@ extension UIButton {
         backgroundColor = UIColor.red // redVelvet.color
         contentHorizontalAlignment = .left
     }
-    
-    //  MARK: - plain Buttons style
+}
+
+
+// MARK: - plain Buttons style
+//
+extension UIButton {
     
     private func plainStyle(_ buttonTitle: String) {
         backgroundColor = .clear
@@ -101,8 +107,12 @@ extension UIButton {
         tintColor = UIColor.black // navyBlack.color
         contentHorizontalAlignment = .right
     }
-    
-    //  MARK: - Border Buttons style
+}
+
+
+//  MARK: - Border Buttons style
+//
+extension UIButton {
     
     private func BorderStyle(_ buttonTitle: String) {
         backgroundColor = .clear

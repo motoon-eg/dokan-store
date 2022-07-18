@@ -9,27 +9,23 @@ import Foundation
 import UIKit
 
 
-let textField: UITextField = {
-    let content = UITextField()
-    content.translatesAutoresizingMaskIntoConstraints = false
-    return content
-}()
-
-let titleLabel: UILabel = {
-    let content = UILabel()
-    content.translatesAutoresizingMaskIntoConstraints = false
-    return content
-}()
-
-let bodyLabel: UILabel = {
-    let content = UILabel()
-    content.translatesAutoresizingMaskIntoConstraints = false
-    return content
-}()
-
 extension UIStackView {
     
+    private func addLabel() -> UILabel {
+        let content = UILabel()
+        content.translatesAutoresizingMaskIntoConstraints = false
+        return content
+    }
+    
+    private func addTextField() -> UITextField {
+        let content = UITextField()
+        content.translatesAutoresizingMaskIntoConstraints = false
+        return content
+    }
+    
     private func labelAndTextField(_ labelName: String, _ placeholder: String) {
+        let titleLabel: UILabel = addLabel()
+        let textField: UITextField = addTextField()
         
         addSubview(titleLabel)
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
@@ -46,10 +42,13 @@ extension UIStackView {
     
     private func labelAndPasswordTextField(_ labelName: String, _ placeholder: String) {
         labelAndTextField(labelName, placeholder)
-        textField.eye()
+        addTextField().addPasswordToggle()
     }
     
     private func titleLabelAndBodyLabel(_ title: String, _ body: String) {
+        let titleLabel: UILabel = addLabel()
+        let bodyLabel: UILabel = addLabel()
+        
         addSubview(titleLabel)
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
@@ -65,6 +64,9 @@ extension UIStackView {
     }
 }
 
+
+// MARK: - Style Helper
+//
 extension UIStackView {
     
     public enum stackViewStyle {
