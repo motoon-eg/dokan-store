@@ -12,6 +12,7 @@
 		85B31DBC2870BEDE00B1C9E8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */; };
 		85B31DBD2870BEDE00B1C9E8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */; };
 		85B31DC02870BF4300B1C9E8 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */; };
+		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
@@ -19,6 +20,10 @@
 		AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA21B43E28537E0500E4F217 /* Assets.xcassets */; };
 		AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */; };
 		AA4B15042853F4A500F1C3EF /* DokanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4B15032853F4A500F1C3EF /* DokanTests.swift */; };
+		AA57CB2E2881B21800FE62C8 /* ProductDetailsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */; };
+		AA57CB2F2881B21800FE62C8 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA57CB2B2881B21800FE62C8 /* ProductDetailsViewController.swift */; };
+		AA57CB302881B21800FE62C8 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */; };
+		AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */; };
 		AA98C0702867E660004C5967 /* DKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = AA98C06F2867E660004C5967 /* DKFoundation */; };
 		AA98C0762867EAC0004C5967 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98C0752867EAC0004C5967 /* Logging.swift */; };
 		AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */; };
@@ -26,6 +31,10 @@
 		AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */; };
 		AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1BE285E1A3A00A4EBB0 /* Networking */; };
 		AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
+		E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04928784A050065C852 /* VerificationViewModelType.swift */; };
+		E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04A28784A050065C852 /* VerificationViewController.swift */; };
+		E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04B28784A050065C852 /* VerificationViewModel.swift */; };
+		E251D05028784A050065C852 /* VerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E251D04C28784A050065C852 /* VerificationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +63,17 @@
 		AA21B44328537E0500E4F217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA4B15012853F4A500F1C3EF /* DokanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DokanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4B15032853F4A500F1C3EF /* DokanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokanTests.swift; sourceTree = "<group>"; };
+		AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModelType.swift; sourceTree = "<group>"; };
+		AA57CB2B2881B21800FE62C8 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsViewController.xib; sourceTree = "<group>"; };
 		AA98C0752867EAC0004C5967 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E251D04928784A050065C852 /* VerificationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModelType.swift; sourceTree = "<group>"; };
+		E251D04A28784A050065C852 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		E251D04B28784A050065C852 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
+		E251D04C28784A050065C852 /* VerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +86,7 @@
 				AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */,
 				AA98C0702867E660004C5967 /* DKFoundation in Frameworks */,
 				AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */,
+				437D1B1E2870F2C400B972BC /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +165,25 @@
 			path = DokanTests;
 			sourceTree = "<group>";
 		};
+		AA57CB322881B22000FE62C8 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AA57CB332881B50500FE62C8 /* Views */,
+				AA57CB2B2881B21800FE62C8 /* ProductDetailsViewController.swift */,
+				AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */,
+				AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */,
+				AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		AA57CB332881B50500FE62C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AA98C0742867EAB7004C5967 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				85B31DAD2870BD4700B1C9E8 /* Login */,
+				E2156C24287342F000A92325 /* Verification */,
+				AA57CB322881B22000FE62C8 /* ProductDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -184,6 +223,17 @@
 				85B31DBE2870BF3500B1C9E8 /* Login */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E2156C24287342F000A92325 /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				E251D04928784A050065C852 /* VerificationViewModelType.swift */,
+				E251D04A28784A050065C852 /* VerificationViewController.swift */,
+				E251D04B28784A050065C852 /* VerificationViewModel.swift */,
+				E251D04C28784A050065C852 /* VerificationViewController.xib */,
+			);
+			path = Verification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +260,7 @@
 				AAE1A1BE285E1A3A00A4EBB0 /* Networking */,
 				AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */,
 				AA98C06F2867E660004C5967 /* DKFoundation */,
+				437D1B1D2870F2C400B972BC /* Core */,
 			);
 			productName = Dokan;
 			productReference = AA21B43228537E0400E4F217 /* Dokan.app */;
@@ -282,9 +333,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				85B31DBD2870BEDE00B1C9E8 /* LoginViewController.xib in Resources */,
+				E251D05028784A050065C852 /* VerificationViewController.xib in Resources */,
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
+				AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,8 +399,14 @@
 			files = (
 				85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */,
 				85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */,
+				E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */,
+				AA57CB302881B21800FE62C8 /* ProductDetailsViewModel.swift in Sources */,
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
+				AA57CB2E2881B21800FE62C8 /* ProductDetailsViewModelType.swift in Sources */,
+				E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */,
+				E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */,
+				AA57CB2F2881B21800FE62C8 /* ProductDetailsViewController.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
 				AA98C0762867EAC0004C5967 /* Logging.swift in Sources */,
 				85B31DBC2870BEDE00B1C9E8 /* LoginViewModel.swift in Sources */,
@@ -649,6 +708,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		437D1B1D2870F2C400B972BC /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
 		AA98C06F2867E660004C5967 /* DKFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DKFoundation;
