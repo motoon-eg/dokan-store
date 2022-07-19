@@ -9,9 +9,7 @@ import Foundation
 
 // MARK: ProductDetailsViewModel
 //
-class ProductDetailsViewModel {
-  
-}
+class ProductDetailsViewModel {}
 
 // MARK: ProductDetailsViewModel
 

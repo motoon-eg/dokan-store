@@ -8,8 +8,7 @@
 import UIKit
 import UIDokan
 
-class VerificationViewController: UIViewController {
-    
+class VerificationViewController: UIViewController{
     // MARK: Outlets
     @IBOutlet weak var codeTextField: OTCTextField!
     
@@ -35,17 +34,15 @@ class VerificationViewController: UIViewController {
             // TODO: - Handle the textField upon being filled
         }
     }
-    //MARK: - Actions
-    
+    // MARK: -   Actions
+
     @IBAction func resendVerificationCode(_ sender: Any) {
         // send verification code again to user
     }
-    
     @IBAction func confirmVerificationCode(_ sender: Any) {
         // show error message if code number wrong
         // navigate to home page if right code number
     }
-    
 }
 
 
@@ -60,5 +57,4 @@ extension VerificationViewController {
 // MARK: - Private Handlers
 //
 private extension VerificationViewController {
-    
 }
