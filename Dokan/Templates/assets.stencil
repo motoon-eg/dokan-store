@@ -1,0 +1,11 @@
+import UIKit.UIImage
+
+typealias Assets = UIImage
+
+// MARK: - Assets
+
+extension Assets {
+  {% for image in catalogs.first.assets %}
+    static let {{image.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = Assets(named: "{{ image.name }}")!
+  {% endfor %}
+}

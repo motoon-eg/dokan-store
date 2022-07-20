@@ -1,0 +1,11 @@
+import UIKit.UIColor
+
+typealias Color = UIColor
+
+// MARK: - Colors
+
+extension Color {
+    {% for color in catalogs.first.assets %}
+      static let {{color.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = Color(named: "{{ color.name }}")!
+    {% endfor %}
+  }

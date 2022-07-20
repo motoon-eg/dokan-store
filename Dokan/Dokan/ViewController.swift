@@ -12,8 +12,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let imageContent = Asset.comics.image
-        let blueOceanColor = ColorName.blueOcean.color
         
     }
 

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
-		99FDE883287C594E00E09EB2 /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99FDE882287C594E00E09EB2 /* colors.txt */; };
+		99091F1128884651000FA9C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99091F1028884651000FA9C9 /* Colors.xcassets */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		99FDE882287C594E00E09EB2 /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colors.txt; sourceTree = "<group>"; };
+		99091F1028884651000FA9C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA21B43728537E0400E4F217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				AA21B43728537E0400E4F217 /* SceneDelegate.swift */,
 				AA21B43928537E0400E4F217 /* ViewController.swift */,
 				AA21B43B28537E0400E4F217 /* Main.storyboard */,
-				99FDE882287C594E00E09EB2 /* colors.txt */,
+				99091F1028884651000FA9C9 /* Colors.xcassets */,
 				AA21B43E28537E0500E4F217 /* Assets.xcassets */,
 				AA21B44028537E0500E4F217 /* LaunchScreen.storyboard */,
 				AA21B44328537E0500E4F217 /* Info.plist */,
@@ -277,12 +277,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99FDE883287C594E00E09EB2 /* colors.txt in Resources */,
 				E251D05028784A050065C852 /* VerificationViewController.xib in Resources */,
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
+				99091F1128884651000FA9C9 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

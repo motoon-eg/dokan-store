@@ -1,10 +1,16 @@
+input_dir: Dokan/
+output_dir: ../UIDokan/Sources/UIDokan/Extentions/
+
 xcassets:
-  inputs: Dokan/
+  - inputs:
+      - Assets.xcassets
+    outputs:
+      - templatePath: Templates/assets.stencil
+        output: Images+Style.swift
+
+xcassets:
+  inputs:
+    - Colors.xcassets
   outputs:
-    templateName: swift5
-    output: Assets.swift
-colors:
-  inputs: Dokan/colors.txt
-  outputs:
-    templateName: swift5
-    output: Colors.swift
+    - templatePath: Templates/colors.stencil
+      output: Colors+Style.swift
