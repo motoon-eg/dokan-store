@@ -21,77 +21,70 @@ extension UILabel {
         case coverTitle
     }
     
-    public func applyLabelStyle(_ style:labelStyle, labelInfo: String) {
+    public func applyLabelStyle(_ style:labelStyle) {
         switch style {
         case .title:
-            titleLabel(labelInfo)
+            titleLabel()
         case .body:
-            bodyLabel(labelInfo)
+            bodyLabel()
         case .textFieldTitle:
-            textFieldTitleLabel(labelInfo)
+            textFieldTitleLabel()
         case .categoriesTitle:
-            categoriesTitleLabel(labelInfo)
+            categoriesTitleLabel()
         case .productTitle:
-            productPriceLabel(labelInfo)
+            productPriceLabel()
         case .productPrice:
-            productPriceLabel(labelInfo)
+            productPriceLabel()
         case .reviews:
-            reviewsLabel(labelInfo)
+            reviewsLabel()
         case .coverTitle:
-            coverTitleLabel(labelInfo)
+            coverTitleLabel()
         }
     }
 }
 
 extension UILabel{
     
-    private func titleLabel(_ title: String) {
+    private func titleLabel() {
         textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20 ) // RegisterTitle.font
-        text = title
+        font = UIFont(name: UIFont.familyNames[0], size: 20) // RegisterTitle.font
     }
     
-    private func bodyLabel(_ body: String) {
+    private func bodyLabel() {
         textColor = UIColor.darkGray // darkGrey.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20 ) // Body.font
-        text = body
+        font = UIFont(name: UIFont.familyNames[0], size: 20) // Body.font
     }
     
-    private func textFieldTitleLabel(_ textFieldTitle: String) {
+    private func textFieldTitleLabel() {
         textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20 )// Body.font
-        text = textFieldTitle
-        let heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute  , multiplier: 1, constant: 48)
-        addConstraint(heightConstraint)
+        font = UIFont(name: UIFont.familyNames[0], size: 20)// Body.font
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(equalToConstant: 48)
+        ])
     }
     
-    private func categoriesTitleLabel(_ categoriesTitle: String) {
+    private func categoriesTitleLabel() {
         textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20 ) // CategoriesTitle.font
-        text = categoriesTitle
+        font = UIFont(name: UIFont.familyNames[0], size: 20) // CategoriesTitle.font
     }
     
-    private func productTitleLabel(_ productTitle: String) {
+    private func productTitleLabel() {
         textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20 ) // ProductTitle_Btn_TF.font
-        text = productTitle
+        font = UIFont(name: UIFont.familyNames[0], size: 20) // ProductTitle_Btn_TF.font
     }
     
-    private func productPriceLabel(_ productPrice: String) {
+    private func productPriceLabel() {
         textColor = UIColor.red // redVelvet.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20 ) // ProductPrice.font
-        text = productPrice
+        font = UIFont(name: UIFont.familyNames[0], size: 20) // ProductPrice.font
     }
     
-    private func reviewsLabel(_ reviews: String) {
+    private func reviewsLabel() {
         textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20 ) // Reviews.font
-        text = reviews
+        font = UIFont(name: UIFont.familyNames[0], size: 20) // Reviews.font
     }
     
-    private func coverTitleLabel(_ coverTitle: String) {
+    private func coverTitleLabel() {
         textColor = UIColor.white // pureWhite.color
         font = UIFont(name: UIFont.familyNames[0], size: 20 ) // CoverTitle.font
-        text = coverTitle
     }
 }

@@ -13,16 +13,13 @@ extension UITextField {
     
     public func textFieldStyle(_ placeHolder: String) {
         backgroundColor = UIColor.lightGray // offGrey.color
-        layer.cornerRadius = 10
+        layer.cornerRadius = 12
         layer.masksToBounds = true
         textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20 ) // ProductTitle_Btn_TF.font
-        let placeHolderText = placeHolder
-        let str = NSAttributedString(string:placeHolderText, attributes: [NSAttributedString.Key.foregroundColor :UIColor.darkGray /*halfGrey.color*/,  NSAttributedString.Key.font : UIFont(name: UIFont.familyNames[0], size: 20 )])
-        attributedPlaceholder = str
-        rightViewMode = .always
-        let heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute  , multiplier: 1, constant: 48)
-        addConstraint(heightConstraint)
+        font = UIFont(name: UIFont.familyNames[0], size: 20) // ProductTitle_Btn_TF.font
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(equalToConstant: 48)
+        ])
         let paddingView = UIView(frame: CGRect(x: 0,y: 0,width: 20,height: self.frame.height))
         leftView = paddingView
         leftViewMode = .always
