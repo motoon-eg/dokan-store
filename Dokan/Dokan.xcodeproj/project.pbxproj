@@ -127,6 +127,7 @@
 				85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */,
 			);
 			path = Login;
+		};
 		273F1DE32874A4A4006485D6 /* Registratio9nTest */ = {
 			isa = PBXGroup;
 			children = (
