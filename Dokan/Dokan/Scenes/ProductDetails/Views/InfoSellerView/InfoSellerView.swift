@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import UIDokan
 
 class InfoSellerView: UIView {
-
+    
+    @IBOutlet var contentView: UIView!
+    
     @IBOutlet weak var sellerImageProfile: UIImageView!
     
     @IBOutlet weak var sellerName: UILabel!
@@ -19,44 +22,19 @@ class InfoSellerView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        commonInit()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        commonInit()
     }
     
     private func commonInit(){
-        let viewFromXib = Bundle.main.loadNibNamed("InfoSellerView", owner: self, options: nil)![0] as! UIView
-        addSubview(viewFromXib)
-        viewFromXib.frame = self.bounds
-        viewFromXib.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        sellerType.addTrailing(image: UIImage(systemName: "cart")!, text: sellerType.text!)
-    }
-}
-
-extension UILabel {
-    
-    func addTrailing(image: UIImage, text:String) {
-        let attachment = NSTextAttachment()
-        attachment.image = image
-
-        let attachmentString = NSAttributedString(attachment: attachment)
-        let string = NSMutableAttributedString(string: text, attributes: [:])
-
-        string.append(attachmentString)
-        self.attributedText = string
-    }
-    
-    func addLeading(image: UIImage, text:String) {
-        let attachment = NSTextAttachment()
-        attachment.image = image
-
-        let attachmentString = NSAttributedString(attachment: attachment)
-        let mutableAttributedString = NSMutableAttributedString()
-        mutableAttributedString.append(attachmentString)
-        
-        let string = NSMutableAttributedString(string: text, attributes: [:])
-        mutableAttributedString.append(string)
-        self.attributedText = mutableAttributedString
+        Bundle.main.loadNibNamed("InfoSellerView", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        sellerType.addTrailing(image: UIImage(named: "verified")!, text: sellerType.text! + " ")
     }
 }
