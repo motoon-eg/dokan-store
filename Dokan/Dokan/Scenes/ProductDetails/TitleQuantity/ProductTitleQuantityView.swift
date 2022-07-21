@@ -47,6 +47,12 @@ class ProductTitleQuantityView: UIView {
     // MARK: Configuration
     
     func passProductDetailsDataToView(productDetailsData: ProductDetails) {
+        self.productTitle.text = productDetailsData.productTitle
+        self.productCurrency.text = productDetailsData.productCurrency
+        self.productPrice.text = productDetailsData.productPrice
+        self.productReviewAverage.text = "\(productDetailsData.productReviewAverage)"
+        self.productReviewCount.text = "\(productDetailsData.productReviewCount)"
+        self.productStockCount.text = "\(productDetailsData.productStockCount)"
     }
 }
 
@@ -55,6 +61,6 @@ struct ProductDetails {
     var productCurrency: String
     var productPrice: String
     var productReviewAverage: Double
-    var productReviewCount: String
+    var productReviewCount: Int
     var productStockCount: Int
 }
