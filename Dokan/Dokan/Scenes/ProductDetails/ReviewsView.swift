@@ -24,7 +24,7 @@ class ReviewsView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
    // func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
- //       guard let cell = tableView.dequeueReusableCell(withIdentifier: " ") else { return // } ?? <#default value#> //as! // asm el class bta3 el cell
+ //       guard let cell = tableView.dequeueReusableCell(withIdentifier: " ") else { return // } 
       
     //    return cell
   //  }
