@@ -10,13 +10,15 @@ import UIKit
 class ProductDetailsViewController: UIViewController {
     
     // MARK: Outlets
-
+    @IBOutlet weak private var descriptionTextView: UITextView!
+    
+    @IBOutlet weak private var descriptionTextViewHeightConstraint: NSLayoutConstraint!
+    
+    
     // MARK: Properties
-        
     private let viewModel: ProductDetailsViewModelType
 
     // MARK: Init
-        
     init(viewModel: ProductDetailsViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -27,25 +29,26 @@ class ProductDetailsViewController: UIViewController {
     }
 
     // MARK: Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-}
-
-// MARK: - Actions
-//
-extension ProductDetailsViewController {
     
+    // MARK: - Actions
+    //
+    @IBAction func seeMoreButtonPressed(_ sender: UIButton) {
+        
+    }
+
 }
 
 // MARK: - Configurations
 //
 extension ProductDetailsViewController {
-    
+
 }
 
 // MARK: - Private Handlers
 //
 private extension ProductDetailsViewController {
+    
 }
