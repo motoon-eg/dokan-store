@@ -7,49 +7,34 @@
 
 import UIKit
 
-extension UIViewController{
-    var badge: UIView {
-        return UIView(frame: CGRect(x: 0, y: 0, width: 4, height: 4))
-    }
-
-    func config(headTitle: String,isfirstButtonHidden: Bool,isCartButtonHidden: Bool,firstButtonName: String,cartButtonName: String = "cart",action: Selector){
-        let shareButton = UIBarButtonItem(image: UIImage(systemName: firstButtonName), style: .plain, target: self, action: action)
-        let cartButton = UIBarButtonItem()
+public extension UIViewController{
+    
+    func configureNavigationBar(headTitle: String,
+                isfirstButtonHidden: Bool,
+                isSecondButtonHidden: Bool,
+                firstButtonName: String,
+                secondButtonName: String,
+                firstAction: Selector? = nil,
+                secondAction: Selector? = nil) {
+        
+        let first = UIImage(named: firstButtonName)?.withRenderingMode(.alwaysOriginal)
+        let second = UIImage(named: secondButtonName)?.withRenderingMode(.alwaysOriginal)
+        
+        let firstButton = UIBarButtonItem(image: first, style: .plain, target: self, action: firstAction)
+        let secondButton = UIBarButtonItem(image: second, style: .plain, target: self, action: secondAction)
         let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        
-        badge.translatesAutoresizingMaskIntoConstraints = false
-        badge.layer.cornerRadius = 4
-        badge.layer.masksToBounds = true
-        badge.backgroundColor = .red
-        let btnName = UIButton()
-        btnName.setImage(UIImage(systemName: cartButtonName), for: .normal)
-        btnName.frame = CGRect(x: 0, y: 0, width: 30, height: 55)
-        btnName.addSubview(badge)
-        btnName.contentHorizontalAlignment = .center
-        
-        NSLayoutConstraint.activate([
-            badge.leftAnchor.constraint(equalTo: btnName.leftAnchor, constant: 18),
-            badge.topAnchor.constraint(equalTo: btnName.topAnchor, constant: 12),
-            badge.widthAnchor.constraint(equalToConstant: 10),
-            badge.heightAnchor.constraint(equalToConstant: 10),
-            
-            btnName.widthAnchor.constraint(equalToConstant: 30),
-            btnName.heightAnchor.constraint(equalToConstant: 55),
-        ])
-        
-        cartButton.customView = btnName
         
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
-        if !isfirstButtonHidden && !isCartButtonHidden {
-            navigationItem.rightBarButtonItems = [cartButton,shareButton]
+        if !isfirstButtonHidden && !isSecondButtonHidden {
+            navigationItem.rightBarButtonItems = [secondButton,firstButton]
         }else if isfirstButtonHidden {
-            navigationItem.rightBarButtonItem = cartButton
-        }else if isCartButtonHidden {
-            navigationItem.rightBarButtonItem = shareButton
+            navigationItem.rightBarButtonItem = secondButton
+        }else if isSecondButtonHidden {
+            navigationItem.rightBarButtonItem = firstButton
         }
         
-        title = "Road"
+        title = headTitle
     }
 }
 
