@@ -6,25 +6,28 @@
 //
 
 import UIKit
+import Domain
 
-class SliderCollectionViewCell: UICollectionViewCell {
+class SliderCollectionViewCell: UICollectionViewCell, NibLoadableView, ReusableView {
 
     // MARK: - Outlet
-    
+
     @IBOutlet weak var productPicture: UIImageView!
     @IBOutlet weak var noOfCurrentPicture: UILabel!
     @IBOutlet weak var noOfPicture: UILabel!
-    
-    
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
     }
-    
+
  // MARK: - Configurations
 
-    private func configureProductPicture(image:UIImage){
+    private func configureProductPicture(image: UIImage, currentPictureNumber: Int) {
         productPicture.image = image
+        noOfCurrentPicture.text="\(currentPictureNumber)"
+
     }
 
 }
