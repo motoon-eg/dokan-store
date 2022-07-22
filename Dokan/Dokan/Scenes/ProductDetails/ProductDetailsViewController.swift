@@ -31,7 +31,10 @@ class ProductDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTable()
     }
+    
     func setupTable() {
         productSliderCollectionView.register(SliderCollectionViewCell.self)
 
@@ -56,8 +59,9 @@ extension ProductDetailsViewController {
 //
 private extension ProductDetailsViewController {
 }
+// UICollectionViewDelegate & UICollectionViewDatasource
 
-extension ProductDetailsViewController: UICollectionViewDataSource {
+extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         5
     }
@@ -78,6 +82,4 @@ extension ProductDetailsViewController: UICollectionViewDataSource {
 }
 
 
-extension ProductDetailsViewController: UICollectionViewDelegate {
 
-}
