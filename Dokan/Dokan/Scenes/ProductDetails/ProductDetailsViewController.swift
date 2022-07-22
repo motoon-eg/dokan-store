@@ -11,6 +11,7 @@ class ProductDetailsViewController: UIViewController {
     
     // MARK: Outlets
 
+    @IBOutlet weak var InfoSellerView: InfoSellerView!
     // MARK: Properties
         
     private let viewModel: ProductDetailsViewModelType
@@ -43,9 +44,14 @@ extension ProductDetailsViewController {
 //
 extension ProductDetailsViewController {
     
+    func configureInfoSellerNavButton(){
+        InfoSellerView.sellerNavigationButton.addTarget(self, action: #selector(infoSellerWasTapped), for: .touchUpInside)
+    }
+    
 }
 
 // MARK: - Private Handlers
 //
 private extension ProductDetailsViewController {
+    @objc func infoSellerWasTapped(){}
 }
