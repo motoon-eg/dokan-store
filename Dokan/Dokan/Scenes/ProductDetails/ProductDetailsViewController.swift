@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIDokan
 
 class ProductDetailsViewController: UIViewController {
     
@@ -30,6 +31,7 @@ class ProductDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavBar()
     }
 }
 
@@ -42,10 +44,15 @@ extension ProductDetailsViewController {
 // MARK: - Configurations
 //
 extension ProductDetailsViewController {
-    
+    func configureNavBar(){
+        configureNavigationBar(headTitle: "Product Details", isfirstButtonHidden: false, isSecondButtonHidden: false, firstButtonName: "redo", secondButtonName: "shopping-cart-badge", firstAction: #selector(redoWasTapped), secondAction: #selector(cartWasTapped))
+    }
 }
 
 // MARK: - Private Handlers
 //
 private extension ProductDetailsViewController {
+    @objc func redoWasTapped(){}
+    
+    @objc func cartWasTapped(){}
 }
