@@ -1,11 +1,12 @@
 import UIKit.UIImage
 
-typealias Assets = UIImage
+// this is automatic generated file please don't edit it 🔫
+// MARK: - Images
 
-// MARK: - Assets
-
-extension Assets {
+extension UIImage {
   {% for image in catalogs.first.assets %}
-    static let {{image.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = Assets(named: "{{ image.name }}")!
+    static var {{image.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} : UIImage {
+      UIImage(named: "{{ image.name }}")!
+    }
   {% endfor %}
 }

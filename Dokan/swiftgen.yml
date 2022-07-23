@@ -6,11 +6,17 @@ xcassets:
       - Assets.xcassets
     outputs:
       - templatePath: Templates/assets.stencil
-        output: Images+Style.swift
+        output: UIImage.Generated.swift
+  - inputs:
+      - Colors.xcassets
+    outputs:
+      - templatePath: Templates/colors.stencil
+        output:  UIColors.Generated.swift
+  
 
-xcassets:
-  inputs:
-    - Colors.xcassets
-  outputs:
-    - templatePath: Templates/colors.stencil
-      output: Colors+Style.swift
+# xcassets:
+#   inputs:
+#     - Colors.xcassets
+#   outputs:
+#     - templatePath: Templates/colors.stencil
+#       output: UIColors.Generated.swift
