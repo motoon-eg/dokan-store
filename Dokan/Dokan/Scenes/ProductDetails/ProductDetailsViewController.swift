@@ -11,7 +11,8 @@ class ProductDetailsViewController: UIViewController {
     
     // MARK: Outlets
 
-    @IBOutlet weak var InfoSellerView: InfoSellerView!
+    @IBOutlet private weak var InfoSellerView: InfoSellerView!
+    
     // MARK: Properties
         
     private let viewModel: ProductDetailsViewModelType
