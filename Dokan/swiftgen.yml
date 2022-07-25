@@ -1,22 +1,13 @@
 input_dir: Dokan/
 output_dir: ../UIDokan/Sources/UIDokan/Extentions/
-
 xcassets:
   - inputs:
       - Assets.xcassets
     outputs:
-      - templatePath: Templates/assets.stencil
+      - templatePath: Templates/images.stencil
         output: UIImage.Generated.swift
   - inputs:
       - Colors.xcassets
     outputs:
       - templatePath: Templates/colors.stencil
         output:  UIColors.Generated.swift
-  
-
-# xcassets:
-#   inputs:
-#     - Colors.xcassets
-#   outputs:
-#     - templatePath: Templates/colors.stencil
-#       output: UIColors.Generated.swift

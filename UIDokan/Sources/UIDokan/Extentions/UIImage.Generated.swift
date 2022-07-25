@@ -4,13 +4,16 @@ import UIKit.UIImage
 // MARK: - Images
 
 extension UIImage {
+
     static var accentColor : UIImage {
-      UIImage(named: "AccentColor")!
+      UIImage(named: "AccentColor")! 
     }
+
     static var comics22 : UIImage {
-      UIImage(named: "comics22")!
+      UIImage(named: "comics22")! 
     }
+
     static var image2 : UIImage {
-      UIImage(named: "image2")!
+      UIImage(named: "image2")! 
     }
 }

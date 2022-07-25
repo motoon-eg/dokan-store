@@ -5,8 +5,10 @@ import UIKit.UIImage
 
 extension UIImage {
   {% for image in catalogs.first.assets %}
+
     static var {{image.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} : UIImage {
-      UIImage(named: "{{ image.name }}")!
+      UIImage(named: "{{ image.name }}")! 
     }
   {% endfor %}
+  
 }
