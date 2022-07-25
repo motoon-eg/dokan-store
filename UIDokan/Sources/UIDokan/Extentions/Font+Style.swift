@@ -16,7 +16,7 @@ public extension UIFont {
         return UIFont(name: "DMSans-Medium", size: 14)!
     }
     
-    static var smallbutton: UIFont {
+    static var smallButton: UIFont {
         return UIFont(name: "DMSans-Medium", size: 12)!
     }
 }
