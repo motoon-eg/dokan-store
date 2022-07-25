@@ -51,7 +51,7 @@ extension ProductDetailsViewController {
     
 }
 
-// MARK: - Private Handlers
+// MARK: - Actions
 //
 private extension ProductDetailsViewController {
     @objc func infoSellerWasTapped(){}
