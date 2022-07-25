@@ -32,6 +32,7 @@ class ProductDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureInfoSellerNavButton()
     }
 }
 
@@ -46,7 +47,7 @@ extension ProductDetailsViewController {
 extension ProductDetailsViewController {
     
     func configureInfoSellerNavButton(){
-        InfoSellerView.sellerNavigationButton.addTarget(self, action: #selector(infoSellerWasTapped), for: .touchUpInside)
+//        InfoSellerView.sellerNavigationButton.addTarget(self, action: #selector(infoSellerWasTapped), for: .touchUpInside)
     }
     
 }
