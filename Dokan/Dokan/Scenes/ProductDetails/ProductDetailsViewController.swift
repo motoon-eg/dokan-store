@@ -45,7 +45,7 @@ extension ProductDetailsViewController {
 //
 extension ProductDetailsViewController {
     func configureNavBar(){
-        configureNavigationBar(headTitle: "Product Details", isfirstButtonHidden: false, isSecondButtonHidden: false, firstButtonName: "redo", secondButtonName: "shopping-cart-badge", firstAction: #selector(redoWasTapped), secondAction: #selector(cartWasTapped))
+        configureNavigationBar(headTitle: "Product Details", isLeftButtonHidden: false, isRightButtonHidden: false, leftImageNamed: "redo", rightImageNamed: "shopping-cart-badge", LeftButtonAction: #selector(redoWasTapped), rightButtonAction: #selector(cartWasTapped))
     }
 }
 
