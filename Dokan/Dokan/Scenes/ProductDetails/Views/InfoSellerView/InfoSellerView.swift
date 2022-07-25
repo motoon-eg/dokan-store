@@ -10,15 +10,13 @@ import UIDokan
 
 class InfoSellerView: UIView {
     
-    @IBOutlet var contentView: UIView!
+    // MARK: - Outlets
     
-    @IBOutlet weak var sellerImageProfile: UIImageView!
-    
-    @IBOutlet weak var sellerName: UILabel!
-    
-    @IBOutlet weak var sellerType: UILabel!
-    
-    @IBOutlet weak var sellerNavigationButton: UIButton!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var sellerImageProfile: UIImageView!
+    @IBOutlet private weak var sellerName: UILabel!
+    @IBOutlet private weak var sellerType: UILabel!
+    @IBOutlet private weak var sellerNavigationButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
