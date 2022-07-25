@@ -11,7 +11,7 @@ import UIKit
 
 extension UITextField {
     
-    public func textFieldStyle(_ placeHolder: String) {
+    public func textFieldStyle() {
         backgroundColor = UIColor.lightGray // offGrey.color
         layer.cornerRadius = 12
         layer.masksToBounds = true
