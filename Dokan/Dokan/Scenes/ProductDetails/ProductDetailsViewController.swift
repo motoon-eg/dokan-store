@@ -15,7 +15,7 @@ class ProductDetailsViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: ProductDetailsViewModelType
-    
+
     // MARK: Init
 
     init(viewModel: ProductDetailsViewModelType) {
@@ -31,10 +31,10 @@ class ProductDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupTable()
     }
-    
+
     func setupTable() {
         productSliderCollectionView.register(SliderCollectionViewCell.self)
 
@@ -59,9 +59,9 @@ extension ProductDetailsViewController {
 //
 private extension ProductDetailsViewController {
 }
-// UICollectionViewDelegate & UICollectionViewDatasource
+// UICollectionViewDelegate & UICollectionViewDatasource & UICollectionViewDelegateFlowLayout protocols
 
-extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         5
     }
@@ -69,17 +69,18 @@ extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell: SliderCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.configureProductPicture(currentPictureNumber: indexPath.row + 1)
         return cell
 
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: (self.view.frame.width)-5, height: self.view.frame.width)
+        return CGSize(width: (productSliderCollectionView.bounds.width)-5, height: productSliderCollectionView.bounds.height)
 
     }
 
 
 }
-
 
 

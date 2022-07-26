@@ -23,15 +23,15 @@
                     <rect key="frame" x="20" y="64" width="374" height="1383"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-gD-2z3">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="1058"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="1150"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-ec-rsE" userLabel="SliderView">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="220"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="t8c-YW-hyy">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="t8c-YW-hyy">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="220"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0fu-Z4-dFW">
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0fu-Z4-dFW">
                                                 <size key="itemSize" width="128" height="128"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -44,61 +44,61 @@
                                         <constraint firstItem="t8c-YW-hyy" firstAttribute="top" secondItem="qDo-ec-rsE" secondAttribute="top" id="hQZ-Vg-ZJP"/>
                                         <constraint firstAttribute="bottom" secondItem="t8c-YW-hyy" secondAttribute="bottom" id="ta5-8e-tsB"/>
                                         <constraint firstAttribute="trailing" secondItem="t8c-YW-hyy" secondAttribute="trailing" id="tty-03-EWS"/>
-                                        <constraint firstAttribute="height" priority="250" constant="128" id="vFA-wY-lIi"/>
+                                        <constraint firstAttribute="height" priority="250" constant="180" id="vFA-wY-lIi"/>
                                         <constraint firstItem="t8c-YW-hyy" firstAttribute="leading" secondItem="qDo-ec-rsE" secondAttribute="leading" id="xZG-mi-SWM"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-mJ-zfW" userLabel="TitleView">
-                                    <rect key="frame" x="0.0" y="148" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="240" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="128" id="hjG-F1-rCl"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUV-ot-6hy" userLabel="SeparatorView">
-                                    <rect key="frame" x="0.0" y="296" width="374" height="1"/>
+                                    <rect key="frame" x="0.0" y="388" width="374" height="1"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="Ax5-cL-rIP"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-vx-s8d" userLabel="SellerView">
-                                    <rect key="frame" x="0.0" y="317" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="409" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="128" id="ISq-dd-bbb"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6U-sc-JgH" userLabel="SeparatorView">
-                                    <rect key="frame" x="0.0" y="465" width="374" height="1"/>
+                                    <rect key="frame" x="0.0" y="557" width="374" height="1"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="epr-7K-bnm"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0z8-QI-qT0" userLabel="DescriptionView">
-                                    <rect key="frame" x="0.0" y="486" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="578" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="128" id="dQb-YF-jh9"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-ct-O8i" userLabel="ReviewsView">
-                                    <rect key="frame" x="0.0" y="634" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="726" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="128" id="cPa-9n-Hm8"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auT-ob-9ds" userLabel="FeaturedView">
-                                    <rect key="frame" x="0.0" y="782" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="874" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="128" id="hcM-eU-p4e"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqs-7W-PR8" userLabel="ButtonsView">
-                                    <rect key="frame" x="0.0" y="930" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="1022" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="128" id="wMX-Bb-fpF"/>

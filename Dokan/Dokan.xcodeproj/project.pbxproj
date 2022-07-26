@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27A748A12887116A00C71331 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7489F2887116900C71331 /* SliderCollectionViewCell.swift */; };
+		27A748A22887116A00C71331 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A748A02887116A00C71331 /* SliderCollectionViewCell.xib */; };
+		27C9AE19288A8FDD00FA584A /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 27C9AE18288A8FDD00FA584A /* Domain */; };
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
@@ -43,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27A7489F2887116900C71331 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		27A748A02887116A00C71331 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA21B43728537E0400E4F217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */,
+				27C9AE19288A8FDD00FA584A /* Domain in Frameworks */,
 				AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */,
 				AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */,
 				AA98C0702867E660004C5967 /* DKFoundation in Frameworks */,
@@ -90,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27A7489E2887114B00C71331 /* SliderCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				27A7489F2887116900C71331 /* SliderCollectionViewCell.swift */,
+				27A748A02887116A00C71331 /* SliderCollectionViewCell.xib */,
+			);
+			path = SliderCollectionCell;
+			sourceTree = "<group>";
+		};
 		AA21B42928537E0400E4F217 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +166,7 @@
 		AA57CB332881B50500FE62C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				27A7489E2887114B00C71331 /* SliderCollectionCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +246,7 @@
 				AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */,
 				AA98C06F2867E660004C5967 /* DKFoundation */,
 				437D1B1D2870F2C400B972BC /* Core */,
+				27C9AE18288A8FDD00FA584A /* Domain */,
 			);
 			productName = Dokan;
 			productReference = AA21B43228537E0400E4F217 /* Dokan.app */;
@@ -305,6 +322,7 @@
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
+				27A748A22887116A00C71331 /* SliderCollectionViewCell.xib in Resources */,
 				AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 			);
@@ -366,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */,
+				27A748A12887116A00C71331 /* SliderCollectionViewCell.swift in Sources */,
 				AA57CB302881B21800FE62C8 /* ProductDetailsViewModel.swift in Sources */,
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
@@ -672,6 +691,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		27C9AE18288A8FDD00FA584A /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
 		437D1B1D2870F2C400B972BC /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
