@@ -24,7 +24,7 @@ class SliderCollectionViewCell: UICollectionViewCell, NibLoadableView, ReusableV
 
  // MARK: - Configurations
 
-    private func configureProductPicture(image: UIImage, currentPictureNumber: Int) {
+     func configureProductPicture(image: UIImage, currentPictureNumber: Int) {
         productPicture.image = image
         noOfCurrentPicture.text="\(currentPictureNumber)"
 
