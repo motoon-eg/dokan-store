@@ -14,6 +14,7 @@ class ProductDetailsViewController: UIViewController {
     // MARK: Properties
         
     private let viewModel: ProductDetailsViewModelType
+    private var navigationBarBehavior: ProductDetailsNavigationBarBehavior?
 
     // MARK: Init
         
@@ -46,10 +47,9 @@ extension ProductDetailsViewController {
     
     func configureNavBar() {
         title = "Product Detail"
-        let navigationItem = navigationItem
-        let navBar = ProductDetailsNavigationBarBehavior(navigationItem: navigationItem)
+        navigationBarBehavior = ProductDetailsNavigationBarBehavior(navigationItem: navigationItem)
         
-        navBar.configure(onRedo: {
+        navigationBarBehavior?.configure(onRedo: {
             print("onRedo is tapped")
         }, onCart: {
             print("onCart is tapped")

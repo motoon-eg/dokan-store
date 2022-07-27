@@ -9,9 +9,10 @@ import UIKit
 
 
 class ProductDetailsNavigationBarBehavior {
-    private let navigationItem: UINavigationItem
+    private unowned var navigationItem: UINavigationItem
     private var onRedo: () -> () = {}
     private var onCart: () -> () = {}
+    private var navigationItems: [UIBarButtonItem] = []
     
     init(navigationItem: UINavigationItem) {
         self.navigationItem = navigationItem
@@ -21,16 +22,25 @@ class ProductDetailsNavigationBarBehavior {
         self.onRedo = onRedo
         self.onCart = onCart
         
-        let redo = UIImage(named: "redo")?.withRenderingMode(.alwaysOriginal)
-        let cart = UIImage(named: "shopping-cart-badge")?.withRenderingMode(.alwaysOriginal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: redo,
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(redoWasTapped))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: cart,
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(cartWasTapped))
+        let redoButton = UIBarButtonItem(image: UIImage(named: "redo")?.withRenderingMode(.alwaysOriginal),
+                                     style: .done,
+                                     target: self,
+                                     action: #selector(redoWasTapped))
+        let cartButton = UIBarButtonItem(image: UIImage(named: "shopping-cart")?.withRenderingMode(.alwaysOriginal),
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(cartWasTapped))
+        navigationItems = [cartButton,redoButton]
+        navigationItem.rightBarButtonItems = navigationItems
+    }
+    
+    func updateCartButton() {
+        let cartButton = UIBarButtonItem(image: UIImage(named: "shopping-cart-badge")?.withRenderingMode(.alwaysOriginal),
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(cartWasTapped))
+        navigationItems[0] = cartButton
+        navigationItem.rightBarButtonItems = navigationItems
     }
     
     @objc private func redoWasTapped() {
