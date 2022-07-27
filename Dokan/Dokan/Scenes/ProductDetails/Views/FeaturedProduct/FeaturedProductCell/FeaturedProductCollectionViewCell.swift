@@ -9,6 +9,8 @@ import UIKit
 
 class FeaturedProductCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - Outlets
+    
     @IBOutlet private(set) weak var productImage: UIImageView!
     @IBOutlet private(set) weak var productName: UILabel!
     @IBOutlet private(set) weak var productPrice: UILabel!
@@ -17,23 +19,45 @@ class FeaturedProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet private(set) weak var reviewsNumber: UILabel!
     @IBOutlet private(set) weak var moreButton: UIButton!
     
+    // MARK: - Properties
+    
+    var featuredProduct: Any! {
+        didSet {
+            // update collection view components with data
+            productName.text = featuredProduct  as? String
+        }
+    }
+    
+    // MARK: - initializer
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCellStyle()
     }
+    
+    // MARK: - private handler
     
     private func setupCellStyle() {
         self.layer.cornerRadius = 12
         self.layer.masksToBounds = true
     }
     
-    var featuredProduct: Any! {
-        didSet {
-            // update collection view components with data
-        }
-    }
+}
+
+// MARK: - Binding
+
+extension FeaturedProductCollectionViewCell {
     
-    @IBAction func moreButtonAction(_ sender: Any) {
+    func bindMoreButton() {
+        moreButton.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+}
+
+// MARK: - Actions
+
+extension FeaturedProductCollectionViewCell {
+    
+    @objc func buttonWasTapped() {
         // navigate to more
     }
 }

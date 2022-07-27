@@ -71,9 +71,6 @@
                                         <rect key="frame" x="173" y="0.0" width="28" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="B" buttonSize="mini"/>
-                                        <connections>
-                                            <action selector="moreButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="AaX-Vk-TIL"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

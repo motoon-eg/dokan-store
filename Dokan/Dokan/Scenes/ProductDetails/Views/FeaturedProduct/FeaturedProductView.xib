@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="619-TO-iCP"/>
                 <outlet property="featuredProductCollectionView" destination="RRZ-aQ-N8B" id="PKC-LB-my9"/>
-                <outlet property="featuredProductTitle" destination="qxN-2d-GoF" id="myA-Tf-2MA"/>
+                <outlet property="featuredProductTitle" destination="qxN-2d-GoF" id="0Z2-uz-AVS"/>
                 <outlet property="seeAllButton" destination="gI4-zh-VCS" id="H2I-yA-Sqc"/>
             </connections>
         </placeholder>
@@ -40,9 +40,6 @@
                                     <buttonConfiguration key="configuration" style="plain" title="See All">
                                         <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                     </buttonConfiguration>
-                                    <connections>
-                                        <action selector="seeAllButtonAction:" destination="-1" eventType="touchUpInside" id="nIe-Os-7Zw"/>
-                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

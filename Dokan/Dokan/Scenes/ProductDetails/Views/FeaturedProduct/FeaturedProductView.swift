@@ -18,7 +18,7 @@ class FeaturedProductView: UIView {
     
     // MARK: - Properties
     
-    private var featuredProducts: Array<Any> = []
+    var featuredProducts: Array<Any> = []
     
     // MARK: - initializer
     
@@ -43,6 +43,7 @@ private extension FeaturedProductView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionViewSetup()
+        bindSeeAllButton()
     }
     
     func collectionViewSetup() {
@@ -64,6 +65,14 @@ private extension FeaturedProductView {
     }
 }
 
+// MARK: - Binding
+
+extension FeaturedProductView {
+    func bindSeeAllButton() {
+        seeAllButton.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+}
+
 // MARK: - Actions
 
 extension FeaturedProductView {
@@ -73,8 +82,7 @@ extension FeaturedProductView {
         featuredProductCollectionView.reloadData()
     }
     
-
-    @IBAction func seeAllButtonAction(_ sender: Any) {
+    @objc func buttonWasTapped() {
         // navigate to see all
     }
 }
@@ -94,7 +102,7 @@ extension FeaturedProductView: UICollectionViewDelegate, UICollectionViewDataSou
     }
 }
 
-// MARK: - Constants
+         // MARK: - Constants
 
 extension FeaturedProductView {
     
