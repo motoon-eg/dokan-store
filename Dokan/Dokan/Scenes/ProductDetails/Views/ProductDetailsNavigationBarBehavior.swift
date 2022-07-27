@@ -12,7 +12,7 @@ class ProductDetailsNavigationBarBehavior {
     private unowned var navigationItem: UINavigationItem
     private var onRedo: () -> () = {}
     private var onCart: () -> () = {}
-    private var navigationItems: [UIBarButtonItem] = []
+    private var navigationBarButtonItems: [UIBarButtonItem] = []
     
     init(navigationItem: UINavigationItem) {
         self.navigationItem = navigationItem
@@ -22,6 +22,8 @@ class ProductDetailsNavigationBarBehavior {
         self.onRedo = onRedo
         self.onCart = onCart
         
+        
+        
         let redoButton = UIBarButtonItem(image: UIImage(named: "redo")?.withRenderingMode(.alwaysOriginal),
                                      style: .done,
                                      target: self,
@@ -30,17 +32,18 @@ class ProductDetailsNavigationBarBehavior {
                                          style: .done,
                                          target: self,
                                          action: #selector(cartWasTapped))
-        navigationItems = [cartButton,redoButton]
-        navigationItem.rightBarButtonItems = navigationItems
+        navigationBarButtonItems = [cartButton,redoButton]
+        navigationItem.rightBarButtonItems = navigationBarButtonItems
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: self, action: nil)
     }
     
     func updateCartButton() {
-        let cartButton = UIBarButtonItem(image: UIImage(named: "shopping-cart-badge")?.withRenderingMode(.alwaysOriginal),
+        let cartbadgeButton = UIBarButtonItem(image: UIImage(named: "shopping-cart-badge")?.withRenderingMode(.alwaysOriginal),
                                          style: .done,
                                          target: self,
                                          action: #selector(cartWasTapped))
-        navigationItems[0] = cartButton
-        navigationItem.rightBarButtonItems = navigationItems
+        navigationBarButtonItems[0] = cartbadgeButton
+        navigationItem.rightBarButtonItems = navigationBarButtonItems
     }
     
     @objc private func redoWasTapped() {

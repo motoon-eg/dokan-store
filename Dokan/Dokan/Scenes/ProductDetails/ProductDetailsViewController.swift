@@ -48,7 +48,6 @@ extension ProductDetailsViewController {
     func configureNavBar() {
         title = "Product Detail"
         navigationBarBehavior = ProductDetailsNavigationBarBehavior(navigationItem: navigationItem)
-        
         navigationBarBehavior?.configure(onRedo: {
             print("onRedo is tapped")
         }, onCart: {
