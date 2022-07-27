@@ -9,12 +9,18 @@ import UIKit
 
 class FeaturedProductView: UIView {
     
+    // MARK: - Outlets
+    
     @IBOutlet private(set) var contentView: UIView!
     @IBOutlet private(set) weak var featuredProductCollectionView: UICollectionView!
     @IBOutlet private(set) weak var featuredProductTitle: UILabel!
     @IBOutlet private(set) weak var seeAllButton: UIButton!
     
-    var featuredProducts: Array<Any> = []
+    // MARK: - Properties
+    
+    private var featuredProducts: Array<Any> = []
+    
+    // MARK: - initializer
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,9 +33,11 @@ class FeaturedProductView: UIView {
     }
 }
 
-extension FeaturedProductView {
+// MARK: - Setup
+
+private extension FeaturedProductView {
     
-    private func viewSetup() {
+    func viewSetup() {
         Bundle.main.loadNibNamed(Constants.viewNibName, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
@@ -37,7 +45,7 @@ extension FeaturedProductView {
         collectionViewSetup()
     }
     
-    private func collectionViewSetup() {
+    func collectionViewSetup() {
         let nib = UINib(nibName: Constants.collectionViewCellName, bundle: nil)
         featuredProductCollectionView.register(nib, forCellWithReuseIdentifier: Constants.cellReuseIdentifier)
         featuredProductCollectionView.delegate = self
@@ -56,12 +64,22 @@ extension FeaturedProductView {
     }
 }
 
+// MARK: - Actions
+
 extension FeaturedProductView {
     
-    @IBAction func featuredProductButtonAction(_ sender: Any) {
+    func getFeaturedProductsData(featuredProducts: Array<Any>) {
+        self.featuredProducts = featuredProducts
+        featuredProductCollectionView.reloadData()
     }
     
+
+    @IBAction func seeAllButtonAction(_ sender: Any) {
+        // navigate to see all
+    }
 }
+
+// MARK: -  CollectionView
 
 extension FeaturedProductView: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -76,9 +94,11 @@ extension FeaturedProductView: UICollectionViewDelegate, UICollectionViewDataSou
     }
 }
 
+// MARK: - Constants
+
 extension FeaturedProductView {
     
-    enum Constants {
+   private enum Constants {
         static let collectionViewCellName = "FeaturedProductCollectionViewCell"
         static let cellReuseIdentifier = "FeaturedProductCell"
         static let viewNibName = "FeaturedProductView"

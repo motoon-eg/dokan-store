@@ -29,10 +29,11 @@ class FeaturedProductCollectionViewCell: UICollectionViewCell {
     
     var featuredProduct: Any! {
         didSet {
-            
+            // update collection view components with data
         }
     }
     
     @IBAction func moreButtonAction(_ sender: Any) {
+        // navigate to more
     }
 }
