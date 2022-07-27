@@ -10,16 +10,19 @@ import UIKit
 
 class ProductDetailsNavigationBarBehavior {
     private let navigationItem: UINavigationItem
-    
+    private var onRedo: () -> () = {}
+    private var onCart: () -> () = {}
     
     init(navigationItem: UINavigationItem) {
         self.navigationItem = navigationItem
     }
     
-    func configureNavBar() {
+    func configure(onRedo: @escaping () -> () ,onCart: @escaping () -> ()) {
+        self.onRedo = onRedo
+        self.onCart = onCart
+        
         let redo = UIImage(named: "redo")?.withRenderingMode(.alwaysOriginal)
         let cart = UIImage(named: "shopping-cart-badge")?.withRenderingMode(.alwaysOriginal)
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: redo,
                                                             style: .done,
                                                             target: self,
@@ -30,11 +33,11 @@ class ProductDetailsNavigationBarBehavior {
                                                             action: #selector(cartWasTapped))
     }
     
-    @objc func redoWasTapped() {
-        
+    @objc private func redoWasTapped() {
+        onRedo()
     }
     
-    @objc func cartWasTapped() {
-        
+    @objc private func cartWasTapped() {
+        onCart()
     }
 }

@@ -30,6 +30,7 @@ class ProductDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavBar()
     }
 }
 
@@ -42,6 +43,18 @@ extension ProductDetailsViewController {
 // MARK: - Configurations
 //
 extension ProductDetailsViewController {
+    
+    func configureNavBar() {
+        title = "Product Detail"
+        let navigationItem = navigationItem
+        let navBar = ProductDetailsNavigationBarBehavior(navigationItem: navigationItem)
+        
+        navBar.configure(onRedo: {
+            print("onRedo is tapped")
+        }, onCart: {
+            print("onCart is tapped")
+        })
+    }
     
 }
 
