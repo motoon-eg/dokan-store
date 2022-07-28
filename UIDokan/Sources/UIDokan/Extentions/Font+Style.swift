@@ -38,7 +38,7 @@ public extension UIFont {
         return UIFont(name: "DMSans-Medium", size: 18)!
     }
     
-    static var callOut: UIFont {
+    static var callout: UIFont {
         return UIFont(name: "DMSans-Medium", size: 14)!
     }
     
@@ -59,7 +59,7 @@ public extension UIFont {
 //
 public extension UIFont {
     
-    static var textFeild: UIFont {
+    static var textfeild: UIFont {
         return UIFont(name: "DMSans-Medium", size: 14)!
     }
     
