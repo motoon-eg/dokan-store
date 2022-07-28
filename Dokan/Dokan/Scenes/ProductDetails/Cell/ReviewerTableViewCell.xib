@@ -84,6 +84,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="reviewerComment" destination="8ne-qC-Ucn" id="aUg-Lm-RTS"/>
+                <outlet property="reviewerImageView" destination="aMW-WS-Xdx" id="b9i-WD-FR9"/>
+                <outlet property="reviewerNameLabel" destination="5WL-vR-UeQ" id="1sf-yD-KH6"/>
+            </connections>
             <point key="canvasLocation" x="210.1449275362319" y="191.85267857142856"/>
         </tableViewCell>
     </objects>
