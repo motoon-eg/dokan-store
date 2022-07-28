@@ -54,6 +54,7 @@
 		AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1BE285E1A3A00A4EBB0 /* Networking */; };
 		AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
 		B82D6D4F2892FF290035D30C /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D6D4E2892FF290035D30C /* UIModels.swift */; };
+		B82D6D51289302970035D30C /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D6D50289302970035D30C /* ReviewsView.swift */; };
 		B853CB9228830777003AF561 /* ReviewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B853CB9128830777003AF561 /* ReviewsView.xib */; };
 		E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04928784A050065C852 /* VerificationViewModelType.swift */; };
 		E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04A28784A050065C852 /* VerificationViewController.swift */; };
@@ -118,6 +119,7 @@
 		AADC5BAE289ADFF300C9AA12 /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTests.swift; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82D6D4E2892FF290035D30C /* UIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
+		B82D6D50289302970035D30C /* ReviewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		B853CB9128830777003AF561 /* ReviewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsView.xib; sourceTree = "<group>"; };
 		E251D04928784A050065C852 /* VerificationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModelType.swift; sourceTree = "<group>"; };
 		E251D04A28784A050065C852 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -330,7 +332,7 @@
 				AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */,
 				AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */,
 				B82D6D4E2892FF290035D30C /* UIModels.swift */,
-				B853EF76288344750018105E /* ReviewsView.swift */,
+				B82D6D50289302970035D30C /* ReviewsView.swift */,
 				B853CB9128830777003AF561 /* ReviewsView.xib */,
 			);
 			path = ProductDetails;
