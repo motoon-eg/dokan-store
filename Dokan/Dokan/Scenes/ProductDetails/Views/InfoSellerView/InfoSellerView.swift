@@ -18,16 +18,18 @@ class InfoSellerView: UIView {
     
     @IBOutlet weak var sellerType: UILabel!
     
-    @IBOutlet weak var sellerNavigationButton: UIButton!
-    
+    weak var delegate: InfoSellerViewDelegate?
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
+        addTapGestureRecognizer()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
+        addTapGestureRecognizer()
     }
     
     private func commonInit(){
@@ -36,5 +38,19 @@ class InfoSellerView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         sellerType.addTrailing(image: UIImage(named: "verified"), text: sellerType.text! + " ")
+    }
+    
+    private func addTapGestureRecognizer(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(infoSellerViewWasTapped))
+        addGestureRecognizer(tap)
+    }
+}
+
+
+// MARK: - Actions
+
+private extension InfoSellerView {
+    @objc func infoSellerViewWasTapped(){
+        delegate?.didInfoSellerViewTapped()
     }
 }

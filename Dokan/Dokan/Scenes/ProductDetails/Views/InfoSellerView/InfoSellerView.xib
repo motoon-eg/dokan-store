@@ -15,7 +15,6 @@
                 <outlet property="contentView" destination="2gF-mh-0PW" id="ehw-oJ-QUR"/>
                 <outlet property="sellerImageProfile" destination="7it-TY-ddr" id="j0C-si-EoN"/>
                 <outlet property="sellerName" destination="1xj-4F-SX8" id="tDS-Hq-L2d"/>
-                <outlet property="sellerNavigationButton" destination="tmf-5A-RlM" id="1M7-LF-yTO"/>
                 <outlet property="sellerType" destination="hfo-fZ-uck" id="g1s-GM-Kgf"/>
             </connections>
         </placeholder>
@@ -24,17 +23,6 @@
             <rect key="frame" x="0.0" y="0.0" width="325" height="104"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmf-5A-RlM">
-                    <rect key="frame" x="0.0" y="0.6666666666666643" width="325" height="103"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="103" id="BHC-Jz-CL9"/>
-                        <constraint firstAttribute="width" constant="325" id="hTM-BT-i15"/>
-                    </constraints>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain"/>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ds3-nj-67T">
                     <rect key="frame" x="0.0" y="0.0" width="325" height="0.66666666666666663"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="0.72750046079999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,13 +99,11 @@
             <viewLayoutGuide key="safeArea" id="d8P-V3-hkH"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="tmf-5A-RlM" firstAttribute="centerX" secondItem="2gF-mh-0PW" secondAttribute="centerX" id="0kD-6d-FYK"/>
                 <constraint firstItem="CXd-gc-g47" firstAttribute="leading" secondItem="d8P-V3-hkH" secondAttribute="leading" id="3wF-NP-OdM"/>
                 <constraint firstItem="8FT-F8-IzE" firstAttribute="leading" secondItem="2gF-mh-0PW" secondAttribute="leading" id="5zJ-f4-SNZ"/>
                 <constraint firstItem="d8P-V3-hkH" firstAttribute="bottom" secondItem="8FT-F8-IzE" secondAttribute="bottom" id="7dJ-9e-Iqy"/>
                 <constraint firstAttribute="trailing" secondItem="8FT-F8-IzE" secondAttribute="trailing" id="7nf-az-Cx5"/>
                 <constraint firstItem="ds3-nj-67T" firstAttribute="top" secondItem="2gF-mh-0PW" secondAttribute="top" id="Pxe-o2-EAX"/>
-                <constraint firstItem="tmf-5A-RlM" firstAttribute="centerY" secondItem="2gF-mh-0PW" secondAttribute="centerY" id="UVT-xm-o3U"/>
                 <constraint firstItem="CXd-gc-g47" firstAttribute="trailing" secondItem="d8P-V3-hkH" secondAttribute="trailing" id="ftH-Hn-f8z"/>
                 <constraint firstItem="CXd-gc-g47" firstAttribute="top" secondItem="ds3-nj-67T" secondAttribute="bottom" constant="29" id="g5a-BG-g3O"/>
                 <constraint firstAttribute="trailing" secondItem="ds3-nj-67T" secondAttribute="trailing" id="idJ-jA-qdX"/>

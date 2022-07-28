@@ -32,6 +32,7 @@ class ProductDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        InfoSellerView.delegate = self
     }
 }
 
@@ -50,4 +51,13 @@ extension ProductDetailsViewController {
 // MARK: - Actions
 //
 private extension ProductDetailsViewController {
+    
+}
+
+// MARK: - InfoSellerViewDelegate Protocol
+extension ProductDetailsViewController: InfoSellerViewDelegate {
+    func didInfoSellerViewTapped() {
+        print("Info seller view is tapped")
+    }
+    
 }
