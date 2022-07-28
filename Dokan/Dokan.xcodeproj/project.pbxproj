@@ -25,6 +25,8 @@
 		856E36AF2889229B00735EF2 /* InfoSellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856E36AE2889229B00735EF2 /* InfoSellerView.swift */; };
 		856E36B1288922EF00735EF2 /* InfoSellerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856E36B0288922EF00735EF2 /* InfoSellerView.xib */; };
 		856E36B928893C9A00735EF2 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
+		51A04FAD289335FF00900EFF /* ReviewerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */; };
+		51A04FAE289335FF00900EFF /* ReviewerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A04FAC289335FF00900EFF /* ReviewerTableViewCell.xib */; };
 		85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */; };
 		85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */; };
 		85B31DBC2870BEDE00B1C9E8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */; };
@@ -90,6 +92,9 @@
 		43D4BF0A2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductCollectionViewCellTests.swift; sourceTree = "<group>"; };
 		856E36AE2889229B00735EF2 /* InfoSellerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSellerView.swift; sourceTree = "<group>"; };
 		856E36B0288922EF00735EF2 /* InfoSellerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoSellerView.xib; sourceTree = "<group>"; };
+		276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewControllerTests.swift; path = DokanTests/Scenes/Registratio9nTest/RegisterViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
+		51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewerTableViewCell.swift; sourceTree = "<group>"; };
+		51A04FAC289335FF00900EFF /* ReviewerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewerTableViewCell.xib; sourceTree = "<group>"; };
 		85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -245,6 +250,34 @@
 			);
 			path = TitleQuantity;
 			sourceTree = "<group>";
+		};
+		51A04FAA289334A800900EFF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */,
+				51A04FAC289335FF00900EFF /* ReviewerTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		85B31DAD2870BD4700B1C9E8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */,
+				85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */,
+				85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */,
+				85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		85B31DBE2870BF3500B1C9E8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<unknown>";
 		};
 		51A04FAA289334A800900EFF /* Cell */ = {
 			isa = PBXGroup;
@@ -521,6 +554,7 @@
 				51A04FAE289335FF00900EFF /* ReviewerTableViewCell.xib in Resources */,
 				99091F1828895D96000FA9C9 /* ProductTitleQuantityView.xib in Resources */,
 				B853CB9228830777003AF561 /* ReviewsView.xib in Resources */,
+				51A04FAE289335FF00900EFF /* ReviewerTableViewCell.xib in Resources */,
 				AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 				856E36B1288922EF00735EF2 /* InfoSellerView.xib in Resources */,
