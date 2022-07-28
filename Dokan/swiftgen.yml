@@ -1,5 +1,5 @@
 input_dir: Dokan/
-output_dir: ../UIDokan/Sources/UIDokan/Extentions/
+output_dir: ../UIDokan/Sources/UIDokan/Generated/
 xcassets:
   - inputs:
       - Assets.xcassets
