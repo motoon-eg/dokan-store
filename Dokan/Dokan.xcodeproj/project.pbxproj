@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */; };
-		85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */; };
-		85B31DBC2870BEDE00B1C9E8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */; };
-		85B31DBD2870BEDE00B1C9E8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */; };
-		85B31DC02870BF4300B1C9E8 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */; };
 		276889DC287417730091ACEB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889DA287417730091ACEB /* RegisterViewController.swift */; };
 		276889DD287417730091ACEB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276889DB287417730091ACEB /* RegisterViewController.xib */; };
 		276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889DE28741F750091ACEB /* RegisterViewModel.swift */; };
 		276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889E0287420980091ACEB /* RegisterViewModelType.swift */; };
 		276889E328742A4C0091ACEB /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */; };
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
+		85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */; };
+		85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */; };
+		85B31DBC2870BEDE00B1C9E8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */; };
+		85B31DBD2870BEDE00B1C9E8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */; };
+		85B31DC02870BF4300B1C9E8 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
@@ -36,8 +36,8 @@
 		AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */; };
 		AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1BE285E1A3A00A4EBB0 /* Networking */; };
 		AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
+		B82D6D4F2892FF290035D30C /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D6D4E2892FF290035D30C /* UIModels.swift */; };
 		B853CB9228830777003AF561 /* ReviewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B853CB9128830777003AF561 /* ReviewsView.xib */; };
-		B853EF77288344750018105E /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853EF76288344750018105E /* ReviewsView.swift */; };
 		E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04928784A050065C852 /* VerificationViewModelType.swift */; };
 		E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04A28784A050065C852 /* VerificationViewController.swift */; };
 		E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04B28784A050065C852 /* VerificationViewModel.swift */; };
@@ -55,16 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
-		85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		276889DA287417730091ACEB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		276889DB287417730091ACEB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		276889DE28741F750091ACEB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		276889E0287420980091ACEB /* RegisterViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelType.swift; sourceTree = "<group>"; };
 		276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewControllerTests.swift; path = DokanTests/Scenes/Registratio9nTest/RegisterViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
+		85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
+		85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA21B43728537E0400E4F217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 		AA98C0752867EAC0004C5967 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82D6D4E2892FF290035D30C /* UIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
 		B853CB9128830777003AF561 /* ReviewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsView.xib; sourceTree = "<group>"; };
-		B853EF76288344750018105E /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		E251D04928784A050065C852 /* VerificationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModelType.swift; sourceTree = "<group>"; };
 		E251D04A28784A050065C852 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		E251D04B28784A050065C852 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
@@ -114,24 +114,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85B31DAD2870BD4700B1C9E8 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */,
-				85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */,
-				85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */,
-				85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		85B31DBE2870BF3500B1C9E8 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */,
-			);
-			path = Login;
-		};
 		273F1DE32874A4A4006485D6 /* Registratio9nTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +132,25 @@
 			);
 			path = Registration;
 			sourceTree = "<group>";
+		};
+		85B31DAD2870BD4700B1C9E8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */,
+				85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */,
+				85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */,
+				85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		85B31DBE2870BF3500B1C9E8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<unknown>";
 		};
 		AA21B42928537E0400E4F217 = {
 			isa = PBXGroup;
@@ -205,7 +206,7 @@
 				AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */,
 				AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */,
 				AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */,
-				B853EF76288344750018105E /* ReviewsView.swift */,
+				B82D6D4E2892FF290035D30C /* UIModels.swift */,
 				B853CB9128830777003AF561 /* ReviewsView.xib */,
 			);
 			path = ProductDetails;
@@ -435,11 +436,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B853EF77288344750018105E /* ReviewsView.swift in Sources */,
 				85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */,
 				85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */,
 				E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */,
 				AA57CB302881B21800FE62C8 /* ProductDetailsViewModel.swift in Sources */,
+				B82D6D4F2892FF290035D30C /* UIModels.swift in Sources */,
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
 				276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */,
 				276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */,
