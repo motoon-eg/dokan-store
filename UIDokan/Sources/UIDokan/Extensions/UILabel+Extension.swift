@@ -9,7 +9,7 @@ import UIKit
 
 public extension UILabel {
     
-    func addTrailing(image: UIImage, text:String) {
+    func addTrailing(image: UIImage?, text:String) {
         let attachment = NSTextAttachment()
         attachment.image = image
         attachment.bounds = CGRect(x: 0, y: -5, width: (attachment.image?.size.width)!, height: (attachment.image?.size.height)!)
