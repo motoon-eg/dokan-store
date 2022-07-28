@@ -55,7 +55,6 @@
 		AAE1A1C1285E1A3D00A4EBB0 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
 		B82D6D4F2892FF290035D30C /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D6D4E2892FF290035D30C /* UIModels.swift */; };
 		B853CB9228830777003AF561 /* ReviewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B853CB9128830777003AF561 /* ReviewsView.xib */; };
-		B853EF77288344750018105E /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B853EF76288344750018105E /* ReviewsView.swift */; };
 		E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04928784A050065C852 /* VerificationViewModelType.swift */; };
 		E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04A28784A050065C852 /* VerificationViewController.swift */; };
 		E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04B28784A050065C852 /* VerificationViewModel.swift */; };
@@ -100,6 +99,7 @@
 		99091F1728895D96000FA9C9 /* ProductTitleQuantityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTitleQuantityView.xib; sourceTree = "<group>"; };
 		99091F1928895DC1000FA9C9 /* ProductTitleQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTitleQuantityView.swift; sourceTree = "<group>"; };
 		99CC7307288E2FE400503D86 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA21B43728537E0400E4F217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +119,6 @@
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82D6D4E2892FF290035D30C /* UIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
 		B853CB9128830777003AF561 /* ReviewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsView.xib; sourceTree = "<group>"; };
-		B853EF76288344750018105E /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		E251D04928784A050065C852 /* VerificationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModelType.swift; sourceTree = "<group>"; };
 		E251D04A28784A050065C852 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		E251D04B28784A050065C852 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
