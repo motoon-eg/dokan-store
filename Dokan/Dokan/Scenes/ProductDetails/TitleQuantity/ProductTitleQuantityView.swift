@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class ProductTitleQuantityView: UIView {
     // MARK: Outlet
     
@@ -21,46 +22,56 @@ class ProductTitleQuantityView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         stylingProductDetails()
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        
         stylingProductDetails()
     }
     
     // MARK: Style
 
-    func stylingProductDetails() {
+    private func stylingProductDetails() {
         self.productStockBackgroundView.layer.cornerRadius = 10
     }
 
     func changeStockBackGroundColor(stockCount: Int) {
+        
+        let color: UIColor
+        
         if stockCount > 10 {
-            self.productStockBackgroundView.backgroundColor = .green
-        } else if stockCount > 0 && stockCount <= 10 {
-            self.productStockBackgroundView.backgroundColor = .orange
+            color = .green
+        } else if stockCount > 0 {
+            color = .orange
         } else {
-            self.productStockBackgroundView.backgroundColor = .red
+            color = .red
         }
+        
+        self.productStockBackgroundView.backgroundColor = color
+        
     }
 
     // MARK: Configuration
     
-    func passProductDetailsDataToView(productDetailsData: ProductDetails) {
-        self.productTitle.text = productDetailsData.productTitle
-        self.productCurrency.text = productDetailsData.productCurrency
-        self.productPrice.text = productDetailsData.productPrice
-        self.productReviewAverage.text = "\(productDetailsData.productReviewAverage)"
-        self.productReviewCount.text = "\(productDetailsData.productReviewCount)"
-        self.productStockCount.text = "\(productDetailsData.productStockCount)"
+    func configureView(viewModel: ViewModel) {
+        self.productTitle.text = viewModel.title
+        self.productCurrency.text = viewModel.currency
+        self.productPrice.text = viewModel.price
+        self.productReviewAverage.text = "\(viewModel.reviewAverage)"
+        self.productReviewCount.text = "\(viewModel.reviewCount)"
+        self.productStockCount.text = "\(viewModel.stockCount)"
     }
 }
 
-struct ProductDetails {
-    var productTitle: String
-    var productCurrency: String
-    var productPrice: String
-    var productReviewAverage: Double
-    var productReviewCount: Int
-    var productStockCount: Int
+extension ProductTitleQuantityView {
+    struct ViewModel {
+        let title: String
+        let currency: String
+        let price: String
+        let reviewAverage: Double
+        let reviewCount: Int
+        let stockCount: Int
+    }
 }
