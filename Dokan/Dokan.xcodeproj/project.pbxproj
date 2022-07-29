@@ -60,6 +60,7 @@
 		276889DE28741F750091ACEB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		276889E0287420980091ACEB /* RegisterViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelType.swift; sourceTree = "<group>"; };
 		276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewControllerTests.swift; path = DokanTests/Scenes/Registratio9nTest/RegisterViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
+
 		5120E6AE288F2F6400BCC7DE /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
+
 		5120E6AD288F2F3800BCC7DE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +143,7 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+
 		85B31DAD2870BD4700B1C9E8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
