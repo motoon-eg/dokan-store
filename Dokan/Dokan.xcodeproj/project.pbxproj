@@ -13,11 +13,8 @@
 		276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889E0287420980091ACEB /* RegisterViewModelType.swift */; };
 		276889E328742A4C0091ACEB /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */; };
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
-<<<<<<< HEAD
-=======
 		51A04FAD289335FF00900EFF /* ReviewerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */; };
 		51A04FAE289335FF00900EFF /* ReviewerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51A04FAC289335FF00900EFF /* ReviewerTableViewCell.xib */; };
->>>>>>> feat/product-details-add-reviewer-cell
 		85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */; };
 		85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */; };
 		85B31DBC2870BEDE00B1C9E8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */; };
@@ -66,11 +63,8 @@
 		276889DE28741F750091ACEB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		276889E0287420980091ACEB /* RegisterViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelType.swift; sourceTree = "<group>"; };
 		276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewControllerTests.swift; path = DokanTests/Scenes/Registratio9nTest/RegisterViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
-<<<<<<< HEAD
-=======
 		51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewerTableViewCell.swift; sourceTree = "<group>"; };
 		51A04FAC289335FF00900EFF /* ReviewerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewerTableViewCell.xib; sourceTree = "<group>"; };
->>>>>>> feat/product-details-add-reviewer-cell
 		85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -145,8 +139,6 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-=======
 		51A04FAA289334A800900EFF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +148,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
->>>>>>> feat/product-details-add-reviewer-cell
 		85B31DAD2870BD4700B1C9E8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,11 +392,8 @@
 				276889DD287417730091ACEB /* RegisterViewController.xib in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
-<<<<<<< HEAD
 				B853CB9228830777003AF561 /* ReviewsView.xib in Resources */,
-=======
 				51A04FAE289335FF00900EFF /* ReviewerTableViewCell.xib in Resources */,
->>>>>>> feat/product-details-add-reviewer-cell
 				AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 			);
@@ -471,11 +459,8 @@
 				85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */,
 				E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */,
 				AA57CB302881B21800FE62C8 /* ProductDetailsViewModel.swift in Sources */,
-<<<<<<< HEAD
 				B82D6D4F2892FF290035D30C /* UIModels.swift in Sources */,
-=======
 				51A04FAD289335FF00900EFF /* ReviewerTableViewCell.swift in Sources */,
->>>>>>> feat/product-details-add-reviewer-cell
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
 				276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */,
 				276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */,
