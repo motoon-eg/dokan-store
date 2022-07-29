@@ -9,3 +9,4 @@
 --disable wrapMultilineStatementBraces
 --disable strongOutlets
 --disable blankLinesAtStartOfScope
+--disable redundantReturn
