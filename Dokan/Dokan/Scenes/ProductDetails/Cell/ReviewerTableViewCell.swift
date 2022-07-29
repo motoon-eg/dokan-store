@@ -8,30 +8,29 @@
 import UIKit
 
 class ReviewerTableViewCell: UITableViewCell {
-
-   @IBOutlet weak var reviewerImageView: UIImageView!
+    // MARK: - Outlets
+    @IBOutlet weak private var reviewerImageView: UIImageView!
+    @IBOutlet weak private var reviewerNameLabel: UILabel!
     
-    @IBOutlet weak var reviewerNameLabel: UILabel!
+    @IBOutlet weak var reviewerComment: UILabel!
     
-    @IBOutlet weak var reviewerComment: UITextView!
-    
+    // MARK: - life cycle..
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    //MARK: - method to configure cell
-    func configureCell(reviewTableViewCellViewModel:ReviewTableViewCellViewModel){
-        reviewerNameLabel.text = reviewTableViewCellViewModel.reviewerName
-        reviewerComment.text = reviewTableViewCellViewModel.reviewerComment
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        // MARK: - method to configure cell
+        func configureCell(viewModel:ViewModel) {
+            reviewerNameLabel.text = viewModel.reviewerName
+            reviewerComment.text = viewModel.reviewerComment
+        }
     }
     
-}
-struct ReviewTableViewCellViewModel{
-     var reviewerImage : String
-     var reviewerName : String
-     var reviewerComment : String
- }
+
+    extension ReviewerTableViewCell {
+        struct ViewModel {
+            let reviewerImageUrl: String
+            let reviewerName: String
+            let reviewerComment: String
+        }
+    }
+    
