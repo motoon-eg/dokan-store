@@ -363,7 +363,8 @@ public class ReadMoreTextView: UITextView {
     
 }
 
-extension String {
+// MARK: - String Private Helpers
+private extension String {
     
     var dataLength: Int {
         return utf16.count
