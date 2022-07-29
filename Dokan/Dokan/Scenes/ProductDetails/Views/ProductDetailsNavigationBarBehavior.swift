@@ -38,7 +38,7 @@ class ProductDetailsNavigationBarBehavior {
     }
     
     func updateCartButton() {
-        let cartbadgeButton = UIBarButtonItem(image: UIImage(named: "shopping-cart-badge")?.withRenderingMode(.alwaysOriginal),
+        let cartBadgeButton = UIBarButtonItem(image: UIImage(named: "shopping-cart-badge")?.withRenderingMode(.alwaysOriginal),
                                          style: .done,
                                          target: self,
                                          action: #selector(cartWasTapped))
