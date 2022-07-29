@@ -10,13 +10,12 @@ import UIDokan
 
 class InfoSellerView: UIView {
     
-    @IBOutlet var contentView: UIView!
+    // MARK: Outlets
     
-    @IBOutlet weak var sellerImageProfile: UIImageView!
-    
-    @IBOutlet weak var sellerName: UILabel!
-    
-    @IBOutlet weak var sellerType: UILabel!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var sellerImageView: UIImageView!
+    @IBOutlet private weak var sellerNameLabel: UILabel!
+    @IBOutlet private weak var sellerTypeLabel: UILabel!
     
     weak var delegate: InfoSellerViewDelegate?
         
