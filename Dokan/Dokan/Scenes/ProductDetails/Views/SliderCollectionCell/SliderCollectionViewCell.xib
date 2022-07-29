@@ -80,9 +80,9 @@
             </constraints>
             <size key="customSize" width="391" height="321"/>
             <connections>
-                <outlet property="noOfCurrentPicture" destination="ONg-hq-YuO" id="hFE-Eq-yKd"/>
-                <outlet property="noOfPicture" destination="RoU-cZ-e1J" id="iSz-As-dkC"/>
-                <outlet property="productPicture" destination="r3r-sZ-Rgr" id="wbj-XU-cUN"/>
+                <outlet property="noOfCurrentPictureLabel" destination="ONg-hq-YuO" id="gSU-39-OAA"/>
+                <outlet property="noOfPicturesLabel" destination="RoU-cZ-e1J" id="Rca-WQ-Sbs"/>
+                <outlet property="productImageView" destination="r3r-sZ-Rgr" id="oDQ-fe-cTK"/>
             </connections>
             <point key="canvasLocation" x="315" y="64"/>
         </collectionViewCell>
