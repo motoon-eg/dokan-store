@@ -18,35 +18,30 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="326" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="326" height="48"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-nK-NoB">
-                    <rect key="frame" x="0.0" y="0.0" width="326" height="50"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-nK-NoB">
+                    <rect key="frame" x="0.0" y="0.0" width="326" height="48"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="396-Wp-c7V">
-                            <rect key="frame" x="0.0" y="0.0" width="153" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="5Sy-Cw-9ob"/>
-                                <constraint firstAttribute="width" constant="153" id="USt-OU-EvH"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="0.0" width="153" height="48"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Add to favorite">
                                 <color key="baseBackgroundColor" red="0.9137254901960784" green="0.29960992930000002" blue="0.2391737401" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOy-DG-YeJ">
-                            <rect key="frame" x="173" y="0.0" width="153" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="LTz-xj-oUm"/>
-                                <constraint firstAttribute="width" constant="153" id="zUa-wO-yxW"/>
-                            </constraints>
+                            <rect key="frame" x="173" y="0.0" width="153" height="48"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Add to cart">
                                 <color key="baseBackgroundColor" red="0.26178964970000002" green="0.40757322309999999" blue="0.76081919669999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </buttonConfiguration>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="piN-9j-RVA"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

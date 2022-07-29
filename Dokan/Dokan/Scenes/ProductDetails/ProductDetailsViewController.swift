@@ -12,10 +12,6 @@ class ProductDetailsViewController: UIViewController {
     // MARK: Outlets
     
     @IBOutlet weak var buttonsView: ButtonsView!
-    public var questionView: ButtonsView! {
-        guard isViewLoaded else { return nil }
-        return (view as! ButtonsView)
-    }
     
     // MARK: Properties
     
@@ -23,7 +19,7 @@ class ProductDetailsViewController: UIViewController {
     private var addingToCart = false {
         didSet {
             if #available(iOS 15.0, *) {
-                questionView.addToCartButton.setNeedsUpdateConfiguration()
+                buttonsView.addToCartButton.setNeedsUpdateConfiguration()
             } else {
                 // Fallback on earlier versions
             }
@@ -33,7 +29,7 @@ class ProductDetailsViewController: UIViewController {
     private var addingToFavorite = false {
         didSet {
             if #available(iOS 15.0, *) {
-                questionView.addToFavoriteButton.setNeedsUpdateConfiguration()
+                buttonsView.addToFavoriteButton.setNeedsUpdateConfiguration()
             } else {
                 // Fallback on earlier versions
             }
@@ -76,6 +72,7 @@ extension ProductDetailsViewController {
             var config = UIButton.Configuration.filled()
             config.buttonSize = .large
             config.cornerStyle = .medium
+            config.background.backgroundColor = UIColor(red: 0.996, green: 0.227, blue: 0.188, alpha: 1)
             config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
                 var outgoing = incoming
                 outgoing.font = UIFont.preferredFont(forTextStyle: .headline)
