@@ -15,13 +15,12 @@ class ProductDetailsViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: ProductDetailsViewModelType
-    private var sliderCollectionViewModel:SliderCollectionViewModel?
+    private var sliderCollectionViewModel: SliderCollectionViewModel?
     
     // MARK: Init
 
     init(viewModel: ProductDetailsViewModelType) {
         self.viewModel = viewModel
-        
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -71,7 +70,7 @@ extension ProductDetailsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell: SliderCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-     sliderCollectionViewModel = SliderCollectionViewModel(productImage: UIImage(named: "")!, noOfPicture: 5, noOfCurrentPicture: indexPath.row)
+        sliderCollectionViewModel = SliderCollectionViewModel(productImage: UIImage(named: "")!, noOfPicture: 5, noOfCurrentPicture: indexPath.row+1)
 
         cell.configureCellData(SliderCollectionViewCellModel: sliderCollectionViewModel!)
         return cell
