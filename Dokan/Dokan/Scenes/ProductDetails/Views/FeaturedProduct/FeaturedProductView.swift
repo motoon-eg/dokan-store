@@ -11,7 +11,7 @@ class FeaturedProductView: UIView {
     
     // MARK: - Outlets
     
-    @IBOutlet private(set) var contentView: UIView!
+    @IBOutlet private(set) weak  var contentView: UIView!
     @IBOutlet private(set) weak var featuredProductCollectionView: UICollectionView!
     @IBOutlet private(set) weak var featuredProductTitle: UILabel!
     @IBOutlet private(set) weak var seeAllButton: UIButton!
