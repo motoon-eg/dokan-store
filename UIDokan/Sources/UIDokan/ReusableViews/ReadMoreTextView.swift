@@ -1,4 +1,4 @@
-//
+// Credits to https://github.com/ilyapuchka/ReadMoreTextView
 //  ReadMoreTextView.swift
 //  
 //
@@ -232,7 +232,7 @@ public class ReadMoreTextView: UITextView {
     private var _originalAttributedText: NSAttributedString!
     private var _originalTextLength: Int {
         get {
-            return _originalAttributedText?.string.length ?? 0
+            return _originalAttributedText?.string.dataLength ?? 0
         }
     }
     
@@ -277,7 +277,7 @@ public class ReadMoreTextView: UITextView {
         
         if let originalAttributedText = _originalAttributedText?.mutableCopy() as? NSMutableAttributedString {
             attributedText = _originalAttributedText
-            let range = NSRange(location: 0, length: text.length)
+            let range = NSRange(location: 0, length: text.dataLength)
             if let attributedReadLessText = attributedReadLessText {
                 originalAttributedText.append(attributedReadLessText)
             }
@@ -308,7 +308,7 @@ public class ReadMoreTextView: UITextView {
         else {
             let lastCharacterIndex = characterIndexBeforeTrim(range: rangeThatFitsContainer)
             if lastCharacterIndex > 0 {
-                return NSMakeRange(lastCharacterIndex, textStorage.string.length - lastCharacterIndex)
+                return NSMakeRange(lastCharacterIndex, textStorage.string.dataLength - lastCharacterIndex)
             }
             else {
                 return NSMakeRange(NSNotFound, 0)
@@ -326,7 +326,7 @@ public class ReadMoreTextView: UITextView {
             let characterIndex = layoutManager.characterIndexForGlyph(at: glyphIndex)
             return characterIndex - 1
         } else {
-            return NSMaxRange(rangeThatFits) - readMoreText!.length
+            return NSMaxRange(rangeThatFits) - readMoreText!.dataLength
         }
     }
     
@@ -336,20 +336,20 @@ public class ReadMoreTextView: UITextView {
         let layoutManager = NSLayoutManager()
         layoutManager.addTextContainer(textContainer)
         textStorage.addLayoutManager(layoutManager)
-        let readMoreBoundingRect = layoutManager.boundingRectForCharacterRange(range: NSMakeRange(0, text.length), inTextContainer: textContainer)
+        let readMoreBoundingRect = layoutManager.boundingRectForCharacterRange(range: NSMakeRange(0, text.dataLength), inTextContainer: textContainer)
         return readMoreBoundingRect
     }
     
     private func readMoreTextRange() -> NSRange {
         var readMoreTextRange = rangeToReplaceWithReadMoreText()
         if readMoreTextRange.location != NSNotFound {
-            readMoreTextRange.length = readMoreText!.length + 1
+            readMoreTextRange.length = readMoreText!.dataLength + 1
         }
         return readMoreTextRange
     }
     
     private func readLessTextRange() -> NSRange {
-        return NSRange(location: _originalTextLength, length: readLessText!.length + 1)
+        return NSRange(location: _originalTextLength, length: readLessText!.dataLength + 1)
     }
     
     private func pointIsInReadMoreOrReadLessTextRange(point aPoint: CGPoint) -> Bool? {
@@ -364,12 +364,14 @@ public class ReadMoreTextView: UITextView {
 }
 
 extension String {
-    var length: Int {
+    
+    var dataLength: Int {
         return utf16.count
     }
+    
 }
 
-
+// MARK: - NSLayoutManager Private Helpers
 
 extension NSLayoutManager {
     
@@ -392,6 +394,8 @@ extension NSLayoutManager {
     }
     
 }
+
+// MARK: - UITextView Private Helpers
 
 private extension UITextView {
     

@@ -11,7 +11,7 @@ import UIDokan
 class ProductDetailsViewController: UIViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var descriptionTextView: ReadMoreTextView!
+    @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
     
     // MARK: Properties
         
