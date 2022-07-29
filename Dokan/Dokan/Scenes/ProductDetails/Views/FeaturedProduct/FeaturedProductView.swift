@@ -102,7 +102,7 @@ extension FeaturedProductView: UICollectionViewDelegate, UICollectionViewDataSou
     }
 }
 
-         // MARK: - Constants
+// MARK: - Constants
 
 extension FeaturedProductView {
     
