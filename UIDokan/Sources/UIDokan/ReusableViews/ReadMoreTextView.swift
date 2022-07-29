@@ -39,17 +39,19 @@ public class ReadMoreTextView: UITextView {
     func setupDefaults() {
         let defaultReadMoreText = NSLocalizedString("ReadMoreTextView.readMore", value: "more", comment: "")
         let attributedReadMoreText = NSMutableAttributedString(string: "... ")
-
+        
         readMoreTextPadding = .zero
         readLessTextPadding = .zero
         isScrollEnabled = false
         isEditable = false
         
-        let attributedDefaultReadMoreText = NSAttributedString(string: defaultReadMoreText, attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-            NSAttributedString.Key.font: font ?? UIFont.systemFont(ofSize: 14)
-        ])
-        attributedReadMoreText.append(attributedDefaultReadMoreText)
+        // MARK: Customize "read more..." option
+        //        let attributedDefaultReadMoreText = NSAttributedString(string: defaultReadMoreText, attributes: [
+        //            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+        //            NSAttributedString.Key.font: font ?? UIFont.systemFont(ofSize: 14)
+        //        ])
+        //        attributedReadMoreText.append(attributedDefaultReadMoreText)
+        
         self.attributedReadMoreText = attributedReadMoreText
     }
     
@@ -139,7 +141,7 @@ public class ReadMoreTextView: UITextView {
     
     /**
      Force to update trimming on the next layout pass. To update right away call `layoutIfNeeded` right after.
-    */
+     */
     public func setNeedsUpdateTrim() {
         _needsUpdateTrim = true
         setNeedsLayout()
@@ -235,10 +237,12 @@ public class ReadMoreTextView: UITextView {
     }
     
     private func attributedStringWithDefaultAttributes(from text: String) -> NSAttributedString {
-        return NSAttributedString(string: text, attributes: [
-            NSAttributedString.Key.font: font ?? UIFont.systemFont(ofSize: 14),
-            NSAttributedString.Key.foregroundColor: textColor ?? UIColor.black
-        ])
+        return NSAttributedString(string: text, attributes: nil)
+        
+        // MARK: Attributes
+        //        replace nil with these attributes
+        //        NSAttributedString.Key.font: font ?? UIFont.systemFont(ofSize: 14),
+        //        NSAttributedString.Key.foregroundColor: textColor ?? UIColor.black
     }
     
     private func needsTrim() -> Bool {
@@ -253,11 +257,11 @@ public class ReadMoreTextView: UITextView {
         
         layoutManager.invalidateLayout(forCharacterRange: layoutManager.characterRangeThatFits(textContainer: textContainer), actualCharacterRange: nil)
         textContainer.size = CGSize(width: bounds.size.width, height: CGFloat.greatestFiniteMagnitude)
-
+        
         if let text = attributedReadMoreText {
             let range = rangeToReplaceWithReadMoreText()
             guard range.location != NSNotFound else { return }
-
+            
             textStorage.replaceCharacters(in: range, with: text)
         }
         
@@ -270,7 +274,7 @@ public class ReadMoreTextView: UITextView {
         
         shouldTrim = false
         textContainer.maximumNumberOfLines = 0
-
+        
         if let originalAttributedText = _originalAttributedText?.mutableCopy() as? NSMutableAttributedString {
             attributedText = _originalAttributedText
             let range = NSRange(location: 0, length: text.length)
@@ -347,7 +351,7 @@ public class ReadMoreTextView: UITextView {
     private func readLessTextRange() -> NSRange {
         return NSRange(location: _originalTextLength, length: readLessText!.length + 1)
     }
-
+    
     private func pointIsInReadMoreOrReadLessTextRange(point aPoint: CGPoint) -> Bool? {
         if needsTrim() && pointIsInTextRange(point: aPoint, range: readMoreTextRange(), padding: readMoreTextPadding) {
             return false
@@ -356,7 +360,7 @@ public class ReadMoreTextView: UITextView {
         }
         return nil
     }
-
+    
 }
 
 extension String {
@@ -398,7 +402,7 @@ private extension UITextView {
      */
     public func hitTest(pointInGlyphRange aPoint: CGPoint, event: UIEvent?, test: (Int) -> UIView?) -> UIView? {
         guard let charIndex = charIndexForPointInGlyphRect(point: aPoint) else {
-                return super.hitTest(aPoint, with: event)
+            return super.hitTest(aPoint, with: event)
         }
         guard textStorage.attribute(NSAttributedString.Key.link, at: charIndex, effectiveRange: nil) == nil else {
             return super.hitTest(aPoint, with: event)
