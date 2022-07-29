@@ -37,7 +37,7 @@ class InfoSellerView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        sellerType.addTrailing(image: UIImage(named: "verified"), text: sellerType.text! + " ")
+        sellerType.addTrailing(image: UIImage(named: "verified"), text: sellerType.text ?? "" + " ")
     }
     
     private func addTapGestureRecognizer(){
