@@ -16,6 +16,7 @@ class ProductDetailsViewController: UIViewController {
     // MARK: Properties
         
     private let viewModel: ProductDetailsViewModelType
+    private var navigationBarBehavior: ProductDetailsNavigationBarBehavior?
 
     // MARK: Init
         
@@ -33,6 +34,7 @@ class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDescriptionTextView()
+        configureNavBar()
     }
 }
 
@@ -53,6 +55,17 @@ private extension ProductDetailsViewController {
         descriptionTextView.attributedReadLessText = NSAttributedString(string: " Read less")
 
     }
+    
+    func configureNavBar() {
+        title = "Product Detail"
+        navigationBarBehavior = ProductDetailsNavigationBarBehavior(navigationItem: navigationItem)
+        navigationBarBehavior?.configure(onRedo: {
+            print("onRedo is tapped")
+        }, onCart: {
+            print("onCart is tapped")
+        })
+    }
+    
 }
 
 // MARK: - Private Handlers
