@@ -55,7 +55,6 @@ extension ProductDetailsViewController {
             print("onCart is tapped")
         })
     }
-    
 }
 
 // MARK: - Private Handlers

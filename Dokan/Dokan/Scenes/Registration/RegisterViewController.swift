@@ -21,8 +21,8 @@ class RegisterViewController: UIViewController {
 
     // MARK: - initializer
 
-    init(model: RegisterViewModelType) {
-        self.viewModel = model
+    init(viewModel: RegisterViewModelType) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -76,9 +76,9 @@ private extension RegisterViewController {
 
     @objc func buttonWasTapped(_ sender: UIButton) {
         switch sender {
-        case signInButton :
+        case signInButton:
             print("")
-            // navigate to signin screen
+        // navigate to signin screen
         default:
             guard let email = emailOrphoneTextField.text else { return }
             // navigate to verification screen
