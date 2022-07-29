@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 public class OTCTextField: UITextField {
     
     public var didEnterLastDigit: ((String) -> Void)?
@@ -85,7 +84,7 @@ public class OTCTextField: UITextField {
 // MARK: - UITextFieldDelegate
 //
 extension OTCTextField: UITextFieldDelegate {
-    
+
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let charachterCount = textField.text?.count else { return false }
         return charachterCount < digitsLabels.count || string == ""
