@@ -5,11 +5,11 @@
 //
 
 import UIKit
-public protocol ReusableView: class {
+public protocol IdentifiableView: AnyObject {
     static var reuseIdentifier: String { get }
 }
 
-public extension ReusableView where Self: UIView {
+public extension IdentifiableView where Self: UIView {
     static var reuseIdentifier: String {
         return String(describing: self)
     }

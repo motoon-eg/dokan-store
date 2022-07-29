@@ -8,7 +8,7 @@
 import UIKit
 import UIDokan
 
-class SliderCollectionViewCell: UICollectionViewCell, NibLoadableView, ReusableView {
+class SliderCollectionViewCell: UICollectionViewCell, IdentifiableView {
 
     // MARK: - Outlet
 
@@ -23,7 +23,7 @@ class SliderCollectionViewCell: UICollectionViewCell, NibLoadableView, ReusableV
 
  // MARK: - Configurations
 
-    func configureCellData(SliderCollectionViewCellModel : SliderCollectionViewModel) {
+    func configureCellData(SliderCollectionViewCellModel: sliderViewModel) {
         noOfPicturesLabel.text="\(SliderCollectionViewCellModel.noOfCurrentPicture)"
         productImageView.image = SliderCollectionViewCellModel.productImage
 
@@ -31,8 +31,12 @@ class SliderCollectionViewCell: UICollectionViewCell, NibLoadableView, ReusableV
 
 }
 
-struct SliderCollectionViewModel{
-     var productImage : UIImage
-     var noOfPicture : Int
-     var noOfCurrentPicture : Int
+extension SliderCollectionViewCell {
+
+struct sliderViewModel {
+     var productImage: UIImage
+     var noOfPicture: Int
+     var noOfCurrentPicture: Int
  }
+
+}
