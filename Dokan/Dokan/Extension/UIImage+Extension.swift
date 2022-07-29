@@ -9,8 +9,10 @@ import Foundation
 import Kingfisher
 import UIKit
 
-
-extension UIImageView{
+protocol ImageSetable {
+      func setImage(with urlString: String , placeholderString : String)
+}
+extension UIImageView : ImageSetable {
 
     func setImage(with urlString: String , placeholderString : String ) {
          let url = URL(string: urlString)
@@ -20,7 +22,7 @@ extension UIImageView{
                           progressBlock: nil, completionHandler: { [weak self](result) in
                              switch result {
                              case .failure:
-                                 self?.image =  #imageLiteral(resourceName: "personImage")
+                                 self?.image =  #imageLiteral(resourceName: placeholderString)
                              default:
                                  break
                              }
