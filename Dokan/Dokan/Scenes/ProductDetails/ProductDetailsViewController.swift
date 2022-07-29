@@ -1,4 +1,4 @@
-//  
+//
 //  ProductDetailsViewController.swift
 //  Dokan
 //
@@ -8,16 +8,16 @@
 import UIKit
 
 class ProductDetailsViewController: UIViewController {
-    
+
     // MARK: Outlets
 
     // MARK: Properties
-        
+
     private let viewModel: ProductDetailsViewModelType
     private var navigationBarBehavior: ProductDetailsNavigationBarBehavior?
 
     // MARK: Init
-        
+
     init(viewModel: ProductDetailsViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -29,7 +29,7 @@ class ProductDetailsViewController: UIViewController {
     }
 
     // MARK: Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
@@ -37,15 +37,13 @@ class ProductDetailsViewController: UIViewController {
 }
 
 // MARK: - Actions
-//
-extension ProductDetailsViewController {
-    
-}
+
+extension ProductDetailsViewController {}
 
 // MARK: - Configurations
-//
+
 extension ProductDetailsViewController {
-    
+
     func configureNavBar() {
         title = "Product Detail"
         navigationBarBehavior = ProductDetailsNavigationBarBehavior(navigationItem: navigationItem)
@@ -58,6 +56,5 @@ extension ProductDetailsViewController {
 }
 
 // MARK: - Private Handlers
-//
-private extension ProductDetailsViewController {
-}
+
+private extension ProductDetailsViewController {}

@@ -1,4 +1,4 @@
-//  
+//
 //  VerificationViewController.swift
 //  Dokan
 //
@@ -9,11 +9,11 @@ import UIDokan
 import UIKit
 
 class VerificationViewController: UIViewController {
-    
+
     // MARK: Outlets
 
     @IBOutlet weak var codeTextField: OTCTextField!
-    
+
     // MARK: Properties
 
     private let viewModel: VerificationViewModelType
@@ -43,17 +43,13 @@ class VerificationViewController: UIViewController {
 }
 
 // MARK: - Actions
-//
-extension VerificationViewController {
-}
+
+extension VerificationViewController {}
 
 // MARK: - Configurations
-//
-extension VerificationViewController {
-}
+
+extension VerificationViewController {}
 
 // MARK: - Private Handlers
-//
-private extension VerificationViewController {
-    
-}
+
+private extension VerificationViewController {}

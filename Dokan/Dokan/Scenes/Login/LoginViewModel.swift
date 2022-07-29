@@ -1,4 +1,4 @@
-//  
+//
 //  LoginViewModel.swift
 //  Dokan
 //
@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: LoginViewModel
-//
+
 class LoginViewModel {
     private var email: String = ""
     private var password: String = ""
@@ -22,7 +22,7 @@ extension LoginViewModel: LoginViewModelInput {
         email = text
         updateEnabledStateButton()
     }
-    
+
     func updatePassword(_ text: String) {
         password = text
         updateEnabledStateButton()
@@ -30,9 +30,9 @@ extension LoginViewModel: LoginViewModelInput {
 }
 
 // MARK: LoginViewModelOutput
-//
+
 extension LoginViewModel: LoginViewModelOutput {
-   
+
     func configureOnButtonEnabled(onEnabled: @escaping (Bool) -> Void) {
         onButtonEnabled = onEnabled
         updateEnabledStateButton()
@@ -40,14 +40,14 @@ extension LoginViewModel: LoginViewModelOutput {
 }
 
 // MARK: Private Handlers
-//
+
 private extension LoginViewModel {
-    
+
     func updateEnabledStateButton() {
-           let isEmailValid = !email.isEmpty
-           let isPasswordValid = !password.isEmpty
-           let isButtonEnabled = isEmailValid && isPasswordValid
-           
-           onButtonEnabled(isButtonEnabled)
-       }
+        let isEmailValid = !email.isEmpty
+        let isPasswordValid = !password.isEmpty
+        let isButtonEnabled = isEmailValid && isPasswordValid
+
+        onButtonEnabled(isButtonEnabled)
+    }
 }

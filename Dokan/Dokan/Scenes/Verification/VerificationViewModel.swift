@@ -1,4 +1,4 @@
-//  
+//
 //  VerificationViewModel.swift
 //  Dokan
 //
@@ -8,25 +8,17 @@
 import Foundation
 
 // MARK: VerificationViewModel
-//
-class VerificationViewModel {
-  
-}
+
+class VerificationViewModel {}
 
 // MARK: VerificationViewModel
 
-extension VerificationViewModel: VerificationViewModelInput {
-
-}
+extension VerificationViewModel: VerificationViewModelInput {}
 
 // MARK: VerificationViewModelOutput
-//
-extension VerificationViewModel: VerificationViewModelOutput {
 
-}
+extension VerificationViewModel: VerificationViewModelOutput {}
 
 // MARK: Private Handlers
-//
-private extension VerificationViewModel {
 
-}
+private extension VerificationViewModel {}
