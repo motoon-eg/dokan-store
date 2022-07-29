@@ -37,10 +37,8 @@ class ProductTitleQuantityView: UIView {
         self.productStockBackgroundView.layer.cornerRadius = 10
     }
 
-    func changeStockBackGroundColor(stockCount: Int) {
-        
+    private func changeStockBackGroundColor(stockCount: Int) {
         let color: UIColor
-        
         if stockCount > 10 {
             color = .green
         } else if stockCount > 0 {
@@ -62,6 +60,8 @@ class ProductTitleQuantityView: UIView {
         self.productReviewAverage.text = "\(viewModel.reviewAverage)"
         self.productReviewCount.text = "\(viewModel.reviewCount)"
         self.productStockCount.text = "\(viewModel.stockCount)"
+        
+        changeStockBackGroundColor(stockCount: viewModel.stockCount)
     }
 }
 
