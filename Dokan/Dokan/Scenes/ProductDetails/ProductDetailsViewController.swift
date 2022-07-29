@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import UIDokan
 
 class ProductDetailsViewController: UIViewController {
     
     // MARK: Outlets
-
+    @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
+    
     // MARK: Properties
         
     private let viewModel: ProductDetailsViewModelType
@@ -31,6 +33,7 @@ class ProductDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureDescriptionTextView()
         configureNavBar()
     }
 }
@@ -43,7 +46,15 @@ extension ProductDetailsViewController {
 
 // MARK: - Configurations
 //
-extension ProductDetailsViewController {
+private extension ProductDetailsViewController {
+    
+    func configureDescriptionTextView() {
+        descriptionTextView.shouldTrim = true
+        descriptionTextView.maximumNumberOfLines = 3
+        descriptionTextView.attributedReadMoreText = NSAttributedString(string: "... Read more")
+        descriptionTextView.attributedReadLessText = NSAttributedString(string: " Read less")
+
+    }
     
     func configureNavBar() {
         title = "Product Detail"
@@ -54,6 +65,7 @@ extension ProductDetailsViewController {
             print("onCart is tapped")
         })
     }
+    
     
 }
 

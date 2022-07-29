@@ -42,6 +42,7 @@ class ProductDetailsNavigationBarBehavior {
                                          style: .done,
                                          target: self,
                                          action: #selector(cartWasTapped))
+      
         navigationBarButtonItems[0] = cartBadgeButton
         navigationItem.rightBarButtonItems = navigationBarButtonItems
     }
