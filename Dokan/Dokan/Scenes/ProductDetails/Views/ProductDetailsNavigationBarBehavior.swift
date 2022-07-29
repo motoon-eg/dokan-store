@@ -32,7 +32,7 @@ class ProductDetailsNavigationBarBehavior {
                                          style: .done,
                                          target: self,
                                          action: #selector(cartWasTapped))
-        navigationBarButtonItems = [cartButton,redoButton]
+        navigationBarButtonItems = [cartButton, redoButton]
         navigationItem.rightBarButtonItems = navigationBarButtonItems
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: self, action: nil)
     }
