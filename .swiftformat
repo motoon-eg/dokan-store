@@ -1,0 +1,6 @@
+--stripunusedargs closure-only
+--lineaftermarks true
+
+--disable wrapMultilineStatementBraces
+--disable strongOutlets
+--disable blankLinesAtStartOfScope
