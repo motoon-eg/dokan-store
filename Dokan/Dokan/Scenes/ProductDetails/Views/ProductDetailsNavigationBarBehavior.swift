@@ -18,7 +18,7 @@ class ProductDetailsNavigationBarBehavior {
         self.navigationItem = navigationItem
     }
     
-    func configure(onRedo: @escaping () -> () ,onCart: @escaping () -> ()) {
+    func configure(onRedo: @escaping () -> (), onCart: @escaping () -> ()) {
         self.onRedo = onRedo
         self.onCart = onCart
         
