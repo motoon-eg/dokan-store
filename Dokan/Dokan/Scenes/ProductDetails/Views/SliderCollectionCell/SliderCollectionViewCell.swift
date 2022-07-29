@@ -23,12 +23,16 @@ class SliderCollectionViewCell: UICollectionViewCell, NibLoadableView, ReusableV
 
  // MARK: - Configurations
 
-//     func configureProductPicture(image: UIImage, currentPictureNumber: Int) {
-    
-//        productPicture.image = image
-    func configureProductPicture(currentPictureNumber: Int) {
-        noOfPicturesLabel.text="\(currentPictureNumber)"
+    func configureCellData(SliderCollectionViewCellModel : SliderCollectionViewModel) {
+        noOfPicturesLabel.text="\(SliderCollectionViewCellModel.noOfCurrentPicture)"
+        productImageView.image = SliderCollectionViewCellModel.productImage
 
     }
 
 }
+
+struct SliderCollectionViewModel{
+     var productImage : UIImage
+     var noOfPicture : Int
+     var noOfCurrentPicture : Int
+ }
