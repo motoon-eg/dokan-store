@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import UIDokan
 
 class ProductDetailsViewController: UIViewController {
     
     // MARK: Outlets
-
+    @IBOutlet weak var descriptionTextView: ReadMoreTextView!
+    
     // MARK: Properties
         
     private let viewModel: ProductDetailsViewModelType
@@ -30,6 +32,7 @@ class ProductDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureDescriptionTextView()
     }
 }
 
@@ -41,8 +44,15 @@ extension ProductDetailsViewController {
 
 // MARK: - Configurations
 //
-extension ProductDetailsViewController {
+private extension ProductDetailsViewController {
     
+    func configureDescriptionTextView() {
+        descriptionTextView.shouldTrim = true
+        descriptionTextView.maximumNumberOfLines = 3
+        descriptionTextView.attributedReadMoreText = NSAttributedString(string: "... Read more")
+        descriptionTextView.attributedReadLessText = NSAttributedString(string: " Read less")
+
+    }
 }
 
 // MARK: - Private Handlers
