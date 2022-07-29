@@ -1,0 +1,14 @@
+import UIKit.UIImage
+
+// this is automatic generated file please don't edit it 🔫
+// MARK: - Images
+
+extension UIImage {
+  {% for image in catalogs.first.assets %}
+
+    static var {{image.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} : UIImage {
+      UIImage(named: "{{ image.name }}")! 
+    }
+  {% endfor %}
+  
+}
