@@ -72,7 +72,6 @@ extension ProductDetailsViewController {
             var config = UIButton.Configuration.filled()
             config.buttonSize = .large
             config.cornerStyle = .medium
-            config.background.backgroundColor = UIColor(red: 0.996, green: 0.227, blue: 0.188, alpha: 1)
             config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
                 var outgoing = incoming
                 outgoing.font = UIFont.preferredFont(forTextStyle: .headline)
@@ -115,6 +114,7 @@ extension ProductDetailsViewController {
             var config = UIButton.Configuration.filled()
             config.buttonSize = .large
             config.cornerStyle = .medium
+            config.background.backgroundColor = UIColor(red: 0.996, green: 0.227, blue: 0.188, alpha: 1)
             config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
                 var outgoing = incoming
                 outgoing.font = UIFont.preferredFont(forTextStyle: .headline)
