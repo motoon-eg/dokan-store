@@ -1,4 +1,4 @@
-//  
+//
 //  LoginViewController.swift
 //  Dokan
 //
@@ -8,32 +8,33 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
+
     // MARK: Outlets
-    
+
     @IBOutlet private(set) weak var emailTextField: UITextField!
     @IBOutlet private(set) weak var passwordTextField: UITextField!
     @IBOutlet private(set) weak var signInButton: UIButton!
     @IBOutlet private(set) weak var forgotPasswordButton: UIButton!
     @IBOutlet private(set) weak var signUpButton: UIButton!
-    
+
     // MARK: Properties
-        
+
     private let viewModel: LoginViewModelType
 
     // MARK: Init
-        
+
     init(viewModel: LoginViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bindTextFields()
@@ -43,25 +44,23 @@ class LoginViewController: UIViewController {
 }
 
 // MARK: - Actions
-//
-extension LoginViewController {
-    
-}
+
+extension LoginViewController {}
 
 // MARK: - Configurations
-//
+
 extension LoginViewController {
-    
-    func bindTextFields(){
+
+    func bindTextFields() {
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
-    
-    func bindSignInBtn(){
+
+    func bindSignInBtn() {
         signInButton.addTarget(self, action: #selector(signInWasTapped), for: .touchUpInside)
     }
-    
-    func bindViewModel(){
+
+    func bindViewModel() {
         viewModel.configureOnButtonEnabled { [weak self] onEnabled in
             self?.signInButton.isEnabled = onEnabled
         }
@@ -69,18 +68,18 @@ extension LoginViewController {
 }
 
 // MARK: - Private Handlers
-//
+
 private extension LoginViewController {
-    
+
     @objc func textDidChange(_ sender: UITextField) {
-        guard let text = sender.text else { return}
-        
+        guard let text = sender.text else { return }
+
         if sender == emailTextField {
             viewModel.updateEmail(text)
         } else if sender == passwordTextField {
             viewModel.updatePassword(text)
         }
     }
-    
-    @objc func signInWasTapped(){}
+
+    @objc func signInWasTapped() {}
 }

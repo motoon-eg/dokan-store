@@ -4,10 +4,10 @@ public struct ShipBookLogger: Logging {
     public static let shared = ShipBookLogger()
 
     private init() {
-        ShipBook.start(appId:"62c58b01cce7cd701efdfa09",
-                       appKey:"47acafe6f0cd03591eb0efc0eb1fb9f2")
+        ShipBook.start(appId: "62c58b01cce7cd701efdfa09",
+                       appKey: "47acafe6f0cd03591eb0efc0eb1fb9f2")
     }
-    
+
     public func log(_ message: @autoclosure () -> String,
                     level: LogLevel,
                     file: StaticString,

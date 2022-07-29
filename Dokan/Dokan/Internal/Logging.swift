@@ -19,9 +19,9 @@ public func LogDebug(_ message: @autoclosure () -> String,
                      function: StaticString = #function,
                      line: UInt = #line) {
     Logger.LogDebug(message(),
-                     file: file,
-                     function: function,
-                     line: line)
+                    file: file,
+                    function: function,
+                    line: line)
 }
 
 @inline(__always)
@@ -30,9 +30,9 @@ public func LogInfo(_ message: @autoclosure () -> String,
                     function: StaticString = #function,
                     line: UInt = #line) {
     Logger.LogInfo(message(),
-                    file: file,
-                    function: function,
-                    line: line)
+                   file: file,
+                   function: function,
+                   line: line)
 }
 
 @inline(__always)
@@ -41,9 +41,9 @@ public func LogWarn(_ message: @autoclosure () -> String,
                     function: StaticString = #function,
                     line: UInt = #line) {
     Logger.LogWarn(message(),
-                    file: file,
-                    function: function,
-                    line: line)
+                   file: file,
+                   function: function,
+                   line: line)
 }
 
 @inline(__always)
@@ -52,9 +52,9 @@ public func LogVerbose(_ message: @autoclosure () -> String,
                        function: StaticString = #function,
                        line: UInt = #line) {
     Logger.LogVerbose(message(),
-                       file: file,
-                       function: function,
-                       line: line)
+                      file: file,
+                      function: function,
+                      line: line)
 }
 
 @inline(__always)
@@ -63,7 +63,7 @@ public func LogError(_ message: @autoclosure () -> String,
                      function: StaticString = #function,
                      line: UInt = #line) {
     Logger.LogError(message(),
-                     file: file,
-                     function: function,
-                     line: line)
+                    file: file,
+                    function: function,
+                    line: line)
 }

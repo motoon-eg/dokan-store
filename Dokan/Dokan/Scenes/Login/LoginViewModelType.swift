@@ -1,4 +1,4 @@
-//  
+//
 //  LoginViewModelType.swift
 //  Dokan
 //

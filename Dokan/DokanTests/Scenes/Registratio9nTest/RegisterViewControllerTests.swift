@@ -5,9 +5,8 @@
 //  Created by heba isaa on 05/07/2022.
 //
 
-import XCTest
 @testable import Dokan
-
+import XCTest
 
 class RegisterViewControllerTests: XCTestCase {
     // MARK: - Properties

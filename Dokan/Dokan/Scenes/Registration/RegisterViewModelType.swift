@@ -9,7 +9,7 @@ import Foundation
 typealias RegisterViewModelType = RegisterViewModelInput & RegisterViewModelOutput
 
 protocol RegisterViewModelInput {
-    func updatePhoneOrEmail (input: String)
+    func updatePhoneOrEmail(input: String)
 }
 
 protocol RegisterViewModelOutput {

@@ -1,5 +1,5 @@
-import XCTest
 @testable import DKFoundation
+import XCTest
 
 final class DKFoundationTests: XCTestCase {
     func testExample() throws {
