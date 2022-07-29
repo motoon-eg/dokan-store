@@ -13,7 +13,6 @@ class LoginViewModel {
     private var email: String = ""
     private var password: String = ""
     private var onButtonEnabled: (Bool) -> Void = { _ in }
-   
 }
 
 // MARK: LoginViewModelInput
@@ -28,7 +27,6 @@ extension LoginViewModel: LoginViewModelInput {
         password = text
         updateEnabledStateButton()
     }
-
 }
 
 // MARK: LoginViewModelOutput
@@ -36,10 +34,9 @@ extension LoginViewModel: LoginViewModelInput {
 extension LoginViewModel: LoginViewModelOutput {
    
     func configureOnButtonEnabled(onEnabled: @escaping (Bool) -> Void) {
-        self.onButtonEnabled = onEnabled
+        onButtonEnabled = onEnabled
         updateEnabledStateButton()
     }
-
 }
 
 // MARK: Private Handlers

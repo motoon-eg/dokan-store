@@ -26,6 +26,7 @@ class RegisterViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -40,7 +41,6 @@ class RegisterViewController: UIViewController {
         bindViewModel()
         bindSigninButton()
     }
-
 }
 
 // MARK: - Binding
@@ -64,7 +64,6 @@ private extension RegisterViewController {
             self?.continueButton.isEnabled = onEnabled
         }
     }
-
 }
 
 // MARK: - Actions
@@ -83,7 +82,6 @@ private extension RegisterViewController {
         default:
             guard let email = emailOrphoneTextField.text else { return }
             // navigate to verification screen
-
         }
     }
 }
