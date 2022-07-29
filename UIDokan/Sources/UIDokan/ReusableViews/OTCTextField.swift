@@ -7,13 +7,12 @@
 
 import UIKit
 
-
-public class OTCTextField: UITextField {
+open class OTCTextField: UITextField {
     
     public var didEnterLastDigit: ((String) -> Void)?
     var defaultCharacter = "-"
     private var isConfigured = false
-    private var digitsLabels: [UILabel] = []
+    private var digitsLabels = [UILabel]()
     private lazy var tapRecognizer: UITapGestureRecognizer = {
         let recognizer = UITapGestureRecognizer()
         recognizer.addTarget(self, action: #selector(becomeFirstResponder))
@@ -54,6 +53,7 @@ public class OTCTextField: UITextField {
             label.translatesAutoresizingMaskIntoConstraints = false
             label.textAlignment = .center
             label.font = .systemFont(ofSize: 40)
+            label.isUserInteractionEnabled = true
             label.text = defaultCharacter
             stackView.addArrangedSubview(label)
             
@@ -80,14 +80,16 @@ public class OTCTextField: UITextField {
             didEnterLastDigit?(text)
         }
     }
+    
 }
 
-// MARK: - UITextFieldDelegate
-//
 extension OTCTextField: UITextFieldDelegate {
-    
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let charachterCount = textField.text?.count else { return false }
         return charachterCount < digitsLabels.count || string == ""
     }
 }
+
+
+
+

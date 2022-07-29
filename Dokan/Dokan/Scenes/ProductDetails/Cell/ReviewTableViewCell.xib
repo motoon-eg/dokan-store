@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewTableViewCell" rowHeight="291" id="KGk-i7-Jjw" customClass="ReviewTableViewCell" customModule="Dokan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="291"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="291"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPd-0W-Vq0">
+                        <rect key="frame" x="0.0" y="0.0" width="441" height="291"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZlA-s9-oxR">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7EL-Dt-vIw"/>
+                                    <constraint firstAttribute="height" constant="40" id="OEP-OM-iAv"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Naj-Bd-ecq">
+                                <rect key="frame" x="55" y="0.0" width="386" height="291"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SaY-xN-474">
+                                        <rect key="frame" x="0.0" y="0.0" width="386" height="16.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yelena Belova" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFT-0w-oDD">
+                                                <rect key="frame" x="0.0" y="0.0" width="193" height="16.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Minggu yang lalu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVn-4S-RAj">
+                                                <rect key="frame" x="193" y="0.0" width="193" height="16.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="dmc-vL-r86">
+                                        <rect key="frame" x="0.0" y="21.5" width="386" height="269.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZlA-s9-oxR" firstAttribute="leading" secondItem="SPd-0W-Vq0" secondAttribute="leading" id="09K-ms-2U5"/>
+                            <constraint firstAttribute="bottom" secondItem="Naj-Bd-ecq" secondAttribute="bottom" id="3w6-bx-poh"/>
+                            <constraint firstItem="Naj-Bd-ecq" firstAttribute="top" secondItem="SPd-0W-Vq0" secondAttribute="top" id="BzG-0W-pYX"/>
+                            <constraint firstAttribute="trailing" secondItem="Naj-Bd-ecq" secondAttribute="trailing" id="ERu-KQ-w7o"/>
+                            <constraint firstItem="Naj-Bd-ecq" firstAttribute="leading" secondItem="ZlA-s9-oxR" secondAttribute="trailing" constant="15" id="w4J-XM-4rr"/>
+                            <constraint firstItem="ZlA-s9-oxR" firstAttribute="top" secondItem="SPd-0W-Vq0" secondAttribute="top" id="zyh-ij-MZ0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="SPd-0W-Vq0" secondAttribute="trailing" id="6TX-GB-EzU"/>
+                    <constraint firstItem="SPd-0W-Vq0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZQG-Ue-rBy"/>
+                    <constraint firstAttribute="bottom" secondItem="SPd-0W-Vq0" secondAttribute="bottom" id="eF1-Km-M3N"/>
+                    <constraint firstItem="SPd-0W-Vq0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fy9-rh-YVZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="reviewerComment" destination="dmc-vL-r86" id="oFf-FB-gqU"/>
+                <outlet property="reviewerImageView" destination="ZlA-s9-oxR" id="Ewa-77-RtU"/>
+                <outlet property="reviewerName" destination="PFT-0w-oDD" id="4Zz-h6-Zkl"/>
+            </connections>
+            <point key="canvasLocation" x="225.36231884057972" y="226.67410714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

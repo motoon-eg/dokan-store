@@ -13,8 +13,7 @@ typealias ProductDetailsViewModelType = ProductDetailsViewModelInput & ProductDe
 
 /// ProductDetails ViewModel Input
 ///
-protocol ProductDetailsViewModelInput {
-  
+protocol ProductDetailsViewModelInput {  
 }
 
 /// ProductDetails ViewModel Output

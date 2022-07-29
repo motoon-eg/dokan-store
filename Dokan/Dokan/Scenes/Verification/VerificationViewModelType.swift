@@ -13,8 +13,7 @@ typealias VerificationViewModelType = VerificationViewModelInput & VerificationV
 
 /// Verification ViewModel Input
 ///
-protocol VerificationViewModelInput {
-  
+protocol VerificationViewModelInput {  
 }
 
 /// Verification ViewModel Output

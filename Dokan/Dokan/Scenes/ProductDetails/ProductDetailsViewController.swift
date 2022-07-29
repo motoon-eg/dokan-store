@@ -8,15 +8,12 @@
 import UIKit
 
 class ProductDetailsViewController: UIViewController {
-    
     // MARK: Outlets
 
     // MARK: Properties
-        
     private let viewModel: ProductDetailsViewModelType
 
     // MARK: Init
-        
     init(viewModel: ProductDetailsViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -26,8 +23,7 @@ class ProductDetailsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: Lifecycle
-    
+    // MARK: Lifecycl
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,13 +32,11 @@ class ProductDetailsViewController: UIViewController {
 // MARK: - Actions
 //
 extension ProductDetailsViewController {
-    
 }
 
 // MARK: - Configurations
 //
 extension ProductDetailsViewController {
-    
 }
 
 // MARK: - Private Handlers

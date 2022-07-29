@@ -9,9 +9,7 @@ import Foundation
 
 // MARK: VerificationViewModel
 //
-class VerificationViewModel {
-  
-}
+class VerificationViewModel {}
 
 // MARK: VerificationViewModel
 
