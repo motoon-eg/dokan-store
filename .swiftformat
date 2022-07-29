@@ -1,6 +1,11 @@
+# format options
+--swiftversion 5.5
 --stripunusedargs closure-only
 --lineaftermarks true
 
+# file options
+
+# rules
 --disable wrapMultilineStatementBraces
 --disable strongOutlets
 --disable blankLinesAtStartOfScope
