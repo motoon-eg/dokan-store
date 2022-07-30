@@ -11,7 +11,6 @@ class ReviewerTableViewCell: UITableViewCell {
     // MARK: - Outlets
     @IBOutlet weak private var reviewerImageView: UIImageView!
     @IBOutlet weak private var reviewerNameLabel: UILabel!
-    
     @IBOutlet weak var reviewerComment: UILabel!
     
     // MARK: - life cycle..
@@ -20,6 +19,7 @@ class ReviewerTableViewCell: UITableViewCell {
     }
         // MARK: - method to configure cell
         func configureCell(viewModel:ViewModel) {
+            #warning("Image will be configure after add kingfisher")
             reviewerNameLabel.text = viewModel.reviewerName
             reviewerComment.text = viewModel.reviewerComment
         }
