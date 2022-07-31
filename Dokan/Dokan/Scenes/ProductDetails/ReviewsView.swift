@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class ReviewsView: UIView, UITableViewDelegate, UITableViewDataSource {
+
+ public class ReviewsView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     var uiMODEL: ReviewsUiModel?
    // MARK: outlets
@@ -17,17 +18,16 @@ class ReviewsView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var customerReview: UITableView!
     @IBOutlet weak var seeAllReviewsButton: UIButton!
+    @IBOutlet weak var imageReview: UIImageView!
     
     // MARK: functions
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         uiMODEL!.reviews.count
     }
-    
-   // func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
- //       guard let cell = tableView.dequeueReusableCell(withIdentifier: " ") else { return // } 
-      
-    //    return cell
-  //  }
+     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewerTableViewCell", for: indexPath)
+        return cell
+    }
     
     override init(frame: CGRect) {
           super.init(frame: frame)
@@ -46,8 +46,7 @@ class ReviewsView: UIView, UITableViewDelegate, UITableViewDataSource {
       }
   }
 
-  extension UIView
-  {
+  extension UIView{
       func fixInView(_ container: UIView) -> Void{
           self.translatesAutoresizingMaskIntoConstraints = false
           self.frame = container.frame
@@ -58,8 +57,3 @@ class ReviewsView: UIView, UITableViewDelegate, UITableViewDataSource {
           NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
       }
 }
-
-
-    
-
-
