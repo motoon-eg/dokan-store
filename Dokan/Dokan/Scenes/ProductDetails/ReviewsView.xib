@@ -16,6 +16,7 @@
                 <outlet property="evaluation" destination="1os-cm-Pnw" id="W2b-ba-iKu"/>
                 <outlet property="reviews" destination="lXx-Ro-9aV" id="e7P-So-ghd"/>
                 <outlet property="seeAllReviewsButton" destination="nk3-9U-bPh" id="PQZ-Kd-cLc"/>
+                <outlet property="star" destination="koy-fI-M58" id="Pxr-Bd-7y9"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,13 +28,13 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXx-Ro-9aV">
-                            <rect key="frame" x="8" y="8" width="50" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <rect key="frame" x="8" y="8" width="48" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="1"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1os-cm-Pnw">
-                            <rect key="frame" x="364" y="8" width="42" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1os-cm-Pnw">
+                            <rect key="frame" x="362" y="8" width="44" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -47,6 +48,9 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="See All Review"/>
                         </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="koy-fI-M58">
+                            <rect key="frame" x="310" y="4" width="73" height="29"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -56,14 +60,18 @@
                         <constraint firstAttribute="trailing" secondItem="nk3-9U-bPh" secondAttribute="trailing" constant="20" id="8LZ-HF-ZpN"/>
                         <constraint firstItem="ZWX-98-Ydl" firstAttribute="top" secondItem="lXx-Ro-9aV" secondAttribute="bottom" constant="39" id="9s4-9f-qEE"/>
                         <constraint firstItem="nk3-9U-bPh" firstAttribute="top" secondItem="ZWX-98-Ydl" secondAttribute="bottom" constant="84" id="Bg3-5w-BqE"/>
+                        <constraint firstItem="koy-fI-M58" firstAttribute="top" secondItem="TMO-FZ-vPl" secondAttribute="top" constant="4" id="DuT-pX-q06"/>
                         <constraint firstAttribute="bottom" secondItem="nk3-9U-bPh" secondAttribute="bottom" constant="24" id="Dxu-UF-m3j"/>
                         <constraint firstAttribute="bottom" secondItem="1os-cm-Pnw" secondAttribute="bottom" constant="789" id="DyV-4Q-Icq"/>
+                        <constraint firstItem="ZWX-98-Ydl" firstAttribute="top" secondItem="koy-fI-M58" secondAttribute="bottom" constant="35" id="FMx-Nw-R7w"/>
                         <constraint firstItem="1os-cm-Pnw" firstAttribute="leading" secondItem="lXx-Ro-9aV" secondAttribute="trailing" constant="306" id="H4a-AB-AGn"/>
                         <constraint firstAttribute="trailing" secondItem="1os-cm-Pnw" secondAttribute="trailing" constant="8" id="RiJ-VF-Udk"/>
                         <constraint firstItem="nk3-9U-bPh" firstAttribute="leading" secondItem="TMO-FZ-vPl" secondAttribute="leading" constant="20" id="Uhl-sr-F0X"/>
                         <constraint firstItem="1os-cm-Pnw" firstAttribute="top" secondItem="TMO-FZ-vPl" secondAttribute="top" constant="8" id="VZs-vf-h2H"/>
+                        <constraint firstItem="koy-fI-M58" firstAttribute="leading" secondItem="lXx-Ro-9aV" secondAttribute="trailing" constant="254" id="XJB-Qu-g75"/>
                         <constraint firstItem="1os-cm-Pnw" firstAttribute="leading" secondItem="lXx-Ro-9aV" secondAttribute="trailing" constant="306" id="ZbY-7D-zas"/>
                         <constraint firstItem="lXx-Ro-9aV" firstAttribute="top" secondItem="TMO-FZ-vPl" secondAttribute="top" constant="8" id="fRr-bs-qKi"/>
+                        <constraint firstItem="1os-cm-Pnw" firstAttribute="leading" secondItem="koy-fI-M58" secondAttribute="trailing" constant="-21" id="guC-pk-ipK"/>
                         <constraint firstItem="lXx-Ro-9aV" firstAttribute="leading" secondItem="TMO-FZ-vPl" secondAttribute="leading" constant="8" id="jcF-cS-7bG"/>
                         <constraint firstItem="nk3-9U-bPh" firstAttribute="top" secondItem="ZWX-98-Ydl" secondAttribute="bottom" constant="84" id="yKQ-cX-8zT"/>
                     </constraints>
@@ -81,6 +89,7 @@
         </view>
     </objects>
     <resources>
+        <image name="star" width="14" height="14"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
