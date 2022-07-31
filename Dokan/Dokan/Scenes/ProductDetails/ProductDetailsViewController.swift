@@ -6,16 +6,19 @@
 //
 
 import UIKit
+import UIDokan
 
 class ProductDetailsViewController: UIViewController {
     
     // MARK: Outlets
 
     @IBOutlet private weak var InfoSellerView: InfoSellerView!
+    @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
     
     // MARK: Properties
         
     private let viewModel: ProductDetailsViewModelType
+    private var navigationBarBehavior: ProductDetailsNavigationBarBehavior?
 
     // MARK: Init
         
@@ -33,6 +36,8 @@ class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         InfoSellerView.delegate = self
+        configureDescriptionTextView()
+        configureNavBar()
     }
 }
 
@@ -44,7 +49,26 @@ extension ProductDetailsViewController {
 
 // MARK: - Configurations
 //
-extension ProductDetailsViewController {
+private extension ProductDetailsViewController {
+    
+    func configureDescriptionTextView() {
+        descriptionTextView.shouldTrim = true
+        descriptionTextView.maximumNumberOfLines = 3
+        descriptionTextView.attributedReadMoreText = NSAttributedString(string: "... Read more")
+        descriptionTextView.attributedReadLessText = NSAttributedString(string: " Read less")
+
+    }
+    
+    func configureNavBar() {
+        title = "Product Detail"
+        navigationBarBehavior = ProductDetailsNavigationBarBehavior(navigationItem: navigationItem)
+        navigationBarBehavior?.configure(onRedo: {
+            print("onRedo is tapped")
+        }, onCart: {
+            print("onCart is tapped")
+        })
+    }
+    
     
 }
 
