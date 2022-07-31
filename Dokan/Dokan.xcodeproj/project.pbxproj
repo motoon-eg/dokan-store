@@ -281,6 +281,7 @@
 			buildConfigurationList = AA21B44628537E0500E4F217 /* Build configuration list for PBXNativeTarget "Dokan" */;
 			buildPhases = (
 				99CC7309288E302200503D86 /* SwiftGen */,
+				AA758472289443F400445B85 /* Swift Format */,
 				AA21B42E28537E0400E4F217 /* Sources */,
 				AA21B42F28537E0400E4F217 /* Frameworks */,
 				AA21B43028537E0400E4F217 /* Resources */,
@@ -393,6 +394,7 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		99CC7309288E302200503D86 /* SwiftGen */ = {
+		AA758472289443F400445B85 /* Swift Format */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,6 +404,7 @@
 			inputPaths = (
 			);
 			name = SwiftGen;
+			name = "Swift Format";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -409,6 +412,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$SRCROOT/swiftgen/bin/swiftgen\n";
+			shellScript = "cd ../BuildTools\n# cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n# swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"/..\n";
 		};
 		AAA2E183285CC0BB00EAD189 /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -446,7 +450,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nCONFIG_FILE=\"${SRCROOT}/../.swiftlint.yml\"\nif which swiftlint > /dev/null; then\n  swiftlint --config $CONFIG_FILE\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nCONFIG_FILE=\"${SRCROOT}/../.swiftlint.yml\"\nif which swiftlint > /dev/null; then\n  swiftlint lint --path \"$SRCROOT\"/.. --config $CONFIG_FILE\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

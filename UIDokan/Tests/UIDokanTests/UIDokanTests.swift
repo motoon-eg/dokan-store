@@ -1,5 +1,5 @@
-import XCTest
 @testable import UIDokan
+import XCTest
 
 final class UIDokanTests: XCTestCase {
     func testExample() throws {
