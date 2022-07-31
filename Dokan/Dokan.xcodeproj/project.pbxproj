@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		27A748A12887116A00C71331 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7489F2887116900C71331 /* SliderCollectionViewCell.swift */; };
-		27A748A22887116A00C71331 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A748A02887116A00C71331 /* SliderCollectionViewCell.xib */; };
-		27C9AE19288A8FDD00FA584A /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 27C9AE18288A8FDD00FA584A /* Domain */; };
 		276889DC287417730091ACEB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889DA287417730091ACEB /* RegisterViewController.swift */; };
 		276889DD287417730091ACEB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276889DB287417730091ACEB /* RegisterViewController.xib */; };
 		276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889DE28741F750091ACEB /* RegisterViewModel.swift */; };
 		276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889E0287420980091ACEB /* RegisterViewModelType.swift */; };
 		276889E328742A4C0091ACEB /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */; };
+		27A7378028967C1200FD8AD9 /* CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7377F28967C1200FD8AD9 /* CollectionViewDelegate.swift */; };
+		27A7378228967C8000FD8AD9 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7378128967C8000FD8AD9 /* CollectionViewDataSource.swift */; };
+		27A748A12887116A00C71331 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7489F2887116900C71331 /* SliderCollectionViewCell.swift */; };
+		27A748A22887116A00C71331 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A748A02887116A00C71331 /* SliderCollectionViewCell.xib */; };
+		27C9AE19288A8FDD00FA584A /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 27C9AE18288A8FDD00FA584A /* Domain */; };
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */; };
 		85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */; };
@@ -57,14 +58,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-
-		27A7489F2887116900C71331 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
-		27A748A02887116A00C71331 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		276889DA287417730091ACEB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		276889DB287417730091ACEB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		276889DE28741F750091ACEB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		276889E0287420980091ACEB /* RegisterViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelType.swift; sourceTree = "<group>"; };
 		276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewControllerTests.swift; path = DokanTests/Scenes/Registratio9nTest/RegisterViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
+		27A7377F28967C1200FD8AD9 /* CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegate.swift; sourceTree = "<group>"; };
+		27A7378128967C8000FD8AD9 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		27A7489F2887116900C71331 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		27A748A02887116A00C71331 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -118,16 +120,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-
-		27A7489E2887114B00C71331 /* SliderCollectionCell */ = {
-			isa = PBXGroup;
-			children = (
-				27A7489F2887116900C71331 /* SliderCollectionViewCell.swift */,
-				27A748A02887116A00C71331 /* SliderCollectionViewCell.xib */,
-			);
-			path = SliderCollectionCell;
-			sourceTree = "<group>";
-		};
 		273F1DE32874A4A4006485D6 /* Registratio9nTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +137,15 @@
 				276889E0287420980091ACEB /* RegisterViewModelType.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		27A7489E2887114B00C71331 /* SliderCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				27A7489F2887116900C71331 /* SliderCollectionViewCell.swift */,
+				27A748A02887116A00C71331 /* SliderCollectionViewCell.xib */,
+			);
+			path = SliderCollectionCell;
 			sourceTree = "<group>";
 		};
 		85B31DAD2870BD4700B1C9E8 /* Login */ = {
@@ -220,6 +221,8 @@
 				AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */,
 				AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */,
 				AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */,
+				27A7377F28967C1200FD8AD9 /* CollectionViewDelegate.swift */,
+				27A7378128967C8000FD8AD9 /* CollectionViewDataSource.swift */,
 			);
 			path = ProductDetails;
 			sourceTree = "<group>";
@@ -466,6 +469,8 @@
 				AA57CB2F2881B21800FE62C8 /* ProductDetailsViewController.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
 				AA98C0762867EAC0004C5967 /* Logging.swift in Sources */,
+				27A7378028967C1200FD8AD9 /* CollectionViewDelegate.swift in Sources */,
+				27A7378228967C8000FD8AD9 /* CollectionViewDataSource.swift in Sources */,
 				85B31DBC2870BEDE00B1C9E8 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
