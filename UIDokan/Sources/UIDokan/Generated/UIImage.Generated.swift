@@ -6,39 +6,7 @@ import UIKit.UIImage
 
 extension UIImage {
 
-    static var accentColor: UIImage {
-        UIImage(named: "AccentColor")!
-    }
-
-    static var bellBadge: UIImage {
-        UIImage(named: "bell-badge")!
-    }
-
-    static var bell: UIImage {
-        UIImage(named: "bell")!
-    }
-
-    static var newImageIcon: UIImage {
-        UIImage(named: "new-image-icon")!
-    }
-
-    static var redo: UIImage {
-        UIImage(named: "redo")!
-    }
-
-    static var search: UIImage {
-        UIImage(named: "search")!
-    }
-
-    static var shoppingCartBadge: UIImage {
-        UIImage(named: "shopping-cart-badge")!
-    }
-
-    static var shoppingCart: UIImage {
-        UIImage(named: "shopping-cart")!
-    }
-
-    static var star: UIImage {
-        UIImage(named: "star")!
+    static var accentColor : UIImage {
+      UIImage(named: "AccentColor")! 
     }
 }
