@@ -3,25 +3,17 @@
 import Foundation
 
 // MARK: ___FILEBASENAMEASIDENTIFIER___
-//
-class ___FILEBASENAMEASIDENTIFIER___ {
-  
-}
+
+class ___FILEBASENAMEASIDENTIFIER___ {}
 
 // MARK: ___FILEBASENAMEASIDENTIFIER___
 
-extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName___ViewModelInput {
-
-}
+extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName___ViewModelInput {}
 
 // MARK: ___FILEBASENAMEASIDENTIFIER___Output
-//
-extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName___ViewModelOutput {
 
-}
+extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName___ViewModelOutput {}
 
 // MARK: Private Handlers
-//
-private extension ___FILEBASENAMEASIDENTIFIER___ {
 
-}
+private extension ___FILEBASENAMEASIDENTIFIER___ {}
