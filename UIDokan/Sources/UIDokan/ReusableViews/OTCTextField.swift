@@ -1,15 +1,14 @@
 //
 //  OTCTextField.swift
-//  
+//
 //
 //  Created by Ahmed Nagy on 08/07/2022.
 //
 
 import UIKit
 
-
 public class OTCTextField: UITextField {
-    
+
     public var didEnterLastDigit: ((String) -> Void)?
     var defaultCharacter = "-"
     private var isConfigured = false
@@ -19,7 +18,7 @@ public class OTCTextField: UITextField {
         recognizer.addTarget(self, action: #selector(becomeFirstResponder))
         return recognizer
     }()
-    
+
     public func configure(with slotCount: Int = 4) {
         guard isConfigured == false else { return }
         isConfigured.toggle()
@@ -31,9 +30,10 @@ public class OTCTextField: UITextField {
             labelsStackView.topAnchor.constraint(equalTo: topAnchor),
             labelsStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             labelsStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            labelsStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            labelsStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
+
     private func configureTextField() {
         tintColor = .clear
         textColor = .clear
@@ -42,6 +42,7 @@ public class OTCTextField: UITextField {
         addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         delegate = self
     }
+
     private func createLabelStackView(with count: Int) -> UIStackView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -49,25 +50,25 @@ public class OTCTextField: UITextField {
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.spacing = 8
-        (1...count).forEach { _ in
+        (1 ... count).forEach { _ in
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.textAlignment = .center
             label.font = .systemFont(ofSize: 40)
             label.text = defaultCharacter
             stackView.addArrangedSubview(label)
-            
+
             digitsLabels.append(label)
         }
-        
+
         return stackView
     }
-    
+
     @objc private func textDidChange() {
-        guard let text = self.text, text.count <= digitsLabels.count else { return }
-        for i in 0..<digitsLabels.count {
+        guard let text = text, text.count <= digitsLabels.count else { return }
+        for i in 0 ..< digitsLabels.count {
             let currentLabel = digitsLabels[i]
-            
+
             if i < text.count {
                 let index = text.index(text.startIndex, offsetBy: i)
                 currentLabel.text = String(text[index])
@@ -75,7 +76,7 @@ public class OTCTextField: UITextField {
                 currentLabel.text = defaultCharacter
             }
         }
-        
+
         if text.count == digitsLabels.count {
             didEnterLastDigit?(text)
         }
@@ -83,9 +84,9 @@ public class OTCTextField: UITextField {
 }
 
 // MARK: - UITextFieldDelegate
-//
+
 extension OTCTextField: UITextFieldDelegate {
-    
+
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let charachterCount = textField.text?.count else { return false }
         return charachterCount < digitsLabels.count || string == ""
