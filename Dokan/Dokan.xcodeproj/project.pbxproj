@@ -23,6 +23,10 @@
 		85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */; };
 		85B31DBC2870BEDE00B1C9E8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */; };
 		85B31DBD2870BEDE00B1C9E8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */; };
+		85B31DC02870BF4300B1C9E8 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */; };
+		99CC7308288E2FE400503D86 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CC7307288E2FE400503D86 /* Colors.xcassets */; };
+		85F6B6DA28919C87007730AB /* ProductDetailsNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6B6D928919C87007730AB /* ProductDetailsNavigationBarBehavior.swift */; };
+		99CC7308288E2FE400503D86 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CC7307288E2FE400503D86 /* Colors.xcassets */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
@@ -72,6 +76,10 @@
 		85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		99CC7307288E2FE400503D86 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		85F6B6D928919C87007730AB /* ProductDetailsNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsNavigationBarBehavior.swift; sourceTree = "<group>"; };
+		99CC7307288E2FE400503D86 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA21B43728537E0400E4F217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +192,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		85B31DBE2870BF3500B1C9E8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				85B31DBF2870BF4300B1C9E8 /* LoginViewModelTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<unknown>";
+		};
 		AA21B42928537E0400E4F217 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +222,7 @@
 		AA21B43428537E0400E4F217 /* Dokan */ = {
 			isa = PBXGroup;
 			children = (
+				99CC7307288E2FE400503D86 /* Colors.xcassets */,
 				AA98C0742867EAB7004C5967 /* Internal */,
 				AAF5F1DA286F76F2002DA8ED /* Scenes */,
 				AAF5F1DB286F76FD002DA8ED /* System */,
@@ -246,6 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				437B99A428907E6C00F59B06 /* FeaturedProduct */,
+				85F6B6D928919C87007730AB /* ProductDetailsNavigationBarBehavior.swift */,
+
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +329,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA21B44628537E0500E4F217 /* Build configuration list for PBXNativeTarget "Dokan" */;
 			buildPhases = (
+				99CC7309288E302200503D86 /* SwiftGen */,
+				AA758472289443F400445B85 /* Swift Format */,
 				AA21B42E28537E0400E4F217 /* Sources */,
 				AA21B42F28537E0400E4F217 /* Frameworks */,
 				AA21B43028537E0400E4F217 /* Resources */,
@@ -400,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				437B99AD289082BC00F59B06 /* FeaturedProductCollectionViewCell.xib in Resources */,
+				99CC7308288E2FE400503D86 /* Colors.xcassets in Resources */,
 				85B31DBD2870BEDE00B1C9E8 /* LoginViewController.xib in Resources */,
 				E251D05028784A050065C852 /* VerificationViewController.xib in Resources */,
 				AA21B44228537E0500E4F217 /* LaunchScreen.storyboard in Resources */,
@@ -422,6 +444,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		99CC7309288E302200503D86 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$SRCROOT/../Vendors/swiftgen/bin/swiftgen\n";
+		};
+		AA758472289443F400445B85 /* Swift Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			name = "Swift Format";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$SRCROOT/swiftgen/bin/swiftgen\n";
+			shellScript = "cd ../BuildTools\n# cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n# swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"/..\n";
+		};
 		AAA2E183285CC0BB00EAD189 /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -458,7 +518,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nCONFIG_FILE=\"${SRCROOT}/../.swiftlint.yml\"\nif which swiftlint > /dev/null; then\n  swiftlint --config $CONFIG_FILE\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nCONFIG_FILE=\"${SRCROOT}/../.swiftlint.yml\"\nif which swiftlint > /dev/null; then\n  swiftlint lint --path \"$SRCROOT\"/.. --config $CONFIG_FILE\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -480,6 +540,7 @@
 				AA57CB2E2881B21800FE62C8 /* ProductDetailsViewModelType.swift in Sources */,
 				E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */,
 				E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */,
+				85F6B6DA28919C87007730AB /* ProductDetailsNavigationBarBehavior.swift in Sources */,
 				AA57CB2F2881B21800FE62C8 /* ProductDetailsViewController.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
 				AA98C0762867EAC0004C5967 /* Logging.swift in Sources */,
