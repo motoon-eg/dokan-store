@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 class CollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
     var data = [String]()

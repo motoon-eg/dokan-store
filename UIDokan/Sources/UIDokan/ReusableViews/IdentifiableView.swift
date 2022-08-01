@@ -5,6 +5,7 @@
 //
 
 import UIKit
+
 public protocol IdentifiableView: AnyObject {
     static var reuseIdentifier: String { get }
 }
