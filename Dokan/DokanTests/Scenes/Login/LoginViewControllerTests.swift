@@ -1,13 +1,14 @@
 //
-//  DokanTests.swift
+//  LoginViewControllerTests.swift
 //  DokanTests
 //
-//  Created by Ahmed M. Hassan on 10/06/2022.
+//  Created by Omar Ahmed on 08/07/2022.
 //
 
+@testable import Dokan
 import XCTest
 
-class DokanTests: XCTestCase {
+class LoginViewControllerTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -31,5 +32,4 @@ class DokanTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

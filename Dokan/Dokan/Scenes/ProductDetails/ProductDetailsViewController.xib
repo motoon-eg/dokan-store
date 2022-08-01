@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailsViewController" customModule="Dokan" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTextView" destination="owe-WV-VX7" id="UDC-4d-5av"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1501"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHs-9r-A9B">
+                    <rect key="frame" x="20" y="64" width="374" height="1383"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-gD-2z3">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="1058"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-ec-rsE" userLabel="SliderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="vFA-wY-lIi"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-mJ-zfW" userLabel="TitleView">
+                                    <rect key="frame" x="0.0" y="148" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="hjG-F1-rCl"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUV-ot-6hy" userLabel="SeparatorView">
+                                    <rect key="frame" x="0.0" y="296" width="374" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Ax5-cL-rIP"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-vx-s8d" userLabel="SellerView">
+                                    <rect key="frame" x="0.0" y="317" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="ISq-dd-bbb"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6U-sc-JgH" userLabel="SeparatorView">
+                                    <rect key="frame" x="0.0" y="465" width="374" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="epr-7K-bnm"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0z8-QI-qT0" userLabel="DescriptionView">
+                                    <rect key="frame" x="0.0" y="486" width="374" height="128"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="owe-WV-VX7" customClass="ReadMoreTextView" customModule="UIDokan">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="owe-WV-VX7" secondAttribute="trailing" id="O7G-zG-4rN"/>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="dQb-YF-jh9"/>
+                                        <constraint firstItem="owe-WV-VX7" firstAttribute="leading" secondItem="0z8-QI-qT0" secondAttribute="leading" id="dbd-iI-I6h"/>
+                                        <constraint firstItem="owe-WV-VX7" firstAttribute="top" secondItem="0z8-QI-qT0" secondAttribute="top" id="f7X-5U-Cri"/>
+                                        <constraint firstAttribute="bottom" secondItem="owe-WV-VX7" secondAttribute="bottom" id="sMZ-NX-4tW"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-ct-O8i" userLabel="ReviewsView">
+                                    <rect key="frame" x="0.0" y="634" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="cPa-9n-Hm8"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auT-ob-9ds" userLabel="FeaturedView">
+                                    <rect key="frame" x="0.0" y="782" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="hcM-eU-p4e"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqs-7W-PR8" userLabel="ButtonsView">
+                                    <rect key="frame" x="0.0" y="930" width="374" height="128"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="250" constant="128" id="wMX-Bb-fpF"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="pOd-gD-2z3" firstAttribute="width" secondItem="zHs-9r-A9B" secondAttribute="width" id="3lq-Zc-UkR"/>
+                        <constraint firstItem="pOd-gD-2z3" firstAttribute="top" secondItem="zHs-9r-A9B" secondAttribute="top" id="7yU-P4-CNZ"/>
+                        <constraint firstAttribute="trailing" secondItem="pOd-gD-2z3" secondAttribute="trailing" id="NaZ-jM-AIq"/>
+                        <constraint firstAttribute="bottom" secondItem="pOd-gD-2z3" secondAttribute="bottom" id="nwV-q7-1OT"/>
+                        <constraint firstItem="pOd-gD-2z3" firstAttribute="leading" secondItem="zHs-9r-A9B" secondAttribute="leading" id="sw5-Uc-nFK"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zHs-9r-A9B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="20" id="4Ye-9g-gjY"/>
+                <constraint firstItem="zHs-9r-A9B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="BtZ-ud-JLK"/>
+                <constraint firstItem="pOd-gD-2z3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="1" id="ixN-vX-Rsw"/>
+                <constraint firstAttribute="trailing" secondItem="zHs-9r-A9B" secondAttribute="trailing" constant="20" id="kNN-lQ-bdK"/>
+                <constraint firstAttribute="bottomMargin" secondItem="zHs-9r-A9B" secondAttribute="bottom" constant="20" id="wGY-iq-Wqb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="91.304347826086968" y="219.30803571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
