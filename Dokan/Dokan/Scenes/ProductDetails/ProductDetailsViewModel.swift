@@ -1,4 +1,4 @@
-//  
+//
 //  ProductDetailsViewModel.swift
 //  Dokan
 //
@@ -8,25 +8,17 @@
 import Foundation
 
 // MARK: ProductDetailsViewModel
-//
-class ProductDetailsViewModel {
-  
-}
+
+class ProductDetailsViewModel {}
 
 // MARK: ProductDetailsViewModel
 
-extension ProductDetailsViewModel: ProductDetailsViewModelInput {
-
-}
+extension ProductDetailsViewModel: ProductDetailsViewModelInput {}
 
 // MARK: ProductDetailsViewModelOutput
-//
-extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
-}
+extension ProductDetailsViewModel: ProductDetailsViewModelOutput {}
 
 // MARK: Private Handlers
-//
-private extension ProductDetailsViewModel {
 
-}
+private extension ProductDetailsViewModel {}
