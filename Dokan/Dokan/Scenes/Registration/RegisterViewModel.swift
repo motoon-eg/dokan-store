@@ -23,7 +23,7 @@ extension RegisterViewModel: RegisterViewModelInput {
 
 extension RegisterViewModel: RegisterViewModelOutput {
     func ConfigureButtonEnabled(isEnabled: @escaping (Bool) -> Void) {
-        self.isButtonEnabled = isEnabled
+        isButtonEnabled = isEnabled
         updateIsEnabledButton()
     }
 }

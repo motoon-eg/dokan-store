@@ -1,4 +1,4 @@
-//  
+//
 //  ProductDetailsViewController.swift
 //  Dokan
 //
@@ -9,28 +9,29 @@ import UIKit
 import UIDokan
 
 class ProductDetailsViewController: UIViewController {
-    
+
     // MARK: Outlets
     @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
     
     // MARK: Properties
-        
+
     private let viewModel: ProductDetailsViewModelType
     private var navigationBarBehavior: ProductDetailsNavigationBarBehavior?
 
     // MARK: Init
-        
+
     init(viewModel: ProductDetailsViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDescriptionTextView()
@@ -39,13 +40,11 @@ class ProductDetailsViewController: UIViewController {
 }
 
 // MARK: - Actions
-//
-extension ProductDetailsViewController {
-    
-}
+
+extension ProductDetailsViewController {}
 
 // MARK: - Configurations
-//
+
 private extension ProductDetailsViewController {
     
     func configureDescriptionTextView() {
@@ -53,7 +52,6 @@ private extension ProductDetailsViewController {
         descriptionTextView.maximumNumberOfLines = 3
         descriptionTextView.attributedReadMoreText = NSAttributedString(string: "... Read more")
         descriptionTextView.attributedReadLessText = NSAttributedString(string: " Read less")
-
     }
     
     func configureNavBar() {
@@ -65,11 +63,8 @@ private extension ProductDetailsViewController {
             print("onCart is tapped")
         })
     }
-    
-    
 }
 
 // MARK: - Private Handlers
-//
-private extension ProductDetailsViewController {
-}
+
+private extension ProductDetailsViewController {}
