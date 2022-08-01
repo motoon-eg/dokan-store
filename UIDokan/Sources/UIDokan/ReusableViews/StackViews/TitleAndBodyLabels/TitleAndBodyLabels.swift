@@ -15,7 +15,7 @@ class TitleAndBodyLabels: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-       setup()
+        setup()
     }
     
     required init?(coder: NSCoder) {

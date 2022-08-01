@@ -46,45 +46,61 @@ extension UILabel {
 extension UILabel{
     
     private func titleLabel() {
-        textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20) // RegisterTitle.font
+        // TODO: - navyBlack.color
+        textColor = UIColor.black
+        // TODO: - RegisterTitle.font
+        font = UIFont(name: UIFont.familyNames[0], size: 20) 
     }
     
     private func bodyLabel() {
-        textColor = UIColor.darkGray // darkGrey.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20) // Body.font
+        // TODO: - darkGrey.color
+        textColor = UIColor.darkGray
+        // TODO: - Body.font
+        font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
     
     private func textFieldTitleLabel() {
-        textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20)// Body.font
+        // TODO: - navyBlack.color
+        textColor = UIColor.black
+        // TODO: - Body.font
+        font = UIFont(name: UIFont.familyNames[0], size: 20)
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 48)
         ])
     }
     
     private func categoriesTitleLabel() {
-        textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20) // CategoriesTitle.font
+        // TODO: - navyBlack.color
+        textColor = UIColor.black
+        // TODO: - CategoriesTitle.font
+        font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
     
     private func productTitleLabel() {
-        textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20) // ProductTitle_Btn_TF.font
+        // TODO: - navyBlack.color
+        textColor = UIColor.black
+        // TODO: - ProductTitle_Btn_TF.font
+        font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
     
     private func productPriceLabel() {
-        textColor = UIColor.red // redVelvet.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20) // ProductPrice.font
+        // TODO: - redVelvet.color
+        textColor = UIColor.red
+        // TODO: - ProductPrice.font
+        font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
     
     private func reviewsLabel() {
-        textColor = UIColor.black // navyBlack.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20) // Reviews.font
+        // TODO: - navyBlack.color
+        textColor = UIColor.black
+        // TODO: - Reviews.font
+        font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
     
     private func coverTitleLabel() {
-        textColor = UIColor.white // pureWhite.color
-        font = UIFont(name: UIFont.familyNames[0], size: 20 ) // CoverTitle.font
+        // TODO: - pureWhite.color
+        textColor = UIColor.white
+        // TODO: - CoverTitle.font
+        font = UIFont(name: UIFont.familyNames[0], size: 20 )
     }
 }

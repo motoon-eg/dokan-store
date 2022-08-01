@@ -9,13 +9,13 @@ import UIKit
 
 public class LabelAndTextfield: UIView {
     
-    @IBOutlet public var contentView: UIView!
-    @IBOutlet weak var stackViewLabel: UILabel!
-    @IBOutlet weak var stackViewTextField: UITextField!
+    @IBOutlet private var contentView: UIView!
+    @IBOutlet private weak var stackViewLabel: UILabel!
+    @IBOutlet private weak var stackViewTextField: UITextField!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-       setup()
+        setup()
     }
     
     required init?(coder: NSCoder) {
@@ -33,6 +33,6 @@ public class LabelAndTextfield: UIView {
     
     private func setupStyle() {
         stackViewLabel.applyLabelStyle(.textFieldTitle)
-        stackViewTextField.textFieldStyle()
+        stackViewTextField.applyRoundedtextFieldStyle()
     }
 }
