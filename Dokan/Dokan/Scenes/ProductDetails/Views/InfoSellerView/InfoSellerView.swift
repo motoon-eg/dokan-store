@@ -39,7 +39,7 @@ class InfoSellerView: UIView {
         sellerType.addTrailing(image: UIImage(named: "verified"), text: sellerType.text ?? "" + " ")
     }
     
-    private func addTapGestureRecognizer(){
+    private func addTapGestureRecognizer() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(infoSellerViewWasTapped))
         addGestureRecognizer(tap)
     }
