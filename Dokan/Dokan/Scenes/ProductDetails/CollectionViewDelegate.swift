@@ -5,7 +5,6 @@
 //  Created by heba isaa on 31/07/2022.
 //
 
-import Foundation
 import UIKit
 
 class CollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
