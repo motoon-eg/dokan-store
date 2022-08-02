@@ -12,6 +12,7 @@ class ProductDetailsViewController: UIViewController {
 
     // MARK: Outlets
 
+    @IBOutlet private weak var InfoSellerView: InfoSellerView!
     @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
 
     // MARK: Properties
@@ -35,6 +36,7 @@ class ProductDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        InfoSellerView.delegate = self
         configureDescriptionTextView()
         configureNavBar()
     }
@@ -66,6 +68,16 @@ private extension ProductDetailsViewController {
     }
 }
 
-// MARK: - Private Handlers
+// MARK: - Actions
+//
+private extension ProductDetailsViewController {
+    
+}
 
-private extension ProductDetailsViewController {}
+// MARK: - InfoSellerViewDelegate Protocol
+extension ProductDetailsViewController: InfoSellerViewDelegate {
+    func didInfoSellerViewTapped() {
+        print("Info seller view is tapped")
+    }
+    
+}
