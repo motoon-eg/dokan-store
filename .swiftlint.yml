@@ -133,3 +133,7 @@ line_length: 160
 
 control_statement:
   severity: error
+
+# Excluded files and folders
+excluded:
+  - BuildTools
