@@ -6,14 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
-struct Review{
-    
-}
+
 struct ReviewsUiModel{
     var reviewsCount: Int
     var rate: Double
-    var reviews: [Review]
-    
+    var reviews: [ReviewTableViewCellViewModel]
+    var imageReview: UIImage
 }
 

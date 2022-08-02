@@ -7,11 +7,12 @@
 
 import Foundation
 import UIKit
+import CoreMIDI
 
 
  public class ReviewsView: UIView, UITableViewDelegate, UITableViewDataSource {
     
-    var uiMODEL: ReviewsUiModel?
+     var uiMODEL: ReviewsUiModel?
    // MARK: outlets
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var reviews: UILabel!
@@ -19,20 +20,19 @@ import UIKit
     @IBOutlet weak var customerReview: UITableView!
     @IBOutlet weak var seeAllReviewsButton: UIButton!
     @IBOutlet weak var imageReview: UIImageView!
-    
     // MARK: functions
      public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         uiMODEL!.reviews.count
     }
      public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewerTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewerTableViewCell") as! ReviewerTableViewCell
+         guard let data = (uiMODEL?.reviews[indexPath.row]) else { return UITableViewCell() }
+         cell.configureCell(reviewTableViewCellViewModel: data)
         return cell
     }
-    
     override init(frame: CGRect) {
           super.init(frame: frame)
           commonInit()
-        
         customerReview.dataSource = self
         customerReview.delegate = self
       }
