@@ -163,6 +163,8 @@
 				85DA676328928F1500DCABD2 /* InfoSellerViewDelegate.swift */,
 			);
 			path = InfoSellerView;
+			sourceTree = "<group>";
+		};
 		437B99A428907E6C00F59B06 /* FeaturedProduct */ = {
 			isa = PBXGroup;
 			children = (
@@ -908,5 +910,4 @@
 /* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA21B42A28537E0400E4F217 /* Project object */;
-}
 }
