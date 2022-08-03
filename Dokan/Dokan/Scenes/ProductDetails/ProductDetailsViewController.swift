@@ -69,15 +69,14 @@ private extension ProductDetailsViewController {
 }
 
 // MARK: - Actions
+
 //
-private extension ProductDetailsViewController {
-    
-}
+private extension ProductDetailsViewController {}
 
 // MARK: - InfoSellerViewDelegate Protocol
+
 extension ProductDetailsViewController: InfoSellerViewDelegate {
     func didInfoSellerViewTapped() {
         print("Info seller view is tapped")
     }
-    
 }
