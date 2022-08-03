@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  Dokan
+
+  Created by marwa on 25/07/2022.
+  
+*/
+"app.title" = "Mega Mall";
+"login.title" = "Welcome back to Mega Mall";
+"login.email.title" = "Email/ Phone";
+"login.password.title" = "Password";
+"login.button" = "Sign In";
+"login.button.forgotPassword" = "Forgot Password";
+"login.button.signUp" = "Sign Up";
+"resetPassword.title" = "Reset Password";
+"resetPassword.button" = "Reset";
+"verification.title" = "Verification";
+"verification.otc.title" = "Verification Code";
+"verification.button.resend" = "Re-send Code";
+"verification.button.continue" = "Continue";
+"register.button.continue" = "Continue";
+"register.title" = "Register Account";
+"register.haveAccount" = "Have an Account?";
+"register.button.signIn" = "Sign In";
+"ProfileAndPassword.title" = "Profile & Password";
+"ProfileAndPassword.fullName" = "Full Name";
+"ProfileAndPassword.referalCode" = "Referal Code (Optional)";
+"ProfileAndPassword.password" = "Password";
+"ProfileAndPassword.button.confirmation" = "Confirmation";
+"productDetails.placeHolder.search" = "Search Product Name";
+"productDetails.title.categories" = "Categories";
+"productDetails.title.featuredProduct" = "Featured Product";
+"productDetails.title.bestSellers" = "Best Sellers";
+"productDetails.title.newArrivals" = "New Arrivals";
+"productDetails.title.specialOffers" = "Special Offers";
+"productDetails.title.latestNews" = "Latest News";
+"productDetails.title.topRated" = "Top Rated Product";
+"productDetails.button.seeAll" = "See All";
+"productDetails.button.seeAllNews" = "See All News";
+
+
+
