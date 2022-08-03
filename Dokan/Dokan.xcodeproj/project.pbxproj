@@ -47,8 +47,6 @@
 		AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */; };
 		AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E17F285CBFCA00EAD189 /* FirebaseAnalytics */; };
 		AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */; };
-		AADC5BAF289ADFF300C9AA12 /* FeaturedProductCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC5BAB289ADFF300C9AA12 /* FeaturedProductCollectionViewCellTests.swift */; };
-		AADC5BB0289ADFF300C9AA12 /* FeaturedProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC5BAC289ADFF300C9AA12 /* FeaturedProductTests.swift */; };
 		AADC5BB1289ADFF300C9AA12 /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC5BAE289ADFF300C9AA12 /* RegisterViewControllerTests.swift */; };
 		AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1BE285E1A3A00A4EBB0 /* Networking */; };
 		E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04928784A050065C852 /* VerificationViewModelType.swift */; };
@@ -106,8 +104,6 @@
 		AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsViewController.xib; sourceTree = "<group>"; };
 		AA98C0752867EAC0004C5967 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AADC5BAB289ADFF300C9AA12 /* FeaturedProductCollectionViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedProductCollectionViewCellTests.swift; sourceTree = "<group>"; };
-		AADC5BAC289ADFF300C9AA12 /* FeaturedProductTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedProductTests.swift; sourceTree = "<group>"; };
 		AADC5BAE289ADFF300C9AA12 /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTests.swift; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E251D04928784A050065C852 /* VerificationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModelType.swift; sourceTree = "<group>"; };
@@ -312,23 +308,6 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
-		AADC5BA9289ADFF300C9AA12 /* ProductDetails */ = {
-			isa = PBXGroup;
-			children = (
-				AADC5BAA289ADFF300C9AA12 /* FeaturedProduct */,
-			);
-			path = ProductDetails;
-			sourceTree = "<group>";
-		};
-		AADC5BAA289ADFF300C9AA12 /* FeaturedProduct */ = {
-			isa = PBXGroup;
-			children = (
-				AADC5BAB289ADFF300C9AA12 /* FeaturedProductCollectionViewCellTests.swift */,
-				AADC5BAC289ADFF300C9AA12 /* FeaturedProductTests.swift */,
-			);
-			path = FeaturedProduct;
-			sourceTree = "<group>";
-		};
 		AADC5BAD289ADFF300C9AA12 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,7 +345,6 @@
 		AAF5F1DC286F770C002DA8ED /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				AADC5BA9289ADFF300C9AA12 /* ProductDetails */,
 				43D4BF0628918F160023190F /* ProductDetails */,
 				AADC5BAD289ADFF300C9AA12 /* Registration */,
 			);
@@ -621,8 +599,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AADC5BB1289ADFF300C9AA12 /* RegisterViewControllerTests.swift in Sources */,
-				AADC5BAF289ADFF300C9AA12 /* FeaturedProductCollectionViewCellTests.swift in Sources */,
-				AADC5BB0289ADFF300C9AA12 /* FeaturedProductTests.swift in Sources */,
 				43D4BF0B2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift in Sources */,
 				43D4BF0928918F9A0023190F /* FeaturedProductTests.swift in Sources */,
 			);
