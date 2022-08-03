@@ -8,4 +8,6 @@ final class DomainTests: XCTestCase {
         // results.
         XCTAssertEqual(Domain().text, "Hello, World!")
     }
+    
+    
 }
