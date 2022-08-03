@@ -4,6 +4,26 @@
 # https://circleci.com/docs/2.0/testing-ios/
 version: 2.1
 
+commands:
+  fix-image:
+    steps:
+      - run:
+          name: CI Image
+          command: |
+            # A placeholder command that fixes any issues present on the CircleCI box – there's often something wrong with it,
+            # so preserving this step (even if empty) makes the diffs simpler.
+            if [ $(echo $PATH | ruby -e "puts Kernel.gets.include?('/usr/local/bin')") != "true" ]; then
+              echo 'export PATH=/usr/local/bin:$PATH' >> $BASH_ENV
+              echo "Manually added `/usr/local/bin` to the $PATH:"
+              echo $PATH
+            fi
+            chruby ruby-$(cat .ruby-version)
+            gem install bundler
+            # Add support for fetching SPM packages from GitHub
+            for ip in $(dig @8.8.8.8 github.com +short); do ssh-keyscan github.com,$ip; ssh-keyscan $ip; done 2>/dev/null >> ~/.ssh/known_hosts
+            # Prevent fastlane from checking for updates, also removing the verbose fastlane changelog at the end of each invocation.
+            echo "export FASTLANE_SKIP_UPDATE_CHECK=1" >> $BASH_ENV
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
@@ -15,6 +35,7 @@ jobs:
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
+      - fix-image
       - checkout
       # Commands will execute in macOS container
       # with Xcode 12.5.1 installed
