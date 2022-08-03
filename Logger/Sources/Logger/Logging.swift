@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Ahmed M. Hassan on 26/06/2022.
 //
@@ -10,7 +10,7 @@ import Foundation
 /// Represents a logger blueprint
 ///
 public protocol Logging {
-    
+
     /// Log a message
     ///
     /// - Parameters:
