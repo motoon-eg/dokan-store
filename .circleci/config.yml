@@ -42,11 +42,11 @@ jobs:
           name: Build and test
           command: xcodebuild test -workspace 'Dokan.xcworkspace' -scheme 'Dokan' -configuration 'Release' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' CODE_SIGN_IDENTITY= | tee 'artifacts/xcode_raw.log' | xcpretty -r junit -o 'test-results/ios-tests/junit.xml'
 
-    - store_test_results:
-        path: test-results
+      - store_test_results:
+          path: test-results
 
-    - store_artifacts:
-        path: artifacts
+      - store_artifacts:
+          path: artifacts
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
