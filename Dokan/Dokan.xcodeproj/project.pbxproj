@@ -521,7 +521,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ../BuildTools\n# cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n# swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"/..\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    echo \"🌱 SwiftFormat: Running for Debug mode\"\n    cd ../BuildTools\n    # cd BuildTools\n    SDKROOT=(xcrun --sdk macosx --show-sdk-path)\n    # swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\n    swift run -c release swiftformat \"$SRCROOT\"/..\nelse\n    echo \"🌱 SwiftFormat: Skip for Release mode\"\nfi\n";
 		};
 		AAA2E183285CC0BB00EAD189 /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -787,6 +787,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = L79YXVBK78;
+				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dokan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
