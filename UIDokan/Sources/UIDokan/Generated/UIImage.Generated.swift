@@ -18,10 +18,6 @@ extension UIImage {
         UIImage(named: "bell")!
     }
 
-    static var newImageIcon: UIImage {
-        UIImage(named: "new-image-icon")!
-    }
-
     static var redo: UIImage {
         UIImage(named: "redo")!
     }
@@ -36,6 +32,10 @@ extension UIImage {
 
     static var shoppingCart: UIImage {
         UIImage(named: "shopping-cart")!
+    }
+
+    static var star: UIImage {
+        UIImage(named: "star")!
     }
 
     static var vector: UIImage {
