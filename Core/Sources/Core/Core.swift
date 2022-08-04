@@ -1,11 +1,9 @@
-import Networking
 import DKFoundation
+import Networking
 
 public struct Core {
 
-    public init() {
-    }
-    
-    func loadUserData() {
-    }
+    public init() {}
+
+    func loadUserData() {}
 }
