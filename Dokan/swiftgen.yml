@@ -1,5 +1,6 @@
 input_dir: Dokan/
 output_dir: ../UIDokan/Sources/UIDokan/Generated/
+
 xcassets:
   - inputs:
       - Assets.xcassets
@@ -11,3 +12,15 @@ xcassets:
     outputs:
       - templatePath: Templates/colors.stencil
         output:  UIColors.Generated.swift
+
+strings:
+  inputs:
+    - Localization/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      params:
+        publicAccess: true
+        enumName: Strings
+      output: ../../../../Dokan/Dokan/Localization/Generated/Strings+Generated.swift
+
+

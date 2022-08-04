@@ -8,25 +8,25 @@
 import UIKit
 
 class FeaturedProductView: UIView {
-    
+
     // MARK: - Outlets
-    
-    @IBOutlet private(set) weak  var contentView: UIView!
+
+    @IBOutlet private(set) weak var contentView: UIView!
     @IBOutlet private(set) weak var featuredProductCollectionView: UICollectionView!
     @IBOutlet private(set) weak var featuredProductTitle: UILabel!
     @IBOutlet private(set) weak var seeAllButton: UIButton!
-    
+
     // MARK: - Properties
-    
-    var featuredProducts: Array<Any> = []
-    
+
+    var featuredProducts: [Any] = []
+
     // MARK: - initializer
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewSetup()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         viewSetup()
@@ -36,16 +36,16 @@ class FeaturedProductView: UIView {
 // MARK: - Setup
 
 private extension FeaturedProductView {
-    
+
     func viewSetup() {
         Bundle.main.loadNibNamed(Constants.viewNibName, owner: self, options: nil)
         addSubview(contentView)
-        contentView.frame = self.bounds
+        contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionViewSetup()
         bindSeeAllButton()
     }
-    
+
     func collectionViewSetup() {
         let nib = UINib(nibName: Constants.collectionViewCellName, bundle: nil)
         featuredProductCollectionView.register(nib, forCellWithReuseIdentifier: Constants.cellReuseIdentifier)
@@ -53,11 +53,11 @@ private extension FeaturedProductView {
         featuredProductCollectionView.dataSource = self
         collectionViewLayout()
     }
-    
+
     func collectionViewLayout() {
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.sectionInset = Constants.collectionViewLayoutSectionInset
-        layout.itemSize = CGSize(width: featuredProductCollectionView.frame.width/2.25, height: featuredProductCollectionView.frame.height)
+        layout.itemSize = CGSize(width: featuredProductCollectionView.frame.width / 2.25, height: featuredProductCollectionView.frame.height)
         layout.minimumInteritemSpacing = Constants.collectionViewLayoutInteritemSpacing
         layout.minimumLineSpacing = Constants.collectionViewLayoutLineSpacing
         layout.scrollDirection = .horizontal
@@ -76,12 +76,12 @@ extension FeaturedProductView {
 // MARK: - Actions
 
 extension FeaturedProductView {
-    
-    func getFeaturedProductsData(featuredProducts: Array<Any>) {
+
+    func getFeaturedProductsData(featuredProducts: [Any]) {
         self.featuredProducts = featuredProducts
         featuredProductCollectionView.reloadData()
     }
-    
+
     @objc func buttonWasTapped() {
         // navigate to see all
     }
@@ -90,13 +90,13 @@ extension FeaturedProductView {
 // MARK: -  CollectionView
 
 extension FeaturedProductView: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellReuseIdentifier, for: indexPath) as! FeaturedProductCollectionViewCell
         cell.featuredProduct = featuredProducts[indexPath.row]
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return featuredProducts.count
     }
@@ -105,8 +105,8 @@ extension FeaturedProductView: UICollectionViewDelegate, UICollectionViewDataSou
 // MARK: - Constants
 
 extension FeaturedProductView {
-    
-   private enum Constants {
+
+    private enum Constants {
         static let collectionViewCellName = "FeaturedProductCollectionViewCell"
         static let cellReuseIdentifier = "FeaturedProductCell"
         static let viewNibName = "FeaturedProductView"
