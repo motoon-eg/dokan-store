@@ -156,7 +156,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		273F1DE32874A4A4006485D6 /* Registratio9nTest */ = {
 		276889D92874162B0091ACEB /* Registration */ = {
 			isa = PBXGroup;
 			children = (
