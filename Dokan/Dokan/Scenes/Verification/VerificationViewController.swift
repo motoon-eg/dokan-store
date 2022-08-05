@@ -45,7 +45,7 @@ class VerificationViewController: UIViewController {
 // MARK: - Actions
 
 extension VerificationViewController {
-     
+
     @IBAction func resendVerificationCode(_ sender: Any) {
         // send verification code again to user
     }
