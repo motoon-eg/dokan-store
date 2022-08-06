@@ -31,8 +31,14 @@ class ReviewerTableViewCell: UITableViewCell {
     }
 }
 
-struct ReviewTableViewCellViewModel {
-    var reviewerImage: String
-    var reviewerName: String
-    var reviewerComment: String
+// MARK: View Model
+	
+	extension ReviewerTableViewCell {
+	    
+	    struct ViewModel {
+	        var imageUrl: String
+	        var name: String
+	        var comment: String
+	    }
+	}
 }
