@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		5120E6AC288F2E8600BCC7DE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5120E6AB288F2E8600BCC7DE /* Kingfisher */; };
-		517B4A82289F19F4008D2E28 /* Dokan in Resources */ = {isa = PBXBuildFile; fileRef = 517B4A81289F19F4008D2E28 /* Dokan */; };
 		517B4A84289F1A8B008D2E28 /* DokanTests in Resources */ = {isa = PBXBuildFile; fileRef = 517B4A83289F1A8B008D2E28 /* DokanTests */; };
+		517B4A86289F1C37008D2E28 /* Dokan in Resources */ = {isa = PBXBuildFile; fileRef = 517B4A85289F1C37008D2E28 /* Dokan */; };
+		517B4A88289F1C74008D2E28 /* swiftgen in Resources */ = {isa = PBXBuildFile; fileRef = 517B4A87289F1C74008D2E28 /* swiftgen */; };
+		517B4A8A289F1C9B008D2E28 /* Templates in Resources */ = {isa = PBXBuildFile; fileRef = 517B4A89289F1C9B008D2E28 /* Templates */; };
+		517B4A8C289F1CA9008D2E28 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 517B4A8B289F1CA9008D2E28 /* swiftgen.yml */; };
 		856E36B928893C9A00735EF2 /* UIDokan in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1C0285E1A3D00A4EBB0 /* UIDokan */; };
 		AA98C0702867E660004C5967 /* DKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = AA98C06F2867E660004C5967 /* DKFoundation */; };
 		AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E17F285CBFCA00EAD189 /* FirebaseAnalytics */; };
@@ -29,11 +32,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		517B4A81289F19F4008D2E28 /* Dokan */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Dokan; sourceTree = "<group>"; };
 		517B4A83289F1A8B008D2E28 /* DokanTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DokanTests; sourceTree = "<group>"; };
+		517B4A85289F1C37008D2E28 /* Dokan */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Dokan; sourceTree = "<group>"; };
+		517B4A87289F1C74008D2E28 /* swiftgen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = swiftgen; sourceTree = "<group>"; };
+		517B4A89289F1C9B008D2E28 /* Templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Templates; sourceTree = "<group>"; };
+		517B4A8B289F1CA9008D2E28 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Dokan.app; path = "/Users/raniazeid/Documents/GitHub/dokan-store/Dokan/build/Debug-iphoneos/Dokan.app"; sourceTree = "<absolute>"; };
 		AA4B15012853F4A500F1C3EF /* DokanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DokanTests.xctest; path = "/Users/raniazeid/Documents/GitHub/dokan-store/Dokan/build/Debug-iphoneos/DokanTests.xctest"; sourceTree = "<absolute>"; };
-		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,18 +69,12 @@
 		AA21B42928537E0400E4F217 = {
 			isa = PBXGroup;
 			children = (
+				517B4A8B289F1CA9008D2E28 /* swiftgen.yml */,
+				517B4A89289F1C9B008D2E28 /* Templates */,
+				517B4A87289F1C74008D2E28 /* swiftgen */,
+				517B4A85289F1C37008D2E28 /* Dokan */,
 				517B4A83289F1A8B008D2E28 /* DokanTests */,
-				517B4A81289F19F4008D2E28 /* Dokan */,
-				AAE1A1BD285E1A3A00A4EBB0 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		AAE1A1BD285E1A3A00A4EBB0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +177,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				517B4A8A289F1C9B008D2E28 /* Templates in Resources */,
+				517B4A8C289F1CA9008D2E28 /* swiftgen.yml in Resources */,
+				517B4A86289F1C37008D2E28 /* Dokan in Resources */,
 				517B4A84289F1A8B008D2E28 /* DokanTests in Resources */,
-				517B4A82289F19F4008D2E28 /* Dokan in Resources */,
+				517B4A88289F1C74008D2E28 /* swiftgen in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
