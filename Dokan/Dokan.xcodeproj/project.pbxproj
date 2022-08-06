@@ -167,7 +167,14 @@
 		};
 
 
+		5120E6AD288F2F3800BCC7DE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5120E6AE288F2F6400BCC7DE /* UIImage+Extension.swift */,
 			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 
 
 		432EF5D5288F2B340073FB1D /* Localization */ = {
@@ -277,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 
-				517B4A77289E6E04008D2E28 /* Dokan */,
+
 				432EF5D5288F2B340073FB1D /* Localization */,
 
 				99CC7307288E2FE400503D86 /* Colors.xcassets */,
@@ -510,7 +517,6 @@
 				432EF5D4288F078E0073FB1D /* Localizable.strings in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
-				517B4A78289E6E04008D2E28 /* Dokan in Resources */,
 				99091F1828895D96000FA9C9 /* ProductTitleQuantityView.xib in Resources */,
 				AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
@@ -628,6 +634,7 @@
 				432EF5D8288F2E7D0073FB1D /* Strings+Generated.swift in Sources */,
 				85DA676428928F1500DCABD2 /* InfoSellerViewDelegate.swift in Sources */,
 				E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */,
+				5120E6AF288F2F6400BCC7DE /* UIImage+Extension.swift in Sources */,
 				AA57CB2F2881B21800FE62C8 /* ProductDetailsViewController.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
 				AA98C0762867EAC0004C5967 /* Logging.swift in Sources */,
