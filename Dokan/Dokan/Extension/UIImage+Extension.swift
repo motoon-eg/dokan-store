@@ -13,7 +13,6 @@ protocol ImageSetable {
       func setImage(with urlString: String , placeholderImage : UIImage)
 }
 extension UIImageView : ImageSetable {
-
     func setImage(with urlString: String , placeholderImage : UIImage) {
          let url = URL(string: urlString)
          self.kf.setImage(with: url,
