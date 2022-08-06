@@ -90,7 +90,7 @@ extension FeaturedProductView {
     }
 }
 
-// MARK: -  CollectionView
+// MARK: - CollectionView
 
 extension FeaturedProductView: UICollectionViewDelegate, UICollectionViewDataSource {
 
