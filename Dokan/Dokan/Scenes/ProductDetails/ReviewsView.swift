@@ -4,7 +4,6 @@
 //
 //  Created by Clara Mounir Adly on 16/07/2022.
 //
-import CoreMIDI
 import Foundation
 import UIKit
 
