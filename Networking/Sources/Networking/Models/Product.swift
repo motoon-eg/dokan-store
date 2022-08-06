@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Ahmed M. Hassan on 18/06/2022.
 //
@@ -21,8 +21,9 @@ public struct Product: Decodable {
         case welcomeDescription = "description"
         case category, image, rating
     }
-    
+
     // MARK: - Rating
+
     struct Rating: Codable {
         let rate: Double
         let count: Int
