@@ -57,7 +57,6 @@
 		E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04B28784A050065C852 /* VerificationViewModel.swift */; };
 		E251D05028784A050065C852 /* VerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E251D04C28784A050065C852 /* VerificationViewController.xib */; };
 /* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		AA4B15052853F4A500F1C3EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -67,7 +66,6 @@
 			remoteInfo = Dokan;
 		};
 /* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		276889DA287417730091ACEB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		276889DB287417730091ACEB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 		E251D04B28784A050065C852 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
 		E251D04C28784A050065C852 /* VerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		AA21B42F28537E0400E4F217 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -141,7 +138,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
 		276889D92874162B0091ACEB /* Registration */ = {
 			isa = PBXGroup;
@@ -474,7 +470,6 @@
 			);
 		};
 /* End PBXProject section */
-
 /* Begin PBXResourcesBuildPhase section */
 		AA21B43028537E0400E4F217 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -507,7 +502,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
 		99CC7309288E302200503D86 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -584,7 +578,6 @@
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nCONFIG_FILE=\"${SRCROOT}/../.swiftlint.yml\"\nif which swiftlint > /dev/null; then\n  swiftlint lint --path \"$SRCROOT\"/.. --config $CONFIG_FILE\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		AA21B42E28537E0400E4F217 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -627,7 +620,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
 /* Begin PBXTargetDependency section */
 		AA4B15062853F4A500F1C3EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -635,7 +627,6 @@
 			targetProxy = AA4B15052853F4A500F1C3EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		AA21B43B28537E0400E4F217 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -654,7 +645,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		AA21B44428537E0500E4F217 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -870,7 +860,6 @@
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
-
 /* Begin XCConfigurationList section */
 		AA21B42D28537E0400E4F217 /* Build configuration list for PBXProject "Dokan" */ = {
 			isa = XCConfigurationList;
@@ -900,7 +889,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		5120E6AA288F2E8600BCC7DE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -919,7 +907,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		437D1B1D2870F2C400B972BC /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
