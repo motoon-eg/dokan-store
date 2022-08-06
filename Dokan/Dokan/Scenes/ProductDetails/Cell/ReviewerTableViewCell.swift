@@ -13,6 +13,8 @@ class ReviewerTableViewCell: UITableViewCell {
 	    @IBOutlet private(set) weak var reviewerComment: UITextView!
 
 // MARK: Lifecycle
+    // MARK: Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
