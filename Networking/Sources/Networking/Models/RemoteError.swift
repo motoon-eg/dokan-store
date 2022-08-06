@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Ahmed M. Hassan on 18/06/2022.
 //
@@ -8,7 +8,7 @@
 import Foundation
 
 public enum RemoteError: Error, Decodable, Equatable {
-    
+
     /// Missing Token!
     ///
     case unauthorized
@@ -20,7 +20,7 @@ public enum RemoteError: Error, Decodable, Equatable {
     /// Unknown: Represents an unmapped remote error. Capisce?
     ///
     case unknown(code: String, message: String?)
-    
+
     /// Decodable Initializer.
     ///
     public init(from decoder: Decoder) throws {
@@ -39,12 +39,12 @@ public enum RemoteError: Error, Decodable, Equatable {
             self = .unknown(code: error, message: message)
         }
     }
-    
+
     /// Constants for Possible Error Identifiers
     ///
     private enum Constants {
-        static let unauthorized     = "unauthorized"
-        static let invalidToken     = "invalid_token"
+        static let unauthorized = "unauthorized"
+        static let invalidToken = "invalid_token"
     }
 
     /// Coding Keys
@@ -56,8 +56,9 @@ public enum RemoteError: Error, Decodable, Equatable {
 }
 
 // MARK: - Equatable Conformance
+
 //
-public func ==(lhs: RemoteError, rhs: RemoteError) -> Bool {
+public func == (lhs: RemoteError, rhs: RemoteError) -> Bool {
     switch (lhs, rhs) {
     case (.unauthorized, .unauthorized):
         return true

@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Ahmed M. Hassan on 18/06/2022.
 //
@@ -16,7 +16,7 @@ public protocol ProductsRemoteProtocol {
 /// Products: Remote Endpoints
 ///
 public class ProductsRemote: Remote, ProductsRemoteProtocol {
-    
+
     /// Loads all available products
     ///
     public func loadAllProducts(completion: @escaping (Result<[Product], Error>) -> Void) {

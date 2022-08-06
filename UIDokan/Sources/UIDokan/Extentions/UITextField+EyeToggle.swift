@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by marwa on 13/07/2022.
 //
@@ -8,20 +8,19 @@
 import Foundation
 import UIKit
 
-
 extension UITextField {
-    
+
     func addPasswordToggle() {
         isSecureTextEntry = true
         rightViewMode = .unlessEditing
         rightView = createToggleButton()
         rightViewMode = .always
     }
-    
+
     func createToggleButton() -> UIButton {
         let eyeButton = UIButton()
         eyeButton.setImage(.eyeIcone, for: .normal)
-        
+
         if #available(iOS 15, *) {
             var buttonConfig = UIButton.Configuration.bordered()
             buttonConfig.baseBackgroundColor = .clear
@@ -30,19 +29,20 @@ extension UITextField {
             eyeButton.imageEdgeInsets = Metrics.imageEdgeInsets
             eyeButton.frame = Metrics.buttonFrame
         }
-        
+
         eyeButton.addTarget(self, action: #selector(didTapToggle), for: .touchUpInside)
         return eyeButton
     }
-    
+
     @objc func didTapToggle(_ sender: UIButton) {
         isSecureTextEntry.toggle()
         let imageName = isSecureTextEntry ? UIImage.eyeIcone : UIImage.eyeSlashIcone
-        sender.setImage((imageName), for: .normal)
+        sender.setImage(imageName, for: .normal)
     }
 }
 
 // MARK: - Constants
+
 //
 private extension UITextField {
     enum Metrics {
@@ -55,7 +55,7 @@ private extension UIImage {
     static var eyeSlashIcone: UIImage {
         UIImage(systemName: "eye.slash")!
     }
-    
+
     static var eyeIcone: UIImage {
         UIImage(systemName: "eye")!
     }

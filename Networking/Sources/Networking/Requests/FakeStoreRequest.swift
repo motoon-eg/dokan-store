@@ -1,18 +1,17 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Ahmed M. Hassan on 18/06/2022.
 //
 
-import Foundation
 import Alamofire
-
+import Foundation
 
 /// Represents Fakestore.com Endpoint
 ///
 struct FakeStoreRequest: URLRequestConvertible {
-    
+
     /// HTTP Request Method
     ///
     let method: HTTPMethod
@@ -24,7 +23,7 @@ struct FakeStoreRequest: URLRequestConvertible {
     /// Parameters
     ///
     let parameters: [String: Any]
-    
+
     /// Designated Initializer.
     ///
     /// - Parameters:
@@ -37,7 +36,7 @@ struct FakeStoreRequest: URLRequestConvertible {
         self.path = path
         self.parameters = parameters ?? [:]
     }
-    
+
     /// Returns a URLRequest instance reprensenting the current FakeStore Request.
     ///
     func asURLRequest() throws -> URLRequest {
@@ -49,9 +48,10 @@ struct FakeStoreRequest: URLRequestConvertible {
 }
 
 // MARK: - FakeStore Request: Internal
+
 //
 private extension FakeStoreRequest {
-    
+
     /// Returns the Parameters Encoder
     ///
     var encoder: ParameterEncoding {
