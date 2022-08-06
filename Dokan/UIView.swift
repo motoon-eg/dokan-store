@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BaseUIView: UIView {
+class DokanUIView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
