@@ -34,6 +34,10 @@ extension UIImage {
         UIImage(named: "shopping-cart")!
     }
 
+    static var star: UIImage {
+        UIImage(named: "star")!
+    }
+
     static var vector: UIImage {
         UIImage(named: "vector")!
     }

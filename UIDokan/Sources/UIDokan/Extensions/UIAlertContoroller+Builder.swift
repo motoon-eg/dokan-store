@@ -6,23 +6,21 @@
 //
 
 import UIKit
-
-/*
- * This extension implements a Builder pattern to use with the UIAlertViewController.
- * Sample:
- * UIAlertController.Builder()
- *    .withTitle("this_is_a_key_from_localizable.strings")
- *    .withMessage("This is a normal message")
- *    .addOkAction()
- *    .show(in: UIViewController) OR .build() to get back the UIAlertController directly
- */
-
+/// This extension implements a Builder pattern to use with the UIAlertViewController.
+/// Example:
+/// ```
+/// UIAlertController.Builder()
+///    .withTitle("this_is_a_key_from_localizable.strings")
+///    .withMessage("This is a normal message")
+///    .addOkAction()
+///    .show(in: UIViewController) OR .build() to get back the UIAlertController directly
+/// ```
 extension UIAlertController {
 
-    static func okAlert(withTitle title: String? = nil, withMessage message: String? = nil, viewController: UIViewController) {
+    static func showOkAlert(withTitle title: String? = nil, withMessage message: String? = nil, viewController: UIViewController) {
         UIAlertController.Builder()
-            .withTitle(title)
-            .withMessage(message)
+            .title(title)
+            .message(message)
             .addOkAction()
             .show(in: viewController, animated: true)
     }
@@ -44,17 +42,17 @@ extension UIAlertController {
             return self
         }
 
-        func withTitle(_ title: String?) -> Builder {
-            self.title = unwrapString(title)
+        func title(_ title: String?) -> Builder {
+            self.title = title ?? ""
             return self
         }
 
-        func withMessage(_ message: String?) -> Builder {
-            self.message = unwrapString(message)
+        func message(_ message: String?) -> Builder {
+            self.message = message ?? ""
             return self
         }
 
-        func withPopoverSourceView(_ view: UIView?) -> Builder {
+        func popoverSourceView(_ view: UIView?) -> Builder {
             popoverSourceView = view
             return self
         }
@@ -105,11 +103,6 @@ extension UIAlertController {
             }
 
             return alert
-        }
-
-        private func unwrapString(_ value: String?) -> String? {
-            guard let value = value else { return nil }
-            return value
         }
     }
 }
