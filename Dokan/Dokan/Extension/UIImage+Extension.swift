@@ -19,13 +19,6 @@ extension UIImageView : ImageSetable {
          self.kf.setImage(with: url,
                           placeholder: #imageLiteral(resourceName: placeholderString),
                           options: [.transition(.fade(0.5))],
-                          progressBlock: nil, completionHandler: { [weak self](result) in
-                             switch result {
-                             case .failure:
-                                 self?.image =  #imageLiteral(resourceName: placeholderString)
-                             default:
-                                 break
-                             }
-                          })
+                          progressBlock: nil, completionHandler: nil)
      }
  }
