@@ -19,12 +19,12 @@ class ReviewerTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    // MARK: - method to configure cell
-
-    func configureCell(reviewTableViewCellViewModel: ReviewTableViewCellViewModel) {
-        reviewerNameLabel.text = reviewTableViewCellViewModel.reviewerName
-        reviewerComment.text = reviewTableViewCellViewModel.reviewerComment
-    }
+    // MARK: Cell Configurations
+	
+	    func configureCell(viewModel: ViewModel) {
+	        reviewerNameLabel.text = viewModel.name
+	        reviewerComment.text = viewModel.comment
+	    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
