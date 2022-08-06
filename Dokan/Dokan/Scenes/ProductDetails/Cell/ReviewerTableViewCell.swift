@@ -25,10 +25,6 @@ class ReviewerTableViewCell: UITableViewCell {
 	        reviewerNameLabel.text = viewModel.name
 	        reviewerComment.text = viewModel.comment
 	    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }
 
 // MARK: View Model
