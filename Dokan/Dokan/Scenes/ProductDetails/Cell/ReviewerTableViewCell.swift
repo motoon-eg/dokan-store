@@ -7,12 +7,10 @@
 import UIKit
 
 class ReviewerTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var reviewerImageView: UIImageView!
-
-    @IBOutlet weak var reviewerNameLabel: UILabel!
-
-    @IBOutlet weak var reviewerComment: UITextView!
+// MARK: - Outlets
+    @IBOutlet private(set) weak var reviewerImageView: UIImageView!
+	    @IBOutlet private(set) weak var reviewerNameLabel: UILabel!
+	    @IBOutlet private(set) weak var reviewerComment: UITextView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
