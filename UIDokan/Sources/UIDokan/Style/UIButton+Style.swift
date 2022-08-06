@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by marwa on 13/07/2022.
 //
@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-
 // MARK: - Style Helper
+
 //
-extension UIButton {
-    
-    public enum buttonStyle {
+public extension UIButton {
+
+    enum buttonStyle {
         case filledBlue
         case filledGray
         case filledRed
@@ -22,9 +22,9 @@ extension UIButton {
         case plainBlueSmallButton
         case plainBlack
     }
-    
-    public func applyButtonStyle(_ style:buttonStyle) {
-        switch style{
+
+    func applyButtonStyle(_ style: buttonStyle) {
+        switch style {
         case .filledBlue:
             filledBlueStyle()
         case .filledGray:
@@ -43,11 +43,11 @@ extension UIButton {
     }
 }
 
-
 // MARK: - Filled Buttons style
+
 //
 extension UIButton {
-    
+
     private func filledPrimaryStyle() {
         // TODO: - ProductTitle_Btn_TF.font
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20)
@@ -56,22 +56,22 @@ extension UIButton {
         layer.cornerRadius = 12.0
         layer.masksToBounds = true
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 48)
+            heightAnchor.constraint(equalToConstant: 48),
         ])
     }
-    
+
     private func filledBlueStyle() {
         filledPrimaryStyle()
         // TODO: - blueOcean.color
         backgroundColor = UIColor.blue
     }
-    
+
     private func filledGrayStyle() {
         filledPrimaryStyle()
         // TODO: - halfGrey.color
         backgroundColor = UIColor.lightGray
     }
-    
+
     private func filledRedStyle() {
         filledPrimaryStyle()
         // TODO: - redVelvet.color
@@ -80,18 +80,18 @@ extension UIButton {
     }
 }
 
-
 // MARK: - plain Buttons style
+
 //
 extension UIButton {
-    
+
     private func plainStyle() {
         backgroundColor = .clear
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 20)
+            heightAnchor.constraint(equalToConstant: 20),
         ])
     }
-    
+
     private func plainBlueStyleProductTitle() {
         plainStyle()
         // TODO: - ProductTitle_Btn_TF.font
@@ -100,7 +100,7 @@ extension UIButton {
         tintColor = UIColor.blue
         contentHorizontalAlignment = .right
     }
-    
+
     private func plainBlueStylesmallButton() {
         plainStyle()
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20) // smallBtn.font
@@ -108,26 +108,25 @@ extension UIButton {
         tintColor = UIColor.blue
         contentHorizontalAlignment = .left
     }
-    
+
     private func plainBlackStyle() {
         plainStyle()
         // TODO: - ProductTitle_Btn_TF.font
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20)
         // TODO: - navyBlack.color
-        tintColor = UIColor.black 
+        tintColor = UIColor.black
         contentHorizontalAlignment = .right
     }
 }
 
+// MARK: - Border Buttons style
 
-//  MARK: - Border Buttons style
-//
 extension UIButton {
-    
+
     private func BorderStyle() {
         backgroundColor = .clear
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 48)
+            heightAnchor.constraint(equalToConstant: 48),
         ])
         // TODO: - ProductTitle_Btn_TF.font
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20)
@@ -140,4 +139,3 @@ extension UIButton {
         layer.masksToBounds = true
     }
 }
-

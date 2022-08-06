@@ -12,7 +12,7 @@ class RegisterViewController: UIViewController {
     // MARK: - Outlets
 
     @IBOutlet private weak var signInButton: UIButton!
-    @IBOutlet private weak var emailOrphoneTextField: UITextField!
+    @IBOutlet private weak var emailOrPhoneTextField: UITextField!
     @IBOutlet private weak var continueButton: UIButton!
 
     // MARK: - Properties
@@ -36,7 +36,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindEmailOrphoneText()
+        bindEmailOrPhoneText()
         bindContinueButton()
         bindViewModel()
         bindSigninButton()
@@ -47,8 +47,8 @@ class RegisterViewController: UIViewController {
 
 private extension RegisterViewController {
 
-    func bindEmailOrphoneText() {
-        emailOrphoneTextField.addTarget(self, action: #selector(emailOrPhoneTextChanged), for: .editingChanged)
+    func bindEmailOrPhoneText() {
+        emailOrPhoneTextField.addTarget(self, action: #selector(emailOrPhoneTextChanged), for: .editingChanged)
     }
 
     func bindContinueButton() {
@@ -80,7 +80,7 @@ private extension RegisterViewController {
             print("")
         // navigate to signin screen
         default:
-            guard let email = emailOrphoneTextField.text else { return }
+            guard let _ = emailOrPhoneTextField.text else { return }
             // navigate to verification screen
         }
     }

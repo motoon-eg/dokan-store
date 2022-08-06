@@ -71,9 +71,14 @@ class FeaturedProductTests: XCTestCase {
 
         sut.featuredProducts = ["A", "B"] // mock [objs] from data model
 
-        let expectedCell = Bundle(for: FeaturedProductCollectionViewCell.self).loadNibNamed("FeaturedProductCollectionViewCell", owner: nil)?.first as! FeaturedProductCollectionViewCell
+        let expectedCell = Bundle(for: FeaturedProductCollectionViewCell.self)
+            .loadNibNamed("FeaturedProductCollectionViewCell", owner: nil)?
+            .first as! FeaturedProductCollectionViewCell
 
-        let actualCollectionViewCell = view.featuredProductCollectionView!.dataSource?.collectionView(view.featuredProductCollectionView, cellForItemAt: IndexPath(row: 0, section: 0))
+        let actualCollectionViewCell = view.featuredProductCollectionView?.dataSource?.collectionView(
+            view.featuredProductCollectionView,
+            cellForItemAt: IndexPath(row: 0, section: 0)
+        )
 
         guard let actualCell = actualCollectionViewCell as? FeaturedProductCollectionViewCell else {
             XCTFail("Expected \(FeaturedProductCollectionViewCell.self), but was \(String(describing: actualCollectionViewCell))")
