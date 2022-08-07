@@ -5,8 +5,8 @@
 //  Created by Ahmed M. Hassan on 15/07/2022.
 //
 
-import UIKit
 import UIDokan
+import UIKit
 
 class ProductDetailsViewController: UIViewController {
 
@@ -157,13 +157,14 @@ private extension ProductDetailsViewController {
             // Fallback on earlier versions
         }
     }
+
     func configureDescriptionTextView() {
         descriptionTextView.shouldTrim = true
         descriptionTextView.maximumNumberOfLines = 3
         descriptionTextView.attributedReadMoreText = NSAttributedString(string: "... Read more")
         descriptionTextView.attributedReadLessText = NSAttributedString(string: " Read less")
     }
-    
+
     func configureNavBar() {
         title = "Product Detail"
         navigationBarBehavior = ProductDetailsNavigationBarBehavior(navigationItem: navigationItem)
@@ -174,16 +175,15 @@ private extension ProductDetailsViewController {
         })
     }
 }
-// MARK: - Private Handlers
+
+// MARK: - Actions
 //
-private extension ProductDetailsViewController {
-    
-}
+private extension ProductDetailsViewController {}
 
 // MARK: - InfoSellerViewDelegate Protocol
+
 extension ProductDetailsViewController: InfoSellerViewDelegate {
     func didInfoSellerViewTapped() {
         print("Info seller view is tapped")
     }
-    
 }

@@ -41,4 +41,12 @@ extension UIImage {
     static var star: UIImage {
         UIImage(named: "star")!
     }
+
+    static var vector: UIImage {
+        UIImage(named: "vector")!
+    }
+
+    static var verified: UIImage {
+        UIImage(named: "verified")!
+    }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class ProductTitleQuantityView: UIView {
     // MARK: Outlet
-    
+
     @IBOutlet private(set) weak var productTitle: UILabel!
     @IBOutlet private(set) weak var productCurrency: UILabel!
     @IBOutlet private(set) weak var productPrice: UILabel!
@@ -17,24 +17,25 @@ class ProductTitleQuantityView: UIView {
     @IBOutlet private(set) weak var productReviewCount: UILabel!
     @IBOutlet private(set) weak var productStockBackgroundView: UIView!
     @IBOutlet private(set) weak var productStockCount: UILabel!
-    
+
     // MARK: Init
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         stylingProductDetails()
     }
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
+
         stylingProductDetails()
     }
-    
+
     // MARK: Style
 
     private func stylingProductDetails() {
-        self.productStockBackgroundView.layer.cornerRadius = 10
+        productStockBackgroundView.layer.cornerRadius = 10
     }
 
     private func changeStockBackGroundColor(stockCount: Int) {
@@ -46,21 +47,20 @@ class ProductTitleQuantityView: UIView {
         } else {
             color = .red
         }
-        
-        self.productStockBackgroundView.backgroundColor = color
-        
+
+        productStockBackgroundView.backgroundColor = color
     }
 
     // MARK: Configuration
-    
+
     func configureView(viewModel: ViewModel) {
-        self.productTitle.text = viewModel.title
-        self.productCurrency.text = viewModel.currency
-        self.productPrice.text = viewModel.price
-        self.productReviewAverage.text = "\(viewModel.reviewAverage)"
-        self.productReviewCount.text = "\(viewModel.reviewCount)"
-        self.productStockCount.text = "\(viewModel.stockCount)"
-        
+        productTitle.text = viewModel.title
+        productCurrency.text = viewModel.currency
+        productPrice.text = viewModel.price
+        productReviewAverage.text = "\(viewModel.reviewAverage)"
+        productReviewCount.text = "\(viewModel.reviewCount)"
+        productStockCount.text = "\(viewModel.stockCount)"
+
         changeStockBackGroundColor(stockCount: viewModel.stockCount)
     }
 }
