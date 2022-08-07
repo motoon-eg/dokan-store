@@ -1,4 +1,4 @@
-//  
+//
 //  ProductDetailsViewController.swift
 //  Dokan
 //
@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import UIDokan
 
 class ProductDetailsViewController: UIViewController {
-    
+
     // MARK: Outlets
     
     @IBOutlet weak var buttonsView: ButtonsView!
-    
+    @IBOutlet private weak var InfoSellerView: InfoSellerView!
+    @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
+
     // MARK: Properties
     
     private let viewModel: ProductDetailsViewModelType
@@ -36,37 +39,41 @@ class ProductDetailsViewController: UIViewController {
         }
     }
     
+    private var navigationBarBehavior: ProductDetailsNavigationBarBehavior?
+
     // MARK: Init
-    //
+
     init(viewModel: ProductDetailsViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
-    
+
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAddToCartButton()
         setupAddToFavoriteButton()
+        InfoSellerView.delegate = self
+        configureDescriptionTextView()
+        configureNavBar()
     }
     
     
 }
 
 // MARK: - Actions
-//
-extension ProductDetailsViewController {
-    
-}
+
+extension ProductDetailsViewController {}
 
 // MARK: - Configurations
 //
-extension ProductDetailsViewController {
+private extension ProductDetailsViewController {
     func setupAddToCartButton() {
         if #available(iOS 15.0, *) {
             var config = UIButton.Configuration.filled()
@@ -150,9 +157,33 @@ extension ProductDetailsViewController {
             // Fallback on earlier versions
         }
     }
+    func configureDescriptionTextView() {
+        descriptionTextView.shouldTrim = true
+        descriptionTextView.maximumNumberOfLines = 3
+        descriptionTextView.attributedReadMoreText = NSAttributedString(string: "... Read more")
+        descriptionTextView.attributedReadLessText = NSAttributedString(string: " Read less")
+    }
+    
+    func configureNavBar() {
+        title = "Product Detail"
+        navigationBarBehavior = ProductDetailsNavigationBarBehavior(navigationItem: navigationItem)
+        navigationBarBehavior?.configure(onRedo: {
+            print("onRedo is tapped")
+        }, onCart: {
+            print("onCart is tapped")
+        })
+    }
 }
 // MARK: - Private Handlers
 //
 private extension ProductDetailsViewController {
+    
+}
+
+// MARK: - InfoSellerViewDelegate Protocol
+extension ProductDetailsViewController: InfoSellerViewDelegate {
+    func didInfoSellerViewTapped() {
+        print("Info seller view is tapped")
+    }
     
 }
