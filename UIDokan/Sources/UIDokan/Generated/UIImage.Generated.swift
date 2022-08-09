@@ -18,10 +18,6 @@ extension UIImage {
         UIImage(named: "bell")!
     }
 
-    static var newImageIcon: UIImage {
-        UIImage(named: "new-image-icon")!
-    }
-
     static var redo: UIImage {
         UIImage(named: "redo")!
     }

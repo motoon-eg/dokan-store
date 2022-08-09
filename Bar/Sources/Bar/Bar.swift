@@ -1,6 +1,5 @@
-public struct Cosmas {
+public struct Bar {
     public private(set) var text = "Hello, World!"
 
-    public init() {
-    }
+    public init() {}
 }
