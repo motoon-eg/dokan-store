@@ -47,11 +47,11 @@ public class ReadMoreTextView: UITextView {
 
         // MARK: Customize "read more..." option
 
-        //        let attributedDefaultReadMoreText = NSAttributedString(string: defaultReadMoreText, attributes: [
-        //            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-        //            NSAttributedString.Key.font: font ?? UIFont.systemFont(ofSize: 14)
-        //        ])
-        //        attributedReadMoreText.append(attributedDefaultReadMoreText)
+        let attributedDefaultReadMoreText = NSAttributedString(string: defaultReadMoreText, attributes: [
+            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+            NSAttributedString.Key.font: font ?? UIFont.systemFont(ofSize: 14),
+        ])
+        attributedReadMoreText.append(attributedDefaultReadMoreText)
 
         self.attributedReadMoreText = attributedReadMoreText
     }
@@ -317,7 +317,10 @@ public class ReadMoreTextView: UITextView {
     private func characterIndexBeforeTrim(range rangeThatFits: NSRange) -> Int {
         if let text = attributedReadMoreText {
             let readMoreBoundingRect = attributedReadMoreText(text: text, boundingRectThatFits: textContainer.size)
-            let lastCharacterRect = layoutManager.boundingRectForCharacterRange(range: NSMakeRange(NSMaxRange(rangeThatFits) - 1, 1), inTextContainer: textContainer)
+            let lastCharacterRect = layoutManager.boundingRectForCharacterRange(
+                range: NSMakeRange(NSMaxRange(rangeThatFits) - 1, 1),
+                inTextContainer: textContainer
+            )
             var point = lastCharacterRect.origin
             point.x = textContainer.size.width - ceil(readMoreBoundingRect.size.width)
             let glyphIndex = layoutManager.glyphIndex(for: point, in: textContainer, fractionOfDistanceThroughGlyph: nil)
@@ -401,7 +404,7 @@ private extension UITextView {
      Will pass in to `test` a character index that corresponds to `point`.
      Return `self` in `test` if text view should intercept the touch event or `nil` otherwise.
      */
-    public func hitTest(pointInGlyphRange aPoint: CGPoint, event: UIEvent?, test: (Int) -> UIView?) -> UIView? {
+    func hitTest(pointInGlyphRange aPoint: CGPoint, event: UIEvent?, test: (Int) -> UIView?) -> UIView? {
         guard let charIndex = charIndexForPointInGlyphRect(point: aPoint) else {
             return super.hitTest(aPoint, with: event)
         }
@@ -415,7 +418,7 @@ private extension UITextView {
      Returns true if point is in text bounding rect adjusted with padding.
      Bounding rect will be enlarged with positive padding values and decreased with negative values.
      */
-    public func pointIsInTextRange(point aPoint: CGPoint, range: NSRange, padding: UIEdgeInsets) -> Bool {
+    func pointIsInTextRange(point aPoint: CGPoint, range: NSRange, padding: UIEdgeInsets) -> Bool {
         var boundingRect = layoutManager.boundingRectForCharacterRange(range: range, inTextContainer: textContainer)
         boundingRect = boundingRect.offsetBy(dx: textContainerInset.left, dy: textContainerInset.top)
         boundingRect = boundingRect.insetBy(dx: -(padding.left + padding.right), dy: -(padding.top + padding.bottom))
@@ -425,7 +428,7 @@ private extension UITextView {
     /**
      Returns index of character for glyph at provided point. Returns `nil` if point is out of any glyph.
      */
-    public func charIndexForPointInGlyphRect(point aPoint: CGPoint) -> Int? {
+    func charIndexForPointInGlyphRect(point aPoint: CGPoint) -> Int? {
         let point = CGPoint(x: aPoint.x, y: aPoint.y - textContainerInset.top)
         let glyphIndex = layoutManager.glyphIndex(for: point, in: textContainer)
         let glyphRect = layoutManager.boundingRect(forGlyphRange: NSMakeRange(glyphIndex, 1), in: textContainer)

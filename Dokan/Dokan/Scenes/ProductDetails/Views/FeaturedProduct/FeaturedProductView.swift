@@ -5,6 +5,7 @@
 //  Created by marwa on 26/07/2022.
 //
 
+import UIDokan
 import UIKit
 
 class FeaturedProductView: UIView {
@@ -44,6 +45,7 @@ private extension FeaturedProductView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionViewSetup()
         bindSeeAllButton()
+        startSkeletonView()
     }
 
     func collectionViewSetup() {
@@ -79,6 +81,7 @@ extension FeaturedProductView {
 
     func getFeaturedProductsData(featuredProducts: [Any]) {
         self.featuredProducts = featuredProducts
+        stopSkeletonView()
         featuredProductCollectionView.reloadData()
     }
 
@@ -87,7 +90,7 @@ extension FeaturedProductView {
     }
 }
 
-// MARK: -  CollectionView
+// MARK: - CollectionView
 
 extension FeaturedProductView: UICollectionViewDelegate, UICollectionViewDataSource {
 
