@@ -51,7 +51,6 @@
 		AAC39E18289DD9DE0069822D /* ReviewerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39E16289DD9DE0069822D /* ReviewerTableViewCell.swift */; };
 		AADC5BB1289ADFF300C9AA12 /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC5BAE289ADFF300C9AA12 /* RegisterViewControllerTests.swift */; };
 		AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1BE285E1A3A00A4EBB0 /* Networking */; };
-		B8234100289C750D009E2308 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82340FF289C750D009E2308 /* UIView.swift */; };
 		E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04928784A050065C852 /* VerificationViewModelType.swift */; };
 		E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04A28784A050065C852 /* VerificationViewController.swift */; };
 		E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04B28784A050065C852 /* VerificationViewModel.swift */; };
@@ -111,7 +110,6 @@
 		AAC39E16289DD9DE0069822D /* ReviewerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewerTableViewCell.swift; sourceTree = "<group>"; };
 		AADC5BAE289ADFF300C9AA12 /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTests.swift; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B82340FF289C750D009E2308 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E251D04928784A050065C852 /* VerificationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModelType.swift; sourceTree = "<group>"; };
 		E251D04A28784A050065C852 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		E251D04B28784A050065C852 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 		AA21B42928537E0400E4F217 = {
 			isa = PBXGroup;
 			children = (
-				B82340FF289C750D009E2308 /* UIView.swift */,
 				AA21B43428537E0400E4F217 /* Dokan */,
 				AA4B15022853F4A500F1C3EF /* DokanTests */,
 				AA21B43328537E0400E4F217 /* Products */,
@@ -603,7 +600,6 @@
 				E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */,
 				432EF5D8288F2E7D0073FB1D /* Strings+Generated.swift in Sources */,
 				85DA676428928F1500DCABD2 /* InfoSellerViewDelegate.swift in Sources */,
-				B8234100289C750D009E2308 /* UIView.swift in Sources */,
 				E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */,
 				85F6B6DA28919C87007730AB /* ProductDetailsNavigationBarBehavior.swift in Sources */,
 				AA57CB2F2881B21800FE62C8 /* ProductDetailsViewController.swift in Sources */,
