@@ -19,7 +19,7 @@ class SliderCollectionViewCell: UICollectionViewCell, IdentifiableView {
     @IBOutlet private weak var noOfCurrentPictureLabel: UILabel!
     @IBOutlet private weak var noOfPicturesLabel: UILabel!
 
-    // MARK: - Life cycle
+    // MARK: - initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()
