@@ -12,10 +12,6 @@
 		276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889DE28741F750091ACEB /* RegisterViewModel.swift */; };
 		276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889E0287420980091ACEB /* RegisterViewModelType.swift */; };
 		276889E328742A4C0091ACEB /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */; };
-		2768DECF28A39260004C6A5B /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768DECE28A39260004C6A5B /* SliderView.xib */; };
-		2768DED228A392A7004C6A5B /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DED128A392A7004C6A5B /* SliderView.swift */; };
-		2768DED428A39D58004C6A5B /* SliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DED328A39D58004C6A5B /* SliderViewModel.swift */; };
-		2768DEEA28A41B77004C6A5B /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DEE828A41B77004C6A5B /* SliderCollectionViewCell.swift */; };
 		27C9AE19288A8FDD00FA584A /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 27C9AE18288A8FDD00FA584A /* Domain */; };
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */; };
@@ -63,11 +59,6 @@
 		276889DE28741F750091ACEB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		276889E0287420980091ACEB /* RegisterViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelType.swift; sourceTree = "<group>"; };
 		276889E228742A4C0091ACEB /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewControllerTests.swift; path = DokanTests/Scenes/Registratio9nTest/RegisterViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
-		2768DECE28A39260004C6A5B /* SliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
-		2768DED128A392A7004C6A5B /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
-		2768DED328A39D58004C6A5B /* SliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewModel.swift; sourceTree = "<group>"; };
-		2768DEE828A41B77004C6A5B /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
-		2768DEE928A41B77004C6A5B /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		85B31DB62870BEDE00B1C9E8 /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		85B31DB72870BEDE00B1C9E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85B31DB82870BEDE00B1C9E8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -138,26 +129,6 @@
 				276889E0287420980091ACEB /* RegisterViewModelType.swift */,
 			);
 			path = Registration;
-			sourceTree = "<group>";
-		};
-		2768DED028A39283004C6A5B /* SliderView */ = {
-			isa = PBXGroup;
-			children = (
-				2768DEE128A41B13004C6A5B /* SliderCollectionviewCell */,
-				2768DED328A39D58004C6A5B /* SliderViewModel.swift */,
-				2768DED128A392A7004C6A5B /* SliderView.swift */,
-				2768DECE28A39260004C6A5B /* SliderView.xib */,
-			);
-			path = SliderView;
-			sourceTree = "<group>";
-		};
-		2768DEE128A41B13004C6A5B /* SliderCollectionviewCell */ = {
-			isa = PBXGroup;
-			children = (
-				2768DEE828A41B77004C6A5B /* SliderCollectionViewCell.swift */,
-				2768DEE928A41B77004C6A5B /* SliderCollectionViewCell.xib */,
-			);
-			path = SliderCollectionviewCell;
 			sourceTree = "<group>";
 		};
 		85B31DAD2870BD4700B1C9E8 /* Login */ = {
@@ -240,7 +211,6 @@
 		AA57CB332881B50500FE62C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2768DED028A39283004C6A5B /* SliderView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,7 +372,6 @@
 				276889DD287417730091ACEB /* RegisterViewController.xib in Resources */,
 				AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */,
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
-				2768DECF28A39260004C6A5B /* SliderView.xib in Resources */,
 				AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 			);
@@ -471,17 +440,14 @@
 				276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */,
 				276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */,
 				276889DC287417730091ACEB /* RegisterViewController.swift in Sources */,
-				2768DED228A392A7004C6A5B /* SliderView.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
 				AA57CB2E2881B21800FE62C8 /* ProductDetailsViewModelType.swift in Sources */,
 				E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */,
 				E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */,
 				AA57CB2F2881B21800FE62C8 /* ProductDetailsViewController.swift in Sources */,
-				2768DEEA28A41B77004C6A5B /* SliderCollectionViewCell.swift in Sources */,
 				AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */,
 				AA98C0762867EAC0004C5967 /* Logging.swift in Sources */,
 				85B31DBC2870BEDE00B1C9E8 /* LoginViewModel.swift in Sources */,
-				2768DED428A39D58004C6A5B /* SliderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
