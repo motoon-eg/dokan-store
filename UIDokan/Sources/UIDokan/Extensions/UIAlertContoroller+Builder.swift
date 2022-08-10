@@ -19,7 +19,6 @@ extension UIAlertController {
 
     // MARK: - Static function
     //
-    
     static func showOkAlert(withTitle title: String? = nil, withMessage message: String? = nil, viewController: UIViewController) {
         UIAlertController.Builder()
             .title(title)
@@ -28,8 +27,7 @@ extension UIAlertController {
             .show(in: viewController, animated: true)
     }
 
-    /// Builder Pattern to show Alert
-    ///
+    /// Builder Pattern to show
     class Builder {
         var preferredStyle: UIAlertController.Style = .alert
         var title: String?
@@ -39,9 +37,9 @@ extension UIAlertController {
         var sourceRect: CGRect?
     }
 }
+
 // MARK: - Actions
 //
-
 extension UIAlertController.Builder {
     func preferredStyle(_ style: UIAlertController.Style) -> Self {
         preferredStyle = style
