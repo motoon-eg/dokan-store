@@ -20,6 +20,7 @@
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		43D4BF0928918F9A0023190F /* FeaturedProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BF0828918F9A0023190F /* FeaturedProductTests.swift */; };
 		43D4BF0B2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BF0A2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift */; };
+		51798D1E28A4473600392E1C /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 51798D1D28A4473600392E1C /* Cosmos */; };
 		519D380428A05AD90029B722 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 519D380328A05AD90029B722 /* Kingfisher */; };
 		519D380728A05B860029B722 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D380628A05B860029B722 /* UIImage+Extension.swift */; };
 		856E36AF2889229B00735EF2 /* InfoSellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856E36AE2889229B00735EF2 /* InfoSellerView.swift */; };
@@ -126,6 +127,7 @@
 			files = (
 				856E36B928893C9A00735EF2 /* UIDokan in Frameworks */,
 				AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */,
+				51798D1E28A4473600392E1C /* Cosmos in Frameworks */,
 				519D380428A05AD90029B722 /* Kingfisher in Frameworks */,
 				AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */,
 				AA98C0702867E660004C5967 /* DKFoundation in Frameworks */,
@@ -417,6 +419,7 @@
 				AA98C06F2867E660004C5967 /* DKFoundation */,
 				437D1B1D2870F2C400B972BC /* Core */,
 				519D380328A05AD90029B722 /* Kingfisher */,
+				51798D1D28A4473600392E1C /* Cosmos */,
 			);
 			productName = Dokan;
 			productReference = AA21B43228537E0400E4F217 /* Dokan.app */;
@@ -473,6 +476,7 @@
 			packageReferences = (
 				AAA2E17E285CBFCA00EAD189 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				519D380228A05AD90029B722 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				51798D1C28A4473600392E1C /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			productRefGroup = AA21B43328537E0400E4F217 /* Products */;
 			projectDirPath = "";
@@ -912,6 +916,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		51798D1C28A4473600392E1C /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		519D380228A05AD90029B722 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -934,6 +946,11 @@
 		437D1B1D2870F2C400B972BC /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
+		};
+		51798D1D28A4473600392E1C /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51798D1C28A4473600392E1C /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
 		};
 		519D380328A05AD90029B722 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

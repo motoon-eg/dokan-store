@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Dokan/../CosmasRatingBar">
+   </FileRef>
+   <FileRef
       location = "group:Domain">
    </FileRef>
    <FileRef
