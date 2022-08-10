@@ -28,6 +28,7 @@ class SliderView: UIView {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        
         collectionViewSetup()
     }
 }
@@ -50,7 +51,6 @@ class SliderView: UIView {
          let layout = UICollectionViewFlowLayout()
          layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
          layout.itemSize = CGSize(width: (productSliderCollectionView.bounds.width)-5, height: productSliderCollectionView.bounds.height)
-
          layout.minimumInteritemSpacing = 15
          layout.minimumLineSpacing = 15
          layout.scrollDirection = .horizontal
