@@ -17,6 +17,9 @@ import UIKit
 /// ```
 extension UIAlertController {
 
+    // MARK: - Static function
+    //
+    
     static func showOkAlert(withTitle title: String? = nil, withMessage message: String? = nil, viewController: UIViewController) {
         UIAlertController.Builder()
             .title(title)
@@ -28,81 +31,83 @@ extension UIAlertController {
     /// Builder Pattern to show Alert
     ///
     class Builder {
-        private var preferredStyle: UIAlertController.Style = .alert
-        private var title: String?
-        private var message: String?
-        private var actions: [UIAlertAction] = .init()
-        private var popoverSourceView: UIView?
-        private var sourceRect: CGRect?
+        var preferredStyle: UIAlertController.Style = .alert
+        var title: String?
+        var message: String?
+        var actions: [UIAlertAction] = .init()
+        var popoverSourceView: UIView?
+        var sourceRect: CGRect?
+    }
+}
+// MARK: - Actions
+//
 
-        init() {}
+extension UIAlertController.Builder {
+    func preferredStyle(_ style: UIAlertController.Style) -> Self {
+        preferredStyle = style
+        return self
+    }
 
-        func preferredStyle(_ style: UIAlertController.Style) -> Builder {
-            preferredStyle = style
-            return self
+    func title(_ title: String?) -> Self {
+        self.title = title ?? ""
+        return self
+    }
+
+    func message(_ message: String?) -> Self {
+        self.message = message ?? ""
+        return self
+    }
+
+    func popoverSourceView(_ view: UIView?) -> Self {
+        popoverSourceView = view
+        return self
+    }
+
+    func addOkAction(handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+        return addDefaultActionWithTitle("OK", handler: handler)
+    }
+
+    func addDeleteAction(handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+        return addDestructiveActionWithTitle("Delete", handler: handler)
+    }
+
+    func addCancelAction(handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+        return addCancelActionWithTitle("Cancel", handler: handler)
+    }
+
+    func addDefaultActionWithTitle(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+        return addActionWithTitle(title, style: .default, handler: handler)
+    }
+
+    func addDestructiveActionWithTitle(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+        return addActionWithTitle(title, style: .destructive, handler: handler)
+    }
+
+    func addCancelActionWithTitle(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Self {
+        return addActionWithTitle(title, style: .cancel, handler: handler)
+    }
+
+    func addActionWithTitle(_ title: String, style: UIAlertAction.Style, handler: ((UIAlertAction) -> Void)?) -> Self {
+        let action = UIAlertAction(title: NSLocalizedString(title, comment: ""), style: style, handler: handler)
+        actions.append(action)
+        return self
+    }
+
+    func show(in viewController: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
+        viewController.present(build(), animated: animated, completion: completion)
+    }
+
+    private func build() -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+
+        if let popoverSourceView = popoverSourceView {
+            alert.popoverPresentationController?.sourceView = popoverSourceView
         }
 
-        func title(_ title: String?) -> Builder {
-            self.title = title ?? ""
-            return self
+        actions.forEach { action in
+            alert.addAction(action)
         }
 
-        func message(_ message: String?) -> Builder {
-            self.message = message ?? ""
-            return self
-        }
-
-        func popoverSourceView(_ view: UIView?) -> Builder {
-            popoverSourceView = view
-            return self
-        }
-
-        func addOkAction(handler: ((UIAlertAction) -> Void)? = nil) -> Builder {
-            return addDefaultActionWithTitle("OK", handler: handler)
-        }
-
-        func addDeleteAction(handler: ((UIAlertAction) -> Void)? = nil) -> Builder {
-            return addDestructiveActionWithTitle("Delete", handler: handler)
-        }
-
-        func addCancelAction(handler: ((UIAlertAction) -> Void)? = nil) -> Builder {
-            return addCancelActionWithTitle("Cancel", handler: handler)
-        }
-
-        func addDefaultActionWithTitle(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Builder {
-            return addActionWithTitle(title, style: .default, handler: handler)
-        }
-
-        func addDestructiveActionWithTitle(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Builder {
-            return addActionWithTitle(title, style: .destructive, handler: handler)
-        }
-
-        func addCancelActionWithTitle(_ title: String, handler: ((UIAlertAction) -> Void)? = nil) -> Builder {
-            return addActionWithTitle(title, style: .cancel, handler: handler)
-        }
-
-        func addActionWithTitle(_ title: String, style: UIAlertAction.Style, handler: ((UIAlertAction) -> Void)?) -> Builder {
-            let action = UIAlertAction(title: NSLocalizedString(title, comment: ""), style: style, handler: handler)
-            actions.append(action)
-            return self
-        }
-
-        func show(in viewController: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
-            viewController.present(build(), animated: animated, completion: completion)
-        }
-
-        private func build() -> UIAlertController {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
-
-            if let popoverSourceView = popoverSourceView {
-                alert.popoverPresentationController?.sourceView = popoverSourceView
-            }
-
-            actions.forEach { action in
-                alert.addAction(action)
-            }
-
-            return alert
-        }
+        return alert
     }
 }
