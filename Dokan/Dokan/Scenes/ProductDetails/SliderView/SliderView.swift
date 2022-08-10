@@ -15,11 +15,11 @@ class SliderView: UIView {
     @IBOutlet private(set) weak var productSliderCollectionView: UICollectionView!
     
     // MARK: - Properties
-
+    
     private var viewModel: [sliderViewModel]?
 
-
     // MARK: - initializer
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -56,7 +56,6 @@ class SliderView: UIView {
          layout.scrollDirection = .horizontal
          productSliderCollectionView.collectionViewLayout = layout
      }
-
 }
    // MARK: - CollectionViewDelegate & Datasource
 
@@ -71,7 +70,6 @@ extension SliderView: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.configureCellData(viewModel: model[indexPath.row])
         return cell
     }
- 
 }
 
 extension UIView {

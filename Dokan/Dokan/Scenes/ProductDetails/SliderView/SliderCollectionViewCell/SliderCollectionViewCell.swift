@@ -23,7 +23,6 @@ class SliderCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
 
  // MARK: - Configurations
