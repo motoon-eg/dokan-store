@@ -8,7 +8,7 @@
 import UIKit
 import UIDokan
 
-class SliderCollectionViewCell: UICollectionViewCell {
+class SliderCollectionViewCell: UICollectionViewCell,IdentifiableView {
     // MARK: - Propperties
 
     static let headerIdentifier = "SliderCollectionview"

@@ -41,8 +41,7 @@ class SliderView: UIView {
         Bundle.main.loadNibNamed("SliderView", owner: self, options: nil)
         sliderView.fixInView(self)
 
-        let nib = UINib(nibName: "SliderCollectionViewCell", bundle: nil)
-        self.productSliderCollectionView.register(nib, forCellWithReuseIdentifier: SliderCollectionViewCell.headerIdentifier)
+        self.productSliderCollectionView.register(SliderCollectionViewCell.self)
         self.productSliderCollectionView.delegate = self
         self.productSliderCollectionView.dataSource = self
         collectionViewLayout()
@@ -65,7 +64,7 @@ extension SliderView: UICollectionViewDelegate, UICollectionViewDataSource {
         viewModel?.count ?? 0
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      let cell: SliderCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: SliderCollectionViewCell.headerIdentifier, for: indexPath) as! SliderCollectionViewCell
+        let cell: SliderCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         guard let model = viewModel else { return UICollectionViewCell() }
         cell.configureCellData(viewModel: model[indexPath.row])
         return cell
