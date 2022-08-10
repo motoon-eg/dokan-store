@@ -1,6 +1,6 @@
 //
 //  File.swift
-//
+//  
 //
 //  Created by heba isaa on 10/08/2022.
 //
@@ -17,3 +17,4 @@ public extension IdentifiableView where Self: UIView {
         return String(describing: self)
     }
 }
+

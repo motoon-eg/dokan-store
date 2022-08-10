@@ -5,10 +5,10 @@
 //  Created by heba isaa on 19/07/2022.
 //
 
-import UIDokan
 import UIKit
+import UIDokan
 
-class SliderCollectionViewCell: UICollectionViewCell, IdentifiableView {
+class SliderCollectionViewCell: UICollectionViewCell,IdentifiableView {
     // MARK: - Propperties
 
     static let headerIdentifier = "SliderCollectionview"
@@ -25,10 +25,13 @@ class SliderCollectionViewCell: UICollectionViewCell, IdentifiableView {
         super.awakeFromNib()
     }
 
-    // MARK: - Configurations
+ // MARK: - Configurations
 
     func configureCellData(viewModel: sliderViewModel) {
-        noOfPicturesLabel.text = "\(viewModel.noOfCurrentPicture)"
+        noOfPicturesLabel.text="\(viewModel.noOfCurrentPicture)"
         productImageView.image = viewModel.productImage
+
     }
+
 }
+

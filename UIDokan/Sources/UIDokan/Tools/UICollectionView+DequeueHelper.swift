@@ -1,6 +1,6 @@
 //
 //  File.swift
-//
+//  
 //
 //  Created by heba isaa on 10/08/2022.
 //
@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 public extension UICollectionView {
-
-    func register<T: UICollectionViewCell>(_: T.Type) where T: IdentifiableView {
+ 
+    func register<T: UICollectionViewCell>(_: T.Type) where T: IdentifiableView{
         let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.reuseIdentifier, bundle: bundle)
 
