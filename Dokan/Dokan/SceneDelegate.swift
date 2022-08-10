@@ -19,19 +19,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        if let _delegate = UIApplication.shared.delegate as? AppDelegate {
-            _delegate.window = window
-        }
-        
-        let viewModel = ProductDetailsViewModel()
-        let vc = ProductDetailsViewController(viewModel: viewModel)
-        setRootVC(vc: vc)
-    }
-    func setRootVC(vc:UIViewController){
-        
-            self.window?.rootViewController = vc
-            self.window?.makeKeyAndVisible()
-        
         }
     
     func sceneDidDisconnect(_ scene: UIScene) {
