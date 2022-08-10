@@ -10,7 +10,6 @@ import UIKit
 
 public extension UICollectionView {
  
-
     func register<T: UICollectionViewCell>(_: T.Type) where T: IdentifiableView{
         let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.reuseIdentifier, bundle: bundle)
