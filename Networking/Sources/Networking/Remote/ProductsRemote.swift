@@ -10,7 +10,7 @@ import Foundation
 /// Protocol for `ProductsRemote` mainly used for mocking.
 ///
 public protocol ProductsRemoteProtocol {
-    func loadAllProducts(completion: @escaping (Result<[Product], Error>) -> Void)
+    func loadProducts(at page: Int, completion: @escaping (Result<[Product], Error>) -> Void)
 }
 
 /// Products: Remote Endpoints
@@ -19,10 +19,21 @@ public class ProductsRemote: Remote, ProductsRemoteProtocol {
 
     /// Loads all available products
     ///
-    public func loadAllProducts(completion: @escaping (Result<[Product], Error>) -> Void) {
+    public func loadProducts(at page: Int, completion: @escaping (Result<[Product], Error>) -> Void) {
         let path = "products"
-        let request = FakeStoreRequest(method: .get, path: path)
+        let parameters = ["offset": page,
+                          "limit": Defaults.perPageLimit]
+        let request = FakeStoreRequest(method: .get, path: path, parameters: parameters)
 
         enqueue(request, completion: completion)
+    }
+}
+
+// MARK: Constants
+
+extension ProductsRemote {
+
+    enum Defaults {
+        static let perPageLimit = 10
     }
 }
