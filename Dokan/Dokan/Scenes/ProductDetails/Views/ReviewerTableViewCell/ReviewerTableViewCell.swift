@@ -9,28 +9,30 @@ import UIKit
 
 class ReviewerTableViewCell: UITableViewCell {
     // MARK: - Outlets
-    @IBOutlet weak private var reviewerImageView: UIImageView!
-    @IBOutlet weak private var reviewerNameLabel: UILabel!
+
+    @IBOutlet private weak var reviewerImageView: UIImageView!
+    @IBOutlet private weak var reviewerNameLabel: UILabel!
     @IBOutlet weak var reviewerComment: UILabel!
-    
+
     // MARK: - life cycle..
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-        // MARK: - method to configure cell
-        func configureCell(viewModel:ViewModel) {
-            #warning("Image will be configure after add kingfisher")
-            reviewerNameLabel.text = viewModel.reviewerName
-            reviewerComment.text = viewModel.reviewerComment
-        }
-    }
-    
 
-    extension ReviewerTableViewCell {
-        struct ViewModel {
-            let reviewerImageUrl: String
-            let reviewerName: String
-            let reviewerComment: String
-        }
+    // MARK: - method to configure cell
+
+    func configureCell(viewModel: ViewModel) {
+        #warning("Image will be configure after add kingfisher")
+        reviewerNameLabel.text = viewModel.reviewerName
+        reviewerComment.text = viewModel.reviewerComment
     }
-    
+}
+
+extension ReviewerTableViewCell {
+    struct ViewModel {
+        let reviewerImageUrl: String
+        let reviewerName: String
+        let reviewerComment: String
+    }
+}
