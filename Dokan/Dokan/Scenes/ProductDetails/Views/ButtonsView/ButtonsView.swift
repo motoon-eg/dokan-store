@@ -11,20 +11,20 @@ class ButtonsView: UIView {
     
     // Outlets
     @IBOutlet private var contentView: UIView!
-    @IBOutlet private weak var addToFavoriteButton: LoadingButton!
-    @IBOutlet private weak var addToCartButton: LoadingButton!
+    @IBOutlet weak var addToFavoriteButton: LoadingButton!
+    @IBOutlet weak var addToCartButton: LoadingButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        InitiateButtonsView()
+        initiateButtonsView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        InitiateButtonsView()
+        initiateButtonsView()
     }
     
-    private func InitiateButtonsView(){
+    private func initiateButtonsView(){
         Bundle.main.loadNibNamed("ButtonsView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
