@@ -11,16 +11,16 @@ class LoadingButton: UIButton {
 
     private var isButtonTapped = false
     private var activityIndicator = UIActivityIndicatorView()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-    func addButtontoCartTapped(completed: () -> Void) {
+
+    func buttonTapped(completed: () -> Void) {
         isButtonTapped.toggle()
         showIndicator()
         if isButtonTapped {
@@ -31,36 +31,37 @@ class LoadingButton: UIButton {
             completed()
         }
     }
-    
+
     private func configureButtonState(isTapped: Bool) {
         if isTapped {
-            self.setTitle("Remove from Cart", for: .normal)
-            self.setImage(UIImage(systemName: "cart.fill"), for: .normal)
+            setTitle("Remove from Cart", for: .normal)
+            setImage(UIImage(systemName: "cart.fill"), for: .normal)
         } else {
-            self.setTitle("Add to cart", for: .normal)
-            self.setImage(UIImage(systemName: "cart"), for: .normal)
+            setTitle("Add to cart", for: .normal)
+            setImage(UIImage(systemName: "cart"), for: .normal)
         }
     }
-    
+
     // MARK: - ActivityIndicator Configuration
+
     //
     private func showIndicator() {
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        self.isEnabled = false
-        self.addSubview(activityIndicator)
+        isEnabled = false
+        addSubview(activityIndicator)
         positionActivityIndicatorInButton()
         activityIndicator.startAnimating()
         Timer.scheduledTimer(withTimeInterval: 0.7, repeats: false) { _ in
             self.stopAnimating()
         }
     }
-    
+
     private func stopAnimating() {
-        self.isEnabled = true
+        isEnabled = true
         activityIndicator.stopAnimating()
         activityIndicator.removeFromSuperview()
     }
-    
+
     private func positionActivityIndicatorInButton() {
         let trailingConstraint = NSLayoutConstraint(item: self,
                                                     attribute: .trailing,
@@ -68,19 +69,18 @@ class LoadingButton: UIButton {
                                                     toItem: activityIndicator,
                                                     attribute: .trailing,
                                                     multiplier: 1, constant: 16)
-        self.addConstraint(trailingConstraint)
-        
+        addConstraint(trailingConstraint)
+
         let yCenterConstraint = NSLayoutConstraint(item: self,
                                                    attribute: .centerY,
                                                    relatedBy: .equal,
                                                    toItem: activityIndicator,
                                                    attribute: .centerY,
                                                    multiplier: 1, constant: 0)
-        self.addConstraint(yCenterConstraint)
+        addConstraint(yCenterConstraint)
         NSLayoutConstraint.activate([
-            activityIndicator.leadingAnchor.constraint(equalTo: self.trailingAnchor, constant: 12),
-            activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            activityIndicator.leadingAnchor.constraint(equalTo: trailingAnchor, constant: 12),
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
     }
-
 }

@@ -82,14 +82,14 @@ private extension ProductDetailsViewController {
 //
 private extension ProductDetailsViewController {
     @objc func addToCartButtonTapped() {
-        buttonsView.addToCartButton.addButtontoCartTapped {
+        buttonsView.addToCartButton.buttonTapped {
             #warning("Implement tapping the add to cart button")
         }
     }
     
     @objc func addToFavoriteButtonTapped() {
         
-        buttonsView.addToFavoriteButton.addButtontoCartTapped {
+        buttonsView.addToFavoriteButton.buttonTapped {
             #warning("Implement tapping the add to favorite button")
         }
     }
