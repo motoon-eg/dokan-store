@@ -12,7 +12,7 @@ class ProductDetailsViewController: UIViewController {
 
     // MARK: Outlets
     
-    @IBOutlet weak var buttonsView: ButtonsView!
+    @IBOutlet private weak var buttonsView: ButtonsView!
     @IBOutlet private weak var InfoSellerView: InfoSellerView!
     @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
 
