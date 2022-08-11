@@ -29,7 +29,7 @@ extension Encodable {
 
 let userKey = "userDataCash"
 
-enum DokanDataActions {
+struct DokanDataActions {
 
     static func cashUserModel(user: User) {
         let userDictionary = try! user.asDictionary()
