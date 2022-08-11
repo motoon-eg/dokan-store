@@ -11,7 +11,7 @@ import Foundation
 ///
 public protocol ProductUseCase {
 
-    /// Load all products at a page
+    /// Load all products at a page. Completes with products list or error if any.
     ///
-    func loadProducts(at page: Int) async throws -> [Product]
+    func loadProducts(at page: Int, completion: @escaping (Result<[Product], Error>) -> Void)
 }
