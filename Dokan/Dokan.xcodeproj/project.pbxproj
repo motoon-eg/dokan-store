@@ -31,6 +31,7 @@
 		85B31DBD2870BEDE00B1C9E8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B31DB92870BEDE00B1C9E8 /* LoginViewController.xib */; };
 		85DA676428928F1500DCABD2 /* InfoSellerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA676328928F1500DCABD2 /* InfoSellerViewDelegate.swift */; };
 		85F6B6DA28919C87007730AB /* ProductDetailsNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6B6D928919C87007730AB /* ProductDetailsNavigationBarBehavior.swift */; };
+		990682C928A52B9C00BA9EB5 /* Caching in Frameworks */ = {isa = PBXBuildFile; productRef = 990682C828A52B9C00BA9EB5 /* Caching */; };
 		99091F1828895D96000FA9C9 /* ProductTitleQuantityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99091F1728895D96000FA9C9 /* ProductTitleQuantityView.xib */; };
 		99091F1A28895DC1000FA9C9 /* ProductTitleQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99091F1928895DC1000FA9C9 /* ProductTitleQuantityView.swift */; };
 		99CC7308288E2FE400503D86 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CC7307288E2FE400503D86 /* Colors.xcassets */; };
@@ -128,6 +129,7 @@
 				AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */,
 				519D380428A05AD90029B722 /* Kingfisher in Frameworks */,
 				AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */,
+				990682C928A52B9C00BA9EB5 /* Caching in Frameworks */,
 				AA98C0702867E660004C5967 /* DKFoundation in Frameworks */,
 				AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */,
 				437D1B1E2870F2C400B972BC /* Core in Frameworks */,
@@ -417,6 +419,7 @@
 				AA98C06F2867E660004C5967 /* DKFoundation */,
 				437D1B1D2870F2C400B972BC /* Core */,
 				519D380328A05AD90029B722 /* Kingfisher */,
+				990682C828A52B9C00BA9EB5 /* Caching */,
 			);
 			productName = Dokan;
 			productReference = AA21B43228537E0400E4F217 /* Dokan.app */;
@@ -939,6 +942,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 519D380228A05AD90029B722 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		990682C828A52B9C00BA9EB5 /* Caching */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Caching;
 		};
 		AA98C06F2867E660004C5967 /* DKFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
