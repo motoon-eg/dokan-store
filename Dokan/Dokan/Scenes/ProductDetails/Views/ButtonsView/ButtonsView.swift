@@ -11,8 +11,8 @@ class ButtonsView: UIView {
     
     // Outlets
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var addToFavoriteButton: UIButton!
-    @IBOutlet weak var addToCartButton: UIButton!
+    @IBOutlet weak var addToFavoriteButton: LoadingButton!
+    @IBOutlet weak var addToCartButton: LoadingButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

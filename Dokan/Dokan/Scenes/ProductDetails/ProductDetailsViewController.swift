@@ -19,25 +19,8 @@ class ProductDetailsViewController: UIViewController {
     // MARK: Properties
     
     private let viewModel: ProductDetailsViewModelType
-    private var addingToCart = false {
-        didSet {
-            if #available(iOS 15.0, *) {
-                buttonsView.addToCartButton.setNeedsUpdateConfiguration()
-            } else {
-                // Fallback on earlier versions
-            }
-        }
-    }
-    
-    private var addingToFavorite = false {
-        didSet {
-            if #available(iOS 15.0, *) {
-                buttonsView.addToFavoriteButton.setNeedsUpdateConfiguration()
-            } else {
-                // Fallback on earlier versions
-            }
-        }
-    }
+    private var addedToCart = false
+    private var addedToFavorite = false
     
     private var navigationBarBehavior: ProductDetailsNavigationBarBehavior?
 
@@ -57,14 +40,11 @@ class ProductDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAddToCartButton()
-        setupAddToFavoriteButton()
         InfoSellerView.delegate = self
         configureDescriptionTextView()
         configureNavBar()
+        configureButtonsView()
     }
-    
-    
 }
 
 // MARK: - Actions
@@ -74,90 +54,12 @@ extension ProductDetailsViewController {}
 // MARK: - Configurations
 //
 private extension ProductDetailsViewController {
-    func setupAddToCartButton() {
-        if #available(iOS 15.0, *) {
-            var config = UIButton.Configuration.filled()
-            config.buttonSize = .large
-            config.cornerStyle = .medium
-            config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
-                var outgoing = incoming
-                outgoing.font = UIFont.preferredFont(forTextStyle: .headline)
-                return outgoing
-            }
-            config.image = UIImage(systemName: "chevron.right")
-            config.imagePadding = 5
-            config.imagePlacement = .trailing
-            config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(scale: .medium)
-            
-            buttonsView.addToCartButton.addAction(UIAction { _ in
-                
-                self.addingToCart = true
-                
-                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
-                    self.addingToCart = true
-                }
-                
-            }, for: .touchUpInside)
-            
-            buttonsView.addToCartButton.configurationUpdateHandler = { [unowned self] button in
-                
-                var config = button.configuration
-                config?.showsActivityIndicator = self.addingToCart
-                config?.imagePlacement = self.addingToCart ? .leading : .trailing
-                config?.title = self.addingToCart ? "Adding to cart..." : "Add to cart"
-                
-                button.isEnabled = !self.addingToCart
-                button.configuration = config
-            }
-            
-            buttonsView.addToCartButton.configuration = config
-        } else {
-            // Fallback on earlier versions
-        }
+    
+    func configureButtonsView() {
+        buttonsView.addToCartButton.addTarget(self, action: #selector(addToCartButtonTapped), for: .touchUpInside)
+        buttonsView.addToFavoriteButton.addTarget(self, action: #selector(addToFavoriteButtonTapped), for: .touchUpInside)
     }
     
-    func setupAddToFavoriteButton() {
-        if #available(iOS 15.0, *) {
-            var config = UIButton.Configuration.filled()
-            config.buttonSize = .large
-            config.cornerStyle = .medium
-            config.background.backgroundColor = UIColor(red: 0.996, green: 0.227, blue: 0.188, alpha: 1)
-            config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
-                var outgoing = incoming
-                outgoing.font = UIFont.preferredFont(forTextStyle: .headline)
-                return outgoing
-            }
-            config.image = UIImage(systemName: "heart")
-            config.imagePadding = 5
-            config.imagePlacement = .trailing
-            config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(scale: .medium)
-            
-            buttonsView.addToCartButton.addAction(UIAction { _ in
-                self.addingToFavorite = true
-                
-                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
-                    self.addingToFavorite = true
-                }
-            }, for: .touchUpInside)
-            
-            buttonsView.addToFavoriteButton.configurationUpdateHandler = { [unowned self] button in
-                
-                var config = button.configuration
-                config?.showsActivityIndicator = self.addingToFavorite
-                config?.imagePlacement = self.addingToFavorite ? .leading : .trailing
-                config?.image = UIImage(systemName: "heart.fill")
-                config?.title = self.addingToFavorite ? "Adding to favorite..." : "Add to cart"
-                
-                button.isEnabled = !self.addingToFavorite
-                button.configuration = config
-            }
-            
-            buttonsView.addToFavoriteButton.configuration = config
-        } else {
-            // Fallback on earlier versions
-        }
-    }
-
     func configureDescriptionTextView() {
         descriptionTextView.shouldTrim = true
         descriptionTextView.maximumNumberOfLines = 3
@@ -178,7 +80,20 @@ private extension ProductDetailsViewController {
 
 // MARK: - Actions
 //
-private extension ProductDetailsViewController {}
+private extension ProductDetailsViewController {
+    @objc func addToCartButtonTapped() {
+        buttonsView.addToCartButton.addButtontoCartTapped {
+            #warning("Implement tapping the add to cart button")
+        }
+    }
+    
+    @objc func addToFavoriteButtonTapped() {
+        
+        buttonsView.addToFavoriteButton.addButtontoCartTapped {
+            #warning("Implement tapping the add to favorite button")
+        }
+    }
+}
 
 // MARK: - InfoSellerViewDelegate Protocol
 
