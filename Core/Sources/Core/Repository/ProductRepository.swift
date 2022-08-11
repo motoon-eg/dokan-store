@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ProductRepository.swift
 //
 //
 //  Created by Ahmed M. Hassan on 12/08/2022.
@@ -9,9 +9,9 @@ import Domain
 import Foundation
 import Networking
 
-/// Implementation of `Domain.ProductUseCase`
+/// Implementation of `Domain.ProductRepository`
 ///
-struct ProductUseCase: Domain.ProductUseCase {
+struct ProductRepository: Domain.ProductRepository {
     let remote: ProductsRemote
 
     init(remote: ProductsRemote) {
