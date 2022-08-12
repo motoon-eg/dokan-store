@@ -5,8 +5,8 @@
 //  Created by heba isaa on 10/08/2022.
 //
 
+import UIDokan
 import UIKit
-
 class SliderView: UIView {
 
     // MARK: - Outlet
@@ -73,5 +73,3 @@ extension SliderView: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
 }
-
-
