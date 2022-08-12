@@ -32,3 +32,11 @@ class SliderCollectionViewCell: UICollectionViewCell, IdentifiableView {
         productImageView.image = viewModel.productImage
     }
 }
+
+extension SliderCollectionViewCell {
+    struct sliderViewModel {
+        var productImage: UIImage
+        var noOfPicture: Int
+        var noOfCurrentPicture: Int
+    }
+}

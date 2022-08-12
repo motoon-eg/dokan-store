@@ -51,8 +51,8 @@ extension SliderView {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: (productSliderCollectionView.bounds.width) - 5, height: productSliderCollectionView.bounds.height)
-        layout.minimumInteritemSpacing = 15
-        layout.minimumLineSpacing = 15
+        layout.minimumInteritemSpacing = 16
+        layout.minimumLineSpacing = 16
         layout.scrollDirection = .horizontal
         productSliderCollectionView.collectionViewLayout = layout
     }

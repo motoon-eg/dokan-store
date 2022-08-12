@@ -7,9 +7,3 @@
 
 import Foundation
 import UIKit
-
-struct sliderViewModel {
-    var productImage: UIImage
-    var noOfPicture: Int
-    var noOfCurrentPicture: Int
-}
