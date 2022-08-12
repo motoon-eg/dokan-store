@@ -6,6 +6,7 @@
 //
 
 import Core
+import Domain
 import Foundation
 import Networking
 
@@ -17,12 +18,22 @@ class ServiceLocator {
     ///
     private static var _networking: Network = AlamofireNetwork()
 
+    /// Repository provider
+    ///
+    private static var _provider: RepositoryProvider = DefaultRepositoryProvider(network: networking)
+
     // MARK: Accessible Services
 
     /// Provide access to default `Networking`
     ///
     static var networking: Network {
         return _networking
+    }
+
+    /// Provide access to default `RepositoryProvider`
+    ///
+    static var provider: RepositoryProvider {
+        return _provider
     }
 }
 
