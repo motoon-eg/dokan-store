@@ -11,6 +11,7 @@ import Foundation
 ///
 public protocol ProductsRemoteProtocol {
     func loadAllProducts(completion: @escaping (Result<[Product], Error>) -> Void)
+    func loadSingleProduct(productID:Int,completion: @escaping (Result<[Product], Error>) -> Void)
 }
 
 /// Products: Remote Endpoints
@@ -24,5 +25,15 @@ public class ProductsRemote: Remote, ProductsRemoteProtocol {
         let request = FakeStoreRequest(method: .get, path: path)
 
         enqueue(request, completion: completion)
+    }
+    
+    /// Loads single products
+    ///
+    public func loadSingleProduct(productID:Int,completion: @escaping (Result<Product, Error>) -> Void){
+        let path = "products/\(productID)"
+        let request = FakeStoreRequest(method: .get, path: path)
+        enqueue(request, completion: completion)
+
+
     }
 }
