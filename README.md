@@ -3,6 +3,9 @@ An educational project for Motoon Mentorship Program team.
 
 <img src='screenshots/cover.jpeg' width=100% alt='Cover Photo'>
 
+## Layers
+<img src='screenshots/layers-image.jpg' width=100% alt='Layers Image'>
+
 ## Hotlinks
 - Documentation: Please check [Wiki](https://github.com/motoon-eg/dokan-store/wiki) for more conceptual details, advanced topics and tutorials.
 - [Fakestore API](https://fakestoreapi.com/): Fake store rest API for your e-commerce or shopping website prototype. 
