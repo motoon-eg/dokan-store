@@ -12,9 +12,9 @@ import Networking
 /// Implementation of `Domain.ProductRepository`
 ///
 struct ProductRepository: Domain.ProductRepository {
-    let remote: ProductsRemote
+    let remote: ProductsRemoteProtocol
 
-    init(remote: ProductsRemote) {
+    init(remote: ProductsRemoteProtocol) {
         self.remote = remote
     }
 

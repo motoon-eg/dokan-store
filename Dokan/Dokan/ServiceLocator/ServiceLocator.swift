@@ -39,7 +39,6 @@ class ServiceLocator {
 
 // MARK: Testing
 
-//
 extension ServiceLocator {
 
     static func setTestNetworking(_ networking: Network) {
