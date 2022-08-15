@@ -31,4 +31,4 @@ struct Rating: Codable {
     let count: Int
 }
 
-public typealias ProductsPagination = [ProductsPaginationElement]
+public typealias ProductsList = [Product]
