@@ -10,7 +10,7 @@ import Foundation
 /// Protocol for `ProductsPaginationRemote` mainly used for mocking.
 ///
 public protocol ProductsPaginationRemoteProtocol {
-    func loadProductsPagination(completion: @escaping (Result<ProductsPagination, Error>) -> Void)
+    func loadProducts(completion: @escaping (Result<[Product], Error>) -> Void)
 }
 
 /// ProductsPagination: Remote Endpoints
