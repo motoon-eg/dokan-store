@@ -13,7 +13,7 @@ public struct Product: Decodable {
     let price: Double
     let description, category: String
     let image: String
-    let rating: Rating
+    let rating: Rating?
 
     enum CodingKeys: String, CodingKey {
         case id, title, price
