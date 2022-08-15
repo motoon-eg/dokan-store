@@ -26,7 +26,7 @@ public struct Product: Decodable {
 
 // MARK: - Rating
 
-struct Rating: Codable {
+struct Rating: Decodable {
     let rate: Double
     let count: Int
 }
