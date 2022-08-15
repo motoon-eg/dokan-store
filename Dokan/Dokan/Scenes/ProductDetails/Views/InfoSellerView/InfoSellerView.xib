@@ -13,11 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoSellerView" customModule="Dokan" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="2gF-mh-0PW" id="ehw-oJ-QUR"/>
-                <outlet property="sellerImageProfile" destination="7it-TY-ddr" id="j0C-si-EoN"/>
                 <outlet property="sellerImageView" destination="7it-TY-ddr" id="bTY-Am-tTU"/>
-                <outlet property="sellerName" destination="1xj-4F-SX8" id="tDS-Hq-L2d"/>
                 <outlet property="sellerNameLabel" destination="1xj-4F-SX8" id="s9I-ea-smx"/>
-                <outlet property="sellerType" destination="hfo-fZ-uck" id="g1s-GM-Kgf"/>
                 <outlet property="sellerTypeLabel" destination="hfo-fZ-uck" id="0Qk-vV-Rpf"/>
             </connections>
         </placeholder>
