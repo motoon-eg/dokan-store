@@ -13,12 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoSellerView" customModule="Dokan" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="2gF-mh-0PW" id="ehw-oJ-QUR"/>
-                <outlet property="sellerImageProfile" destination="7it-TY-ddr" id="j0C-si-EoN"/>
-                <outlet property="sellerImageView" destination="7it-TY-ddr" id="bB8-Tr-aKa"/>
-                <outlet property="sellerName" destination="1xj-4F-SX8" id="tDS-Hq-L2d"/>
-                <outlet property="sellerNameLabel" destination="1xj-4F-SX8" id="vH6-Ca-4Cc"/>
-                <outlet property="sellerType" destination="hfo-fZ-uck" id="g1s-GM-Kgf"/>
-                <outlet property="sellerTypeLabel" destination="hfo-fZ-uck" id="1VK-O5-acE"/>
+                <outlet property="sellerImageView" destination="7it-TY-ddr" id="SLn-Lv-HWH"/>
+                <outlet property="sellerNameLabel" destination="1xj-4F-SX8" id="M7Q-YT-oYW"/>
+                <outlet property="sellerTypeLabel" destination="hfo-fZ-uck" id="DgJ-kR-0d4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
