@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2704245B28ACD223002EF7B5 /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245928ACD223002EF7B5 /* CategoryListCell.swift */; };
+		2704245C28ACD223002EF7B5 /* CategoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704245A28ACD223002EF7B5 /* CategoryListCell.xib */; };
 		276889DC287417730091ACEB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889DA287417730091ACEB /* RegisterViewController.swift */; };
 		276889DD287417730091ACEB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276889DB287417730091ACEB /* RegisterViewController.xib */; };
 		276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276889DE28741F750091ACEB /* RegisterViewModel.swift */; };
@@ -70,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2704245928ACD223002EF7B5 /* CategoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCell.swift; sourceTree = "<group>"; };
+		2704245A28ACD223002EF7B5 /* CategoryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListCell.xib; sourceTree = "<group>"; };
 		276889DA287417730091ACEB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		276889DB287417730091ACEB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		276889DE28741F750091ACEB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +148,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2704245828ACD1E2002EF7B5 /* CategoryList */ = {
+			isa = PBXGroup;
+			children = (
+				2704245D28ACD79F002EF7B5 /* categoryListCell */,
+			);
+			path = CategoryList;
+			sourceTree = "<group>";
+		};
+		2704245D28ACD79F002EF7B5 /* categoryListCell */ = {
+			isa = PBXGroup;
+			children = (
+				2704245928ACD223002EF7B5 /* CategoryListCell.swift */,
+				2704245A28ACD223002EF7B5 /* CategoryListCell.xib */,
+			);
+			path = categoryListCell;
+			sourceTree = "<group>";
+		};
 		276889D92874162B0091ACEB /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +375,7 @@
 		AAF5F1DA286F76F2002DA8ED /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2704245828ACD1E2002EF7B5 /* CategoryList */,
 				85B31DAD2870BD4700B1C9E8 /* Login */,
 				276889D92874162B0091ACEB /* Registration */,
 				E2156C24287342F000A92325 /* Verification */,
@@ -504,6 +526,7 @@
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 				856E36B1288922EF00735EF2 /* InfoSellerView.xib in Resources */,
 				437B99A628907F0700F59B06 /* FeaturedProductView.xib in Resources */,
+				2704245C28ACD223002EF7B5 /* CategoryListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +630,7 @@
 				276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */,
 				99091F1A28895DC1000FA9C9 /* ProductTitleQuantityView.swift in Sources */,
 				276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */,
+				2704245B28ACD223002EF7B5 /* CategoryListCell.swift in Sources */,
 				276889DC287417730091ACEB /* RegisterViewController.swift in Sources */,
 				AAC39E18289DD9DE0069822D /* ReviewerTableViewCell.swift in Sources */,
 				437B99AC289082BC00F59B06 /* FeaturedProductCollectionViewCell.swift in Sources */,
