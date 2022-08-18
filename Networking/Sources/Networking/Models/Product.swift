@@ -8,24 +8,25 @@
 import Foundation
 
 public struct Product: Decodable {
-    public let id: Int
-    public let title: String
-    public let price: Double
-    public let welcomeDescription: String
-    public let category: String
-    public let image: String
-    public let rating: Rating
+    let id: Int
+    let title: String
+    let price: Double
+    let description, category: String
+    let image: String
+    let rating: Rating?
 
     enum CodingKeys: String, CodingKey {
         case id, title, price
-        case welcomeDescription = "description"
+        case description
         case category, image, rating
     }
 
     // MARK: - Rating
 
-    public struct Rating: Codable {
-        public let rate: Double
-        public let count: Int
+    struct Rating: Decodable {
+        let rate: Double
+        let count: Int
     }
 }
+
+public typealias ProductsList = [Product]
