@@ -100,6 +100,13 @@ Typography
                 <constraint firstItem="bRA-9C-6ym" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="lDQ-Yg-Vbs"/>
             </constraints>
             <size key="customSize" width="411" height="296"/>
+            <connections>
+                <outlet property="productName" destination="wsN-aX-lFT" id="zcj-lr-3ZF"/>
+                <outlet property="productPrice" destination="1T7-AL-UcB" id="azU-gt-rVB"/>
+                <outlet property="productReviewRate" destination="emv-AE-DQr" id="nE9-Fx-W1N"/>
+                <outlet property="productReviewerCount" destination="Izc-qC-cKX" id="1Hz-uR-23R"/>
+                <outlet property="sellerProductImage" destination="bRA-9C-6ym" id="P17-aF-jnt"/>
+            </connections>
             <point key="canvasLocation" x="399.27536231884062" y="208.92857142857142"/>
         </collectionViewCell>
     </objects>
