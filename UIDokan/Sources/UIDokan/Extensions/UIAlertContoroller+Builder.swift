@@ -18,6 +18,7 @@ import UIKit
 extension UIAlertController {
 
     // MARK: - Static function
+
     //
     static func showOkAlert(withTitle title: String? = nil, withMessage message: String? = nil, viewController: UIViewController) {
         UIAlertController.Builder()
@@ -39,6 +40,7 @@ extension UIAlertController {
 }
 
 // MARK: - Actions
+
 //
 extension UIAlertController.Builder {
     func preferredStyle(_ style: UIAlertController.Style) -> Self {

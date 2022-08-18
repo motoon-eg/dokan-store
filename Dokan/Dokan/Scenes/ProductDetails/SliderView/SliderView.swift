@@ -19,6 +19,7 @@ class SliderView: UIView {
     private var viewModel: [SliderCollectionViewCell.sliderViewModel]?
 
     // MARK: - initializer
+
     ///
     override init(frame: CGRect) {
         super.init(frame: frame)
