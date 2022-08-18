@@ -24,6 +24,8 @@
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		43D4BF0928918F9A0023190F /* FeaturedProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BF0828918F9A0023190F /* FeaturedProductTests.swift */; };
 		43D4BF0B2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BF0A2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift */; };
+		51934C8F28AD91B60078FD3C /* SellerInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51934C8D28AD91B60078FD3C /* SellerInfoCell.swift */; };
+		51934C9028AD91B60078FD3C /* SellerInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51934C8E28AD91B60078FD3C /* SellerInfoCell.xib */; };
 		519D380428A05AD90029B722 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 519D380328A05AD90029B722 /* Kingfisher */; };
 		519D380728A05B860029B722 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D380628A05B860029B722 /* UIImage+Extension.swift */; };
 		51A04FAD289335FF00900EFF /* ReviewerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */; };
@@ -99,6 +101,8 @@
 		437B99AB289082BC00F59B06 /* FeaturedProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		43D4BF0828918F9A0023190F /* FeaturedProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductTests.swift; sourceTree = "<group>"; };
 		43D4BF0A2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		51934C8D28AD91B60078FD3C /* SellerInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoCell.swift; sourceTree = "<group>"; };
+		51934C8E28AD91B60078FD3C /* SellerInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SellerInfoCell.xib; sourceTree = "<group>"; };
 		519D380628A05B860029B722 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewerTableViewCell.swift; sourceTree = "<group>"; };
 		51A04FAC289335FF00900EFF /* ReviewerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewerTableViewCell.xib; sourceTree = "<group>"; };
@@ -255,6 +259,23 @@
 			path = FeaturedProduct;
 			sourceTree = "<group>";
 		};
+		51934C8728AD911A0078FD3C /* SellerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				51934C8828AD91320078FD3C /* Cell */,
+			);
+			path = SellerInfo;
+			sourceTree = "<group>";
+		};
+		51934C8828AD91320078FD3C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				51934C8D28AD91B60078FD3C /* SellerInfoCell.swift */,
+				51934C8E28AD91B60078FD3C /* SellerInfoCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		519D380528A05B570029B722 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				E2DADBAA288A53D9005E483A /* ButtonsView */,
+				51934C8728AD911A0078FD3C /* SellerInfo */,
 				AAC39E13289DD9CA0069822D /* ReviewerTableViewCell */,
 				856E36AD2889224B00735EF2 /* InfoSellerView */,
 				437B99A428907E6C00F59B06 /* FeaturedProduct */,
@@ -586,6 +608,7 @@
 			files = (
 				437B99AD289082BC00F59B06 /* FeaturedProductCollectionViewCell.xib in Resources */,
 				99CC7308288E2FE400503D86 /* Colors.xcassets in Resources */,
+				51934C9028AD91B60078FD3C /* SellerInfoCell.xib in Resources */,
 				2768DEF428A422F3004C6A5B /* SliderView.xib in Resources */,
 				9900242128B15F9E00D1D722 /* InfoSellerViewController.xib in Resources */,
 				85B31DBD2870BEDE00B1C9E8 /* LoginViewController.xib in Resources */,
@@ -707,6 +730,7 @@
 				B82D6D4F2892FF290035D30C /* UIModels.swift in Sources */,
 				51A04FAD289335FF00900EFF /* ReviewerTableViewCell.swift in Sources */,
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
+				51934C8F28AD91B60078FD3C /* SellerInfoCell.swift in Sources */,
 				276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */,
 				99091F1A28895DC1000FA9C9 /* ProductTitleQuantityView.swift in Sources */,
 				9900241F28B15F9E00D1D722 /* InfoSellerViewController.swift in Sources */,
