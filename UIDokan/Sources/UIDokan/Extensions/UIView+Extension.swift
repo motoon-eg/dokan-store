@@ -10,14 +10,14 @@ import UIKit
 
 public extension UIView {
 
-    func fixInView(_ container: UIView) {
-        container.addSubview(self)
-        translatesAutoresizingMaskIntoConstraints = false
+    func addAndFixSubview(_ subview: UIView) {
+        addSubview(subview)
+        subview.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            topAnchor.constraint(equalTo: container.topAnchor),
-            bottomAnchor.constraint(equalTo: container.bottomAnchor),
+            subview.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subview.trailingAnchor.constraint(equalTo: trailingAnchor),
+            subview.topAnchor.constraint(equalTo: topAnchor),
+            subview.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
 }
