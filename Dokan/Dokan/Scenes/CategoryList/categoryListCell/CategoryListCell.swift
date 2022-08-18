@@ -5,50 +5,46 @@
 //  Created by heba isaa on 17/08/2022.
 //
 
-import UIKit
 import UIDokan
+import UIKit
 
-class CategoryListCell: UICollectionViewCell,IdentifiableView {
-    
-    //MARK: - Outlet
-    
-    @IBOutlet weak private(set) var categoryImage: UIImageView!
-    @IBOutlet weak private(set) var categoryTitle: UILabel!
-    @IBOutlet weak private(set) var categoryPrice: UILabel!
-    @IBOutlet weak private(set) var categoryReview: UILabel!
-    @IBOutlet weak private(set) var noOfReviewer: UILabel!
-    @IBOutlet weak private(set) var moreActionBtn: UIButton!
-    
-    //MARK: -  Initialization
+class CategoryListCell: UICollectionViewCell, IdentifiableView {
+
+    // MARK: - Outlet
+
+    @IBOutlet private(set) weak var categoryImage: UIImageView!
+    @IBOutlet private(set) weak var categoryTitle: UILabel!
+    @IBOutlet private(set) weak var categoryPrice: UILabel!
+    @IBOutlet private(set) weak var categoryReview: UILabel!
+    @IBOutlet private(set) weak var noOfReviewer: UILabel!
+    @IBOutlet private(set) weak var moreActionBtn: UIButton!
+
+    // MARK: -  Initialization
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
-    //MARK: - Cell  Configuration
-    
+
+    // MARK: - Cell  Configuration
+
     func configureCell(viewModel: categoryViewModel) {
         categoryImage.image = viewModel.categoryImage
         categoryTitle.text = viewModel.categoryTitle
         categoryPrice.text = viewModel.categoryPrice
-        categoryReview.text = "\(viewModel.categoryReview)"
-        noOfReviewer.text = viewModel.noOfReviewer
-        
-        
+        categoryReview.text = viewModel.categoryReview
+        noOfReviewer.text = "\(viewModel.noOfReviewer)"
     }
-    
 }
 
-//MARK: - category Model
+// MARK: - category Model
 
-extension CategoryListCell{
-    
-    struct categoryViewModel{
-        let categoryImage:UIImage
-        let categoryTitle:String
-        let categoryPrice:String
-        let categoryReview:String
-        let noOfReviewer:Int
-        
+extension CategoryListCell {
+
+    struct categoryViewModel {
+        let categoryImage: UIImage
+        let categoryTitle: String
+        let categoryPrice: String
+        let categoryReview: String
+        let noOfReviewer: Int
     }
-    
 }
