@@ -34,6 +34,7 @@ class CategoryListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionview()
+        configureSearchController()
     }
 
     private func setupCollectionview() {
@@ -51,7 +52,16 @@ extension CategoryListViewController {}
 // MARK: - Configurations
 
 //
-extension CategoryListViewController {}
+extension CategoryListViewController {
+    func configureSearchController() {
+        let searchController = UISearchController()
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search Product Name"
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+}
 
 // MARK: - Private Handlers
 
@@ -71,5 +81,14 @@ extension CategoryListViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         return CGSize(width: (view.frame.width / 4) - 20, height: 200)
+    }
+}
+
+// MARK: - UISearchBarDelegate Methods
+//
+
+extension CategoryListViewController: UISearchResultsUpdating ,UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        #warning("update search results")
     }
 }
