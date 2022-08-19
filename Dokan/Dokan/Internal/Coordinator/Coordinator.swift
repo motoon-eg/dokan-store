@@ -7,8 +7,10 @@
 
 import UIKit
 
+/// A basic coordinator design pattern to help decouple things.
+/// See: http://khanlou.com/2015/01/the-coordinator/
+///
 protocol Coordinator: AnyObject {
-    var children: [Coordinator] { get set }
     var navigationController: UINavigationController { get }
     func start()
 }
@@ -26,13 +28,17 @@ extension Coordinator {
         navigationController.popToRootViewController(animated: animated)
     }
 
-    func present(coordinator: Coordinator, animated: Bool = true, completion: @escaping () -> Void = {}) {
-        children.append(coordinator)
-        navigationController.present(coordinator.navigationController, animated: animated, completion: completion)
+    func present(coordinator: Coordinator,
+                 animated: Bool = true,
+                 completion: @escaping () -> Void = {}) {
+        navigationController.present(coordinator.navigationController,
+                                     animated: animated,
+                                     completion: completion)
     }
 
-    func dismiss(coordinator: Coordinator, animated: Bool = true, completion: @escaping () -> Void = {}) {
-        children.removeAll(where: { $0 === coordinator })
-        navigationController.dismiss(animated: animated, completion: completion)
+    func dismiss(animated: Bool = true,
+                 completion: @escaping () -> Void = {}) {
+        navigationController.dismiss(animated: animated,
+                                     completion: completion)
     }
 }

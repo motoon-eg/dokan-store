@@ -18,7 +18,6 @@ protocol AuthenticationCoordinator: AnyObject {
 // MARK: - DefaultAuthenticationCoordinator
 
 class DefaultAuthenticationCoordinator: Coordinator {
-    var children: [Coordinator] = []
     let navigationController: UINavigationController
     private let onVerifyLogin: () -> Void
 

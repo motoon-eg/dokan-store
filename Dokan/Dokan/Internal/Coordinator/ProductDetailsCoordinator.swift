@@ -10,7 +10,6 @@ import UIKit
 protocol ProductsCoordinator: AnyObject {}
 
 class DefaultProductsCoordinator: Coordinator {
-    var children: [Coordinator] = []
     let navigationController: UINavigationController
 
     init() {
