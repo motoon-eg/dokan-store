@@ -8,10 +8,10 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
-    var children: [Coordinator] = []
     let navigationController: UINavigationController
     let window: UIWindow
     private var onVerifyLogin: () -> Void = {}
+    private var children: [Coordinator] = []
 
     init(window: UIWindow, navigationController: UINavigationController) {
         self.window = window
@@ -24,6 +24,11 @@ class AppCoordinator: Coordinator {
     func start() {
         presentLoginCoordinator()
     }
+}
+
+// MARK: Flows!
+
+extension AppCoordinator {
 
     private func presentLoginCoordinator() {
         let coordinator = DefaultAuthenticationCoordinator { [weak self] in
@@ -31,19 +36,29 @@ class AppCoordinator: Coordinator {
             self?.onVerifyLogin()
         }
 
-        children.append(coordinator)
-        coordinator.start()
+        startCoordinator(coordinator)
         replaceWindowRootViewController(coordinator.navigationController)
     }
 
     private func showHomeScreen() {
         let coordinator = DefaultProductsCoordinator()
 
-        children.append(coordinator)
-        coordinator.start()
+        startCoordinator(coordinator)
         replaceWindowRootViewController(coordinator.navigationController)
     }
 }
+
+// MARK: Private Helpers
+
+private extension AppCoordinator {
+
+    private func startCoordinator(_ coordinator: Coordinator) {
+        children = [coordinator]
+        coordinator.start()
+    }
+}
+
+// MARK: Window Helpers
 
 private extension AppCoordinator {
 
