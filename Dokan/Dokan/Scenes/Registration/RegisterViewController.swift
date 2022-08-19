@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController {
 
     // MARK: - Properties
 
+    weak var coordinator: AuthenticationCoordinator?
     private let viewModel: RegisterViewModelType
 
     // MARK: - initializer
@@ -72,6 +73,10 @@ private extension RegisterViewController {
 
     @objc func emailOrPhoneTextChanged(_ sender: UITextField) {
         viewModel.updatePhoneOrEmail(input: sender.text ?? "")
+    }
+
+    @IBAction func continueWasTapped(_ sender: UIButton) {
+        coordinator?.showVerification()
     }
 
     @objc func buttonWasTapped(_ sender: UIButton) {
