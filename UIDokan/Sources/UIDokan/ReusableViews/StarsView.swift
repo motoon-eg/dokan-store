@@ -22,3 +22,4 @@ public class StarsView: CosmosView {
         settings.filledBorderColor = UIColor.systemYellow
     }
 }
+
