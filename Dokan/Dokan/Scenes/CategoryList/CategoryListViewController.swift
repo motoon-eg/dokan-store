@@ -16,6 +16,7 @@ class CategoryListViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: CategoryListViewModelType
+    private var categoriesviewModel: [CategoryListCell.categoryViewModel]?
 
     // MARK: Init
 
@@ -33,6 +34,7 @@ class CategoryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupCollectionview()
         configureSearchController()
     }
@@ -70,7 +72,7 @@ private extension CategoryListViewController {}
 
 extension CategoryListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        categoriesviewModel?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -80,14 +82,15 @@ extension CategoryListViewController: UICollectionViewDelegate, UICollectionView
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: (view.frame.width / 4) - 20, height: 200)
+        return CGSize(width: (view.frame.width / 2) - 20, height: 280)
     }
 }
 
 // MARK: - UISearchBarDelegate Methods
+
 //
 
-extension CategoryListViewController: UISearchResultsUpdating ,UISearchBarDelegate {
+extension CategoryListViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         #warning("update search results")
     }
