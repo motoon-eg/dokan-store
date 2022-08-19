@@ -45,7 +45,10 @@ class LoginViewController: UIViewController {
 
 // MARK: - Actions
 
-extension LoginViewController {}
+private extension LoginViewController {
+
+    @IBAction func signUpWasTapped(_ sender: UIButton) {}
+}
 
 // MARK: - Configurations
 
