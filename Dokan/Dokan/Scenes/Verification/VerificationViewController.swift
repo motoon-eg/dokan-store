@@ -16,6 +16,7 @@ class VerificationViewController: UIViewController {
 
     // MARK: Properties
 
+    weak var coordinator: AuthenticationCoordinator?
     private let viewModel: VerificationViewModelType
 
     // MARK: Init
@@ -44,7 +45,12 @@ class VerificationViewController: UIViewController {
 
 // MARK: - Actions
 
-extension VerificationViewController {}
+extension VerificationViewController {
+
+    @IBAction func verifyWasTapped(_ sender: UIButton) {
+        coordinator?.didVerifyPhoneNumber()
+    }
+}
 
 // MARK: - Configurations
 

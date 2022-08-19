@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-
-    
-
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YHT-yg-ce7">
-                    <rect key="frame" x="24" y="139" width="325" height="103"/>
+                    <rect key="frame" x="24" y="142" width="325" height="103"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsQ-BR-kmq">
                             <rect key="frame" x="0.0" y="0.0" width="325" height="33"/>
@@ -49,26 +45,26 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S7o-8u-R2M">
-                    <rect key="frame" x="25.333333333333343" y="340" width="377.33333333333326" height="101"/>
+                    <rect key="frame" x="17" y="343" width="394.33333333333331" height="104.33333333333331"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="moa-va-eQf">
-                            <rect key="frame" x="0.0" y="0.0" width="377.33333333333331" height="31"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394.33333333333331" height="34.333333333333336"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPj-XX-tK0">
-                                    <rect key="frame" x="0.0" y="0.0" width="130.66666666666666" height="31"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130.66666666666666" height="34.333333333333336"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdL-KC-ihD">
-                                    <rect key="frame" x="260.66666666666669" y="0.0" width="116.66666666666669" height="31"/>
+                                    <rect key="frame" x="260.66666666666669" y="0.0" width="133.66666666666669" height="34.333333333333336"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Re-send Code"/>
                                 </button>
                             </subviews>
                         </stackView>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3u-pr-auv" customClass="OTCTextField" customModule="UIDokan">
-                            <rect key="frame" x="28.666666666666657" y="51" width="320" height="50"/>
+                            <rect key="frame" x="30" y="54.333333333333314" width="334" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="SwS-7J-foB"/>
                             </constraints>
@@ -88,6 +84,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="verifyWasTapped:" destination="-1" eventType="touchUpInside" id="trL-vO-COc"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
