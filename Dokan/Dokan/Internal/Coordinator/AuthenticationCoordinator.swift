@@ -23,8 +23,8 @@ class DefaultAuthenticationCoordinator: Coordinator {
     private let onVerifyLogin: () -> Void
 
     init(onVerifyLogin: @escaping () -> Void) {
-        self.onVerifyLogin = onVerifyLogin
         navigationController = UINavigationController()
+        self.onVerifyLogin = onVerifyLogin
     }
 
     func start() {
