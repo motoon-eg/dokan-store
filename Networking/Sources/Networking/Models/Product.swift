@@ -8,12 +8,12 @@
 import Foundation
 
 public struct Product: Decodable {
-    let id: Int
-    let title: String
-    let price: Double
-    let description, category: String
-    let image: String
-    let rating: Rating?
+    public let id: Int
+    public let title: String
+    public let price: Double
+    public let description, category: String
+    public let image: String
+    public let rating: Rating?
 
     enum CodingKeys: String, CodingKey {
         case id, title, price
@@ -23,9 +23,9 @@ public struct Product: Decodable {
 
     // MARK: - Rating
 
-    struct Rating: Decodable {
-        let rate: Double
-        let count: Int
+    public struct Rating: Decodable {
+        public let rate: Double
+        public let count: Int
     }
 }
 
