@@ -11,7 +11,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewProductViewController" customModule="Dokan" customModuleProvider="target">
             <connections>
                 <outlet property="fiveStarProgressBar" destination="e13-UL-PtZ" id="Odp-mN-fUM"/>
+                <outlet property="fiveStarRating" destination="uWh-aq-D7k" id="AQU-2C-dWF"/>
+                <outlet property="fiveStarRatingLabel" destination="eGF-xq-FeM" id="KBm-Np-yQx"/>
+                <outlet property="fourStarProgressBar" destination="Ywg-MQ-ajK" id="M9r-Dv-KeV"/>
+                <outlet property="fourStarRating" destination="CJN-LV-1w9" id="KUa-Ur-aPO"/>
+                <outlet property="fourStarRatingLabel" destination="Bo6-Fp-Qm5" id="hxQ-Bf-cMQ"/>
+                <outlet property="oneStarProgressBar" destination="Qn9-Z6-SQ3" id="poE-JX-cNK"/>
+                <outlet property="oneStarRating" destination="vqu-rB-6ng" id="HZE-A1-E8T"/>
+                <outlet property="oneStarRatingLabel" destination="HIG-uq-xsh" id="8kl-Jj-1f2"/>
+                <outlet property="ratingLabel" destination="cAb-sC-E8n" id="zE2-1w-uj7"/>
                 <outlet property="reviewProductTableView" destination="3wE-SM-L7Y" id="Tia-aB-4m0"/>
+                <outlet property="threeStarProgressBar" destination="sAM-xG-Kq7" id="uAM-LL-Eq7"/>
+                <outlet property="threeStarRating" destination="1lC-cT-o8b" id="0yt-2K-InY"/>
+                <outlet property="threeStarRatingLabel" destination="HRI-W7-sKR" id="8FH-sg-u1t"/>
+                <outlet property="totalReviewsNumberLabel" destination="8n3-bq-ybj" id="zMU-AM-dvY"/>
+                <outlet property="twoStarProgressBar" destination="NEa-YD-uo9" id="D6L-Mh-GZ2"/>
+                <outlet property="twoStarRating" destination="LhI-X9-WfP" id="zs0-Az-Nx6"/>
+                <outlet property="twoStarRatingLabel" destination="pgz-AW-he7" id="xsm-rD-eLS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,25 +37,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="iPm-xf-UFQ">
-                    <rect key="frame" x="12" y="40" width="390" height="844"/>
+                    <rect key="frame" x="12" y="96" width="390" height="788"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVK-Qs-Nll">
-                            <rect key="frame" x="0.0" y="0.0" width="390" height="116.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="135"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="w1L-Dm-Gsv">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="116.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="135"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZDU-zC-Hxo">
-                                            <rect key="frame" x="0.0" y="0.0" width="87.5" height="116.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="87.5" height="135"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-sC-E8n">
-                                                    <rect key="frame" x="18" y="0.0" width="51.5" height="58.5"/>
+                                                    <rect key="frame" x="18" y="0.0" width="51.5" height="67.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="86 Reviews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8n3-bq-ybj">
-                                                    <rect key="frame" x="0.0" y="58.5" width="87.5" height="58"/>
+                                                    <rect key="frame" x="0.0" y="67.5" width="87.5" height="67.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -50,21 +66,27 @@
                                             </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lYA-aH-L0A">
-                                            <rect key="frame" x="119.5" y="0.0" width="270.5" height="116.5"/>
+                                            <rect key="frame" x="119.5" y="0.0" width="270.5" height="135"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VM4-bi-4Q0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="270.5" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="270.5" height="21"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5j-Qd-PXF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="235" height="20.5"/>
+                                                        <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uWh-aq-D7k" customClass="StarsView" customModule="UIDokan">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="21"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="110" id="4Mv-kp-DDj"/>
+                                                            </constraints>
                                                         </view>
-                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e13-UL-PtZ">
-                                                            <rect key="frame" x="243" y="8.5" width="0.0" height="4"/>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e13-UL-PtZ">
+                                                            <rect key="frame" x="118" y="8.5" width="112.5" height="4"/>
                                                             <color key="tintColor" systemColor="systemYellowColor"/>
                                                         </progressView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGF-xq-FeM">
-                                                            <rect key="frame" x="251" y="0.0" width="19.5" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGF-xq-FeM">
+                                                            <rect key="frame" x="238.5" y="0.5" width="32" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="sbf-7S-w5K"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -72,14 +94,24 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Cj-kK-htZ">
-                                                    <rect key="frame" x="0.0" y="28.5" width="270.5" height="4"/>
+                                                    <rect key="frame" x="0.0" y="29" width="270.5" height="20.5"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJN-LV-1w9" customClass="StarsView" customModule="UIDokan">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="20.5"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="110" id="akV-f1-GO2"/>
+                                                            </constraints>
+                                                        </view>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ywg-MQ-ajK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="252" height="4"/>
+                                                            <rect key="frame" x="118" y="8.5" width="112.5" height="4"/>
                                                             <color key="tintColor" systemColor="systemYellowColor"/>
                                                         </progressView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bo6-Fp-Qm5">
-                                                            <rect key="frame" x="260" y="0.0" width="10.5" height="4"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bo6-Fp-Qm5">
+                                                            <rect key="frame" x="238.5" y="0.0" width="32" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="Ws2-O6-442"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -87,14 +119,24 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MXk-TD-LoH">
-                                                    <rect key="frame" x="0.0" y="40.5" width="270.5" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="57.5" width="270.5" height="20.5"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lC-cT-o8b" customClass="StarsView" customModule="UIDokan">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="20.5"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="110" id="vva-dm-R8r"/>
+                                                            </constraints>
+                                                        </view>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sAM-xG-Kq7">
-                                                            <rect key="frame" x="0.0" y="8.5" width="241" height="4"/>
+                                                            <rect key="frame" x="118" y="8.5" width="112.5" height="4"/>
                                                             <color key="tintColor" systemColor="systemYellowColor"/>
                                                         </progressView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRI-W7-sKR">
-                                                            <rect key="frame" x="249" y="0.0" width="21.5" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="44" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRI-W7-sKR">
+                                                            <rect key="frame" x="238.5" y="0.0" width="32" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="KGP-0e-ia9"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -102,14 +144,24 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KLw-AI-heK">
-                                                    <rect key="frame" x="0.0" y="69" width="270.5" height="19"/>
+                                                    <rect key="frame" x="0.0" y="86" width="270.5" height="20.5"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhI-X9-WfP" customClass="StarsView" customModule="UIDokan">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="20.5"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="110" id="YH2-QN-12O"/>
+                                                            </constraints>
+                                                        </view>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NEa-YD-uo9">
-                                                            <rect key="frame" x="0.0" y="7.5" width="252" height="4"/>
+                                                            <rect key="frame" x="118" y="8.5" width="112.5" height="4"/>
                                                             <color key="tintColor" systemColor="systemYellowColor"/>
                                                         </progressView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgz-AW-he7">
-                                                            <rect key="frame" x="260" y="0.0" width="10.5" height="19"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgz-AW-he7">
+                                                            <rect key="frame" x="238.5" y="0.0" width="32" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="qlA-Nw-p52"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -117,14 +169,24 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xoP-aA-CeV">
-                                                    <rect key="frame" x="0.0" y="96" width="270.5" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="114.5" width="270.5" height="20.5"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqu-rB-6ng" customClass="StarsView" customModule="UIDokan">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="20.5"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="110" id="6sX-K0-VP5"/>
+                                                            </constraints>
+                                                        </view>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qn9-Z6-SQ3">
-                                                            <rect key="frame" x="0.0" y="8.5" width="242.5" height="4"/>
+                                                            <rect key="frame" x="118" y="8.5" width="112.5" height="4"/>
                                                             <color key="tintColor" systemColor="systemYellowColor"/>
                                                         </progressView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIG-uq-xsh">
-                                                            <rect key="frame" x="250.5" y="0.0" width="20" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIG-uq-xsh">
+                                                            <rect key="frame" x="238.5" y="0.0" width="32" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="vTN-3Q-h3d"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -148,7 +210,7 @@
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3wE-SM-L7Y">
-                            <rect key="frame" x="0.0" y="148.5" width="390" height="695.5"/>
+                            <rect key="frame" x="0.0" y="167" width="390" height="621"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
@@ -158,7 +220,7 @@
             <constraints>
                 <constraint firstItem="iPm-xf-UFQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="HPY-M6-7Jf"/>
                 <constraint firstAttribute="trailing" secondItem="iPm-xf-UFQ" secondAttribute="trailing" constant="12" id="Xpi-rs-GIL"/>
-                <constraint firstItem="iPm-xf-UFQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="tAt-f5-6KM"/>
+                <constraint firstItem="iPm-xf-UFQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="96" id="tAt-f5-6KM"/>
                 <constraint firstAttribute="bottom" secondItem="iPm-xf-UFQ" secondAttribute="bottom" constant="12" id="yGw-fV-SQa"/>
             </constraints>
             <point key="canvasLocation" x="82.608695652173921" y="-21.428571428571427"/>

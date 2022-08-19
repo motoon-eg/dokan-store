@@ -5,18 +5,36 @@
 //  Created by marwa on 16/08/2022.
 //
 
+import UIDokan
 import UIKit
 
 class ReviewProductViewController: UIViewController {
 
     // MARK: Outlets
 
-    @IBOutlet weak var fiveStarProgressBar: UIProgressView!
-    @IBOutlet weak var reviewProductTableView: UITableView!
+    @IBOutlet private(set) weak var fiveStarProgressBar: UIProgressView!
+    @IBOutlet private(set) weak var fourStarProgressBar: UIProgressView!
+    @IBOutlet private(set) weak var threeStarProgressBar: UIProgressView!
+    @IBOutlet private(set) weak var twoStarProgressBar: UIProgressView!
+    @IBOutlet private(set) weak var oneStarProgressBar: UIProgressView!
+    @IBOutlet private(set) weak var reviewProductTableView: UITableView!
+    @IBOutlet private(set) weak var fiveStarRating: StarsView!
+    @IBOutlet private(set) weak var fourStarRating: StarsView!
+    @IBOutlet private(set) weak var threeStarRating: StarsView!
+    @IBOutlet private(set) weak var twoStarRating: StarsView!
+    @IBOutlet private(set) weak var oneStarRating: StarsView!
+    @IBOutlet private(set) weak var fiveStarRatingLabel: UILabel!
+    @IBOutlet private(set) weak var fourStarRatingLabel: UILabel!
+    @IBOutlet private(set) weak var threeStarRatingLabel: UILabel!
+    @IBOutlet private(set) weak var twoStarRatingLabel: UILabel!
+    @IBOutlet private(set) weak var oneStarRatingLabel: UILabel!
+    @IBOutlet private(set) weak var totalReviewsNumberLabel: UILabel!
+    @IBOutlet private(set) weak var ratingLabel: UILabel!
 
     // MARK: Properties
 
     private let viewModel: ReviewProductViewModelType
+    private var navigationBarBehavior: ReviewProductNavigationBarBehavior?
     var reviewProductList: [Any] = []
 
     // MARK: Init
@@ -36,7 +54,9 @@ class ReviewProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
-        fiveStarProgressBar.progress = 70 / 86
+        starRatingStyleSetup()
+        bindViewModel()
+        configureNavBar()
     }
 }
 
@@ -47,31 +67,85 @@ extension ReviewProductViewController {}
 // MARK: - Configurations
 
 extension ReviewProductViewController {
+
     func tableViewSetup() {
         let nib = UINib(nibName: Constants.tableViewCellName, bundle: nil)
         reviewProductTableView.register(nib, forCellReuseIdentifier: Constants.cellReuseIdentifier)
         reviewProductTableView.delegate = self
         reviewProductTableView.dataSource = self
-        print("hello")
-        // collectionViewLayout()
+    }
+
+    func starRatingStyleSetup() {
+        fiveStarRating.applyStyleToView(5)
+        fourStarRating.applyStyleToView(4)
+        threeStarRating.applyStyleToView(3)
+        twoStarRating.applyStyleToView(2)
+        oneStarRating.applyStyleToView(1)
+    }
+
+    func configureNavBar() {
+        title = "Review Product"
+        navigationBarBehavior = ReviewProductNavigationBarBehavior(navigationItem: navigationItem)
+        // TODO: - pass rating data to the parameter of configure function
+        navigationBarBehavior?.configure(7.8, onBack: {
+            print("onBack is tapped")
+        })
+    }
+
+    func bindViewModel() {
+        // TODO: - Get Date from view model and update rating progressBar, labels and table view
     }
 }
 
 // MARK: - Private Handlers
 
-private extension ReviewProductViewController {}
+private extension ReviewProductViewController {
 
-// MARK: - CollectionView
+    func updateRatingProgressBarAndLabel(_ fiveStarRatingNumber: Int,
+                                         _ fourStarRatingNumber: Int,
+                                         _ threeStarRatingNumber: Int,
+                                         _ twoStarRatingNumber: Int,
+                                         _ oneStarRatingNumber: Int,
+                                         _ totalRatingNumber: Int) {
+
+        // MARK: update rating progress bar
+
+        fiveStarProgressBar.progress = Float(fiveStarRatingNumber) / Float(totalRatingNumber)
+        fourStarProgressBar.progress = Float(fourStarRatingNumber) / Float(totalRatingNumber)
+        threeStarProgressBar.progress = Float(threeStarRatingNumber) / Float(totalRatingNumber)
+        twoStarProgressBar.progress = Float(twoStarRatingNumber) / Float(totalRatingNumber)
+        oneStarProgressBar.progress = Float(oneStarRatingNumber) / Float(totalRatingNumber)
+
+        // MARK: update rating labels
+
+        fiveStarRatingLabel.text = String(fiveStarRatingNumber)
+        fourStarRatingLabel.text = String(fourStarRatingNumber)
+        threeStarRatingLabel.text = String(threeStarRatingNumber)
+        twoStarRatingLabel.text = String(twoStarRatingNumber)
+        oneStarRatingLabel.text = String(oneStarRatingNumber)
+    }
+
+    // MARK: - update total rating and reviews labels
+
+    func updateTotalReviewsLabel(_ totalReviewsNumber: Int, _ rating: Double) {
+        ratingLabel.text = String(rating)
+        totalReviewsNumberLabel.text = String(totalReviewsNumber) + " Reviews"
+    }
+}
+
+// MARK: - TableView
 
 extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return reviewProductList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReuseIdentifier, for: indexPath) as! ReviewerTableViewCell
-        // cell.reviewProductList = reviewProductList[indexPath.row]
-        print("'doneeeeee'")
+
+        // TODO: - Get reviewProductList[indexPath.row] and send it to cell
+
         return cell
     }
 
