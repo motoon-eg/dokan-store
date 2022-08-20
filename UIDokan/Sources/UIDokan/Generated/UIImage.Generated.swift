@@ -18,12 +18,20 @@ extension UIImage {
         UIImage(named: "bell")!
     }
 
+    static var markerTime: UIImage {
+        UIImage(named: "marker-time")!
+    }
+
     static var redo: UIImage {
         UIImage(named: "redo")!
     }
 
     static var search: UIImage {
         UIImage(named: "search")!
+    }
+
+    static var shopImage: UIImage {
+        UIImage(named: "shopImage")!
     }
 
     static var shoppingCartBadge: UIImage {
