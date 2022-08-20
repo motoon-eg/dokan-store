@@ -24,6 +24,7 @@
 		437D1B1E2870F2C400B972BC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 437D1B1D2870F2C400B972BC /* Core */; };
 		43D4BF0928918F9A0023190F /* FeaturedProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BF0828918F9A0023190F /* FeaturedProductTests.swift */; };
 		43D4BF0B2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BF0A2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift */; };
+		51A04FAD289335FF00900EFF /* ReviewerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */; };
 		519D380428A05AD90029B722 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 519D380328A05AD90029B722 /* Kingfisher */; };
 		519D380728A05B860029B722 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D380628A05B860029B722 /* UIImage+Extension.swift */; };
 		856E36AF2889229B00735EF2 /* InfoSellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856E36AE2889229B00735EF2 /* InfoSellerView.swift */; };
@@ -54,10 +55,10 @@
 		AAA2E17D285CBB9100EAD189 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */; };
 		AAA2E180285CBFCA00EAD189 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E17F285CBFCA00EAD189 /* FirebaseAnalytics */; };
 		AAA2E182285CBFCA00EAD189 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAA2E181285CBFCA00EAD189 /* FirebaseCrashlytics */; };
-		AAC39E17289DD9DE0069822D /* ReviewerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC39E15289DD9DE0069822D /* ReviewerTableViewCell.xib */; };
-		AAC39E18289DD9DE0069822D /* ReviewerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC39E16289DD9DE0069822D /* ReviewerTableViewCell.swift */; };
 		AADC5BB1289ADFF300C9AA12 /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC5BAE289ADFF300C9AA12 /* RegisterViewControllerTests.swift */; };
 		AAE1A1BF285E1A3A00A4EBB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1A1BE285E1A3A00A4EBB0 /* Networking */; };
+		B803A84428AFECEE0005C8B9 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803A84328AFECEE0005C8B9 /* ReviewsView.swift */; };
+		B82D6D4F2892FF290035D30C /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82D6D4E2892FF290035D30C /* UIModels.swift */; };
 		E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04928784A050065C852 /* VerificationViewModelType.swift */; };
 		E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04A28784A050065C852 /* VerificationViewController.swift */; };
 		E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04B28784A050065C852 /* VerificationViewModel.swift */; };
@@ -91,6 +92,8 @@
 		437B99AB289082BC00F59B06 /* FeaturedProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		43D4BF0828918F9A0023190F /* FeaturedProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductTests.swift; sourceTree = "<group>"; };
 		43D4BF0A2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewerTableViewCell.swift; sourceTree = "<group>"; };
+		51A04FAC289335FF00900EFF /* ReviewerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewerTableViewCell.xib; sourceTree = "<group>"; };
 		519D380628A05B860029B722 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		856E36AE2889229B00735EF2 /* InfoSellerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSellerView.swift; sourceTree = "<group>"; };
 		856E36B0288922EF00735EF2 /* InfoSellerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoSellerView.xib; sourceTree = "<group>"; };
@@ -119,10 +122,11 @@
 		AA6BBD0B28A5CB2A00A66078 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		AA98C0752867EAC0004C5967 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		AAA2E17C285CBB9100EAD189 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AAC39E15289DD9DE0069822D /* ReviewerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewerTableViewCell.xib; sourceTree = "<group>"; };
-		AAC39E16289DD9DE0069822D /* ReviewerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewerTableViewCell.swift; sourceTree = "<group>"; };
 		AADC5BAE289ADFF300C9AA12 /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTests.swift; sourceTree = "<group>"; };
 		AAE1A1C2285E1A4900A4EBB0 /* DKFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DKFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B803A84328AFECEE0005C8B9 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewsView.swift; path = DokanTests/ReviewsView/ReviewsView.swift; sourceTree = SOURCE_ROOT; };
+		B82D6D4E2892FF290035D30C /* UIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
+		B853CB9128830777003AF561 /* ReviewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsView.xib; sourceTree = "<group>"; };
 		E251D04928784A050065C852 /* VerificationViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModelType.swift; sourceTree = "<group>"; };
 		E251D04A28784A050065C852 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		E251D04B28784A050065C852 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
@@ -237,6 +241,15 @@
 			path = FeaturedProduct;
 			sourceTree = "<group>";
 		};
+		51A04FAA289334A800900EFF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				51A04FAB289335FF00900EFF /* ReviewerTableViewCell.swift */,
+				51A04FAC289335FF00900EFF /* ReviewerTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		519D380528A05B570029B722 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +340,7 @@
 		AA57CB322881B22000FE62C8 /* ProductDetails */ = {
 			isa = PBXGroup;
 			children = (
+				51A04FAA289334A800900EFF /* Cell */,
 				2768DEEB28A42292004C6A5B /* SliderView */,
 				99091F1628895CFF000FA9C9 /* TitleQuantity */,
 				AA57CB332881B50500FE62C8 /* Views */,
@@ -334,6 +348,9 @@
 				AA57CB2D2881B21800FE62C8 /* ProductDetailsViewController.xib */,
 				AA57CB2C2881B21800FE62C8 /* ProductDetailsViewModel.swift */,
 				AA57CB2A2881B21800FE62C8 /* ProductDetailsViewModelType.swift */,
+				B82D6D4E2892FF290035D30C /* UIModels.swift */,
+				B803A84328AFECEE0005C8B9 /* ReviewsView.swift */,
+				B853CB9128830777003AF561 /* ReviewsView.xib */,
 			);
 			path = ProductDetails;
 			sourceTree = "<group>";
@@ -341,7 +358,6 @@
 		AA57CB332881B50500FE62C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AAC39E13289DD9CA0069822D /* ReviewerTableViewCell */,
 				856E36AD2889224B00735EF2 /* InfoSellerView */,
 				437B99A428907E6C00F59B06 /* FeaturedProduct */,
 				85F6B6D928919C87007730AB /* ProductDetailsNavigationBarBehavior.swift */,
@@ -363,15 +379,6 @@
 				AA98C0752867EAC0004C5967 /* Logging.swift */,
 			);
 			path = Internal;
-			sourceTree = "<group>";
-		};
-		AAC39E13289DD9CA0069822D /* ReviewerTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				AAC39E15289DD9DE0069822D /* ReviewerTableViewCell.xib */,
-				AAC39E16289DD9DE0069822D /* ReviewerTableViewCell.swift */,
-			);
-			path = ReviewerTableViewCell;
 			sourceTree = "<group>";
 		};
 		AADC5BAD289ADFF300C9AA12 /* Registration */ = {
@@ -645,18 +652,20 @@
 				E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */,
 				AA6BBD0C28A5CB2A00A66078 /* ServiceLocator.swift in Sources */,
 				AA57CB302881B21800FE62C8 /* ProductDetailsViewModel.swift in Sources */,
+				B82D6D4F2892FF290035D30C /* UIModels.swift in Sources */,
+				51A04FAD289335FF00900EFF /* ReviewerTableViewCell.swift in Sources */,
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
 				276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */,
 				99091F1A28895DC1000FA9C9 /* ProductTitleQuantityView.swift in Sources */,
 				276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */,
 				276889DC287417730091ACEB /* RegisterViewController.swift in Sources */,
-				AAC39E18289DD9DE0069822D /* ReviewerTableViewCell.swift in Sources */,
 				437B99AC289082BC00F59B06 /* FeaturedProductCollectionViewCell.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
 				AA57CB2E2881B21800FE62C8 /* ProductDetailsViewModelType.swift in Sources */,
 				E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */,
 				432EF5D8288F2E7D0073FB1D /* Strings+Generated.swift in Sources */,
 				85DA676428928F1500DCABD2 /* InfoSellerViewDelegate.swift in Sources */,
+				B803A84428AFECEE0005C8B9 /* ReviewsView.swift in Sources */,
 				2768DEF028A422D2004C6A5B /* SliderCollectionViewCell.swift in Sources */,
 				519D380728A05B860029B722 /* UIImage+Extension.swift in Sources */,
 				E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */,
