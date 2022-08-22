@@ -18,6 +18,10 @@ extension UIImage {
         UIImage(named: "bell")!
     }
 
+    static var left: UIImage {
+        UIImage(named: "left")!
+    }
+
     static var redo: UIImage {
         UIImage(named: "redo")!
     }
