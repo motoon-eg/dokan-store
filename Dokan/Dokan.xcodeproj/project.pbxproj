@@ -67,6 +67,9 @@
 		E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04A28784A050065C852 /* VerificationViewController.swift */; };
 		E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04B28784A050065C852 /* VerificationViewModel.swift */; };
 		E251D05028784A050065C852 /* VerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E251D04C28784A050065C852 /* VerificationViewController.xib */; };
+		E2CC398828A4A933008AE48B /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC398728A4A933008AE48B /* LoadingButton.swift */; };
+		E2DADBAC288A5445005E483A /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DADBAB288A5445005E483A /* ButtonsView.swift */; };
+		E2DADBAE288A5463005E483A /* ButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2DADBAD288A5463005E483A /* ButtonsView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +142,9 @@
 		E251D04A28784A050065C852 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		E251D04B28784A050065C852 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
 		E251D04C28784A050065C852 /* VerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationViewController.xib; sourceTree = "<group>"; };
+		E2CC398728A4A933008AE48B /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		E2DADBAB288A5445005E483A /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		E2DADBAD288A5463005E483A /* ButtonsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +313,17 @@
 			path = TitleQuantity;
 			sourceTree = "<group>";
 		};
+		276889D92874162B0091ACEB /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				276889DA287417730091ACEB /* RegisterViewController.swift */,
+				276889DB287417730091ACEB /* RegisterViewController.xib */,
+				276889DE28741F750091ACEB /* RegisterViewModel.swift */,
+				276889E0287420980091ACEB /* RegisterViewModelType.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
 		AA21B42928537E0400E4F217 = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +395,8 @@
 		AA57CB332881B50500FE62C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E2DADBAA288A53D9005E483A /* ButtonsView */,
+				AAC39E13289DD9CA0069822D /* ReviewerTableViewCell */,
 				856E36AD2889224B00735EF2 /* InfoSellerView */,
 				437B99A428907E6C00F59B06 /* FeaturedProduct */,
 				85F6B6D928919C87007730AB /* ProductDetailsNavigationBarBehavior.swift */,
@@ -453,6 +472,16 @@
 				E251D04C28784A050065C852 /* VerificationViewController.xib */,
 			);
 			path = Verification;
+			sourceTree = "<group>";
+		};
+		E2DADBAA288A53D9005E483A /* ButtonsView */ = {
+			isa = PBXGroup;
+			children = (
+				E2DADBAB288A5445005E483A /* ButtonsView.swift */,
+				E2DADBAD288A5463005E483A /* ButtonsView.xib */,
+				E2CC398728A4A933008AE48B /* LoadingButton.swift */,
+			);
+			path = ButtonsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,6 +598,7 @@
 				AA21B43F28537E0500E4F217 /* Assets.xcassets in Resources */,
 				99091F1828895D96000FA9C9 /* ProductTitleQuantityView.xib in Resources */,
 				AA57CB312881B21800FE62C8 /* ProductDetailsViewController.xib in Resources */,
+				E2DADBAE288A5463005E483A /* ButtonsView.xib in Resources */,
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 				856E36B1288922EF00735EF2 /* InfoSellerView.xib in Resources */,
 				437B99A628907F0700F59B06 /* FeaturedProductView.xib in Resources */,
@@ -666,6 +696,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2CC398828A4A933008AE48B /* LoadingButton.swift in Sources */,
 				85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */,
 				9900242028B15F9E00D1D722 /* InfoSellerViewModel.swift in Sources */,
 				85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */,
@@ -683,6 +714,7 @@
 				276889DC287417730091ACEB /* RegisterViewController.swift in Sources */,
 				437B99AC289082BC00F59B06 /* FeaturedProductCollectionViewCell.swift in Sources */,
 				AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */,
+				E2DADBAC288A5445005E483A /* ButtonsView.swift in Sources */,
 				AA57CB2E2881B21800FE62C8 /* ProductDetailsViewModelType.swift in Sources */,
 				E251D04D28784A050065C852 /* VerificationViewModelType.swift in Sources */,
 				432EF5D8288F2E7D0073FB1D /* Strings+Generated.swift in Sources */,
