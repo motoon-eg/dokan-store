@@ -5,8 +5,8 @@
 //  Created by marwa on 16/08/2022.
 //
 
+import Domain
 import Foundation
-
 /// ReviewProduct Input & Output
 ///
 typealias ReviewProductViewModelType = ReviewProductViewModelInput & ReviewProductViewModelOutput
@@ -17,4 +17,6 @@ protocol ReviewProductViewModelInput {}
 
 /// ReviewProduct ViewModel Output
 ///
-protocol ReviewProductViewModelOutput {}
+protocol ReviewProductViewModelOutput {
+    func loadReviews(completion: @escaping (Domain.Reviews) -> Void)
+}

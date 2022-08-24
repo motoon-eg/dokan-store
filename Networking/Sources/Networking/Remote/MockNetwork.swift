@@ -7,12 +7,15 @@
 
 import Foundation
 
+public protocol ReviewsRemoteProtocol {
+    func loadReviewProductData(completion: @escaping (Reviews?, Error?) -> Void)
+}
 
-public class MockNetwork {
-    
+public class MockNetwork: ReviewsRemoteProtocol {
+
     public init() {}
-    
-    public func loadReviewProductData(completion: @escaping (Reviews?,Error?) -> Void) {
+
+    public func loadReviewProductData(completion: @escaping (Reviews?, Error?) -> Void) {
         var Reviewsproduct: Reviews
         do {
             let allProductData = try JSONSerialization.data(withJSONObject: Constants.mockProductReviewsJsonResponse, options: .fragmentsAllowed)
@@ -25,12 +28,10 @@ public class MockNetwork {
     }
 }
 
-
-
 extension MockNetwork {
-    
+
     private enum Constants {
-        
+
         static let mockProductReviewsJsonResponse: [String: Any] = [
             "rating": 4.5,
             "totalRatingNumber": 12,

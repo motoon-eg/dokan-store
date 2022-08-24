@@ -27,7 +27,7 @@ class ReviewerTableViewCell: UITableViewCell {
     // MARK: - method to configure cell
 
     func configureCell(viewModel: ViewModel) {
-        reviewerImageView.setImage(with: "", placeholderImage: UIImage(named: "f1") ?? UIImage())
+        reviewerImageView.setImage(with: "", placeholderImage: UIImage(named: "star") ?? UIImage())
         reviewerNameLabel.text = viewModel.reviewerName
         reviewerComment.text = viewModel.reviewerComment
         ratingStarsView.applyStyleToView(viewModel.rating)

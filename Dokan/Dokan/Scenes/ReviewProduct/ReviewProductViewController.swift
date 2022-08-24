@@ -5,6 +5,8 @@
 //  Created by marwa on 16/08/2022.
 //
 
+import Domain
+import Networking
 import UIDokan
 import UIKit
 
@@ -35,7 +37,7 @@ class ReviewProductViewController: UIViewController {
 
     private let viewModel: ReviewProductViewModelType
     private var navigationBarBehavior: ReviewProductNavigationBarBehavior?
-    var reviewProductList: [Any] = []
+    var reviewProductList: [Domain.Review] = []
 
     // MARK: Init
 
@@ -56,7 +58,7 @@ class ReviewProductViewController: UIViewController {
         tableViewSetup()
         starRatingStyleSetup()
         bindViewModel()
-        configureNavBar()
+        // configureNavBar()
     }
 }
 
@@ -83,17 +85,28 @@ extension ReviewProductViewController {
         oneStarRating.applyStyleToView(1)
     }
 
-    func configureNavBar() {
+    func configureNavBar(rating: Double = 0.0) {
         title = "Review Product"
         navigationBarBehavior = ReviewProductNavigationBarBehavior(navigationItem: navigationItem)
         // TODO: - pass rating data to the parameter of configure function
-        navigationBarBehavior?.configure(7.8, onBack: {
+        navigationBarBehavior?.configure(rating, onBack: {
             print("onBack is tapped")
         })
     }
 
     func bindViewModel() {
-        // TODO: - Get Date from view model and update rating progressBar, labels and table view
+        viewModel.loadReviews { [weak self] ProductReviews in
+            guard let self = self else { return }
+            self.configureNavBar(rating: ProductReviews.rating)
+            self.updateTotalReviewsLabel(ProductReviews.totalRatingNumber, ProductReviews.rating)
+            self.updateReviewsTableViewCell(productReviews: ProductReviews.reviews)
+            self.updateRatingProgressBarAndLabel(ProductReviews.fiveStarRatingNumber,
+                                                 ProductReviews.fourStarRatingNumber,
+                                                 ProductReviews.threeStarRatingNumber,
+                                                 ProductReviews.twoStarRatingNumber,
+                                                 ProductReviews.oneStarRatingNumber,
+                                                 ProductReviews.totalRatingNumber)
+        }
     }
 }
 
@@ -116,7 +129,7 @@ private extension ReviewProductViewController {
         twoStarProgressBar.progress = Float(twoStarRatingNumber) / Float(totalRatingNumber)
         oneStarProgressBar.progress = Float(oneStarRatingNumber) / Float(totalRatingNumber)
 
-        // MARK: update rating labels
+        // MARK: Update rating labels
 
         fiveStarRatingLabel.text = String(fiveStarRatingNumber)
         fourStarRatingLabel.text = String(fourStarRatingNumber)
@@ -125,11 +138,18 @@ private extension ReviewProductViewController {
         oneStarRatingLabel.text = String(oneStarRatingNumber)
     }
 
-    // MARK: - update total rating and reviews labels
+    // MARK: - Update total rating and reviews labels
 
     func updateTotalReviewsLabel(_ totalReviewsNumber: Int, _ rating: Double) {
         ratingLabel.text = String(rating)
         totalReviewsNumberLabel.text = String(totalReviewsNumber) + " Reviews"
+    }
+
+    // MARK: - Update reviews table view cell
+
+    func updateReviewsTableViewCell(productReviews: [Domain.Review]) {
+        reviewProductList = productReviews
+        reviewProductTableView.reloadData()
     }
 }
 

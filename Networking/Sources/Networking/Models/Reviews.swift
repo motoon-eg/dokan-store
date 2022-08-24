@@ -23,5 +23,5 @@ public struct Review: Codable {
     public let name: String
     public let date: String
     public let rating: Int
-    public let reviewDescription: String?
+    public let reviewDescription: String
 }
