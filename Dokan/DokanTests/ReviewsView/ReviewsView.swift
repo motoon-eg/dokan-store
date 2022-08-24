@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - ReviewsView
 
-final class ReviewsView: UIView {
+class ReviewsView: UIView {
 
     // MARK: Outlets
 
@@ -19,7 +19,7 @@ final class ReviewsView: UIView {
     @IBOutlet private(set) weak var ratingLabel: UILabel!
     @IBOutlet private(set) weak var tableView: UITableView!
     @IBOutlet private(set) weak var seeAllReviewsButton: UIButton!
-    @IBOutlet private(set) weak var reviewImageView: UIImageView!
+//    @IBOutlet private(set) weak var reviewImageView: UIImageView!
 
     // MARK: Properties
 
@@ -39,10 +39,13 @@ final class ReviewsView: UIView {
 
     private func commonInit() {
         Bundle.main.loadNibNamed("ReviewsView", owner: self, options: nil)
-        contentView.fixInView(self)
+        addSubview(contentView)
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        contentView.fixInView(self)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(ReviewerTableViewCell.self, forCellReuseIdentifier: "\(ReviewerTableViewCell.self)")
+        tableView.register(ReviewerTableViewCell.self, forCellReuseIdentifier: "ReviewerTableViewCell")
     }
 }
 
@@ -55,7 +58,7 @@ extension ReviewsView: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ReviewerTableViewCell.self)") as? ReviewerTableViewCell,
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewerTableViewCell") as? ReviewerTableViewCell,
               let viewModel = viewModel else {
             return UITableViewCell()
         }

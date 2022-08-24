@@ -17,6 +17,7 @@
                 <outlet property="productStockBackgroundView" destination="XAZ-a0-IKP" id="pdm-1Q-gnL"/>
                 <outlet property="productStockCount" destination="mwO-Wl-fdI" id="XII-9f-AgW"/>
                 <outlet property="productTitle" destination="ntf-ut-53d" id="Tnh-nT-Ywx"/>
+                <outlet property="titleContentView" destination="iN0-l3-epB" id="k3T-Sc-TtG"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

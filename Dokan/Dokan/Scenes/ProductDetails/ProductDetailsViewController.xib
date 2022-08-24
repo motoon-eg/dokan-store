@@ -10,8 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailsViewController" customModule="Dokan" customModuleProvider="target">
             <connections>
-                <outlet property="buttonsView" destination="sqs-7W-PR8" id="AE4-9h-feB"/>
                 <outlet property="InfoSellerView" destination="Wcb-vx-s8d" id="fTl-ay-tlx"/>
+                <outlet property="buttonsView" destination="sqs-7W-PR8" id="AE4-9h-feB"/>
                 <outlet property="descriptionTextView" destination="owe-WV-VX7" id="UDC-4d-5av"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,7 +34,7 @@
                                         <constraint firstAttribute="height" priority="250" constant="128" id="vFA-wY-lIi"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-mJ-zfW" userLabel="TitleView">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-mJ-zfW" userLabel="TitleView" customClass="ProductTitleQuantityView" customModule="Dokan" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="148" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -89,7 +89,7 @@
                                         <constraint firstAttribute="height" priority="250" constant="128" id="cPa-9n-Hm8"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auT-ob-9ds" userLabel="FeaturedView">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auT-ob-9ds" userLabel="FeaturedView" customClass="FeaturedProductView" customModule="Dokan" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="758" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -97,7 +97,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="sqs-7W-PR8" userLabel="ButtonsView" customClass="ButtonsView" customModule="Dokan" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="930" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="906" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="48" id="wMX-Bb-fpF"/>

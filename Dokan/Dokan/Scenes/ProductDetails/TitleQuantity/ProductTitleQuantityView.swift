@@ -10,6 +10,7 @@ import UIKit
 class ProductTitleQuantityView: UIView {
     // MARK: Outlet
 
+    @IBOutlet private(set) weak var titleContentView: UIView!
     @IBOutlet private(set) weak var productTitle: UILabel!
     @IBOutlet private(set) weak var productCurrency: UILabel!
     @IBOutlet private(set) weak var productPrice: UILabel!
@@ -22,14 +23,24 @@ class ProductTitleQuantityView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
-        stylingProductDetails()
+        commonInit()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        commonInit()
+    }
+
+    private func commonInit() {
+        Bundle.main.loadNibNamed("ProductTitleQuantityView", owner: self, options: nil)
+        addSubview(titleContentView)
+        titleContentView.frame = bounds
+        titleContentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 
         stylingProductDetails()
+        let test = ViewModel(title: "Shoes", currency: "USD", price: "199", reviewAverage: 9.2, reviewCount: 34, stockCount: 5)
+        configureView(viewModel: test)
+        changeStockBackGroundColor(stockCount: test.stockCount)
     }
 
     // MARK: Style

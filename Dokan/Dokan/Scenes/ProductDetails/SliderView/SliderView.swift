@@ -41,7 +41,7 @@ extension SliderView {
         Bundle.main.loadNibNamed("SliderView", owner: self, options: nil)
         addAndFixSubview(sliderView)
 
-        productSliderCollectionView.register(SliderCollectionViewCell.self)
+        productSliderCollectionView.register(SliderCollectionViewCell.self, forCellWithReuseIdentifier: SliderCollectionViewCell.headerIdentifier)
         productSliderCollectionView.delegate = self
         productSliderCollectionView.dataSource = self
         collectionViewLayout()
