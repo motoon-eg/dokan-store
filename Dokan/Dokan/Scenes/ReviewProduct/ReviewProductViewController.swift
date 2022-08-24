@@ -164,8 +164,7 @@ extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReuseIdentifier, for: indexPath) as! ReviewerTableViewCell
 
-        // TODO: - Get reviewProductList[indexPath.row] and send it to cell
-
+        cell.reviewProduct = reviewProductList[indexPath.row]
         return cell
     }
 
