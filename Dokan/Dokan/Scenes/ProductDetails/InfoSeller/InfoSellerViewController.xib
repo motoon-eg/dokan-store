@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoSellerViewController" customModule="Dokan" customModuleProvider="target">
             <connections>
                 <outlet property="followButton" destination="wHz-pS-Fu9" id="Ttk-x1-AKK"/>
+                <outlet property="infoSellerCollectionView" destination="L2Y-zR-EaX" id="4Np-Ti-cSz"/>
                 <outlet property="shopImage" destination="cz4-1d-ul6" id="fHy-MF-Iwl"/>
                 <outlet property="sortingButton" destination="o4U-tC-f0u" id="Y1z-5W-Rx6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

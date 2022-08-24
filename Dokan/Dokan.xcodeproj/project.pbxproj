@@ -418,6 +418,7 @@
 			children = (
 				E2DADBAA288A53D9005E483A /* ButtonsView */,
 				51934C8728AD911A0078FD3C /* SellerInfo */,
+				E2DADBAA288A53D9005E483A /* ButtonsView */,
 				AAC39E13289DD9CA0069822D /* ReviewerTableViewCell */,
 				856E36AD2889224B00735EF2 /* InfoSellerView */,
 				437B99A428907E6C00F59B06 /* FeaturedProduct */,
