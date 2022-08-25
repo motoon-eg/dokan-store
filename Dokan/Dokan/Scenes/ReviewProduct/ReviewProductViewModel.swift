@@ -19,9 +19,9 @@ class ReviewProductViewModel {
     private var loadingEnabled: (Bool) -> Void = { _ in }
     private var showError: (String) -> Void = { _ in }
 
-    var loadingApplied: Bool? {
+    var loadingStatus: Bool? {
         didSet {
-            loadingEnabled(loadingApplied ?? true)
+            loadingEnabled(loadingStatus ?? true)
         }
     }
 
@@ -38,16 +38,16 @@ class ReviewProductViewModel {
     }
 }
 
-// MARK: ReviewProductViewModel
+// MARK: - ReviewProductViewModel
 
 extension ReviewProductViewModel: ReviewProductViewModelInput {}
 
-// MARK: ReviewProductViewModelOutput
+// MARK: - ReviewProductViewModelOutput
 
 extension ReviewProductViewModel: ReviewProductViewModelOutput {
 
     func loadReviews(completion: @escaping (Reviews) -> Void) {
-        loadingApplied = true
+        loadingStatus = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.repository.loadReviews { [weak self] reviews, error in
                 guard let self = self else { return }
@@ -55,7 +55,7 @@ extension ReviewProductViewModel: ReviewProductViewModelOutput {
                     self.showErrorAlert(error: error)
                     return
                 }
-                self.loadingApplied = false
+                self.loadingStatus = false
                 completion(reviews)
             }
         }
@@ -70,7 +70,7 @@ extension ReviewProductViewModel: ReviewProductViewModelOutput {
     }
 }
 
-// MARK: Private Handlers
+// MARK: - Private Handlers
 
 private extension ReviewProductViewModel {
 

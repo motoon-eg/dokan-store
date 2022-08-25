@@ -96,7 +96,6 @@ extension ReviewProductViewController {
     func configureNavBar(rating: Double = 0.0) {
         title = Constants.navBarTitle
         navigationBarBehavior = ReviewProductNavigationBarBehavior(navigationItem: navigationItem)
-        // TODO: - pass rating data to the parameter of configure function
         navigationBarBehavior?.configure(rating, onBack: {
             // TODO: back to previous screen
         })
