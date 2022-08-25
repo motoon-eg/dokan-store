@@ -60,7 +60,7 @@ class ReviewProductViewController: UIViewController {
         tableViewSetup()
         starRatingStyleSetup()
         bindViewModel()
-        // configureNavBar()
+        configureNavBar()
     }
 }
 
@@ -94,28 +94,16 @@ extension ReviewProductViewController {
     }
 
     func configureNavBar(rating: Double = 0.0) {
-        title = "Review Product"
+        title = Constants.navBarTitle
         navigationBarBehavior = ReviewProductNavigationBarBehavior(navigationItem: navigationItem)
         // TODO: - pass rating data to the parameter of configure function
         navigationBarBehavior?.configure(rating, onBack: {
-            print("onBack is tapped")
+            // TODO: back to previous screen
         })
     }
 
-    func bindViewModel() {
-
-        viewModel.configureLoadingEnabled { [weak self] enable in
-            guard let self = self else { return }
-            switch enable {
-            case true:
-                self.loadingCell = true
-                self.mainStackView.startSkeletonView()
-            case false:
-                self.loadingCell = false
-                self.mainStackView.stopSkeletonView()
-            }
-        }
-
+    func loadReviewsData() {
+        mainStackView.isHidden = false
         viewModel.loadReviews { [weak self] ProductReviews in
             guard let self = self else { return }
             self.configureNavBar(rating: ProductReviews.rating)
@@ -128,6 +116,34 @@ extension ReviewProductViewController {
                                                  ProductReviews.oneStarRatingNumber,
                                                  ProductReviews.totalRatingNumber)
         }
+    }
+
+    func configureShowError() {
+        viewModel.configureShowError { [weak self] error in
+            guard let self = self else { return }
+            self.mainStackView.isHidden = true
+            self.showErrorAlert(error: error)
+        }
+    }
+
+    func configureLoading() {
+        viewModel.configureLoadingEnabled { [weak self] enable in
+            guard let self = self else { return }
+            switch enable {
+            case true:
+                self.loadingCell = true
+                self.mainStackView.startSkeletonView()
+            case false:
+                self.loadingCell = false
+                self.mainStackView.stopSkeletonView()
+            }
+        }
+    }
+
+    func bindViewModel() {
+        configureLoading()
+        configureShowError()
+        loadReviewsData()
     }
 }
 
@@ -172,6 +188,21 @@ private extension ReviewProductViewController {
         reviewProductList = productReviews
         reviewProductTableView.reloadData()
     }
+
+    // MARK: - Show error alert
+
+    func showErrorAlert(error: String) {
+        UIAlertController.Builder()
+            .title(Constants.errorAlertTitle)
+            .message(error)
+            .addActionWithTitle(Constants.errorAlertBackButton, style: .default, handler: { _ in
+                // TODO: back to previous screen
+            })
+            .addActionWithTitle(Constants.errorAlertTryAgainButton, style: .default, handler: { _ in
+                self.loadReviewsData()
+            })
+            .show(in: self)
+    }
 }
 
 // MARK: - TableView
@@ -203,5 +234,9 @@ extension ReviewProductViewController {
     private enum Constants {
         static let tableViewCellName = "ReviewerTableViewCell"
         static let cellReuseIdentifier = "ReviewerTableViewCell"
+        static let errorAlertTitle = "Error"
+        static let errorAlertBackButton = "Back"
+        static let errorAlertTryAgainButton = "Try Again"
+        static let navBarTitle = "Review Product"
     }
 }

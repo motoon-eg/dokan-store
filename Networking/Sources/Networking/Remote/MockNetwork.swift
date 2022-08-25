@@ -22,7 +22,6 @@ public class MockNetwork: ReviewsRemoteProtocol {
             Reviewsproduct = try JSONDecoder().decode(Reviews.self, from: allProductData)
             completion(Reviewsproduct, nil)
         } catch {
-            print(error.localizedDescription)
             completion(nil, error)
         }
     }

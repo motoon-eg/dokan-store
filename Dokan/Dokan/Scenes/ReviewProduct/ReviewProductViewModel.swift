@@ -17,10 +17,17 @@ class ReviewProductViewModel {
 
     let repository: ReviewsRepository
     private var loadingEnabled: (Bool) -> Void = { _ in }
+    private var showError: (String) -> Void = { _ in }
 
     var loadingApplied: Bool? {
         didSet {
             loadingEnabled(loadingApplied ?? true)
+        }
+    }
+
+    var errorMessage: String? {
+        didSet {
+            showError(errorMessage ?? " ")
         }
     }
 
@@ -42,9 +49,10 @@ extension ReviewProductViewModel: ReviewProductViewModelOutput {
     func loadReviews(completion: @escaping (Reviews) -> Void) {
         loadingApplied = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.repository.loadReviews { reviews, _ in
+            self.repository.loadReviews { [weak self] reviews, error in
+                guard let self = self else { return }
                 guard let reviews = reviews else {
-                    //
+                    self.showErrorAlert(error: error)
                     return
                 }
                 self.loadingApplied = false
@@ -56,8 +64,18 @@ extension ReviewProductViewModel: ReviewProductViewModelOutput {
     func configureLoadingEnabled(onEnabled: @escaping (Bool) -> Void) {
         loadingEnabled = onEnabled
     }
+
+    func configureShowError(onshow: @escaping (String) -> Void) {
+        showError = onshow
+    }
 }
 
 // MARK: Private Handlers
 
-private extension ReviewProductViewModel {}
+private extension ReviewProductViewModel {
+
+    func showErrorAlert(error: Error?) {
+        guard let error = error else { return }
+        errorMessage = error.localizedDescription
+    }
+}
