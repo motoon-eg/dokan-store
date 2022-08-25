@@ -31,13 +31,15 @@ class ReviewProductViewController: UIViewController {
     @IBOutlet private(set) weak var twoStarRatingLabel: UILabel!
     @IBOutlet private(set) weak var oneStarRatingLabel: UILabel!
     @IBOutlet private(set) weak var totalReviewsNumberLabel: UILabel!
+    @IBOutlet private(set) weak var mainStackView: UIStackView!
     @IBOutlet private(set) weak var ratingLabel: UILabel!
 
     // MARK: Properties
 
     private let viewModel: ReviewProductViewModelType
     private var navigationBarBehavior: ReviewProductNavigationBarBehavior?
-    var reviewProductList: [Domain.Review] = []
+    var reviewProductList: [Any] = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10]
+    var loadingCell: Bool = true
 
     // MARK: Init
 
@@ -95,6 +97,19 @@ extension ReviewProductViewController {
     }
 
     func bindViewModel() {
+
+        viewModel.configureLoadingEnabled { [weak self] enable in
+            guard let self = self else { return }
+            switch enable {
+            case true:
+                self.loadingCell = true
+                self.mainStackView.startSkeletonView()
+            case false:
+                self.loadingCell = false
+                self.mainStackView.stopSkeletonView()
+            }
+        }
+
         viewModel.loadReviews { [weak self] ProductReviews in
             guard let self = self else { return }
             self.configureNavBar(rating: ProductReviews.rating)
@@ -164,7 +179,13 @@ extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReuseIdentifier, for: indexPath) as! ReviewerTableViewCell
 
-        cell.reviewProduct = reviewProductList[indexPath.row]
+        if loadingCell {
+            cell.startSkeletonView()
+        } else {
+            cell.stopSkeletonView()
+            cell.reviewProduct = reviewProductList[indexPath.row] as? Domain.Review
+        }
+
         return cell
     }
 

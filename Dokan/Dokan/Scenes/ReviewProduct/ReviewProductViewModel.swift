@@ -12,7 +12,19 @@ import Foundation
 // MARK: ReviewProductViewModel
 
 class ReviewProductViewModel {
+
+    // MARK: - Properties
+
     let repository: ReviewsRepository
+    private var loadingEnabled: (Bool) -> Void = { _ in }
+
+    var loadingApplied: Bool? {
+        didSet {
+            loadingEnabled(loadingApplied ?? true)
+        }
+    }
+
+    // MARK: - Init
 
     init(repository: ReviewsRepository = ServiceLocator.provider.makeReviewsRepository()) {
         self.repository = repository
@@ -28,13 +40,21 @@ extension ReviewProductViewModel: ReviewProductViewModelInput {}
 extension ReviewProductViewModel: ReviewProductViewModelOutput {
 
     func loadReviews(completion: @escaping (Reviews) -> Void) {
-        repository.loadReviews { reviews, _ in
-            guard let reviews = reviews else {
-                // TODO: - make alert of error
-                return
+        loadingApplied = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.repository.loadReviews { reviews, _ in
+                guard let reviews = reviews else {
+                    //
+                    return
+                }
+                self.loadingApplied = false
+                completion(reviews)
             }
-            completion(reviews)
         }
+    }
+
+    func configureLoadingEnabled(onEnabled: @escaping (Bool) -> Void) {
+        loadingEnabled = onEnabled
     }
 }
 

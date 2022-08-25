@@ -19,4 +19,5 @@ protocol ReviewProductViewModelInput {}
 ///
 protocol ReviewProductViewModelOutput {
     func loadReviews(completion: @escaping (Domain.Reviews) -> Void)
+    func configureLoadingEnabled(onEnabled: @escaping (Bool) -> Void)
 }
