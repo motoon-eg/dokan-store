@@ -77,6 +77,12 @@ extension ReviewProductViewController {
         reviewProductTableView.register(nib, forCellReuseIdentifier: Constants.cellReuseIdentifier)
         reviewProductTableView.delegate = self
         reviewProductTableView.dataSource = self
+        tableViewLayout()
+    }
+
+    func tableViewLayout() {
+        reviewProductTableView.estimatedRowHeight = reviewProductTableView.rowHeight
+        reviewProductTableView.rowHeight = UITableView.automaticDimension
     }
 
     func starRatingStyleSetup() {
@@ -187,10 +193,6 @@ extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSourc
         }
 
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
     }
 }
 
