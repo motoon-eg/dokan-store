@@ -16,7 +16,7 @@ import UIKit
 ///    .addOkAction()
 ///    .show(in: UIViewController) OR .build() to get back the UIAlertController directly
 /// ```
-extension UIAlertController {
+public extension UIAlertController {
 
     // MARK: - Static function
 
@@ -30,6 +30,7 @@ extension UIAlertController {
 
     /// Builder Pattern to show
     class Builder {
+        public init() {}
         var preferredStyle: UIAlertController.Style = .alert
         var title: String?
         var message: String?
@@ -41,7 +42,7 @@ extension UIAlertController {
 
 // MARK: - Actions
 
-extension UIAlertController.Builder {
+public extension UIAlertController.Builder {
     func preferredStyle(_ style: UIAlertController.Style) -> Self {
         preferredStyle = style
         return self
