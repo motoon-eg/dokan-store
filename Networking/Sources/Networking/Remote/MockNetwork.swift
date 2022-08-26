@@ -45,14 +45,14 @@ extension MockNetwork {
                     "name": "yacob Jameruddin Debiza",
                     "date": "2021-05-17",
                     "rating": 5,
-                    "reviewDescription": "Make a statement ",
+                    "reviewDescription": "Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.",
                 ],
                 [
                     "image": "https://images.pexels.com/photos/2050994/pexels-photo-2050994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                     "name": "khaled kashmiry",
                     "date": "2021-05-17",
                     "rating": 3,
-                    "reviewDescription": "Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.Make a statement with these iconic Dr Marten boots. This classic style has stood the test of time thanks to the combination.",
+                    "reviewDescription": "Make a statement with these iconic Dr Marten.",
                 ],
                 [
                     "image": "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
