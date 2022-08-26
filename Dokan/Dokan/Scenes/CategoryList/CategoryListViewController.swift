@@ -41,6 +41,7 @@ class CategoryListViewController: UIViewController {
 
     private func setupCollectionview() {
         categoriesCollectionview.register(CategoryListCell.self)
+        categoriesCollectionview.register(CategoryFooterReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.identifier)
         categoriesCollectionview.delegate = self
         categoriesCollectionview.dataSource = self
     }
@@ -83,6 +84,16 @@ extension CategoryListViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         return CGSize(width: (view.frame.width / 2) - 20, height: 280)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.identifier, for: indexPath) as! CategoryFooterReusableView
+        footer.configure()
+        return footer
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width * 0.8, height: 44)
     }
 }
 
