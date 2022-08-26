@@ -18,27 +18,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="420" height="187"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-Jv-2I6">
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-Jv-2I6">
                         <rect key="frame" x="0.0" y="0.0" width="420" height="187"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aMW-WS-Xdx">
-                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="9pv-7I-Y3B"/>
-                                    <constraint firstAttribute="height" constant="40" id="IV1-Jx-3gu"/>
-                                </constraints>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FDB-Wn-BUo">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="187"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aMW-WS-Xdx">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="9pv-7I-Y3B"/>
+                                            <constraint firstAttribute="height" constant="40" id="IV1-Jx-3gu"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-d7-l6N">
-                                <rect key="frame" x="50" y="0.0" width="370" height="45"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-d7-l6N">
+                                <rect key="frame" x="50" y="0.0" width="370" height="187"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="5ua-2S-dtm">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="7"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5ua-2S-dtm">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter Parker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WL-vR-UeQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="82" height="7"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -47,7 +55,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Bulan yang lalu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lGD-ya-DVc">
-                                                <rect key="frame" x="274" y="0.0" width="96" height="7"/>
+                                                <rect key="frame" x="274" y="0.0" width="96" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
@@ -56,12 +64,15 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="wNg-iy-czn"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSV-Vh-XjP" customClass="StarsView" customModule="UIDokan">
-                                        <rect key="frame" x="0.0" y="15" width="370" height="20"/>
+                                        <rect key="frame" x="0.0" y="69.5" width="370" height="20"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="HN5-Tz-hNY"/>
@@ -71,7 +82,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZaW-Ej-lig">
-                                        <rect key="frame" x="0.0" y="43" width="370" height="2"/>
+                                        <rect key="frame" x="0.0" y="139" width="370" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="mcj-id-nTs"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -91,10 +105,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="K5h-Jv-2I6" secondAttribute="trailing" id="cAs-wy-hmS"/>
-                    <constraint firstItem="K5h-Jv-2I6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ce8-3a-zMC"/>
-                    <constraint firstItem="K5h-Jv-2I6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eRP-8l-uub"/>
-                    <constraint firstAttribute="bottom" secondItem="K5h-Jv-2I6" secondAttribute="bottom" id="t2g-v9-j9M"/>
+                    <constraint firstItem="K5h-Jv-2I6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ULJ-pJ-Ng9"/>
+                    <constraint firstAttribute="bottom" secondItem="K5h-Jv-2I6" secondAttribute="bottom" id="drv-NE-Lz0"/>
+                    <constraint firstItem="K5h-Jv-2I6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uEx-At-wgG"/>
+                    <constraint firstAttribute="trailing" secondItem="K5h-Jv-2I6" secondAttribute="trailing" id="uhT-yI-UwT"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
