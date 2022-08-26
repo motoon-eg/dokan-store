@@ -7,6 +7,7 @@
 
 import UIDokan
 import UIKit
+import Domain
 
 class ProductDetailsViewController: UIViewController {
 

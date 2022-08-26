@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 /// ProductDetails Input & Output
 ///
@@ -17,4 +18,6 @@ protocol ProductDetailsViewModelInput {}
 
 /// ProductDetails ViewModel Output
 ///
-protocol ProductDetailsViewModelOutput {}
+protocol ProductDetailsViewModelOutput {
+    func loadProduct(productID: Int, completion: @escaping (Product) -> Void)
+}

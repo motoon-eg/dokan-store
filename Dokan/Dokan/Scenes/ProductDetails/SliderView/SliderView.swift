@@ -7,6 +7,7 @@
 
 import UIDokan
 import UIKit
+
 class SliderView: UIView {
 
     // MARK: - Outlet
