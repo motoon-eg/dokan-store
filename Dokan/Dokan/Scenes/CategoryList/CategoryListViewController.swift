@@ -38,13 +38,6 @@ class CategoryListViewController: UIViewController {
         setupCollectionview()
         configureSearchController()
     }
-
-    private func setupCollectionview() {
-        categoriesCollectionview.register(CategoryListCell.self)
-        categoriesCollectionview.register(CategoryFooterReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.identifier)
-        categoriesCollectionview.delegate = self
-        categoriesCollectionview.dataSource = self
-    }
 }
 
 // MARK: - Actions
@@ -67,6 +60,7 @@ extension CategoryListViewController {
 
     private func setupCollectionview() {
         categoriesCollectionview.register(CategoryCollectionViewCell.self)
+        categoriesCollectionview.register(CategoryFooterReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.identifier)
         categoriesCollectionview.delegate = self
         categoriesCollectionview.dataSource = self
     }
@@ -93,13 +87,13 @@ extension CategoryListViewController: UICollectionViewDelegateFlowLayout {
 
         return CGSize(width: (collectionView.bounds.width / 2) - 20, height: 280)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.identifier, for: indexPath) as! CategoryFooterReusableView
+    let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.identifier, for: indexPath) as! CategoryFooterReusableView
         footer.configure()
         return footer
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width * 0.8, height: 44)
     }

@@ -8,7 +8,7 @@
 import UIKit
 
 class CategoryFooterReusableView: UICollectionReusableView {
-    
+
     static let identifier = "CategoryFooterReusableView"
     private let button: UIButton = {
         let button = UIButton(type: .system)
@@ -21,14 +21,13 @@ class CategoryFooterReusableView: UICollectionReusableView {
         button.setTitle("Filter & Sorting", for: .normal)
         return button
     }()
-    
+
     public func configure() {
         addSubview(button)
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         button.frame = bounds
     }
-        
 }
