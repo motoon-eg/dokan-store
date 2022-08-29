@@ -16,7 +16,7 @@ class CategoryListViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: CategoryListViewModelType
-    private var categoriesviewModel: [CategoryListCell.categoryViewModel]?
+    private var categoriesviewModel: [CategoryCollectionViewCell.ViewModel]?
 
     // MARK: Init
 
@@ -38,12 +38,6 @@ class CategoryListViewController: UIViewController {
         setupCollectionview()
         configureSearchController()
     }
-
-    private func setupCollectionview() {
-        categoriesCollectionview.register(CategoryListCell.self)
-        categoriesCollectionview.delegate = self
-        categoriesCollectionview.dataSource = self
-    }
 }
 
 // MARK: - Actions
@@ -63,26 +57,34 @@ extension CategoryListViewController {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
     }
+
+    private func setupCollectionview() {
+        categoriesCollectionview.register(CategoryCollectionViewCell.self)
+        categoriesCollectionview.delegate = self
+        categoriesCollectionview.dataSource = self
+    }
 }
 
-// MARK: - Private Handlers
+// MARK: - conform to UICollectionView protocols
 
-//
-private extension CategoryListViewController {}
+extension CategoryListViewController: UICollectionViewDelegate {}
 
-extension CategoryListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CategoryListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         categoriesviewModel?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: CategoryListCell = collectionView.dequeueReusableCell(for: indexPath)
+        let cell: CategoryCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         return cell
     }
+}
+
+extension CategoryListViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: (view.frame.width / 2) - 20, height: 280)
+        return CGSize(width: (collectionView.bounds.width / 2) - 20, height: 280)
     }
 }
 

@@ -8,7 +8,7 @@
 import UIDokan
 import UIKit
 
-class CategoryListCell: UICollectionViewCell, IdentifiableView {
+class CategoryCollectionViewCell: UICollectionViewCell, IdentifiableView {
 
     // MARK: - Outlet
 
@@ -27,24 +27,24 @@ class CategoryListCell: UICollectionViewCell, IdentifiableView {
 
     // MARK: - Cell  Configuration
 
-    func configureCell(viewModel: categoryViewModel) {
-        categoryImage.image = viewModel.categoryImage
-        categoryTitle.text = viewModel.categoryTitle
-        categoryPrice.text = viewModel.categoryPrice
-        categoryReview.text = viewModel.categoryReview
+    func configureCell(viewModel: ViewModel) {
+        categoryImage.image = viewModel.image
+        categoryTitle.text = viewModel.title
+        categoryPrice.text = viewModel.price
+        categoryReview.text = viewModel.review
         noOfReviewer.text = "\(viewModel.noOfReviewer)"
     }
 }
 
 // MARK: - category Model
 
-extension CategoryListCell {
+extension CategoryCollectionViewCell {
 
-    struct categoryViewModel {
-        let categoryImage: UIImage
-        let categoryTitle: String
-        let categoryPrice: String
-        let categoryReview: String
+    struct ViewModel {
+        let image: UIImage
+        let title: String
+        let price: String
+        let review: String
         let noOfReviewer: Int
     }
 }

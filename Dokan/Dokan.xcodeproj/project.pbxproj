@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2704245B28ACD223002EF7B5 /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245928ACD223002EF7B5 /* CategoryListCell.swift */; };
-		2704245C28ACD223002EF7B5 /* CategoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704245A28ACD223002EF7B5 /* CategoryListCell.xib */; };
+		2704245B28ACD223002EF7B5 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245928ACD223002EF7B5 /* CategoryCollectionViewCell.swift */; };
+		2704245C28ACD223002EF7B5 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704245A28ACD223002EF7B5 /* CategoryCollectionViewCell.xib */; };
 		273D3A9828AE11A400860702 /* CategoryListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9428AE11A400860702 /* CategoryListViewModelType.swift */; };
 		273D3A9928AE11A400860702 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9528AE11A400860702 /* CategoryListViewController.swift */; };
 		273D3A9A28AE11A400860702 /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9628AE11A400860702 /* CategoryListViewModel.swift */; };
@@ -81,8 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2704245928ACD223002EF7B5 /* CategoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCell.swift; sourceTree = "<group>"; };
-		2704245A28ACD223002EF7B5 /* CategoryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListCell.xib; sourceTree = "<group>"; };
+		2704245928ACD223002EF7B5 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		2704245A28ACD223002EF7B5 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		273D3A9428AE11A400860702 /* CategoryListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModelType.swift; sourceTree = "<group>"; };
 		273D3A9528AE11A400860702 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		273D3A9628AE11A400860702 /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 		2704245D28ACD79F002EF7B5 /* categoryListCell */ = {
 			isa = PBXGroup;
 			children = (
-				2704245928ACD223002EF7B5 /* CategoryListCell.swift */,
-				2704245A28ACD223002EF7B5 /* CategoryListCell.xib */,
+				2704245928ACD223002EF7B5 /* CategoryCollectionViewCell.swift */,
+				2704245A28ACD223002EF7B5 /* CategoryCollectionViewCell.xib */,
 			);
 			path = categoryListCell;
 			sourceTree = "<group>";
@@ -580,7 +580,7 @@
 				AA21B43D28537E0400E4F217 /* Main.storyboard in Resources */,
 				856E36B1288922EF00735EF2 /* InfoSellerView.xib in Resources */,
 				437B99A628907F0700F59B06 /* FeaturedProductView.xib in Resources */,
-				2704245C28ACD223002EF7B5 /* CategoryListCell.xib in Resources */,
+				2704245C28ACD223002EF7B5 /* CategoryCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,7 +685,7 @@
 				276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */,
 				99091F1A28895DC1000FA9C9 /* ProductTitleQuantityView.swift in Sources */,
 				276889DF28741F750091ACEB /* RegisterViewModel.swift in Sources */,
-				2704245B28ACD223002EF7B5 /* CategoryListCell.swift in Sources */,
+				2704245B28ACD223002EF7B5 /* CategoryCollectionViewCell.swift in Sources */,
 				276889DC287417730091ACEB /* RegisterViewController.swift in Sources */,
 				AAC39E18289DD9DE0069822D /* ReviewerTableViewCell.swift in Sources */,
 				273D3A9A28AE11A400860702 /* CategoryListViewModel.swift in Sources */,
