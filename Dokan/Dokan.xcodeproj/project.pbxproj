@@ -68,6 +68,7 @@
 		E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04A28784A050065C852 /* VerificationViewController.swift */; };
 		E251D04F28784A050065C852 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251D04B28784A050065C852 /* VerificationViewModel.swift */; };
 		E251D05028784A050065C852 /* VerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E251D04C28784A050065C852 /* VerificationViewController.xib */; };
+		E2F353F528B8E45E00E47566 /* CategoryFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F353F428B8E45E00E47566 /* CategoryFooterReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		E251D04A28784A050065C852 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		E251D04B28784A050065C852 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
 		E251D04C28784A050065C852 /* VerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationViewController.xib; sourceTree = "<group>"; };
+		E2F353F428B8E45E00E47566 /* CategoryFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFooterReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		2704245828ACD1E2002EF7B5 /* CategoryList */ = {
 			isa = PBXGroup;
 			children = (
+				E2F353F328B8E41700E47566 /* CategoryListFooterView */,
 				2704245D28ACD79F002EF7B5 /* categoryListCell */,
 				273D3A9428AE11A400860702 /* CategoryListViewModelType.swift */,
 				273D3A9528AE11A400860702 /* CategoryListViewController.swift */,
@@ -462,6 +465,14 @@
 			path = Verification;
 			sourceTree = "<group>";
 		};
+		E2F353F328B8E41700E47566 /* CategoryListFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				E2F353F428B8E45E00E47566 /* CategoryFooterReusableView.swift */,
+			);
+			path = CategoryListFooterView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -677,6 +688,7 @@
 			files = (
 				85B31DBB2870BEDE00B1C9E8 /* LoginViewController.swift in Sources */,
 				85B31DBA2870BEDE00B1C9E8 /* LoginViewModelType.swift in Sources */,
+				E2F353F528B8E45E00E47566 /* CategoryFooterReusableView.swift in Sources */,
 				856E36AF2889229B00735EF2 /* InfoSellerView.swift in Sources */,
 				E251D04E28784A050065C852 /* VerificationViewController.swift in Sources */,
 				AA6BBD0C28A5CB2A00A66078 /* ServiceLocator.swift in Sources */,
