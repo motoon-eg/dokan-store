@@ -16,20 +16,41 @@ class ReviewProductViewModel {
     // MARK: - Properties
 
     let repository: ReviewsRepository
-    private var loadingEnabled: (Bool) -> Void = { _ in }
-    private var showError: (String) -> Void = { _ in }
 
-    var loadingStatus: Bool? {
+    private var reviewsList: [Domain.Review] = .init()
+
+    private var cellViewModels: [ReviewerCellViewModel] = .init() {
         didSet {
-            loadingEnabled(loadingStatus ?? true)
+            reloadTableViewClosure()
         }
     }
 
-    var errorMessage: String? {
+    var state: State = .empty {
         didSet {
-            showError(errorMessage ?? " ")
+            updateLoadingStatus()
         }
     }
+
+    var alertMessage: String = .init() {
+        didSet {
+            showAlertClosure()
+        }
+    }
+
+    var navBarRating: Double = .init() {
+        didSet {
+            showNavBarClosure()
+        }
+    }
+
+    var numberOfCells: Int {
+        return cellViewModels.count
+    }
+
+    var reloadTableViewClosure: (() -> Void) = {}
+    var showAlertClosure: (() -> Void) = {}
+    var showNavBarClosure: (() -> Void) = {}
+    var updateLoadingStatus: (() -> Void) = {}
 
     // MARK: - Init
 
@@ -46,27 +67,25 @@ extension ReviewProductViewModel: ReviewProductViewModelInput {}
 
 extension ReviewProductViewModel: ReviewProductViewModelOutput {
 
-    func loadReviews(completion: @escaping (Reviews) -> Void) {
-        loadingStatus = true
+    func loadReviews() {
+        state = .loading
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.repository.loadReviews { [weak self] reviews, error in
                 guard let self = self else { return }
                 guard let reviews = reviews else {
-                    self.showErrorAlert(error: error)
+                    self.state = .error
+                    self.alertMessage = error?.localizedDescription ?? " "
                     return
                 }
-                self.loadingStatus = false
-                completion(reviews)
+                self.processFetchedReviews(reviews: reviews)
+                self.navBarRating = reviews.rating
+                self.state = .loaded
             }
         }
     }
 
-    func configureLoadingEnabled(onEnabled: @escaping (Bool) -> Void) {
-        loadingEnabled = onEnabled
-    }
-
-    func configureShowError(onshow: @escaping (String) -> Void) {
-        showError = onshow
+    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel {
+        return cellViewModels[indexPath.row]
     }
 }
 
@@ -74,8 +93,28 @@ extension ReviewProductViewModel: ReviewProductViewModelOutput {
 
 private extension ReviewProductViewModel {
 
-    func showErrorAlert(error: Error?) {
-        guard let error = error else { return }
-        errorMessage = error.localizedDescription
+    private func createCellViewModel(reviews: Domain.Review) -> ReviewerCellViewModel {
+        return ReviewerCellViewModel(reviewerImageUrl: reviews.image,
+                                     reviewerName: reviews.name,
+                                     reviewerComment: reviews.reviewDescription,
+                                     rating: Double(reviews.rating))
     }
+
+    private func processFetchedReviews(reviews: Domain.Reviews) {
+        reviewsList = reviews.reviews
+        var cellVMs = [ReviewerCellViewModel]()
+        for review in reviewsList {
+            cellVMs.append(createCellViewModel(reviews: review))
+        }
+        cellViewModels = cellVMs
+    }
+}
+
+// MARK: - states
+
+enum State {
+    case empty
+    case loading
+    case error
+    case loaded
 }

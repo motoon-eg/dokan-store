@@ -19,9 +19,9 @@ class ReviewProductViewController: UIViewController {
 
     // MARK: Properties
 
-    private let viewModel: ReviewProductViewModelType
+    private var viewModel: ReviewProductViewModelType
     private var navigationBarBehavior: ReviewProductNavigationBarBehavior?
-    var reviewProductList: [Any] = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10]
+    var reviewCount: Int = 10
     var loadingCell: Bool = true
 
     // MARK: Init
@@ -74,42 +74,59 @@ extension ReviewProductViewController {
             // TODO: back to previous screen
         })
     }
+}
 
-    func loadReviewsData() {
-        mainStackView.isHidden = false
-        viewModel.loadReviews { [weak self] ProductReviews in
-            guard let self = self else { return }
-            self.configureNavBar(rating: ProductReviews.rating)
-            self.updateReviewsTableViewCell(productReviews: ProductReviews.reviews)
+// MARK: - bind view model
+
+extension ReviewProductViewController {
+
+    func bindViewModel() {
+
+        viewModel.showAlertClosure = { () in
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+
+                let message = self.viewModel.alertMessage
+                self.showErrorAlert(error: message)
+            }
         }
-    }
 
-    func configureShowError() {
-        viewModel.configureShowError { [weak self] error in
-            guard let self = self else { return }
-            self.mainStackView.isHidden = true
-            self.showErrorAlert(error: error)
+        viewModel.showNavBarClosure = { () in
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+
+                let rating = self.viewModel.navBarRating
+                self.configureNavBar(rating: rating)
+            }
         }
-    }
 
-    func configureLoading() {
-        viewModel.configureLoadingEnabled { [weak self] enable in
+        viewModel.updateLoadingStatus = { [weak self] () in
             guard let self = self else { return }
-            switch enable {
-            case true:
+
+            switch self.viewModel.state {
+            case .empty, .error:
+                self.mainStackView.isHidden = true
+            case .loading:
+                self.mainStackView.isHidden = false
                 self.loadingCell = true
                 self.mainStackView.startSkeletonView()
-            case false:
+            case .loaded:
+                self.mainStackView.isHidden = false
                 self.loadingCell = false
                 self.mainStackView.stopSkeletonView()
             }
         }
-    }
 
-    func bindViewModel() {
-        configureLoading()
-        configureShowError()
-        loadReviewsData()
+        viewModel.reloadTableViewClosure = { () in
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+
+                self.reviewCount = self.viewModel.numberOfCells
+                self.reviewProductTableView.reloadData()
+            }
+        }
+
+        viewModel.loadReviews()
     }
 }
 
@@ -117,14 +134,7 @@ extension ReviewProductViewController {
 
 private extension ReviewProductViewController {
 
-    // MARK: - Update reviews table view cell
-
-    func updateReviewsTableViewCell(productReviews: [Domain.Review]) {
-        reviewProductList = productReviews
-        reviewProductTableView.reloadData()
-    }
-
-    // MARK: - Show error alert
+    // MARK: Show error alert
 
     func showErrorAlert(error: String) {
         UIAlertController.Builder()
@@ -134,7 +144,7 @@ private extension ReviewProductViewController {
                 // TODO: back to previous screen
             })
             .addActionWithTitle(Constants.errorAlertTryAgainButton, style: .default, handler: { _ in
-                self.loadReviewsData()
+                self.viewModel.loadReviews()
             })
             .show(in: self)
     }
@@ -145,7 +155,7 @@ private extension ReviewProductViewController {
 extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviewProductList.count
+        return reviewCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -155,9 +165,9 @@ extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSourc
             cell.startSkeletonView()
         } else {
             cell.stopSkeletonView()
-            cell.reviewProduct = reviewProductList[indexPath.row] as? Domain.Review
+            let cellVM = viewModel.getCellViewModel(at: indexPath)
+            cell.configureCell(viewModel: cellVM)
         }
-
         return cell
     }
 }

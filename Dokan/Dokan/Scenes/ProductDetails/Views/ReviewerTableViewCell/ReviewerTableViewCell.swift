@@ -18,16 +18,6 @@ class ReviewerTableViewCell: UITableViewCell {
     @IBOutlet weak var reviewerComment: UILabel!
     @IBOutlet weak var ratingStarsView: StarsView!
 
-    // MARK: - Properties
-
-    var reviewProduct: Domain.Review! {
-        didSet {
-            reviewerImageView.setImage(with: reviewProduct.image, placeholderImage: UIImage(named: "star") ?? UIImage())
-            reviewerNameLabel.text = reviewProduct.name
-            reviewerComment.text = reviewProduct.reviewDescription
-            ratingStarsView.applyStyleToView(Double(reviewProduct.rating))
-        }
-    }
 
     // MARK: - life cycle..
 
@@ -43,16 +33,17 @@ class ReviewerTableViewCell: UITableViewCell {
 
     // MARK: - method to configure cell
 
-    func configureCell(viewModel: ViewModel) {
+    func configureCell(viewModel: ReviewerCellViewModel) {
+        reviewerImageView.setImage(with: viewModel.reviewerImageUrl, placeholderImage: UIImage(named: "star") ?? UIImage())
         reviewerNameLabel.text = viewModel.reviewerName
         reviewerComment.text = viewModel.reviewerComment
+        ratingStarsView.applyStyleToView(viewModel.rating)
     }
 }
 
-extension ReviewerTableViewCell {
-    struct ViewModel {
-        let reviewerImageUrl: String
-        let reviewerName: String
-        let reviewerComment: String
-    }
+struct ReviewerCellViewModel {
+    let reviewerImageUrl: String
+    let reviewerName: String
+    let reviewerComment: String
+    let rating: Double
 }
