@@ -8,7 +8,7 @@
 import UIKit
 
 class SellerInfoCell: UICollectionViewCell {
-    // MARK: - outlets..
+    // MARK: - Outlets..
 
     @IBOutlet private weak var sellerProductImage: UIImageView!
     @IBOutlet private weak var productName: UILabel!
@@ -16,7 +16,7 @@ class SellerInfoCell: UICollectionViewCell {
     @IBOutlet private weak var productReviewRate: UILabel!
     @IBOutlet private weak var productReviewerCount: UILabel!
 
-    // MARK: - life cycle...
+    // MARK: - Life cycle...
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +24,8 @@ class SellerInfoCell: UICollectionViewCell {
 
     // MARK: - func to configure cell with data
 
-    func configureCell(model: SellerInfoCellModel) {
-        sellerProductImage.setImage(with: model.sellerProductImage, placeholderImage: UIImage(named: "")!)
+    func configureCell(model: ViewModel) {
+        sellerProductImage.setImage(with: model.sellerProductImage, placeholderImage: UIImage())
         productName.text = model.productName
         productPrice.text = model.productPrice
         productReviewRate.text = model.productReviewRate
@@ -33,10 +33,10 @@ class SellerInfoCell: UICollectionViewCell {
     }
 }
 
-// MARK: - implement cell view model
+// MARK: - Implement cell view model
 
 extension SellerInfoCell {
-    struct SellerInfoCellModel {
+    struct ViewModel {
         var sellerProductImage: String
         var productName: String
         var productPrice: String

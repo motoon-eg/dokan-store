@@ -22,6 +22,10 @@ public struct DefaultRepositoryProvider {
 // MARK: - DefaultRepositoryProvider
 
 extension DefaultRepositoryProvider: RepositoryProvider {
+    public func makeSellerInfoRepository() -> Domain.SellerInfoRepository {
+        let remote = SellerInfoRemote(network: network)
+        return SellerInfoRepository(remote: remote)
+    }
 
     public func makeProductRepository() -> Domain.ProductRepository {
         let remote = ProductsRemote(network: network)
