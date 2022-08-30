@@ -17,7 +17,7 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
 
     // MARK: Properties
-    
+
     private let viewModel: ProductDetailsViewModelType
     private var addedToCart = false
     private var addedToFavorite = false
@@ -35,7 +35,7 @@ class ProductDetailsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: Lifecycle
 
     override func viewDidLoad() {
