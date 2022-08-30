@@ -20,7 +20,6 @@ class SliderView: UIView {
 
     // MARK: - initializer
 
-    ///
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -40,7 +39,7 @@ extension SliderView {
 
     func collectionViewSetup() {
         Bundle.main.loadNibNamed("SliderView", owner: self, options: nil)
-        sliderView.fixInView(self)
+        addAndFixSubview(sliderView)
 
         productSliderCollectionView.register(SliderCollectionViewCell.self)
         productSliderCollectionView.delegate = self

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 /// This extension implements a Builder pattern to use with the UIAlertViewController.
 /// Example:
 /// ```
@@ -19,7 +20,6 @@ extension UIAlertController {
 
     // MARK: - Static function
 
-    //
     static func showOkAlert(withTitle title: String? = nil, withMessage message: String? = nil, viewController: UIViewController) {
         UIAlertController.Builder()
             .title(title)
@@ -41,7 +41,6 @@ extension UIAlertController {
 
 // MARK: - Actions
 
-//
 extension UIAlertController.Builder {
     func preferredStyle(_ style: UIAlertController.Style) -> Self {
         preferredStyle = style

@@ -44,7 +44,17 @@ class VerificationViewController: UIViewController {
 
 // MARK: - Actions
 
-extension VerificationViewController {}
+extension VerificationViewController {
+
+    @IBAction func resendVerificationCode(_ sender: Any) {
+        // send verification code again to user
+    }
+
+    @IBAction func confirmVerificationCode(_ sender: Any) {
+        // show error message if code number wrong
+        // navigate to home page if right code number
+    }
+}
 
 // MARK: - Configurations
 
