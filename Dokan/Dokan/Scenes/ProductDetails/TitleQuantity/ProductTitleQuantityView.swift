@@ -19,6 +19,10 @@ class ProductTitleQuantityView: UIView {
     @IBOutlet private(set) weak var productStockBackgroundView: UIView!
     @IBOutlet private(set) weak var productStockCount: UILabel!
 
+    // MARK: Properities
+
+    lazy var productViewModel: ProductDetailsViewModel = .init()
+
     // MARK: Init
 
     override init(frame: CGRect) {
@@ -38,9 +42,40 @@ class ProductTitleQuantityView: UIView {
         titleContentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 
         stylingProductDetails()
-        let test = ViewModel(title: "Shoes", currency: "USD", price: "199", reviewAverage: 9.2, reviewCount: 34, stockCount: 5)
-        configureView(viewModel: test)
-        changeStockBackGroundColor(stockCount: test.stockCount)
+        initViewModel()
+    }
+
+    func initView() {
+        let model: tQViewModel = productViewModel.getproductViewModel()
+        configureView(viewModel: model)
+        changeStockBackGroundColor(stockCount: model.stockCount)
+    }
+
+    func initViewModel() {
+
+        productViewModel.uploadLoadingState = { [weak self] () in
+            guard let self = self else { return }
+
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+
+                switch self.productViewModel.state {
+
+                case .loading, .error, .empty:
+                    self.startSkeletonView()
+                case .populated:
+                    self.stopSkeletonView()
+                }
+            }
+        }
+
+        productViewModel.reloadViewClosure = { [weak self] () in
+            DispatchQueue.main.async { [weak self] in
+                self?.initView()
+            }
+        }
+
+        productViewModel.initFetchSingleProduct()
     }
 
     // MARK: Style
@@ -64,7 +99,7 @@ class ProductTitleQuantityView: UIView {
 
     // MARK: Configuration
 
-    func configureView(viewModel: ViewModel) {
+    func configureView(viewModel: tQViewModel) {
         productTitle.text = viewModel.title
         productCurrency.text = viewModel.currency
         productPrice.text = viewModel.price
@@ -76,13 +111,11 @@ class ProductTitleQuantityView: UIView {
     }
 }
 
-extension ProductTitleQuantityView {
-    struct ViewModel {
-        let title: String
-        let currency: String
-        let price: String
-        let reviewAverage: Double
-        let reviewCount: Int
-        let stockCount: Int
-    }
+public struct tQViewModel {
+    let title: String
+    let currency: String
+    let price: String
+    let reviewAverage: Double
+    let reviewCount: Int
+    let stockCount: Int
 }

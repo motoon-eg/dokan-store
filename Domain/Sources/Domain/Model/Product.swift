@@ -12,13 +12,15 @@ import Foundation
 public struct Product {
     public let id: String
     public let title: String
+    public let price: String
     public let description: String
     public let thumbnailUrl: String
     public let imagesListUrls: [String]
 
-    public init(id: String, title: String, description: String, thumbnailUrl: String, imagesListUrls: [String]) {
+    public init(id: String, title: String, price: String, description: String, thumbnailUrl: String, imagesListUrls: [String]) {
         self.id = id
         self.title = title
+        self.price = price
         self.description = description
         self.thumbnailUrl = thumbnailUrl
         self.imagesListUrls = imagesListUrls

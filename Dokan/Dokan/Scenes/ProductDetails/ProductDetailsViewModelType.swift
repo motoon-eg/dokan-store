@@ -5,8 +5,8 @@
 //  Created by Ahmed M. Hassan on 15/07/2022.
 //
 
-import Foundation
 import Domain
+import Foundation
 
 /// ProductDetails Input & Output
 ///
@@ -19,5 +19,5 @@ protocol ProductDetailsViewModelInput {}
 /// ProductDetails ViewModel Output
 ///
 protocol ProductDetailsViewModelOutput {
-    func loadProduct(productID: Int, completion: @escaping (Product) -> Void)
+    func initFetchSingleProduct()
 }

@@ -5,9 +5,9 @@
 //  Created by Ahmed M. Hassan on 15/07/2022.
 //
 
+import Domain
 import UIDokan
 import UIKit
-import Domain
 
 class ProductDetailsViewController: UIViewController {
 
