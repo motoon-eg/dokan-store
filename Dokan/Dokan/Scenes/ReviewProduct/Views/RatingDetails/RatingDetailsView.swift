@@ -16,13 +16,25 @@ class RatingDetailsView: UIView {
     @IBOutlet private(set) weak var totalReviewsNumberLabel: UILabel!
     @IBOutlet private(set) weak var ratingLabel: UILabel!
 
-    @IBOutlet weak var fiveStarRating: RatingProgressDetails!
-    @IBOutlet weak var fourStarRating: RatingProgressDetails!
-    @IBOutlet weak var threeStarRating: RatingProgressDetails!
-    @IBOutlet weak var twoStarRating: RatingProgressDetails!
-    @IBOutlet weak var oneStarRating: RatingProgressDetails!
+    @IBOutlet private(set) weak var fiveStarRating: RatingProgressDetails!
+    @IBOutlet private(set) weak var fourStarRating: RatingProgressDetails!
+    @IBOutlet private(set) weak var threeStarRating: RatingProgressDetails!
+    @IBOutlet private(set) weak var twoStarRating: RatingProgressDetails!
+    @IBOutlet private(set) weak var oneStarRating: RatingProgressDetails!
 
     // MARK: - Properties
+
+    var ratingDetails: RatingDetailsViewModel? {
+        didSet {
+            guard let ratingDetails = ratingDetails else {
+                return
+            }
+
+            updateStarProgressBar(ratingDetails: ratingDetails)
+            updateTotalRatingLabel(ratingDetails: ratingDetails)
+            updateTotalReviewsNumberLabel(ratingDetails: ratingDetails)
+        }
+    }
 
     // MARK: - initializer
 
@@ -46,15 +58,27 @@ private extension RatingDetailsView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        fiveStarRating.starsRatingLabel.text = "9"
-        fourStarRating.starsRatingLabel.text = "17"
+    }
+}
+
+// MARK: - Private Handlers
+
+private extension RatingDetailsView {
+
+    func updateTotalRatingLabel(ratingDetails: RatingDetailsViewModel) {
+        ratingLabel.text = ratingDetails.configureRatingLabel()
     }
 
-    // MARK: - Update total rating and reviews labels
+    func updateTotalReviewsNumberLabel(ratingDetails: RatingDetailsViewModel) {
+        totalReviewsNumberLabel.text = ratingDetails.configureTotalReviewsNumberLabel()
+    }
 
-    func updateTotalReviewsLabel(_ totalReviewsNumber: Int, _ rating: Double) {
-        ratingLabel.text = String(rating)
-        totalReviewsNumberLabel.text = String(totalReviewsNumber) + " Reviews"
+    func updateStarProgressBar(ratingDetails: RatingDetailsViewModel) {
+        fiveStarRating.progressDetails = ratingDetails.configureFiveStarProgressBar()
+        fourStarRating.progressDetails = ratingDetails.configureFourStarProgressBar()
+        threeStarRating.progressDetails = ratingDetails.configureThreeStarProgressBar()
+        twoStarRating.progressDetails = ratingDetails.configureTwoStarProgressBar()
+        oneStarRating.progressDetails = ratingDetails.configureOneStarProgressBar()
     }
 }
 

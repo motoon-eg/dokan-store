@@ -18,13 +18,14 @@ protocol ReviewProductViewModelInput {
     var showAlertClosure: () -> Void { get set }
     var updateLoadingStatus: () -> Void { get set }
     var showNavBarClosure: () -> Void { get set }
+    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel
 }
 
 /// ReviewProduct ViewModel Output
 ///
 protocol ReviewProductViewModelOutput {
     func loadReviews()
-    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel
+    func configureFetchRatingDetails(completion: @escaping (RatingDetailsViewModel?) -> Void)
     var alertMessage: String { get }
     var navBarRating: Double { get }
     var state: State { get }

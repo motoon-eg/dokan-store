@@ -15,8 +15,7 @@ class ReviewProductViewModel {
 
     // MARK: - Properties
 
-    let repository: ReviewsRepository
-
+    private let repository: ReviewsRepository
     private var reviewsList: [Domain.Review] = .init()
 
     private var cellViewModels: [ReviewerCellViewModel] = .init() {
@@ -43,10 +42,17 @@ class ReviewProductViewModel {
         }
     }
 
+    var ratingDetails: RatingDetailsViewModel? {
+        didSet {
+            fetchRatingDetailsClosure(ratingDetails)
+        }
+    }
+
     var numberOfCells: Int {
         return cellViewModels.count
     }
 
+    var fetchRatingDetailsClosure: (RatingDetailsViewModel?) -> Void = { _ in }
     var reloadTableViewClosure: (() -> Void) = {}
     var showAlertClosure: (() -> Void) = {}
     var showNavBarClosure: (() -> Void) = {}
@@ -61,7 +67,12 @@ class ReviewProductViewModel {
 
 // MARK: - ReviewProductViewModel
 
-extension ReviewProductViewModel: ReviewProductViewModelInput {}
+extension ReviewProductViewModel: ReviewProductViewModelInput {
+
+    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel {
+        return cellViewModels[indexPath.row]
+    }
+}
 
 // MARK: - ReviewProductViewModelOutput
 
@@ -84,8 +95,8 @@ extension ReviewProductViewModel: ReviewProductViewModelOutput {
         }
     }
 
-    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel {
-        return cellViewModels[indexPath.row]
+    func configureFetchRatingDetails(completion: @escaping (RatingDetailsViewModel?) -> Void) {
+        fetchRatingDetailsClosure = completion
     }
 }
 
@@ -100,6 +111,16 @@ private extension ReviewProductViewModel {
                                      rating: Double(reviews.rating))
     }
 
+    private func createRatingDetailsViewModel(reviews: Domain.Reviews) -> RatingDetailsViewModel {
+        return RatingDetailsViewModel(rating: reviews.rating,
+                                      fiveStarNumber: reviews.fiveStarRatingNumber,
+                                      fourStarNumber: reviews.fourStarRatingNumber,
+                                      threeStarNumber: reviews.threeStarRatingNumber,
+                                      twoStarNumber: reviews.twoStarRatingNumber,
+                                      oneStarNumber: reviews.oneStarRatingNumber,
+                                      totalReviewsNumber: reviews.totalRatingNumber)
+    }
+
     private func processFetchedReviews(reviews: Domain.Reviews) {
         reviewsList = reviews.reviews
         var cellVMs = [ReviewerCellViewModel]()
@@ -107,6 +128,9 @@ private extension ReviewProductViewModel {
             cellVMs.append(createCellViewModel(reviews: review))
         }
         cellViewModels = cellVMs
+
+        let ratingDetailsView: RatingDetailsViewModel = createRatingDetailsViewModel(reviews: reviews)
+        ratingDetails = ratingDetailsView
     }
 }
 

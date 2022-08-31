@@ -16,13 +16,14 @@ class ReviewProductViewController: UIViewController {
 
     @IBOutlet private(set) weak var reviewProductTableView: UITableView!
     @IBOutlet private(set) weak var mainStackView: UIStackView!
+    @IBOutlet private(set) weak var ratingDetailsView: RatingDetailsView!
 
     // MARK: Properties
 
     private var viewModel: ReviewProductViewModelType
     private var navigationBarBehavior: ReviewProductNavigationBarBehavior?
-    var reviewCount: Int = 10
-    var loadingCell: Bool = true
+    private var reviewCount: Int = 10
+    private var loadingCell: Bool = true
 
     // MARK: Init
 
@@ -124,6 +125,14 @@ extension ReviewProductViewController {
                 self.reviewCount = self.viewModel.numberOfCells
                 self.reviewProductTableView.reloadData()
             }
+        }
+
+        viewModel.configureFetchRatingDetails { [weak self] reviews in
+            guard let self = self else { return }
+            guard let reviews = reviews else {
+                return
+            }
+            self.ratingDetailsView.ratingDetails = reviews
         }
 
         viewModel.loadReviews()

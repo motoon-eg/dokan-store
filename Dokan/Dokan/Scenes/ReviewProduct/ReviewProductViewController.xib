@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewProductViewController" customModule="Dokan" customModuleProvider="target">
             <connections>
                 <outlet property="mainStackView" destination="iPm-xf-UFQ" id="DjU-fe-gNf"/>
+                <outlet property="ratingDetailsView" destination="HVK-Qs-Nll" id="xGM-6D-QQ1"/>
                 <outlet property="reviewProductTableView" destination="3wE-SM-L7Y" id="Tia-aB-4m0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
