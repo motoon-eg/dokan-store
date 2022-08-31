@@ -17,7 +17,7 @@ class SliderView: UIView {
 
     // MARK: - Properties
 
-    private var viewModel: [SliderCollectionViewCell.sliderViewModel]?
+    lazy var productViewModel: ProductDetailsViewModel = .init()
 
     // MARK: - initializer
 
@@ -29,8 +29,34 @@ class SliderView: UIView {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-
         collectionViewSetup()
+    }
+
+    func initViewModel() {
+
+        productViewModel.uploadLoadingState = { [weak self] () in
+            guard let self = self else { return }
+
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+
+                switch self.productViewModel.state {
+
+                case .loading, .error, .empty:
+                    self.startSkeletonView()
+                case .populated:
+                    self.stopSkeletonView()
+                }
+            }
+        }
+
+        productViewModel.reloadImageViewClosure = { [weak self] () in
+            DispatchQueue.main.async { [weak self] in
+                self?.productSliderCollectionView.reloadData()
+            }
+        }
+
+        productViewModel.initFetchSingleProduct()
     }
 }
 
@@ -46,6 +72,7 @@ extension SliderView {
         productSliderCollectionView.delegate = self
         productSliderCollectionView.dataSource = self
         collectionViewLayout()
+        initViewModel()
     }
 
     func collectionViewLayout() {
@@ -64,13 +91,16 @@ extension SliderView {
 extension SliderView: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel?.count ?? 0
+        return productViewModel.numberOfCells
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: SliderCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        guard let model = viewModel else { return UICollectionViewCell() }
-        cell.configureCellData(viewModel: model[indexPath.row])
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionviewCell", for: indexPath) as? SliderCollectionViewCell else {
+            fatalError("Cell not exists in storyboard")
+        }
+
+        let cellVM = productViewModel.getImageview(indexPath: indexPath)
+        cell.sliderViewModel = cellVM
         return cell
     }
 }

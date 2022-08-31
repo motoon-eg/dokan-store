@@ -19,8 +19,19 @@ class ProductDetailsViewModel {
         }
     }
 
+    private var imageViewModel: [sliderViewModel] = .init() {
+        didSet {
+            reloadImageViewClosure?()
+        }
+    }
+
+    var numberOfCells: Int {
+        return imageViewModel.count
+    }
+
     var uploadLoadingState: (() -> Void)?
     var reloadViewClosure: (() -> Void)?
+    var reloadImageViewClosure: (() -> Void)?
 
     var state: State = .empty {
         didSet {
@@ -64,14 +75,26 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
         return titleQuantityViewModel!
     }
 
-    func createProductTitleQuantityView(product: Product) -> tQViewModel {
+    func getImageview(indexPath: IndexPath) -> sliderViewModel {
+        return imageViewModel[indexPath.row]
+    }
+
+    private func createProductTitleQuantityView(product: Product) -> tQViewModel {
 
         return tQViewModel(title: product.title, currency: "$", price: product.price, reviewAverage: 4.8, reviewCount: 23, stockCount: 8)
     }
 
+    private func createProductImage(product: Product) -> sliderViewModel {
+
+        return sliderViewModel(productImage: product.thumbnailUrl)
+    }
+
     func processFetchProduct(product: Product) {
         self.product = product
+        var imgs = [sliderViewModel]()
         titleQuantityViewModel = createProductTitleQuantityView(product: product)
+        imgs.append(createProductImage(product: product))
+        imageViewModel = imgs
     }
 }
 

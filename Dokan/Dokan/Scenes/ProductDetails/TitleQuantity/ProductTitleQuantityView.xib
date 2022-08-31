@@ -28,9 +28,9 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Qm-o8-1Ol" userLabel="Main Components Stack">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TMA-2HD Wireless" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntf-ut-53d">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TMA-2HD Wireless" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntf-ut-53d">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="19.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <color key="textColor" red="0.047058823529411764" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -38,7 +38,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="G0F-Jq-KlI" userLabel="Price Stack">
-                            <rect key="frame" x="0.0" y="39" width="414" height="19.5"/>
+                            <rect key="frame" x="0.0" y="29.5" width="414" height="19.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="379-1p-jyK">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="19.5"/>
@@ -61,15 +61,15 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-IS-ayG">
-                            <rect key="frame" x="0.0" y="68.5" width="414" height="827.5"/>
+                            <rect key="frame" x="0.0" y="59" width="414" height="837"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xdP-Xh-LIc" userLabel="Review Stack">
-                                    <rect key="frame" x="0.0" y="406.5" width="123" height="15"/>
+                                    <rect key="frame" x="0.0" y="411" width="123" height="15"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qWN-ON-yjc" userLabel="Review Average Stack">
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="15"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="8iz-ZD-oKg">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="8iz-ZD-oKg">
                                                     <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="MaY-cU-nqh"/>
@@ -113,7 +113,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGy-aF-yWA" userLabel="Stock Count Stack">
-                                    <rect key="frame" x="312" y="404" width="102" height="20"/>
+                                    <rect key="frame" x="312" y="408.5" width="102" height="20"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAZ-a0-IKP" userLabel="BackGround View">
                                             <rect key="frame" x="0.0" y="0.0" width="102" height="20"/>
@@ -124,13 +124,13 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tersedia :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-6a-LSv">
                                                             <rect key="frame" x="0.0" y="0.0" width="63" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                            <color key="textColor" red="0.22745098039215686" green="0.60784313725490191" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.99942332570000003" green="0.99942332570000003" blue="0.99942332570000003" alpha="0.76559620029999997" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwO-Wl-fdI">
                                                             <rect key="frame" x="63" y="0.0" width="23" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                            <color key="textColor" red="0.2274509804" green="0.60784313729999995" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.99942332570000003" green="0.99942332570000003" blue="0.99942332570000003" alpha="0.65530031720000004" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -173,7 +173,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Star" width="12" height="12"/>
+        <image name="star" width="16" height="17"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
