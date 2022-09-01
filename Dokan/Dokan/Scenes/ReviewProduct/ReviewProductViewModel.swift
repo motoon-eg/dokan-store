@@ -36,7 +36,7 @@ class ReviewProductViewModel {
         }
     }
 
-    var navBarRating: Double = .init() {
+    var navBarRating: Double = .zero {
         didSet {
             showNavBarClosure()
         }
