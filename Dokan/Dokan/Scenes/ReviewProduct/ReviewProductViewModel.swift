@@ -16,7 +16,7 @@ class ReviewProductViewModel {
     // MARK: - Properties
 
     private let repository: ReviewsRepository
-    private var reviewsList: [Domain.Review] = .init()
+    private var reviewsList: [Domain.Review] = []
 
     private var cellViewModels: [ReviewerCellViewModel] = .init() {
         didSet {
