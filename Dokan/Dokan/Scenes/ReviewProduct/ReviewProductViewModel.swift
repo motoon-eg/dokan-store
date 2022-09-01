@@ -123,11 +123,7 @@ private extension ReviewProductViewModel {
 
     private func processFetchedReviews(reviews: Domain.Reviews) {
         reviewsList = reviews.reviews
-        var cellVMs = [ReviewerCellViewModel]()
-        for review in reviewsList {
-            cellVMs.append(createCellViewModel(reviews: review))
-        }
-        cellViewModels = cellVMs
+        cellViewModels = reviewsList.map { createCellViewModel(reviews: $0) }
 
         let ratingDetailsView: RatingDetailsViewModel = createRatingDetailsViewModel(reviews: reviews)
         ratingDetails = ratingDetailsView
