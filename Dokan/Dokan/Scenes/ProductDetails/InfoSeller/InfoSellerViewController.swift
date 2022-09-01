@@ -12,9 +12,9 @@ class InfoSellerViewController: UIViewController {
 
     // MARK: Outlets
 
-    @IBOutlet weak var shopImage: UIImageView!
-    @IBOutlet weak var sortingButton: UIButton!
-    @IBOutlet weak var followButton: UIButton!
+    @IBOutlet private weak var shopImage: UIImageView!
+    @IBOutlet private weak var sortingButton: UIButton!
+    @IBOutlet private weak var followButton: UIButton!
 
     // MARK: Properties
 
