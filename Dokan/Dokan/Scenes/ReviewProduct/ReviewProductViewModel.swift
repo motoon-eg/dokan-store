@@ -18,7 +18,7 @@ class ReviewProductViewModel {
     private let repository: ReviewsRepository
     private var reviewsList: [Domain.Review] = []
 
-    private var cellViewModels: [ReviewerCellViewModel] = .init() {
+    private var cellViewModels: [ReviewerCellViewModel] = [] {
         didSet {
             reloadTableViewClosure()
         }
