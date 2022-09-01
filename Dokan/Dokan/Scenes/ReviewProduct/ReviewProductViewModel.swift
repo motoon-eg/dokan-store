@@ -30,7 +30,7 @@ class ReviewProductViewModel {
         }
     }
 
-    var alertMessage: String = .init() {
+    var alertMessage: String = "" {
         didSet {
             showAlertClosure()
         }
