@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailsViewController" customModule="Dokan" customModuleProvider="target">
             <connections>
+                <outlet property="buttonsView" destination="sqs-7W-PR8" id="AE4-9h-feB"/>
                 <outlet property="InfoSellerView" destination="Wcb-vx-s8d" id="fTl-ay-tlx"/>
                 <outlet property="descriptionTextView" destination="owe-WV-VX7" id="UDC-4d-5av"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -95,11 +96,11 @@
                                         <constraint firstAttribute="height" priority="250" constant="128" id="hcM-eU-p4e"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqs-7W-PR8" userLabel="ButtonsView">
-                                    <rect key="frame" x="0.0" y="906" width="374" height="128"/>
+                                <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="sqs-7W-PR8" userLabel="ButtonsView" customClass="ButtonsView" customModule="Dokan" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="930" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" priority="250" constant="128" id="wMX-Bb-fpF"/>
+                                        <constraint firstAttribute="height" priority="250" constant="48" id="wMX-Bb-fpF"/>
                                     </constraints>
                                 </view>
                             </subviews>

@@ -47,7 +47,13 @@ class VerificationViewController: UIViewController {
 
 extension VerificationViewController {
 
-    @IBAction func verifyWasTapped(_ sender: UIButton) {
+    @IBAction func resendVerificationCode(_ sender: Any) {
+        // send verification code again to user
+    }
+
+    @IBAction func confirmVerificationCode(_ sender: Any) {
+        // show error message if code number wrong
+        // navigate to home page if right code number
         coordinator?.didVerifyPhoneNumber()
     }
 }
