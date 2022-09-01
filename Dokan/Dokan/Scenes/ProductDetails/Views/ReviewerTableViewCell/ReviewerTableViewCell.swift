@@ -13,11 +13,10 @@ class ReviewerTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var reviewerImageView: UIImageView!
-    @IBOutlet private weak var reviewerNameLabel: UILabel!
-    @IBOutlet weak var reviewerComment: UILabel!
-    @IBOutlet weak var ratingStarsView: StarsView!
-
+    @IBOutlet private(set) weak var reviewerImageView: UIImageView!
+    @IBOutlet private(set) weak var reviewerNameLabel: UILabel!
+    @IBOutlet private(set) weak var reviewerComment: UILabel!
+    @IBOutlet private(set) weak var ratingStarsView: StarsView!
 
     // MARK: - life cycle..
 

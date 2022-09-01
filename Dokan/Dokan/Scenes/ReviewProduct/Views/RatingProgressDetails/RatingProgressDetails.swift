@@ -77,7 +77,7 @@ extension RatingProgressDetails {
 
 // MARK: - View Model
 
-struct RatingProgressDetailsViewModel {
+struct RatingProgressDetailsViewModel: Equatable {
     let rating: Int
     let starNumber: Int
     let totalRatingNumber: Int
