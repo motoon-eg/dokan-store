@@ -37,7 +37,7 @@ class ReviewProductNavigationBarBehavior {
 
         // MARK: Add star image and rating label
 
-        lazy var ratingStackView: UIStackView = {
+        let ratingStackView: UIStackView = {
             let ratingLabel = UILabel()
             ratingLabel.textAlignment = .left
             ratingLabel.text = String(rating)
