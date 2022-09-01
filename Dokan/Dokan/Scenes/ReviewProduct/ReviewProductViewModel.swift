@@ -132,7 +132,7 @@ private extension ReviewProductViewModel {
 
 // MARK: - states
 
-enum State {
+enum ReviewProductState {
     case empty
     case loading
     case error
