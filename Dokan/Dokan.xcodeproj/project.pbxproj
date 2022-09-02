@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2704245B28ACD223002EF7B5 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245928ACD223002EF7B5 /* CategoryCollectionViewCell.swift */; };
 		2704245C28ACD223002EF7B5 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704245A28ACD223002EF7B5 /* CategoryCollectionViewCell.xib */; };
+		270E12ED28C1E0DC00E3D8EB /* CategoryListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E12EC28C1E0DC00E3D8EB /* CategoryListTests.swift */; };
 		273D3A9828AE11A400860702 /* CategoryListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9428AE11A400860702 /* CategoryListViewModelType.swift */; };
 		273D3A9928AE11A400860702 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9528AE11A400860702 /* CategoryListViewController.swift */; };
 		273D3A9A28AE11A400860702 /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9628AE11A400860702 /* CategoryListViewModel.swift */; };
@@ -84,6 +85,7 @@
 /* Begin PBXFileReference section */
 		2704245928ACD223002EF7B5 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		2704245A28ACD223002EF7B5 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		270E12EC28C1E0DC00E3D8EB /* CategoryListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTests.swift; sourceTree = "<group>"; };
 		273D3A9428AE11A400860702 /* CategoryListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModelType.swift; sourceTree = "<group>"; };
 		273D3A9528AE11A400860702 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		273D3A9628AE11A400860702 /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 			children = (
 				43D4BF0628918F160023190F /* ProductDetails */,
 				AADC5BAD289ADFF300C9AA12 /* Registration */,
+				270E12EC28C1E0DC00E3D8EB /* CategoryListTests.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				AADC5BB1289ADFF300C9AA12 /* RegisterViewControllerTests.swift in Sources */,
 				43D4BF0B2891A5C50023190F /* FeaturedProductCollectionViewCellTests.swift in Sources */,
 				43D4BF0928918F9A0023190F /* FeaturedProductTests.swift in Sources */,
+				270E12ED28C1E0DC00E3D8EB /* CategoryListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
