@@ -10,6 +10,10 @@ extension UIImage {
         UIImage(named: "AccentColor")!
     }
 
+    static var arrowRight: UIImage {
+        UIImage(named: "arrowRight")!
+    }
+
     static var bellBadge: UIImage {
         UIImage(named: "bell-badge")!
     }
@@ -44,10 +48,6 @@ extension UIImage {
 
     static var star: UIImage {
         UIImage(named: "star")!
-    }
-
-    static var vector: UIImage {
-        UIImage(named: "vector")!
     }
 
     static var verified: UIImage {

@@ -53,7 +53,8 @@ extension InfoSellerViewController {}
 
 extension InfoSellerViewController {
     func registerSellerCollectionView() {
-        infoSellerCollectionView.register(SellerInfoCell.self, forCellWithReuseIdentifier: "SellerInfoCell")
+        let nib = UINib(nibName: "SellerInfoCell", bundle: nil)
+        infoSellerCollectionView.register(nib, forCellWithReuseIdentifier: "SellerInfoCell")
         infoSellerCollectionView.delegate = self
         infoSellerCollectionView.dataSource = self
     }
@@ -72,6 +73,7 @@ extension InfoSellerViewController {
 
 //
 private extension InfoSellerViewController {}
+
 extension InfoSellerViewController: UICollectionViewDelegate {}
 
 extension InfoSellerViewController: UICollectionViewDataSource {
@@ -85,4 +87,8 @@ extension InfoSellerViewController: UICollectionViewDataSource {
     }
 }
 
-extension InfoSellerViewController: UICollectionViewDelegateFlowLayout {}
+extension InfoSellerViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: infoSellerCollectionView.frame.width / 2.5, height: 242)
+    }
+}
