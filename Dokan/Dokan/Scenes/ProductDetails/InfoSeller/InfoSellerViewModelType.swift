@@ -13,8 +13,14 @@ typealias InfoSellerViewModelType = InfoSellerViewModelInput & InfoSellerViewMod
 
 /// InfoSeller ViewModel Input
 ///
-protocol InfoSellerViewModelInput {}
+protocol InfoSellerViewModelInput {
+    func loadSellerInfo()
+}
 
 /// InfoSeller ViewModel Output
 ///
-protocol InfoSellerViewModelOutput {}
+protocol InfoSellerViewModelOutput {
+    var onReloadData: () -> Void { get set }
+    var onShowAlert: (String) -> Void { get set }
+    var numberOfCells: Int { get }
+}

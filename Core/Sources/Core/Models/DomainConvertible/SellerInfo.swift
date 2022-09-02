@@ -11,6 +11,6 @@ import Networking
 extension Networking.SellerInfo: DomainConvertible {
 
     func toDomain() -> Domain.SellerInfo {
-        return Domain.SellerInfo(sellerName: sellerName, reviews: reviews, location: location, workTime: workTime, followers: followers, productsCount: productsCount, createdAt: createdAt, sellerProducts: [])
+        return Domain.SellerInfo(sellerName: sellerName, reviews: reviews, location: location, workTime: workTime, followers: followers, productsCount: productsCount, createdAt: createdAt, products: products.map { $0.toDomain()})
     }
 }

@@ -19,7 +19,7 @@ class InfoSellerViewController: UIViewController {
 
     // MARK: Properties
 
-    private let viewModel: InfoSellerViewModelType
+    private var viewModel: InfoSellerViewModelType
 
     // MARK: Init
 
@@ -39,6 +39,11 @@ class InfoSellerViewController: UIViewController {
         super.viewDidLoad()
         style()
         registerSellerCollectionView()
+        viewModel.loadSellerInfo()
+        print(viewModel.numberOfCells)
+        viewModel.onReloadData = {
+            self.infoSellerCollectionView.reloadData()
+        }
     }
 }
 
@@ -78,7 +83,7 @@ extension InfoSellerViewController: UICollectionViewDelegate {}
 
 extension InfoSellerViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return viewModel.numberOfCells
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -25,11 +25,11 @@ class SellerInfoCell: UICollectionViewCell {
     // MARK: - func to configure cell with data
 
     func configureCell(model: ViewModel) {
-        sellerProductImage.setImage(with: model.sellerProductImage, placeholderImage: UIImage())
-        productName.text = model.productName
-        productPrice.text = model.productPrice
-        productReviewRate.text = model.productReviewRate
-        productReviewerCount.text = model.productReviewerCount
+        sellerProductImage.setImage(with: model.image, placeholderImage: UIImage())
+        productName.text = model.title
+        productPrice.text = String(model.price)
+        productReviewRate.text = String(model.review)
+        productReviewerCount.text = String(model.totalReviews)
     }
 }
 
@@ -37,10 +37,10 @@ class SellerInfoCell: UICollectionViewCell {
 
 extension SellerInfoCell {
     struct ViewModel {
-        var sellerProductImage: String
-        var productName: String
-        var productPrice: String
-        var productReviewRate: String
-        var productReviewerCount: String
+        var title: String
+        var image: String
+        var price: Int
+        var review: Double
+        var totalReviews: Int
     }
 }

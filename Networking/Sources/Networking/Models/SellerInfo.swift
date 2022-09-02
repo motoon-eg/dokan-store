@@ -15,12 +15,12 @@ public struct SellerInfo: Decodable {
     public let location, workTime: String
     public let followers, productsCount: Int
     public let createdAt: String
-    public let sellerProducts: [Networking.SellerProduct]
+    public let products: [Products]
 }
 
 // MARK: - Seller Product
 
-public struct SellerProduct: Decodable {
+public struct Products: Decodable {
     public let title: String
     public let image: String
     public let price: Int

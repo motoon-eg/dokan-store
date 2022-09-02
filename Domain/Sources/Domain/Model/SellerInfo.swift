@@ -13,9 +13,10 @@ public struct SellerInfo {
     public let location, workTime: String
     public let followers, productsCount: Int
     public let createdAt: String
-    public let sellerProducts: [SellerProduct]
+    public let products: [Products]
 
-    public init(sellerName: String, reviews: Double, location: String, workTime: String, followers: Int, productsCount: Int, createdAt: String, sellerProducts: [SellerProduct]) {
+    public init(sellerName: String, reviews: Double,
+                location: String, workTime: String, followers: Int, productsCount: Int, createdAt: String, products: [Products]) {
         self.sellerName = sellerName
         self.reviews = reviews
         self.location = location
@@ -23,13 +24,13 @@ public struct SellerInfo {
         self.followers = followers
         self.productsCount = productsCount
         self.createdAt = createdAt
-        self.sellerProducts = sellerProducts
+        self.products = products
     }
 }
 
 // MARK: - Seller Product
 
-public struct SellerProduct {
+public struct Products {
     public let title: String
     public let image: String
     public let price: Int
