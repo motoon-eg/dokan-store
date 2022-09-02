@@ -15,6 +15,7 @@ class InfoSellerViewController: UIViewController {
     @IBOutlet private weak var shopImage: UIImageView!
     @IBOutlet private weak var sortingButton: UIButton!
     @IBOutlet private weak var followButton: UIButton!
+    @IBOutlet private weak var infoSellerCollectionView: UICollectionView!
 
     // MARK: Properties
 
@@ -37,6 +38,7 @@ class InfoSellerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
+        registerSellerCollectionView()
     }
 }
 
@@ -47,7 +49,16 @@ extension InfoSellerViewController {}
 
 // MARK: - Configurations
 
-//
+// MARK: - implement func to register collection view..
+
+extension InfoSellerViewController {
+    func registerSellerCollectionView() {
+        infoSellerCollectionView.register(SellerInfoCell.self, forCellWithReuseIdentifier: "SellerInfoCell")
+        infoSellerCollectionView.delegate = self
+        infoSellerCollectionView.dataSource = self
+    }
+}
+
 extension InfoSellerViewController {
 
     private func style() {
@@ -61,3 +72,17 @@ extension InfoSellerViewController {
 
 //
 private extension InfoSellerViewController {}
+extension InfoSellerViewController: UICollectionViewDelegate {}
+
+extension InfoSellerViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let infoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SellerInfoCell", for: indexPath) as! SellerInfoCell
+        return infoCell
+    }
+}
+
+extension InfoSellerViewController: UICollectionViewDelegateFlowLayout {}

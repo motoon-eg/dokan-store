@@ -14,4 +14,5 @@ enum Settings {
     /// Base API URL
     ///
     static let storeApiBaseURL = "https://fakestoreapi.com/"
+    static let mocyApiBaseURL = "https://run.mocky.io/"
 }

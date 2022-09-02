@@ -14,4 +14,7 @@ public protocol RepositoryProvider {
     /// Creates new instance of `ProductRepository`
     ///
     func makeProductRepository() -> ProductRepository
+
+    /// Create  new instance Of  'Seller Info Repository'
+    func makeSellerInfoRepository() -> SellerInfoRepository
 }
