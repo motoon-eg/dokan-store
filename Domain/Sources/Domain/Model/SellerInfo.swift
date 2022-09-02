@@ -16,7 +16,9 @@ public struct SellerInfo {
     public let products: [Products]
 
     public init(sellerName: String, reviews: Double,
-                location: String, workTime: String, followers: Int, productsCount: Int, createdAt: String, products: [Products]) {
+                location: String, workTime: String,
+                followers: Int, productsCount: Int,
+                createdAt: String, products: [Products]) {
         self.sellerName = sellerName
         self.reviews = reviews
         self.location = location
@@ -36,4 +38,12 @@ public struct Products {
     public let price: Int
     public let review: Double
     public let totalReviews: Int
+
+    public init(title: String, image: String, price: Int, review: Double, totalRevieews: Int) {
+        self.title = title
+        self.image = image
+        self.price = price
+        self.review = review
+        totalReviews = totalRevieews
+    }
 }

@@ -14,8 +14,7 @@ import Foundation
 class InfoSellerViewModel {
 
     private let repository: SellerInfoRepository
-    private var sellerInfoList: Domain.SellerInfo?
-    private var sellerInfoProductList = [Domain.Products]()
+    private var sellerInfoData: Domain.SellerInfo?
     private var cellViewModel: [SellerInfoCell.ViewModel] = [] {
         didSet {
             onReloadData()
@@ -26,7 +25,7 @@ class InfoSellerViewModel {
     var showAlert: () -> Void = {}
     var onShowAlert: (String) -> Void = { _ in }
     var numberOfCells: Int {
-        return sellerInfoProductList.count
+        return cellViewModel.count
     }
 
     init(repository: SellerInfoRepository = ServiceLocator.provider.makeSellerInfoRepository()) {
@@ -46,8 +45,6 @@ extension InfoSellerViewModel: InfoSellerViewModelInput {
             case let .failure(error):
                 self.onShowAlert(error.localizedDescription)
             case let .success(list):
-                self.sellerInfoProductList = list.products
-                print(list)
                 self.appendSellerInfoDataToCell(sellerInfo: list)
             }
         }
@@ -57,7 +54,16 @@ extension InfoSellerViewModel: InfoSellerViewModelInput {
 // MARK: InfoSellerViewModelOutput
 
 //
-extension InfoSellerViewModel: InfoSellerViewModelOutput {}
+extension InfoSellerViewModel: InfoSellerViewModelOutput {
+
+    func getInfoSellerData() -> Domain.SellerInfo? {
+        return sellerInfoData
+    }
+
+    func getInfoSellerProducts(at indexPath: IndexPath) -> SellerInfoCell.ViewModel {
+        return cellViewModel[indexPath.row]
+    }
+}
 
 // MARK: Private Handlers
 
@@ -73,8 +79,8 @@ private extension InfoSellerViewModel {
     }
 
     private func appendSellerInfoDataToCell(sellerInfo: Domain.SellerInfo) {
-        sellerInfoList = sellerInfo
-        sellerInfoProductList = sellerInfoList?.products ?? []
+        sellerInfoData = sellerInfo
+        let sellerInfoProductList = sellerInfoData?.products ?? []
         cellViewModel = sellerInfoProductList.map { createCellViewModel(sellerInfoProduct: $0) }
     }
 }

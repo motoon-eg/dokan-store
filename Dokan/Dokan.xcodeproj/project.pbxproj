@@ -45,6 +45,7 @@
 		99091F1828895D96000FA9C9 /* ProductTitleQuantityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99091F1728895D96000FA9C9 /* ProductTitleQuantityView.xib */; };
 		99091F1A28895DC1000FA9C9 /* ProductTitleQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99091F1928895DC1000FA9C9 /* ProductTitleQuantityView.swift */; };
 		99CC7308288E2FE400503D86 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CC7307288E2FE400503D86 /* Colors.xcassets */; };
+		99E2C0A528C2A7DE0063874E /* InfoSellerViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E2C0A428C2A7DE0063874E /* InfoSellerViewController+CollectionView.swift */; };
 		AA21B43628537E0400E4F217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43528537E0400E4F217 /* AppDelegate.swift */; };
 		AA21B43828537E0400E4F217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43728537E0400E4F217 /* SceneDelegate.swift */; };
 		AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA21B43928537E0400E4F217 /* ViewController.swift */; };
@@ -121,6 +122,7 @@
 		99091F1728895D96000FA9C9 /* ProductTitleQuantityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTitleQuantityView.xib; sourceTree = "<group>"; };
 		99091F1928895DC1000FA9C9 /* ProductTitleQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTitleQuantityView.swift; sourceTree = "<group>"; };
 		99CC7307288E2FE400503D86 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		99E2C0A428C2A7DE0063874E /* InfoSellerViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InfoSellerViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		AA21B43228537E0400E4F217 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21B43528537E0400E4F217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA21B43728537E0400E4F217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		9900241928B15F5A00D1D722 /* InfoSeller */ = {
 			isa = PBXGroup;
 			children = (
+				99E2C0A328C2A7BD0063874E /* CollectionView */,
 				9900241A28B15F9E00D1D722 /* InfoSellerViewModelType.swift */,
 				9900241B28B15F9E00D1D722 /* InfoSellerViewController.swift */,
 				9900241C28B15F9E00D1D722 /* InfoSellerViewModel.swift */,
@@ -334,15 +337,12 @@
 			path = TitleQuantity;
 			sourceTree = "<group>";
 		};
-		276889D92874162B0091ACEB /* Registration */ = {
+		99E2C0A328C2A7BD0063874E /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				276889DA287417730091ACEB /* RegisterViewController.swift */,
-				276889DB287417730091ACEB /* RegisterViewController.xib */,
-				276889DE28741F750091ACEB /* RegisterViewModel.swift */,
-				276889E0287420980091ACEB /* RegisterViewModelType.swift */,
+				99E2C0A428C2A7DE0063874E /* InfoSellerViewController+CollectionView.swift */,
 			);
-			path = Registration;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		AA21B42928537E0400E4F217 = {
@@ -416,10 +416,8 @@
 		AA57CB332881B50500FE62C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E2DADBAA288A53D9005E483A /* ButtonsView */,
 				51934C8728AD911A0078FD3C /* SellerInfo */,
 				E2DADBAA288A53D9005E483A /* ButtonsView */,
-				AAC39E13289DD9CA0069822D /* ReviewerTableViewCell */,
 				856E36AD2889224B00735EF2 /* InfoSellerView */,
 				437B99A428907E6C00F59B06 /* FeaturedProduct */,
 				85F6B6D928919C87007730AB /* ProductDetailsNavigationBarBehavior.swift */,
@@ -731,6 +729,7 @@
 				B82D6D4F2892FF290035D30C /* UIModels.swift in Sources */,
 				51A04FAD289335FF00900EFF /* ReviewerTableViewCell.swift in Sources */,
 				AA21B43A28537E0400E4F217 /* ViewController.swift in Sources */,
+				99E2C0A528C2A7DE0063874E /* InfoSellerViewController+CollectionView.swift in Sources */,
 				51934C8F28AD91B60078FD3C /* SellerInfoCell.swift in Sources */,
 				276889E1287420980091ACEB /* RegisterViewModelType.swift in Sources */,
 				99091F1A28895DC1000FA9C9 /* ProductTitleQuantityView.swift in Sources */,
