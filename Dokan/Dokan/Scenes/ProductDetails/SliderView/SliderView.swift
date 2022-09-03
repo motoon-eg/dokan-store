@@ -17,7 +17,7 @@ class SliderView: UIView {
 
     // MARK: - Properties
 
-    lazy var productViewModel: ProductDetailsViewModel = .init()
+    var viewModel: ProductDetailsViewModel?
 
     // MARK: - initializer
 
