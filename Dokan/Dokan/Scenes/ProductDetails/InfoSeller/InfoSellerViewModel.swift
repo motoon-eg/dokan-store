@@ -15,11 +15,7 @@ class InfoSellerViewModel {
 
     private let repository: SellerInfoRepository
     private var sellerInfoData: Domain.SellerInfo?
-    private var cellViewModel: [SellerInfoCell.ViewModel] = [] {
-        didSet {
-            onReloadData()
-        }
-    }
+    private var cellViewModel: [SellerInfoCell.ViewModel] = []
 
     var onReloadData: () -> Void = {}
     var showAlert: () -> Void = {}
@@ -46,6 +42,7 @@ extension InfoSellerViewModel: InfoSellerViewModelInput {
                 self.onShowAlert(error.localizedDescription)
             case let .success(list):
                 self.appendSellerInfoDataToCell(sellerInfo: list)
+                self.onReloadData()
             }
         }
     }
