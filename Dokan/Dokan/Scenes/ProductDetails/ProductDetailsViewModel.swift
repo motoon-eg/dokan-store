@@ -19,7 +19,7 @@ class ProductDetailsViewModel {
         }
     }
 
-    private var imageViewModel: [sliderViewModel] = .init() {
+    private var imageViewModel: [sliderViewModel] = [] {
         didSet {
             reloadImageViewClosure?()
         }
