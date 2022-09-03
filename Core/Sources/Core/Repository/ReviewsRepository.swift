@@ -19,14 +19,15 @@ struct ReviewsRepository: Domain.ReviewsRepository {
         self.remote = remote
     }
 
-    func loadReviews(completion: @escaping (Domain.Reviews?, Error?) -> Void) {
-        remote.loadReviewProductData { productReviews, error in
-            guard let productReviews = productReviews else {
-                completion(nil, error!)
-                return
+    func loadReviews(completion: @escaping (Result<Domain.Reviews, Error>) -> Void) {
+        remote.loadReviewProductData { result in
+            switch result {
+            case let .success(productReviews):
+                let convertedReviews = productReviews.toDomain()
+                completion(.success(convertedReviews))
+            case let .failure(error):
+                completion(.failure(error))
             }
-            let convertedReviews = productReviews.toDomain()
-            completion(convertedReviews, nil)
         }
     }
 }

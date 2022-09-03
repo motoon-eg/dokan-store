@@ -18,7 +18,6 @@ class ReviewerTableViewCell: UITableViewCell {
     @IBOutlet weak var reviewerComment: UILabel!
     @IBOutlet weak var ratingStarsView: StarsView!
 
-
     // MARK: - life cycle..
 
     override func awakeFromNib() {
@@ -37,7 +36,8 @@ class ReviewerTableViewCell: UITableViewCell {
         reviewerImageView.setImage(with: viewModel.reviewerImageUrl, placeholderImage: UIImage(named: "star") ?? UIImage())
         reviewerNameLabel.text = viewModel.reviewerName
         reviewerComment.text = viewModel.reviewerComment
-        ratingStarsView.applyStyleToView(viewModel.rating)
+        ratingStarsView.applyStyleToView()
+        ratingStarsView.updateStarsRating(viewModel.rating)
     }
 }
 

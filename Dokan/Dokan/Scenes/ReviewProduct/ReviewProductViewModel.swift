@@ -20,25 +20,25 @@ class ReviewProductViewModel {
 
     private var cellViewModels: [ReviewerCellViewModel] = [] {
         didSet {
-            reloadTableViewClosure()
+            onReloadData()
         }
     }
 
-    var state: State = .empty {
+    var state: ReviewProductState = .empty {
         didSet {
-            updateLoadingStatus()
+            onUpdateLoadingStatus(state)
         }
     }
 
     var alertMessage: String = "" {
         didSet {
-            showAlertClosure()
+            onShowAlertClosure(alertMessage)
         }
     }
 
     var navBarRating: Double = .zero {
         didSet {
-            showNavBarClosure()
+            onUpdateNavBarWithRating(navBarRating)
         }
     }
 
@@ -49,14 +49,18 @@ class ReviewProductViewModel {
     }
 
     var numberOfCells: Int {
-        return cellViewModels.count
+        if cellViewModels.count == 0, state == .loading {
+            return 10
+        } else {
+            return cellViewModels.count
+        }
     }
 
     var fetchRatingDetailsClosure: (RatingDetailsViewModel?) -> Void = { _ in }
-    var reloadTableViewClosure: (() -> Void) = {}
-    var showAlertClosure: (() -> Void) = {}
-    var showNavBarClosure: (() -> Void) = {}
-    var updateLoadingStatus: (() -> Void) = {}
+    var onReloadData: (() -> Void) = {}
+    var onShowAlertClosure: ((String) -> Void) = { _ in }
+    var onUpdateNavBarWithRating: ((Double) -> Void) = { _ in }
+    var onUpdateLoadingStatus: ((ReviewProductState) -> Void) = { _ in }
 
     // MARK: - Init
 
@@ -69,8 +73,23 @@ class ReviewProductViewModel {
 
 extension ReviewProductViewModel: ReviewProductViewModelInput {
 
-    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel {
-        return cellViewModels[indexPath.row]
+    func loadReviews() {
+        state = .loading
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.repository.loadReviews { [weak self] result in
+                guard let self = self else { return }
+
+                switch result {
+                case let .success(reviews):
+                    self.processFetchedReviews(reviews: reviews)
+                    self.navBarRating = reviews.rating
+                    self.state = .loaded
+                case let .failure(error):
+                    self.state = .error
+                    self.alertMessage = error.localizedDescription
+                }
+            }
+        }
     }
 }
 
@@ -78,21 +97,8 @@ extension ReviewProductViewModel: ReviewProductViewModelInput {
 
 extension ReviewProductViewModel: ReviewProductViewModelOutput {
 
-    func loadReviews() {
-        state = .loading
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.repository.loadReviews { [weak self] reviews, error in
-                guard let self = self else { return }
-                guard let reviews = reviews else {
-                    self.state = .error
-                    self.alertMessage = error?.localizedDescription ?? " "
-                    return
-                }
-                self.processFetchedReviews(reviews: reviews)
-                self.navBarRating = reviews.rating
-                self.state = .loaded
-            }
-        }
+    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel {
+        return cellViewModels[indexPath.row]
     }
 
     func configureFetchRatingDetails(completion: @escaping (RatingDetailsViewModel?) -> Void) {

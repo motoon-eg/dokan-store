@@ -25,7 +25,8 @@ class RatingProgressDetails: UIView {
                 return
             }
 
-            starRating.applyStyleToView(Double(progressDetails.starNumber))
+            starRating.applyStyleToView()
+            starRating.updateStarsRating(Double(progressDetails.starNumber))
             starsRatingLabel.text = String(progressDetails.rating)
             updateProgressBarRating(progressDetails: progressDetails)
         }
@@ -49,11 +50,12 @@ class RatingProgressDetails: UIView {
 private extension RatingProgressDetails {
 
     func viewSetup() {
-        Bundle.main.loadNibNamed(Constants.viewNibName, owner: self, options: nil)
+        Bundle.main.loadNibNamed("\(RatingProgressDetails.self)", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        starRating.applyStyleToView(0)
+        starRating.applyStyleToView()
+        starRating.updateStarsRating(0)
     }
 }
 
@@ -63,15 +65,6 @@ private extension RatingProgressDetails {
 
     func updateProgressBarRating(progressDetails: RatingProgressDetailsViewModel) {
         progressBarRating.progress = Float(progressDetails.rating) / Float(progressDetails.totalRatingNumber)
-    }
-}
-
-// MARK: - Constants
-
-extension RatingProgressDetails {
-
-    private enum Constants {
-        static let viewNibName = "RatingProgressDetails"
     }
 }
 

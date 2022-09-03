@@ -13,5 +13,5 @@ public protocol ReviewsRepository {
 
     /// Load Reviews
     ///
-    func loadReviews(completion: @escaping (Domain.Reviews?, Error?) -> Void)
+    func loadReviews(completion: @escaping (Result<Domain.Reviews, Error>) -> Void)
 }

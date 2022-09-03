@@ -13,13 +13,15 @@ import UIKit
 ///
 public class StarsView: CosmosView {
 
-    public func applyStyleToView(_ rate: Double) {
-        rating = rate
+    public func applyStyleToView() {
         settings.updateOnTouch = false
         settings.starSize = 18
         settings.filledColor = UIColor.systemYellow
         settings.emptyBorderColor = UIColor.darkGray
         settings.filledBorderColor = UIColor.systemYellow
     }
-}
 
+    public func updateStarsRating(_ rate: Double) {
+        rating = rate
+    }
+}

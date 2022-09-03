@@ -8,21 +8,21 @@
 import Foundation
 
 public protocol ReviewsRemoteProtocol {
-    func loadReviewProductData(completion: @escaping (Reviews?, Error?) -> Void)
+    func loadReviewProductData(completion: @escaping (Result<Reviews, Error>) -> Void)
 }
 
 public class MockNetwork: ReviewsRemoteProtocol {
 
     public init() {}
 
-    public func loadReviewProductData(completion: @escaping (Reviews?, Error?) -> Void) {
+    public func loadReviewProductData(completion: @escaping (Result<Reviews, Error>) -> Void) {
         var Reviewsproduct: Reviews
         do {
             let allProductData = try JSONSerialization.data(withJSONObject: Constants.mockProductReviewsJsonResponse, options: .fragmentsAllowed)
             Reviewsproduct = try JSONDecoder().decode(Reviews.self, from: allProductData)
-            completion(Reviewsproduct, nil)
+            completion(.success(Reviewsproduct))
         } catch {
-            completion(nil, error)
+            completion(.failure(error))
         }
     }
 }

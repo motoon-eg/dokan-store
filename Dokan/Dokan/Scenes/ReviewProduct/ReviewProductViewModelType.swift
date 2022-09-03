@@ -14,20 +14,18 @@ typealias ReviewProductViewModelType = ReviewProductViewModelInput & ReviewProdu
 /// ReviewProduct ViewModel Input
 ///
 protocol ReviewProductViewModelInput {
-    var reloadTableViewClosure: () -> Void { get set }
-    var showAlertClosure: () -> Void { get set }
-    var updateLoadingStatus: () -> Void { get set }
-    var showNavBarClosure: () -> Void { get set }
-    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel
+    func loadReviews()
+    var onReloadData: () -> Void { get set }
 }
 
 /// ReviewProduct ViewModel Output
 ///
 protocol ReviewProductViewModelOutput {
-    func loadReviews()
+    var onShowAlertClosure: (String) -> Void { get set }
+    var onUpdateLoadingStatus: (ReviewProductState) -> Void { get set }
+    var onUpdateNavBarWithRating: (Double) -> Void { get set }
+    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel
     func configureFetchRatingDetails(completion: @escaping (RatingDetailsViewModel?) -> Void)
-    var alertMessage: String { get }
-    var navBarRating: Double { get }
-    var state: State { get }
     var numberOfCells: Int { get }
+    var state: ReviewProductState { get set }
 }
