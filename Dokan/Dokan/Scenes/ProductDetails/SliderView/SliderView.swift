@@ -99,8 +99,8 @@ extension SliderView: UICollectionViewDelegate, UICollectionViewDataSource {
             fatalError("Cell not exists in storyboard")
         }
 
-        let cellVM = productViewModel.getImageview(indexPath: indexPath)
-        cell.sliderViewModel = cellVM
+        let viewModel = productViewModel.getImageview(indexPath: indexPath)
+        cell.sliderViewModel = viewModel
         return cell
     }
 }
