@@ -21,7 +21,7 @@ class ProductTitleQuantityView: UIView {
 
     // MARK: Properities
 
-    lazy var productViewModel: ProductDetailsViewModel = .init()
+    private var productViewModel = ProductDetailsViewModel()
 
     // MARK: Init
 
