@@ -13,7 +13,7 @@ import Foundation
 class ProductDetailsViewModel {
 
     private var product: Product?
-    private var titleQuantityViewModel: tQViewModel? {
+    private var titleQuantityViewModel: TQViewModel? {
         didSet {
             reloadViewClosure?()
         }
@@ -71,7 +71,7 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
         }
     }
 
-    func getproductViewModel() -> tQViewModel {
+    func getproductViewModel() -> TQViewModel {
         return titleQuantityViewModel!
     }
 
@@ -79,9 +79,9 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
         return imageViewModel[indexPath.row]
     }
 
-    private func createProductTitleQuantityView(product: Product) -> tQViewModel {
+    private func createProductTitleQuantityView(product: Product) -> TQViewModel {
 
-        return tQViewModel(title: product.title, currency: "$", price: product.price, reviewAverage: 4.8, reviewCount: 23, stockCount: 8)
+        return TQViewModel(title: product.title, currency: "$", price: product.price, reviewAverage: 4.8, reviewCount: 23, stockCount: 8)
     }
 
     private func createProductImage(product: Product) -> sliderViewModel {

@@ -46,7 +46,7 @@ class ProductTitleQuantityView: UIView {
     }
 
     func initView() {
-        let model: tQViewModel = productViewModel.getproductViewModel()
+        let model: TQViewModel = productViewModel.getproductViewModel()
         configureView(viewModel: model)
         changeStockBackGroundColor(stockCount: model.stockCount)
     }
@@ -99,7 +99,7 @@ class ProductTitleQuantityView: UIView {
 
     // MARK: Configuration
 
-    func configureView(viewModel: tQViewModel) {
+    func configureView(viewModel: TQViewModel) {
         productTitle.text = viewModel.title
         productCurrency.text = viewModel.currency
         productPrice.text = viewModel.price
@@ -111,7 +111,7 @@ class ProductTitleQuantityView: UIView {
     }
 }
 
-public struct tQViewModel {
+public struct TQViewModel {
     let title: String
     let currency: String
     let price: String
