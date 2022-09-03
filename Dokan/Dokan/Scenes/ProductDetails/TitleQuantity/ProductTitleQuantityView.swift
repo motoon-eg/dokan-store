@@ -53,7 +53,7 @@ class ProductTitleQuantityView: UIView {
 
     func initViewModel() {
 
-        productViewModel.uploadLoadingState = { [weak self] () in
+        productViewModel.onStateUpdate = { [weak self] () in
             guard let self = self else { return }
 
             DispatchQueue.main.async { [weak self] in

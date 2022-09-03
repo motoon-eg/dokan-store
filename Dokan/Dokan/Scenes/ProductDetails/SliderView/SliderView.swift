@@ -34,7 +34,7 @@ class SliderView: UIView {
 
     func initViewModel() {
 
-        viewModel?.uploadLoadingState = { [weak self] () in
+        viewModel?.onStateUpdate = { [weak self] () in
             guard let self = self else { return }
 
             DispatchQueue.main.async { [weak self] in

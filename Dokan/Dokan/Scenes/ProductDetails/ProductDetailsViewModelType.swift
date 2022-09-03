@@ -21,3 +21,10 @@ protocol ProductDetailsViewModelInput {}
 protocol ProductDetailsViewModelOutput {
     func fetchProduct()
 }
+
+public enum ProductDetailsState {
+    case loading
+    case error
+    case empty
+    case populated
+}

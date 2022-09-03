@@ -29,13 +29,13 @@ class ProductDetailsViewModel {
         return imageViewModel.count
     }
 
-    var uploadLoadingState: (() -> Void)?
+    var onStateUpdate: (() -> Void)?
     var reloadViewClosure: (() -> Void)?
     var reloadImageViewClosure: (() -> Void)?
 
     var state: ProductDetailsState = .empty {
         didSet {
-            uploadLoadingState?()
+            onStateUpdate?()
         }
     }
 
@@ -102,9 +102,3 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
 private extension ProductDetailsViewModel {}
 
-public enum ProductDetailsState {
-    case loading
-    case error
-    case empty
-    case populated
-}
