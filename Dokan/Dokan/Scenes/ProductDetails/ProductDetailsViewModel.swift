@@ -33,7 +33,7 @@ class ProductDetailsViewModel {
     var reloadViewClosure: (() -> Void)?
     var reloadImageViewClosure: (() -> Void)?
 
-    var state: State = .empty {
+    var state: ProductDetailsState = .empty {
         didSet {
             uploadLoadingState?()
         }
@@ -54,7 +54,7 @@ extension ProductDetailsViewModel: ProductDetailsViewModelInput {}
 
 extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
-    func initFetchSingleProduct() {
+    func fetchProduct() {
         state = .loading
 
         repository.loadSingleProduct(productID: 1) { [weak self] result in
@@ -102,7 +102,7 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
 private extension ProductDetailsViewModel {}
 
-public enum State {
+public enum ProductDetailsState {
     case loading
     case error
     case empty

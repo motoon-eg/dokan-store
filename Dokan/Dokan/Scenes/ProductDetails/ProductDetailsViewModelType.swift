@@ -19,5 +19,5 @@ protocol ProductDetailsViewModelInput {}
 /// ProductDetails ViewModel Output
 ///
 protocol ProductDetailsViewModelOutput {
-    func initFetchSingleProduct()
+    func fetchProduct()
 }
