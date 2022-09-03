@@ -66,7 +66,7 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
                 self.state = .populated
             case let .failure(error):
                 self.state = .error
-                print("Error on loading product :- \(error.localizedDescription)")
+                LogError(error.localizedDescription)
             }
         }
     }
