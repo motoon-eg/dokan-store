@@ -25,11 +25,10 @@ class LoadingButton: UIButton {
         showIndicator()
         if isButtonTapped {
             configureButtonState(isTapped: isButtonTapped)
-            completed()
         } else {
             configureButtonState(isTapped: isButtonTapped)
-            completed()
         }
+        completed()
     }
 
     private func configureButtonState(isTapped: Bool) {
