@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class UIViewFromNib: UIView {
+open class UIViewFromNib: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -5,12 +5,12 @@
 //  Created by Clara Mounir Adly on 19/08/2022.
 //
 
-import Foundation
 import UIKit
+import UIDokan
 
 // MARK: - ReviewsView
 
-class ReviewsView: UIView {
+final class ReviewsView: UIViewFromNib {
 
     // MARK: Outlets
 

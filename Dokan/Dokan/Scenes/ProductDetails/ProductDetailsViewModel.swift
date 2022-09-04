@@ -13,31 +13,9 @@ import Foundation
 class ProductDetailsViewModel {
 
     private var product: Product?
-    private var titleQuantityViewModel: TQViewModel? {
-        didSet {
-            reloadViewClosure?()
-        }
-    }
-
-    private var imageViewModel: [sliderViewModel] = [] {
-        didSet {
-            reloadImageViewClosure?()
-        }
-    }
-
-    var numberOfCells: Int {
-        return imageViewModel.count
-    }
-
     var onStateUpdate: (() -> Void)?
     var reloadViewClosure: (() -> Void)?
     var reloadImageViewClosure: (() -> Void)?
-
-    var state: ProductDetailsState = .empty {
-        didSet {
-            onStateUpdate?()
-        }
-    }
 
     let repository: ProductRepository
 
@@ -71,8 +49,8 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
         }
     }
 
-    func getproductViewModel() -> TQViewModel {
-        return titleQuantityViewModel!
+    func getproductViewModel() -> TQViewModel? {
+        return titleQuantityViewModel
     }
 
     func getImageview(indexPath: IndexPath) -> sliderViewModel {
@@ -102,3 +80,30 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
 private extension ProductDetailsViewModel {}
 
+
+// MARK: Public Extensions
+
+extension ProductDetailsViewModel {
+    var numberOfCells: Int {
+        return imageViewModel.count
+    }
+    
+    private var titleQuantityViewModel: TQViewModel? {
+        didSet {
+            reloadViewClosure?()
+        }
+    }
+    
+    var state: ProductDetailsState = .empty {
+        didSet {
+            onStateUpdate?()
+        }
+    }
+    
+    private var imageViewModel: [sliderViewModel] = [] {
+        didSet {
+            reloadImageViewClosure?()
+        }
+    }
+    
+}

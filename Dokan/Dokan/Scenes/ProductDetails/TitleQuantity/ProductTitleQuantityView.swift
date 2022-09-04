@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import UIDokan
 
-class ProductTitleQuantityView: UIView {
+class ProductTitleQuantityView: UIViewFromNib {
     // MARK: Outlet
 
     @IBOutlet private(set) weak var titleContentView: UIView!
