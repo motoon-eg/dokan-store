@@ -8,7 +8,7 @@
 import UIDokan
 import UIKit
 
-class RatingProgressDetails: UIView {
+class RatingProgressDetails: UIViewFromNib {
 
     // MARK: - Outlets
 
@@ -34,26 +34,8 @@ class RatingProgressDetails: UIView {
 
     // MARK: - initializer
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        viewSetup()
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        viewSetup()
-    }
-}
-
-// MARK: - Setup
-
-private extension RatingProgressDetails {
-
-    func viewSetup() {
-        Bundle.main.loadNibNamed("\(RatingProgressDetails.self)", owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    override func awakeFromNib() {
+        super.awakeFromNib()
         starRating.applyStyleToView()
         starRating.updateStarsRating(0)
     }
