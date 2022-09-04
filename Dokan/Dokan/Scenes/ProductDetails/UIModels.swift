@@ -10,6 +10,6 @@ import UIKit
 struct ReviewsUiModel {
     var reviewsCount: Int
     var rate: Double
-    var reviews: [ReviewerTableViewCell.ViewModel]
+    var reviews: [ReviewerTableViewCell.ReviewerCellViewModel]
     var imageReview: UIImage
 }
