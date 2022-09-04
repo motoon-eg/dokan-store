@@ -168,8 +168,6 @@ extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSourc
 extension ReviewProductViewController {
 
     private enum Constants {
-        static let tableViewCellName = "ReviewerTableViewCell"
-        static let cellReuseIdentifier = "ReviewerTableViewCell"
         static let errorAlertTitle = "Error"
         static let errorAlertBackButton = "Back"
         static let errorAlertTryAgainButton = "Try Again"
