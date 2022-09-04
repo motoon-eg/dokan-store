@@ -28,7 +28,7 @@ class ReviewProductNavigationBarBehavior {
         // MARK: Add back button to navigation bar
 
         self.onBack = onBack
-        let backButton = UIBarButtonItem(image: UIImage(named: "left")?.withRenderingMode(.alwaysOriginal),
+        let backButton = UIBarButtonItem(image: UIImage.left.withRenderingMode(.alwaysOriginal),
                                          style: .done,
                                          target: self,
                                          action: #selector(backWasTapped))
@@ -43,7 +43,7 @@ class ReviewProductNavigationBarBehavior {
             ratingLabel.text = String(rating)
             ratingLabel.textColor = .black
             let starImage = UIImageView()
-            starImage.image = UIImage(named: "star")
+            starImage.image = .star
             let stackView = UIStackView(arrangedSubviews: [starImage, ratingLabel])
             stackView.axis = .horizontal
             stackView.spacing = 8
