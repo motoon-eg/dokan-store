@@ -5,8 +5,8 @@
 //  Created by Clara Mounir Adly on 19/08/2022.
 //
 
-import UIKit
 import UIDokan
+import UIKit
 
 // MARK: - ReviewsView
 
@@ -26,11 +26,6 @@ final class ReviewsView: UIViewFromNib {
     private var viewModel: ReviewsUiModel?
 
     // MARK: Lifecycle
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

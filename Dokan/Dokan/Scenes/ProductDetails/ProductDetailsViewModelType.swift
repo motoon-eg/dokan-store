@@ -20,7 +20,7 @@ protocol ProductDetailsViewModelInput {}
 ///
 protocol ProductDetailsViewModelOutput {
     func fetchProduct()
-    func getproductViewModel() -> TQViewModel
+    func getproductViewModel() -> TQViewModel?
     func getImageview(indexPath: IndexPath) -> sliderViewModel
     func processFetchProduct(product: Product)
     func createProductTitleQuantityView(product: Product) -> TQViewModel

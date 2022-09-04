@@ -20,9 +20,9 @@ class SliderCollectionViewCell: UICollectionViewCell, IdentifiableView {
     @IBOutlet private weak var noOfPicturesLabel: UILabel!
     var sliderViewModel: sliderViewModel? {
         didSet {
-            noOfPicturesLabel.text = "1"
-            productImageView.setImage(with: sliderViewModel!.productImage)
-            noOfCurrentPictureLabel.text = "1"
+//            noOfPicturesLabel.text = "1"
+//            productImageView.setImage(with: sliderViewModel!.productImage)
+//            noOfCurrentPictureLabel.text = "1"
         }
     }
 

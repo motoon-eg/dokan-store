@@ -12,6 +12,26 @@ import Foundation
 
 class ProductDetailsViewModel {
 
+    static let dummyData: TQViewModel = .init(title: "", currency: "", price: "", reviewAverage: 0.0, reviewCount: 0, stockCount: 0)
+
+    private var titleQuantityViewModel: TQViewModel? {
+        didSet {
+            reloadViewClosure?()
+        }
+    }
+
+    var state: ProductDetailsState = .empty {
+        didSet {
+            onStateUpdate?()
+        }
+    }
+
+    private var imageViewModel: [sliderViewModel] = [] {
+        didSet {
+            reloadImageViewClosure?()
+        }
+    }
+
     private var product: Product?
     var onStateUpdate: (() -> Void)?
     var reloadViewClosure: (() -> Void)?
@@ -57,12 +77,12 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
         return imageViewModel[indexPath.row]
     }
 
-    private func createProductTitleQuantityView(product: Product) -> TQViewModel {
+    func createProductTitleQuantityView(product: Product) -> TQViewModel {
 
         return TQViewModel(title: product.title, currency: "$", price: product.price, reviewAverage: 4.8, reviewCount: 23, stockCount: 8)
     }
 
-    private func createProductImage(product: Product) -> sliderViewModel {
+    func createProductImage(product: Product) -> sliderViewModel {
 
         return sliderViewModel(productImage: product.thumbnailUrl)
     }
@@ -80,30 +100,10 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
 private extension ProductDetailsViewModel {}
 
-
 // MARK: Public Extensions
 
 extension ProductDetailsViewModel {
     var numberOfCells: Int {
         return imageViewModel.count
     }
-    
-    private var titleQuantityViewModel: TQViewModel? {
-        didSet {
-            reloadViewClosure?()
-        }
-    }
-    
-    var state: ProductDetailsState = .empty {
-        didSet {
-            onStateUpdate?()
-        }
-    }
-    
-    private var imageViewModel: [sliderViewModel] = [] {
-        didSet {
-            reloadImageViewClosure?()
-        }
-    }
-    
 }

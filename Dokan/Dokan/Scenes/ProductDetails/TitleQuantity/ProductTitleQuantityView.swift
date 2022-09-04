@@ -5,10 +5,10 @@
 //  Created by ziad on 21/07/2022.
 //
 
-import UIKit
 import UIDokan
+import UIKit
 
-class ProductTitleQuantityView: UIViewFromNib {
+class ProductTitleQuantityView: UIView {
     // MARK: Outlet
 
     @IBOutlet private(set) weak var titleContentView: UIView!
@@ -47,7 +47,7 @@ class ProductTitleQuantityView: UIViewFromNib {
     }
 
     func initView() {
-        let model: TQViewModel = productViewModel.getproductViewModel()
+        let model: TQViewModel = productViewModel.getproductViewModel() ?? ProductDetailsViewModel.dummyData
         configureView(viewModel: model)
         changeStockBackGroundColor(stockCount: model.stockCount)
     }
@@ -76,7 +76,7 @@ class ProductTitleQuantityView: UIViewFromNib {
             }
         }
 
-        productViewModel.initFetchSingleProduct()
+        productViewModel.fetchProduct()
     }
 
     // MARK: Style

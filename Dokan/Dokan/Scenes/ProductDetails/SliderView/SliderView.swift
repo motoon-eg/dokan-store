@@ -58,7 +58,7 @@ class SliderView: UIView {
             }
         }
 
-        viewModel?.initFetchSingleProduct()
+        viewModel?.fetchProduct()
     }
 }
 
