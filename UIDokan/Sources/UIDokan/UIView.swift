@@ -22,9 +22,9 @@ open class UIViewFromNib: UIView {
 
     private func commitInit() {
         let nibName = String(describing: Self.self)
-        guard let contentView = nibFile.instantiate(withOwner: Self.self).first as? UIView else {
         let bundle = Bundle(for: Self.self)
         let nibFile = UINib(nibName: nibName, bundle: bundle)
+        guard let contentView = nibFile.instantiate(withOwner: self).first as? UIView else {
             assertionFailure("unable to find the content view")
             return
         }
