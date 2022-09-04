@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-Jv-2I6">
-                        <rect key="frame" x="0.0" y="0.0" width="420" height="187"/>
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="167"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FDB-Wn-BUo">
-                                <rect key="frame" x="0.0" y="0.0" width="40" height="187"/>
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="167"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aMW-WS-Xdx">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -40,7 +40,7 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-d7-l6N">
-                                <rect key="frame" x="50" y="0.0" width="370" height="187"/>
+                                <rect key="frame" x="50" y="0.0" width="370" height="167"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5ua-2S-dtm">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="20"/>
@@ -72,7 +72,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSV-Vh-XjP" customClass="StarsView" customModule="UIDokan">
-                                        <rect key="frame" x="0.0" y="69.5" width="370" height="20"/>
+                                        <rect key="frame" x="0.0" y="67.5" width="370" height="20"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="HN5-Tz-hNY"/>
@@ -82,9 +82,9 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZaW-Ej-lig">
-                                        <rect key="frame" x="0.0" y="139" width="370" height="48"/>
+                                        <rect key="frame" x="0.0" y="135" width="370" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="mcj-id-nTs"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="mcj-id-nTs"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
@@ -106,7 +106,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="K5h-Jv-2I6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ULJ-pJ-Ng9"/>
-                    <constraint firstAttribute="bottom" secondItem="K5h-Jv-2I6" secondAttribute="bottom" id="drv-NE-Lz0"/>
+                    <constraint firstAttribute="bottom" secondItem="K5h-Jv-2I6" secondAttribute="bottom" constant="20" id="drv-NE-Lz0"/>
                     <constraint firstItem="K5h-Jv-2I6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uEx-At-wgG"/>
                     <constraint firstAttribute="trailing" secondItem="K5h-Jv-2I6" secondAttribute="trailing" id="uhT-yI-UwT"/>
                 </constraints>

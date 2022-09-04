@@ -24,7 +24,7 @@ protocol ReviewProductViewModelOutput {
     var onShowAlertClosure: (String) -> Void { get set }
     var onUpdateLoadingStatus: (ReviewProductState) -> Void { get set }
     var onUpdateNavBarWithRating: (Double) -> Void { get set }
-    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel
+    func getCellViewModel(at indexPath: IndexPath) -> ReviewerTableViewCell.ReviewerCellViewModel
     func configureFetchRatingDetails(completion: @escaping (RatingDetailsViewModel?) -> Void)
     var numberOfCells: Int { get }
     var state: ReviewProductState { get set }

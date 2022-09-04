@@ -18,7 +18,7 @@ class ReviewProductViewModel {
     private let repository: ReviewsRepository
     private var reviewsList: [Domain.Review] = []
 
-    private var cellViewModels: [ReviewerCellViewModel] = [] {
+    private var cellViewModels: [ReviewerTableViewCell.ReviewerCellViewModel] = [] {
         didSet {
             onReloadData()
         }
@@ -97,7 +97,7 @@ extension ReviewProductViewModel: ReviewProductViewModelInput {
 
 extension ReviewProductViewModel: ReviewProductViewModelOutput {
 
-    func getCellViewModel(at indexPath: IndexPath) -> ReviewerCellViewModel {
+    func getCellViewModel(at indexPath: IndexPath) -> ReviewerTableViewCell.ReviewerCellViewModel {
         return cellViewModels[indexPath.row]
     }
 
@@ -110,11 +110,11 @@ extension ReviewProductViewModel: ReviewProductViewModelOutput {
 
 private extension ReviewProductViewModel {
 
-    private func createCellViewModel(reviews: Domain.Review) -> ReviewerCellViewModel {
-        return ReviewerCellViewModel(reviewerImageUrl: reviews.image,
-                                     reviewerName: reviews.name,
-                                     reviewerComment: reviews.reviewDescription,
-                                     rating: Double(reviews.rating))
+    private func createCellViewModel(reviews: Domain.Review) -> ReviewerTableViewCell.ReviewerCellViewModel {
+        return ReviewerTableViewCell.ReviewerCellViewModel(reviewerImageUrl: reviews.image,
+                                                           reviewerName: reviews.name,
+                                                           reviewerComment: reviews.reviewDescription,
+                                                           rating: Double(reviews.rating))
     }
 
     private func createRatingDetailsViewModel(reviews: Domain.Reviews) -> RatingDetailsViewModel {

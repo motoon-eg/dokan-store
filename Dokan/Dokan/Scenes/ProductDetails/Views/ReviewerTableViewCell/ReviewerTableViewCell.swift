@@ -25,25 +25,22 @@ class ReviewerTableViewCell: UITableViewCell {
         reviewerImageView.applyCircleImageStyle()
     }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0))
-    }
-
     // MARK: - method to configure cell
 
     func configureCell(viewModel: ReviewerCellViewModel) {
-        reviewerImageView.setImage(with: viewModel.reviewerImageUrl, placeholderImage: UIImage(named: "star") ?? UIImage())
+        reviewerImageView.setImage(with: viewModel.reviewerImageUrl, placeholderImage: .star)
         reviewerNameLabel.text = viewModel.reviewerName
         reviewerComment.text = viewModel.reviewerComment
         ratingStarsView.applyStyleToView()
         ratingStarsView.updateStarsRating(viewModel.rating)
     }
-}
 
-struct ReviewerCellViewModel {
-    let reviewerImageUrl: String
-    let reviewerName: String
-    let reviewerComment: String
-    let rating: Double
+    // MARK: - View Model
+    
+    struct ReviewerCellViewModel {
+        let reviewerImageUrl: String
+        let reviewerName: String
+        let reviewerComment: String
+        let rating: Double
+    }
 }

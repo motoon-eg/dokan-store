@@ -4,7 +4,7 @@ import UIKit.UIImage
 
 // MARK: - Images
 
-extension UIImage {
+public extension UIImage {
 
     static var accentColor: UIImage {
         UIImage(named: "AccentColor")!
