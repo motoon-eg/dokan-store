@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UITableView {
+public extension UITableView {
 
     func register<T: UITableViewCell>(_ class: T.Type) where T: IdentifiableView {
         let bundle = Bundle(for: T.self)

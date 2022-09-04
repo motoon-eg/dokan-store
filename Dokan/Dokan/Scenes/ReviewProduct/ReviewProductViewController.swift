@@ -54,8 +54,7 @@ extension ReviewProductViewController {}
 extension ReviewProductViewController {
 
     func tableViewSetup() {
-        let nib = UINib(nibName: Constants.tableViewCellName, bundle: nil)
-        reviewProductTableView.register(nib, forCellReuseIdentifier: Constants.cellReuseIdentifier)
+        reviewProductTableView.register(ReviewerTableViewCell.self)
         reviewProductTableView.delegate = self
         reviewProductTableView.dataSource = self
         tableViewLayout()
@@ -151,7 +150,7 @@ extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSourc
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReuseIdentifier, for: indexPath) as! ReviewerTableViewCell
+        let cell: ReviewerTableViewCell = tableView.dequeueReusableCell(for: indexPath)
 
         if viewModel.state == .loading {
             cell.startSkeletonView()

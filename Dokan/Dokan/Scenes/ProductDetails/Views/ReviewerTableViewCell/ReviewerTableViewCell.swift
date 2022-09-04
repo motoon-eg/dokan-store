@@ -9,7 +9,7 @@ import Domain
 import UIDokan
 import UIKit
 
-class ReviewerTableViewCell: UITableViewCell {
+class ReviewerTableViewCell: UITableViewCell, IdentifiableView {
 
     // MARK: - Outlets
 
@@ -36,7 +36,7 @@ class ReviewerTableViewCell: UITableViewCell {
     }
 
     // MARK: - View Model
-    
+
     struct ReviewerCellViewModel {
         let reviewerImageUrl: String
         let reviewerName: String
