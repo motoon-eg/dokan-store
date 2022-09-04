@@ -70,8 +70,11 @@ private extension RatingProgressDetails {
 
 // MARK: - View Model
 
-struct RatingProgressDetailsViewModel {
-    let rating: Int
-    let starNumber: Int
-    let totalRatingNumber: Int
+extension RatingProgressDetails {
+
+    struct RatingProgressDetailsViewModel {
+        let rating: Int
+        let starNumber: Int
+        let totalRatingNumber: Int
+    }
 }
