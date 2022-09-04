@@ -4,8 +4,8 @@
 //
 //  Created by raniazeid on 28/07/2022.
 //
-import UIKit
 import UIDokan
+import UIKit
 
 class ReviewerTableViewCell: UITableViewCell {
     // MARK: - Outlets
@@ -14,7 +14,7 @@ class ReviewerTableViewCell: UITableViewCell {
     @IBOutlet private(set) weak var reviewerNameLabel: UILabel!
     @IBOutlet private(set) weak var reviewerComment: UITextView!
     @IBOutlet var reviewerRatingStars: StarsView!
-    
+
     // MARK: Lifecycle
 
     // MARK: Lifecycle

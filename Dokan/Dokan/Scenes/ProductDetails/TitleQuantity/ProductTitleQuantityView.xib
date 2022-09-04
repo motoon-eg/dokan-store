@@ -169,6 +169,9 @@
                 <constraint firstItem="6Qm-o8-1Ol" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tKk-EQ-D90"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="43" y="-905"/>
         </view>
     </objects>

@@ -43,6 +43,7 @@ private extension FeaturedProductView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
         collectionViewSetup()
         bindSeeAllButton()
         startSkeletonView()
@@ -64,6 +65,7 @@ private extension FeaturedProductView {
         layout.minimumLineSpacing = Constants.collectionViewLayoutLineSpacing
         layout.scrollDirection = .horizontal
         featuredProductCollectionView.collectionViewLayout = layout
+        featuredProductCollectionView.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
     }
 }
 
