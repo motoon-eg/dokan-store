@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-class UIViewFromNib: UIView {
+open class UIViewFromNib: UIView {
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         commitInit()
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         commitInit()
     }
