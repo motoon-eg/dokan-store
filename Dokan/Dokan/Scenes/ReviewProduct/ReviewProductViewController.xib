@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewProductViewController" customModule="Dokan" customModuleProvider="target">
+            <connections>
+                <outlet property="mainStackView" destination="iPm-xf-UFQ" id="DjU-fe-gNf"/>
+                <outlet property="ratingDetailsView" destination="HVK-Qs-Nll" id="xGM-6D-QQ1"/>
+                <outlet property="reviewProductTableView" destination="3wE-SM-L7Y" id="Tia-aB-4m0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="iPm-xf-UFQ">
+                    <rect key="frame" x="12" y="96" width="390" height="788"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KUg-c3-QbX">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="160"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVK-Qs-Nll" customClass="RatingDetailsView" customModule="Dokan" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="160"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcK-0d-QHt">
+                            <rect key="frame" x="0.0" y="192" width="390" height="596"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3wE-SM-L7Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="596"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="3wE-SM-L7Y" firstAttribute="leading" secondItem="kcK-0d-QHt" secondAttribute="leading" id="S1f-k2-lq3"/>
+                                <constraint firstAttribute="trailing" secondItem="3wE-SM-L7Y" secondAttribute="trailing" id="TDD-89-04j"/>
+                                <constraint firstAttribute="bottom" secondItem="3wE-SM-L7Y" secondAttribute="bottom" id="lDT-cR-T0E"/>
+                                <constraint firstItem="3wE-SM-L7Y" firstAttribute="top" secondItem="kcK-0d-QHt" secondAttribute="top" id="nEa-Fo-tgi"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iPm-xf-UFQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="HPY-M6-7Jf"/>
+                <constraint firstAttribute="trailing" secondItem="iPm-xf-UFQ" secondAttribute="trailing" constant="12" id="Xpi-rs-GIL"/>
+                <constraint firstItem="iPm-xf-UFQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="96" id="tAt-f5-6KM"/>
+                <constraint firstAttribute="bottom" secondItem="iPm-xf-UFQ" secondAttribute="bottom" constant="12" id="yGw-fV-SQa"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="82.608695652173921" y="-21.428571428571427"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

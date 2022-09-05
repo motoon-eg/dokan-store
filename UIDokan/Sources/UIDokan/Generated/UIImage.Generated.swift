@@ -4,7 +4,7 @@ import UIKit.UIImage
 
 // MARK: - Images
 
-extension UIImage {
+public extension UIImage {
 
     static var accentColor: UIImage {
         UIImage(named: "AccentColor")!
@@ -16,6 +16,10 @@ extension UIImage {
 
     static var bell: UIImage {
         UIImage(named: "bell")!
+    }
+
+    static var left: UIImage {
+        UIImage(named: "left")!
     }
 
     static var redo: UIImage {

@@ -23,6 +23,11 @@ public struct DefaultRepositoryProvider {
 
 extension DefaultRepositoryProvider: RepositoryProvider {
 
+    public func makeReviewsRepository() -> Domain.ReviewsRepository {
+        let remote = MockNetwork()
+        return ReviewsRepository(remote: remote)
+    }
+
     public func makeProductRepository() -> Domain.ProductRepository {
         let remote = ProductsRemote(network: network)
         return ProductRepository(remote: remote)
