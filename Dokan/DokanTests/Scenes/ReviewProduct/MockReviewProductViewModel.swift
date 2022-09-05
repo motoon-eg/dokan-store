@@ -7,7 +7,7 @@
 
 @testable import Dokan
 import Foundation
-@testable import Networking
+import Networking
 
 class MockReviewProductViewModel {
 

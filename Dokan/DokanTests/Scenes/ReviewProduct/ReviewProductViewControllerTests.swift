@@ -6,8 +6,6 @@
 //
 
 @testable import Dokan
-import Domain
-import Network
 import XCTest
 
 class ReviewProductViewControllerTests: XCTestCase {
