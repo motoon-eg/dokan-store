@@ -11,10 +11,14 @@ import Networking
 extension Networking.Reviews: DomainConvertible {
 
     func toDomain() -> Domain.Reviews {
-
-        let reviewList = reviews.map { $0.toDomain() }
-
-        return Domain.Reviews(rating: rating, totalRatingNumber: totalRatingNumber, fiveStarRatingNumber: fiveStarRatingNumber, fourStarRatingNumber: fourStarRatingNumber, threeStarRatingNumber: threeStarRatingNumber, twoStarRatingNumber: twoStarRatingNumber, oneStarRatingNumber: oneStarRatingNumber, reviews: reviewList)
+        return Domain.Reviews(rating: rating,
+                              totalRatingNumber: totalRatingNumber,
+                              fiveStarRatingNumber: fiveStarRatingNumber,
+                              fourStarRatingNumber: fourStarRatingNumber,
+                              threeStarRatingNumber: threeStarRatingNumber,
+                              twoStarRatingNumber: twoStarRatingNumber,
+                              oneStarRatingNumber: oneStarRatingNumber,
+                              reviews: reviews.map { $0.toDomain() })
     }
 }
 

@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Reviews
 
-public struct Reviews: Codable {
+public struct Reviews: Decodable {
     public let rating: Double
     public let totalRatingNumber, fiveStarRatingNumber, fourStarRatingNumber, threeStarRatingNumber: Int
     public let twoStarRatingNumber, oneStarRatingNumber: Int
@@ -18,7 +18,7 @@ public struct Reviews: Codable {
 
 // MARK: - Review
 
-public struct Review: Codable {
+public struct Review: Decodable {
     public let image: String
     public let name: String
     public let date: String

@@ -15,7 +15,14 @@ public struct Reviews {
     public let twoStarRatingNumber, oneStarRatingNumber: Int
     public let reviews: [Review]
 
-    public init(rating: Double, totalRatingNumber: Int, fiveStarRatingNumber: Int, fourStarRatingNumber: Int, threeStarRatingNumber: Int, twoStarRatingNumber: Int, oneStarRatingNumber: Int, reviews: [Review]) {
+    public init(rating: Double,
+                totalRatingNumber: Int,
+                fiveStarRatingNumber: Int,
+                fourStarRatingNumber: Int,
+                threeStarRatingNumber: Int,
+                twoStarRatingNumber: Int,
+                oneStarRatingNumber: Int,
+                reviews: [Review]) {
         self.rating = rating
         self.fiveStarRatingNumber = fiveStarRatingNumber
         self.fourStarRatingNumber = fourStarRatingNumber

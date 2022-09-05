@@ -22,8 +22,6 @@ class ReviewProductViewController: UIViewController {
 
     private var viewModel: ReviewProductViewModelType
     private var navigationBarBehavior: ReviewProductNavigationBarBehavior?
-    private var reviewCount: Int = 10
-    private var loadingCell: Bool = true
 
     // MARK: Init
 
@@ -56,8 +54,7 @@ extension ReviewProductViewController {}
 extension ReviewProductViewController {
 
     func tableViewSetup() {
-        let nib = UINib(nibName: Constants.tableViewCellName, bundle: nil)
-        reviewProductTableView.register(nib, forCellReuseIdentifier: Constants.cellReuseIdentifier)
+        reviewProductTableView.register(ReviewerTableViewCell.self)
         reviewProductTableView.delegate = self
         reviewProductTableView.dataSource = self
         tableViewLayout()
@@ -83,55 +80,40 @@ extension ReviewProductViewController {
 
     func bindViewModel() {
 
-        viewModel.showAlertClosure = { () in
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-
-                let message = self.viewModel.alertMessage
-                self.showErrorAlert(error: message)
-            }
+        viewModel.onShowAlertClosure = { [weak self] alertMessage in
+            guard let self = self else { return }
+            self.showErrorAlert(error: alertMessage)
         }
 
-        viewModel.showNavBarClosure = { () in
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-
-                let rating = self.viewModel.navBarRating
-                self.configureNavBar(rating: rating)
-            }
+        viewModel.onUpdateNavBarWithRating = { [weak self] navBarRating in
+            guard let self = self else { return }
+            self.configureNavBar(rating: navBarRating)
         }
 
-        viewModel.updateLoadingStatus = { [weak self] () in
+        viewModel.onUpdateLoadingStatus = { [weak self] state in
+
             guard let self = self else { return }
 
-            switch self.viewModel.state {
+            switch state {
             case .empty, .error:
                 self.mainStackView.isHidden = true
             case .loading:
                 self.mainStackView.isHidden = false
-                self.loadingCell = true
                 self.mainStackView.startSkeletonView()
             case .loaded:
                 self.mainStackView.isHidden = false
-                self.loadingCell = false
                 self.mainStackView.stopSkeletonView()
             }
         }
 
-        viewModel.reloadTableViewClosure = { () in
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-
-                self.reviewCount = self.viewModel.numberOfCells
-                self.reviewProductTableView.reloadData()
-            }
+        viewModel.onReloadData = { [weak self] () in
+            guard let self = self else { return }
+            self.reviewProductTableView.reloadData()
         }
 
         viewModel.configureFetchRatingDetails { [weak self] reviews in
             guard let self = self else { return }
-            guard let reviews = reviews else {
-                return
-            }
+            guard let reviews = reviews else { return }
             self.ratingDetailsView.ratingDetails = reviews
         }
 
@@ -164,13 +146,13 @@ private extension ReviewProductViewController {
 extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviewCount
+        return viewModel.numberOfCells
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellReuseIdentifier, for: indexPath) as! ReviewerTableViewCell
+        let cell: ReviewerTableViewCell = tableView.dequeueReusableCell(for: indexPath)
 
-        if loadingCell {
+        if viewModel.state == .loading {
             cell.startSkeletonView()
         } else {
             cell.stopSkeletonView()
@@ -186,8 +168,6 @@ extension ReviewProductViewController: UITableViewDelegate, UITableViewDataSourc
 extension ReviewProductViewController {
 
     private enum Constants {
-        static let tableViewCellName = "ReviewerTableViewCell"
-        static let cellReuseIdentifier = "ReviewerTableViewCell"
         static let errorAlertTitle = "Error"
         static let errorAlertBackButton = "Back"
         static let errorAlertTryAgainButton = "Try Again"

@@ -8,7 +8,7 @@
 import UIDokan
 import UIKit
 
-class RatingProgressDetails: UIView {
+class RatingProgressDetails: UIViewFromNib {
 
     // MARK: - Outlets
 
@@ -25,7 +25,8 @@ class RatingProgressDetails: UIView {
                 return
             }
 
-            starRating.applyStyleToView(Double(progressDetails.starNumber))
+            starRating.applyStyleToView()
+            starRating.updateStarsRating(Double(progressDetails.starNumber))
             starsRatingLabel.text = String(progressDetails.rating)
             updateProgressBarRating(progressDetails: progressDetails)
         }
@@ -33,27 +34,10 @@ class RatingProgressDetails: UIView {
 
     // MARK: - initializer
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        viewSetup()
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        viewSetup()
-    }
-}
-
-// MARK: - Setup
-
-private extension RatingProgressDetails {
-
-    func viewSetup() {
-        Bundle.main.loadNibNamed(Constants.viewNibName, owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        starRating.applyStyleToView(0)
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        starRating.applyStyleToView()
+        starRating.updateStarsRating(0)
     }
 }
 
@@ -66,19 +50,14 @@ private extension RatingProgressDetails {
     }
 }
 
-// MARK: - Constants
+// MARK: - View Model
 
 extension RatingProgressDetails {
 
-    private enum Constants {
-        static let viewNibName = "RatingProgressDetails"
+    struct RatingProgressDetailsViewModel {
+        let rating: Int
+        let starNumber: Int
+        let totalRatingNumber: Int
     }
 }
 
-// MARK: - View Model
-
-struct RatingProgressDetailsViewModel: Equatable {
-    let rating: Int
-    let starNumber: Int
-    let totalRatingNumber: Int
-}

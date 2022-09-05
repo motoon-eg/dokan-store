@@ -25,24 +25,24 @@ struct RatingDetailsViewModel {
 
 extension RatingDetailsViewModel {
 
-    func configureFiveStarProgressBar() -> RatingProgressDetailsViewModel {
-        return RatingProgressDetailsViewModel(rating: fiveStarNumber, starNumber: 5, totalRatingNumber: totalReviewsNumber)
+    func configureFiveStarProgressBar() -> RatingProgressDetails.RatingProgressDetailsViewModel {
+        return RatingProgressDetails.RatingProgressDetailsViewModel(rating: fiveStarNumber, starNumber: 5, totalRatingNumber: totalReviewsNumber)
     }
 
-    func configureFourStarProgressBar() -> RatingProgressDetailsViewModel {
-        return RatingProgressDetailsViewModel(rating: fourStarNumber, starNumber: 4, totalRatingNumber: totalReviewsNumber)
+    func configureFourStarProgressBar() -> RatingProgressDetails.RatingProgressDetailsViewModel {
+        return RatingProgressDetails.RatingProgressDetailsViewModel(rating: fourStarNumber, starNumber: 4, totalRatingNumber: totalReviewsNumber)
     }
 
-    func configureThreeStarProgressBar() -> RatingProgressDetailsViewModel {
-        return RatingProgressDetailsViewModel(rating: threeStarNumber, starNumber: 3, totalRatingNumber: totalReviewsNumber)
+    func configureThreeStarProgressBar() -> RatingProgressDetails.RatingProgressDetailsViewModel {
+        return RatingProgressDetails.RatingProgressDetailsViewModel(rating: threeStarNumber, starNumber: 3, totalRatingNumber: totalReviewsNumber)
     }
 
-    func configureTwoStarProgressBar() -> RatingProgressDetailsViewModel {
-        return RatingProgressDetailsViewModel(rating: twoStarNumber, starNumber: 2, totalRatingNumber: totalReviewsNumber)
+    func configureTwoStarProgressBar() -> RatingProgressDetails.RatingProgressDetailsViewModel {
+        return RatingProgressDetails.RatingProgressDetailsViewModel(rating: twoStarNumber, starNumber: 2, totalRatingNumber: totalReviewsNumber)
     }
 
-    func configureOneStarProgressBar() -> RatingProgressDetailsViewModel {
-        return RatingProgressDetailsViewModel(rating: oneStarNumber, starNumber: 1, totalRatingNumber: totalReviewsNumber)
+    func configureOneStarProgressBar() -> RatingProgressDetails.RatingProgressDetailsViewModel {
+        return RatingProgressDetails.RatingProgressDetailsViewModel(rating: oneStarNumber, starNumber: 1, totalRatingNumber: totalReviewsNumber)
     }
 
     func configureRatingLabel() -> String {

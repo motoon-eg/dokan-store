@@ -8,7 +8,7 @@
 import UIDokan
 import UIKit
 
-class RatingDetailsView: UIView {
+class RatingDetailsView: UIViewFromNib {
 
     // MARK: - Outlets
 
@@ -34,30 +34,6 @@ class RatingDetailsView: UIView {
             updateTotalRatingLabel(ratingDetails: ratingDetails)
             updateTotalReviewsNumberLabel(ratingDetails: ratingDetails)
         }
-    }
-
-    // MARK: - initializer
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        viewSetup()
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        viewSetup()
-    }
-}
-
-// MARK: - Setup
-
-private extension RatingDetailsView {
-
-    func viewSetup() {
-        Bundle.main.loadNibNamed(Constants.viewNibName, owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 }
 
