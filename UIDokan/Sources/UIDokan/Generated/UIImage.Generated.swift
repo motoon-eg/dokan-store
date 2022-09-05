@@ -10,6 +10,10 @@ extension UIImage {
         UIImage(named: "AccentColor")!
     }
 
+    static var arrowRight: UIImage {
+        UIImage(named: "arrowRight")!
+    }
+
     static var bellBadge: UIImage {
         UIImage(named: "bell-badge")!
     }
@@ -18,12 +22,20 @@ extension UIImage {
         UIImage(named: "bell")!
     }
 
+    static var markerTime: UIImage {
+        UIImage(named: "marker-time")!
+    }
+
     static var redo: UIImage {
         UIImage(named: "redo")!
     }
 
     static var search: UIImage {
         UIImage(named: "search")!
+    }
+
+    static var shopImage: UIImage {
+        UIImage(named: "shopImage")!
     }
 
     static var shoppingCartBadge: UIImage {
@@ -36,10 +48,6 @@ extension UIImage {
 
     static var star: UIImage {
         UIImage(named: "star")!
-    }
-
-    static var vector: UIImage {
-        UIImage(named: "vector")!
     }
 
     static var verified: UIImage {
