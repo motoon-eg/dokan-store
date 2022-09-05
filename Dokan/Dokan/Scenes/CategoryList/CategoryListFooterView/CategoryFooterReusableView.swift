@@ -21,8 +21,17 @@ class CategoryFooterReusableView: UICollectionReusableView {
         button.setTitle("Filter & Sorting", for: .normal)
         return button
     }()
-
-    public func configure() {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configure()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configure() {
         addSubview(button)
     }
 
