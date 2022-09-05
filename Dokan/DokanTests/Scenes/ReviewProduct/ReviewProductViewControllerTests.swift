@@ -80,7 +80,7 @@ class ReviewProductViewControllerTests: XCTestCase {
         let state = viewModel.state
 
         // When
-        XCTAssertTrue(state == State.loading)
+        XCTAssertTrue(state == ReviewProductState.loading)
 
         // Then
         XCTAssertFalse(sut.mainStackView.isHidden)
@@ -91,7 +91,7 @@ class ReviewProductViewControllerTests: XCTestCase {
         let state = viewModel.state
 
         // When
-        XCTAssertTrue(state == State.loading)
+        XCTAssertTrue(state == ReviewProductState.loading)
 
         // Then
         XCTAssertTrue(sut.mainStackView.sk.isSkeletonActive)
@@ -105,11 +105,11 @@ class ReviewProductViewControllerTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             expecttionObj.fulfill()
         }
-        waitForExpectations(timeout: 10)
+        waitForExpectations(timeout: 11)
         let state = viewModel.state
 
         // Then
-        XCTAssertTrue(state == State.loaded)
+        XCTAssertTrue(state == ReviewProductState.loaded)
         XCTAssertFalse(sut.mainStackView.isHidden)
     }
 
@@ -121,11 +121,11 @@ class ReviewProductViewControllerTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             expecttionObj.fulfill()
         }
-        waitForExpectations(timeout: 10)
+        waitForExpectations(timeout: 11)
         let state = viewModel.state
 
         // Then
-        XCTAssertTrue(state == State.loaded)
+        XCTAssertTrue(state == ReviewProductState.loaded)
         XCTAssertFalse(sut.mainStackView.sk.isSkeletonActive)
     }
 }

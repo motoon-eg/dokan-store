@@ -59,7 +59,7 @@ class RatingProgressDetailsTests: XCTestCase {
 
     func testRatingProgressDetailsView_WhenProgressDetailsHaveData_Updated() {
         // When
-        sut.progressDetails = RatingProgressDetailsViewModel(rating: 8, starNumber: 4, totalRatingNumber: 12)
+        sut.progressDetails = RatingProgressDetails.RatingProgressDetailsViewModel(rating: 8, starNumber: 4, totalRatingNumber: 12)
 
         // Then
         XCTAssertTrue(sut.starsRatingLabel.text == "8")

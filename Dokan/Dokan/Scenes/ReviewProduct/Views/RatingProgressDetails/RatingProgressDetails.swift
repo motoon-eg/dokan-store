@@ -54,10 +54,9 @@ private extension RatingProgressDetails {
 
 extension RatingProgressDetails {
 
-    struct RatingProgressDetailsViewModel {
+    struct RatingProgressDetailsViewModel: Equatable {
         let rating: Int
         let starNumber: Int
         let totalRatingNumber: Int
     }
 }
-
