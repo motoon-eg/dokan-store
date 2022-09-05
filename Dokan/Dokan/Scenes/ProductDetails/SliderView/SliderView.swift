@@ -40,7 +40,7 @@ class SliderView: UIView {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
 
-                switch self.viewModel?.state {
+                switch self.viewModel?.productDetailsState {
 
                 case .loading, .error, .empty:
                     self.startSkeletonView()

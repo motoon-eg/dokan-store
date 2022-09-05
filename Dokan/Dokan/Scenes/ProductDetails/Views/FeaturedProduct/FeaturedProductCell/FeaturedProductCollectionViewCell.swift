@@ -11,6 +11,7 @@ class FeaturedProductCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Outlets
 
+    @IBOutlet weak var styleView: UIView!
     @IBOutlet private(set) weak var productImage: UIImageView!
     @IBOutlet private(set) weak var productName: UILabel!
     @IBOutlet private(set) weak var productPrice: UILabel!
@@ -21,25 +22,27 @@ class FeaturedProductCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Properties
 
-    var featuredProduct: Any! {
-        didSet {
-            // update collection view components with data
-            productName.text = featuredProduct as? String
-        }
-    }
-
     // MARK: - initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupCellStyle()
+        makeStyleForCell()
+    }
+
+    func configureFeaturedCell(product: FeaturedProduct) {
+        productName.text = product.title
+        productPrice.text = "$ " + product.price
+        productImage.setImage(with: product.image)
     }
 
     // MARK: - private handler
 
-    private func setupCellStyle() {
-        layer.cornerRadius = 12
-        layer.masksToBounds = true
+    private func makeStyleForCell() {
+        styleView.layer.cornerRadius = 5
+        styleView.layer.shadowColor = UIColor.gray.withAlphaComponent(0.3).cgColor
+        styleView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        styleView.layer.shadowOpacity = 1
+        styleView.layer.shadowRadius = 5
     }
 }
 

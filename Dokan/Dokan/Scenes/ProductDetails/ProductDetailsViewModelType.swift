@@ -19,12 +19,19 @@ protocol ProductDetailsViewModelInput {}
 /// ProductDetails ViewModel Output
 ///
 protocol ProductDetailsViewModelOutput {
+
+    // Fetch single Product functions
+
     func fetchProduct()
     func getproductViewModel() -> TQViewModel?
     func getImageview(indexPath: IndexPath) -> sliderViewModel
     func processFetchProduct(product: Product)
     func createProductTitleQuantityView(product: Product) -> TQViewModel
     func createProductImage(product: Product) -> sliderViewModel
+
+    // Fetch featured products function
+
+    func fetchFeaturedProducts()
 }
 
 public enum ProductDetailsState {

@@ -43,6 +43,6 @@ public class ProductsRemote: Remote, ProductsRemoteProtocol {
 extension ProductsRemote {
 
     enum Defaults {
-        static let perPageLimit = 10
+        static let perPageLimit = 3
     }
 }

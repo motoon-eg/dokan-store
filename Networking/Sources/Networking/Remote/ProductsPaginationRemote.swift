@@ -21,7 +21,7 @@ public class ProductsPaginationRemote: Remote, ProductsPaginationRemoteProtocol 
     ///
     public func loadProducts(completion: @escaping (Result<[Product], Error>) -> Void) {
         let path = "products"
-        let parameters = ["limit": "5"]
+        let parameters = ["limit": "2"]
         let request = FakeStoreRequest(method: .get, path: path, parameters: parameters)
 
         enqueue(request, completion: completion)

@@ -19,7 +19,7 @@ class FeaturedProductView: UIView {
 
     // MARK: - Properties
 
-    var featuredProducts: [Any] = []
+    var productsViewModel = ProductDetailsViewModel()
 
     // MARK: - initializer
 
@@ -46,7 +46,7 @@ private extension FeaturedProductView {
         contentView.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
         collectionViewSetup()
         bindSeeAllButton()
-        startSkeletonView()
+        bindViewModelToView()
     }
 
     func collectionViewSetup() {
@@ -60,12 +60,39 @@ private extension FeaturedProductView {
     func collectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = Constants.collectionViewLayoutSectionInset
-        layout.itemSize = CGSize(width: featuredProductCollectionView.frame.width / 2.25, height: featuredProductCollectionView.frame.height)
+        layout.itemSize = CGSize(width: featuredProductCollectionView.frame.width / 2.35, height: featuredProductCollectionView.frame.height * 0.95)
         layout.minimumInteritemSpacing = Constants.collectionViewLayoutInteritemSpacing
         layout.minimumLineSpacing = Constants.collectionViewLayoutLineSpacing
         layout.scrollDirection = .horizontal
         featuredProductCollectionView.collectionViewLayout = layout
         featuredProductCollectionView.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
+    }
+
+    func bindViewModelToView() {
+
+        productsViewModel.onFeaturedProductsStateUpdate = { [weak self] () in
+            guard let self = self else { return }
+
+            DispatchQueue.main.async { [weak self] () in
+                guard let self = self else { return }
+
+                switch self.productsViewModel.featuredProductsState {
+
+                case .loading, .error, .empty:
+                    self.startSkeletonView()
+                case .populated:
+                    self.stopSkeletonView()
+                }
+            }
+        }
+
+        productsViewModel.reloadCollectionViewClosure = { [weak self] () in
+            DispatchQueue.main.async { [weak self] in
+                self?.featuredProductCollectionView.reloadData()
+            }
+        }
+
+        productsViewModel.fetchFeaturedProducts()
     }
 }
 
@@ -81,12 +108,6 @@ extension FeaturedProductView {
 
 extension FeaturedProductView {
 
-    func getFeaturedProductsData(featuredProducts: [Any]) {
-        self.featuredProducts = featuredProducts
-        stopSkeletonView()
-        featuredProductCollectionView.reloadData()
-    }
-
     @objc func buttonWasTapped() {
         // navigate to see all
     }
@@ -98,12 +119,14 @@ extension FeaturedProductView: UICollectionViewDelegate, UICollectionViewDataSou
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellReuseIdentifier, for: indexPath) as! FeaturedProductCollectionViewCell
-        cell.featuredProduct = featuredProducts[indexPath.row]
+
+        let cellViewModel = productsViewModel.getFeaturedProduct(indexPath: indexPath)
+        cell.configureFeaturedCell(product: cellViewModel)
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return featuredProducts.count
+        return productsViewModel.numberOfFeaturedProductsCells
     }
 }
 
@@ -119,4 +142,10 @@ extension FeaturedProductView {
         static let collectionViewLayoutInteritemSpacing = 15.0
         static let collectionViewLayoutLineSpacing = 15.0
     }
+}
+
+public struct FeaturedProduct {
+    let image: String
+    let title: String
+    let price: String
 }

@@ -12,7 +12,19 @@ import Foundation
 
 class ProductDetailsViewModel {
 
+    /// Init repository
+
+    let repository: ProductRepository
+
+    init(repository: ProductRepository = ServiceLocator.provider.makeProductRepository()) {
+        self.repository = repository
+    }
+
+    /// Dummy Product for error handling
+
     static let dummyData: TQViewModel = .init(title: "", currency: "", price: "", reviewAverage: 0.0, reviewCount: 0, stockCount: 0)
+
+    /// Single product properties
 
     private var titleQuantityViewModel: TQViewModel? {
         didSet {
@@ -20,7 +32,7 @@ class ProductDetailsViewModel {
         }
     }
 
-    var state: ProductDetailsState = .empty {
+    var productDetailsState: ProductDetailsState = .empty {
         didSet {
             onStateUpdate?()
         }
@@ -37,11 +49,23 @@ class ProductDetailsViewModel {
     var reloadViewClosure: (() -> Void)?
     var reloadImageViewClosure: (() -> Void)?
 
-    let repository: ProductRepository
+    /// Fetch  products properties
 
-    init(repository: ProductRepository = ServiceLocator.provider.makeProductRepository()) {
-        self.repository = repository
+    private var featuredProducts: [FeaturedProduct] = [] {
+        didSet {
+            reloadCollectionViewClosure?()
+        }
     }
+
+    var featuredProductsState: ProductDetailsState = .empty {
+        didSet {
+            onFeaturedProductsStateUpdate?()
+        }
+    }
+
+    private var products: [Product] = []
+    var reloadCollectionViewClosure: (() -> Void)?
+    var onFeaturedProductsStateUpdate: (() -> Void)?
 }
 
 // MARK: ProductDetailsViewModel
@@ -52,8 +76,10 @@ extension ProductDetailsViewModel: ProductDetailsViewModelInput {}
 
 extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
+    /// Fetch single Product functions
+
     func fetchProduct() {
-        state = .loading
+        productDetailsState = .loading
 
         repository.loadSingleProduct(productID: 1) { [weak self] result in
             guard let self = self else { return }
@@ -61,9 +87,9 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
             case let .success(product):
                 self.processFetchProduct(product: product)
-                self.state = .populated
+                self.productDetailsState = .populated
             case let .failure(error):
-                self.state = .error
+                self.productDetailsState = .error
                 LogError(error.localizedDescription)
             }
         }
@@ -94,6 +120,41 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
         imgs.append(createProductImage(product: product))
         imageViewModel = imgs
     }
+
+    /// Fetch featured products function
+
+    func fetchFeaturedProducts() {
+        repository.loadProducts(at: 1) { result in
+            switch result {
+
+            case let .success(products):
+                self.processFetchProducts(products: products)
+                self.featuredProductsState = .populated
+            case let .failure(error):
+                LogError(error.localizedDescription)
+                self.featuredProductsState = .error
+            }
+        }
+    }
+
+    func createFeaturedProductModel(product: Product) -> FeaturedProduct {
+        return FeaturedProduct(image: product.thumbnailUrl, title: product.title, price: product.price)
+    }
+
+    func processFetchProducts(products: [Product]) {
+        self.products = products
+        var featuredProductsArray = [FeaturedProduct]()
+
+        for product in products {
+            featuredProductsArray.append(createFeaturedProductModel(product: product))
+        }
+
+        featuredProducts = featuredProductsArray
+    }
+
+    func getFeaturedProduct(indexPath: IndexPath) -> FeaturedProduct {
+        return featuredProducts[indexPath.row]
+    }
 }
 
 // MARK: Private Handlers
@@ -105,5 +166,9 @@ private extension ProductDetailsViewModel {}
 extension ProductDetailsViewModel {
     var numberOfCells: Int {
         return imageViewModel.count
+    }
+
+    var numberOfFeaturedProductsCells: Int {
+        return featuredProducts.count
     }
 }

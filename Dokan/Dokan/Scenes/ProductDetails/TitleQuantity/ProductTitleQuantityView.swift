@@ -60,7 +60,7 @@ class ProductTitleQuantityView: UIView {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
 
-                switch self.productViewModel.state {
+                switch self.productViewModel.productDetailsState {
 
                 case .loading, .error, .empty:
                     self.startSkeletonView()
