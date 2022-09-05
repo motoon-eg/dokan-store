@@ -90,7 +90,6 @@ extension CategoryListViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
     let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.identifier, for: indexPath) as! CategoryFooterReusableView
-        footer.configure()
         return footer
     }
 
