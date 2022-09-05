@@ -17,16 +17,19 @@ class RatingDetailsViewTests: XCTestCase {
     // MARK: - life cycle
 
     override func setUpWithError() throws {
+        try super.setUpWithError()
         sut = RatingDetailsView()
     }
 
     override func tearDownWithError() throws {
         sut = nil
+        try super.tearDownWithError()
     }
 
     func testContentView_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let contentView = sut.contentView
+
         // Then
         XCTAssertNotNil(contentView)
     }
@@ -34,6 +37,7 @@ class RatingDetailsViewTests: XCTestCase {
     func testTotalReviewsNumberLabel_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let totalReviewsNumberLabel = sut.totalReviewsNumberLabel
+
         // Then
         XCTAssertNotNil(totalReviewsNumberLabel)
     }
@@ -41,6 +45,7 @@ class RatingDetailsViewTests: XCTestCase {
     func testRatingLabel_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let ratingLabel = sut.ratingLabel
+
         // Then
         XCTAssertNotNil(ratingLabel)
     }
@@ -48,6 +53,7 @@ class RatingDetailsViewTests: XCTestCase {
     func testFiveStarRatingView_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let fiveStarRating = sut.fiveStarRating
+
         // Then
         XCTAssertNotNil(fiveStarRating)
     }
@@ -55,6 +61,7 @@ class RatingDetailsViewTests: XCTestCase {
     func testFourStarRatingView_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let fourStarRating = sut.fourStarRating
+
         // Then
         XCTAssertNotNil(fourStarRating)
     }
@@ -62,6 +69,7 @@ class RatingDetailsViewTests: XCTestCase {
     func testThreeStarRatingView_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let threeStarRating = sut.threeStarRating
+
         // Then
         XCTAssertNotNil(threeStarRating)
     }
@@ -69,6 +77,7 @@ class RatingDetailsViewTests: XCTestCase {
     func testTwoStarRatingView_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let twoStarRating = sut.twoStarRating
+
         // Then
         XCTAssertNotNil(twoStarRating)
     }
@@ -76,6 +85,7 @@ class RatingDetailsViewTests: XCTestCase {
     func testOneStarRatingView_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let oneStarRating = sut.oneStarRating
+
         // Then
         XCTAssertNotNil(oneStarRating)
     }
@@ -89,6 +99,7 @@ class RatingDetailsViewTests: XCTestCase {
                                                    twoStarNumber: 3,
                                                    oneStarNumber: 1,
                                                    totalReviewsNumber: 15)
+
         // Then
         XCTAssertTrue(sut.ratingLabel.text == "3.4")
         XCTAssertTrue(sut.totalReviewsNumberLabel.text == "15 Reviews")

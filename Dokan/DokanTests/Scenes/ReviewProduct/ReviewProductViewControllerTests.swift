@@ -6,6 +6,8 @@
 //
 
 @testable import Dokan
+import Domain
+import Network
 import XCTest
 
 class ReviewProductViewControllerTests: XCTestCase {
@@ -13,24 +15,29 @@ class ReviewProductViewControllerTests: XCTestCase {
 
     var sut: ReviewProductViewController!
     var viewModel: ReviewProductViewModel!
+    var mockViewModel: MockReviewProductViewModel!
 
     // MARK: - life cycle
 
     override func setUpWithError() throws {
+        try super.setUpWithError()
         viewModel = ReviewProductViewModel()
+        mockViewModel = MockReviewProductViewModel(shouldReturnError: false)
         sut = ReviewProductViewController(viewModel: viewModel)
-        viewModel.loadReviews()
         sut.loadViewIfNeeded()
     }
 
     override func tearDownWithError() throws {
         sut = nil
         viewModel = nil
+        mockViewModel = nil
+        try super.tearDownWithError()
     }
 
     func testReviewProductTableView_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let reviewProductTableView = sut.reviewProductTableView
+
         // Then
         XCTAssertNotNil(reviewProductTableView)
     }
@@ -38,6 +45,7 @@ class ReviewProductViewControllerTests: XCTestCase {
     func testRatingDetailsView_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let ratingDetailsView = sut.ratingDetailsView
+
         // Then
         XCTAssertNotNil(ratingDetailsView)
     }
@@ -45,6 +53,7 @@ class ReviewProductViewControllerTests: XCTestCase {
     func testMainStackView_WhenViewIsLoaded_OutletIsLinked() {
         // Given
         let mainStackView = sut.mainStackView
+
         // Then
         XCTAssertNotNil(mainStackView)
     }
@@ -52,9 +61,11 @@ class ReviewProductViewControllerTests: XCTestCase {
     func testFirstRow_WhenLoadData_IsVisible() {
         // Given
         let tableView = sut.reviewProductTableView
+
         // When
-        viewModel.loadReviews()
+        mockViewModel.loadReviews()
         tableView?.reloadData()
+
         // Then
         let indexPath0 = IndexPath(item: 0, section: 0)
         let cell0 = tableView!.cellForRow(at: indexPath0)
@@ -67,8 +78,10 @@ class ReviewProductViewControllerTests: XCTestCase {
     func testMainStackView_WhenStateIsLoading_IsVisible() {
         // Given
         let state = viewModel.state
+
         // When
         XCTAssertTrue(state == State.loading)
+
         // Then
         XCTAssertFalse(sut.mainStackView.isHidden)
     }
@@ -76,8 +89,10 @@ class ReviewProductViewControllerTests: XCTestCase {
     func testMainStackView_WhenStateIsLoading_IsSkeletonActive() {
         // Given
         let state = viewModel.state
+
         // When
         XCTAssertTrue(state == State.loading)
+
         // Then
         XCTAssertTrue(sut.mainStackView.sk.isSkeletonActive)
     }
@@ -86,12 +101,13 @@ class ReviewProductViewControllerTests: XCTestCase {
 
         let expecttionObj = expectation(description: "Wait for response")
         // When
-        viewModel.loadReviews()
+        mockViewModel.loadReviews()
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             expecttionObj.fulfill()
         }
         waitForExpectations(timeout: 10)
         let state = viewModel.state
+
         // Then
         XCTAssertTrue(state == State.loaded)
         XCTAssertFalse(sut.mainStackView.isHidden)
@@ -99,13 +115,15 @@ class ReviewProductViewControllerTests: XCTestCase {
 
     func testMainStackView_WhenStateIsLoaded_IsSkeletonInActive() {
         let expecttionObj = expectation(description: "Wait for response")
+
         // When
-        viewModel.loadReviews()
+        mockViewModel.loadReviews()
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             expecttionObj.fulfill()
         }
         waitForExpectations(timeout: 10)
         let state = viewModel.state
+
         // Then
         XCTAssertTrue(state == State.loaded)
         XCTAssertFalse(sut.mainStackView.sk.isSkeletonActive)

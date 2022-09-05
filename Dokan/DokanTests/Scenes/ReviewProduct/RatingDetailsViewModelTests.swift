@@ -16,6 +16,7 @@ class RatingDetailsViewModelTests: XCTestCase {
     // MARK: - life cycle
 
     override func setUpWithError() throws {
+        try super.setUpWithError()
         sut = RatingDetailsViewModel(rating: 4.3,
                                      fiveStarNumber: 6,
                                      fourStarNumber: 3,
@@ -27,11 +28,13 @@ class RatingDetailsViewModelTests: XCTestCase {
 
     override func tearDownWithError() throws {
         sut = nil
+        try super.tearDownWithError()
     }
 
     func testRating_WhenCallConfigureRatingLabelFunction_ReturnString() {
         // When
         let rating = sut.configureRatingLabel()
+
         // Then
         XCTAssertTrue(rating == "4.3")
     }
@@ -39,6 +42,7 @@ class RatingDetailsViewModelTests: XCTestCase {
     func testTotalReviewsNumber_WhenCallConfigureTotalReviewsNumberLabelFunction_ReturnString() {
         // When
         let totalReviewsNumber = sut.configureTotalReviewsNumberLabel()
+
         // Then
         XCTAssertTrue(totalReviewsNumber == "20 Reviews")
     }
@@ -47,6 +51,7 @@ class RatingDetailsViewModelTests: XCTestCase {
         // When
         let actualFiveStarProgressBar = sut.configureFiveStarProgressBar()
         let expectedFiveStarProgressBar = RatingProgressDetailsViewModel(rating: 6, starNumber: 5, totalRatingNumber: 20)
+
         // Then
         XCTAssertEqual(actualFiveStarProgressBar, expectedFiveStarProgressBar)
     }
@@ -55,6 +60,7 @@ class RatingDetailsViewModelTests: XCTestCase {
         // When
         let actualFourStarProgressBar = sut.configureFourStarProgressBar()
         let expectedFourStarProgressBar = RatingProgressDetailsViewModel(rating: 3, starNumber: 4, totalRatingNumber: 20)
+
         // Then
         XCTAssertEqual(actualFourStarProgressBar, expectedFourStarProgressBar)
     }
@@ -63,6 +69,7 @@ class RatingDetailsViewModelTests: XCTestCase {
         // When
         let actualThreeStarProgressBar = sut.configureThreeStarProgressBar()
         let expectedThreeStarProgressBar = RatingProgressDetailsViewModel(rating: 5, starNumber: 3, totalRatingNumber: 20)
+
         // Then
         XCTAssertEqual(actualThreeStarProgressBar, expectedThreeStarProgressBar)
     }
@@ -71,6 +78,7 @@ class RatingDetailsViewModelTests: XCTestCase {
         // When
         let actualTwoStarProgressBar = sut.configureTwoStarProgressBar()
         let expectedTwoStarProgressBar = RatingProgressDetailsViewModel(rating: 4, starNumber: 2, totalRatingNumber: 20)
+
         // Then
         XCTAssertEqual(actualTwoStarProgressBar, expectedTwoStarProgressBar)
     }
@@ -79,6 +87,7 @@ class RatingDetailsViewModelTests: XCTestCase {
         // When
         let actualOneStarProgressBar = sut.configureOneStarProgressBar()
         let expectedOneStarProgressBar = RatingProgressDetailsViewModel(rating: 2, starNumber: 1, totalRatingNumber: 20)
+
         // Then
         XCTAssertEqual(actualOneStarProgressBar, expectedOneStarProgressBar)
     }
