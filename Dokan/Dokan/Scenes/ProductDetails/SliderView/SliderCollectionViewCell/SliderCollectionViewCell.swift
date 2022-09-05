@@ -18,7 +18,7 @@ class SliderCollectionViewCell: UICollectionViewCell, IdentifiableView {
     @IBOutlet private weak var productImageView: UIImageView!
     @IBOutlet private weak var noOfCurrentPictureLabel: UILabel!
     @IBOutlet private weak var noOfPicturesLabel: UILabel!
-    var sliderViewModel: sliderViewModel? {
+    var sliderViewModel: SliderViewModel? {
         didSet {
 //            noOfPicturesLabel.text = "1"
 //            productImageView.setImage(with: sliderViewModel!.productImage)
@@ -35,6 +35,6 @@ class SliderCollectionViewCell: UICollectionViewCell, IdentifiableView {
     // MARK: - Configurations
 }
 
-struct sliderViewModel {
+public struct SliderViewModel {
     var productImage: String
 }

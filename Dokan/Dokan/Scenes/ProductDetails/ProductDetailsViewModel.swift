@@ -38,7 +38,7 @@ class ProductDetailsViewModel {
         }
     }
 
-    private var imageViewModel: [sliderViewModel] = [] {
+    private var imageViewModel: [SliderViewModel] = [] {
         didSet {
             reloadImageViewClosure?()
         }
@@ -99,23 +99,23 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
         return titleQuantityViewModel
     }
 
-    func getImageview(indexPath: IndexPath) -> sliderViewModel {
+    func getImageview(indexPath: IndexPath) -> SliderViewModel {
         return imageViewModel[indexPath.row]
     }
 
-    func createProductTitleQuantityView(product: Product) -> TQViewModel {
+    private func createProductTitleQuantityView(product: Product) -> TQViewModel {
 
         return TQViewModel(title: product.title, currency: "$", price: product.price, reviewAverage: 4.8, reviewCount: 23, stockCount: 8)
     }
 
-    func createProductImage(product: Product) -> sliderViewModel {
+    private func createProductImage(product: Product) -> SliderViewModel {
 
-        return sliderViewModel(productImage: product.thumbnailUrl)
+        return SliderViewModel(productImage: product.thumbnailUrl)
     }
 
     func processFetchProduct(product: Product) {
         self.product = product
-        var imgs = [sliderViewModel]()
+        var imgs = [SliderViewModel]()
         titleQuantityViewModel = createProductTitleQuantityView(product: product)
         imgs.append(createProductImage(product: product))
         imageViewModel = imgs
@@ -137,7 +137,7 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
         }
     }
 
-    func createFeaturedProductModel(product: Product) -> FeaturedProduct {
+    private func createFeaturedProductModel(product: Product) -> FeaturedProduct {
         return FeaturedProduct(image: product.thumbnailUrl, title: product.title, price: product.price)
     }
 

@@ -24,14 +24,14 @@ protocol ProductDetailsViewModelOutput {
 
     func fetchProduct()
     func getproductViewModel() -> TQViewModel?
-    func getImageview(indexPath: IndexPath) -> sliderViewModel
+    func getImageview(indexPath: IndexPath) -> SliderViewModel
     func processFetchProduct(product: Product)
-    func createProductTitleQuantityView(product: Product) -> TQViewModel
-    func createProductImage(product: Product) -> sliderViewModel
 
     // Fetch featured products function
 
     func fetchFeaturedProducts()
+    func processFetchProducts(products: [Product])
+    func getFeaturedProduct(indexPath: IndexPath) -> FeaturedProduct
 }
 
 public enum ProductDetailsState {

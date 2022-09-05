@@ -38,6 +38,7 @@ class FeaturedProductCollectionViewCell: UICollectionViewCell {
     // MARK: - private handler
 
     private func makeStyleForCell() {
+        styleView.layer.masksToBounds = true
         styleView.layer.cornerRadius = 5
         styleView.layer.shadowColor = UIColor.gray.withAlphaComponent(0.3).cgColor
         styleView.layer.shadowOffset = CGSize(width: 0, height: 4)

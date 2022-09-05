@@ -46,6 +46,7 @@ private extension FeaturedProductView {
         contentView.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
         collectionViewSetup()
         bindSeeAllButton()
+        updateViewState()
         bindViewModelToView()
     }
 
@@ -67,9 +68,8 @@ private extension FeaturedProductView {
         featuredProductCollectionView.collectionViewLayout = layout
         featuredProductCollectionView.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
     }
-
-    func bindViewModelToView() {
-
+    
+    func updateViewState() {
         productsViewModel.onFeaturedProductsStateUpdate = { [weak self] () in
             guard let self = self else { return }
 
@@ -85,6 +85,9 @@ private extension FeaturedProductView {
                 }
             }
         }
+    }
+
+    func bindViewModelToView() {
 
         productsViewModel.reloadCollectionViewClosure = { [weak self] () in
             DispatchQueue.main.async { [weak self] in
