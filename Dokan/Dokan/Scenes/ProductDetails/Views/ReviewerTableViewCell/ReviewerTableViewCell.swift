@@ -18,7 +18,6 @@ class ReviewerTableViewCell: UITableViewCell, IdentifiableView {
     @IBOutlet weak var reviewerComment: UILabel!
     @IBOutlet weak var ratingStarsView: StarsView!
 
-
     // MARK: - life cycle..
 
     override func awakeFromNib() {
