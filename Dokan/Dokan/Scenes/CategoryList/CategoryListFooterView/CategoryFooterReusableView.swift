@@ -9,7 +9,7 @@ import UIDokan
 import UIKit
 
 class CategoryFooterReusableView: UICollectionReusableView, IdentifiableView {
-    
+
     private let button: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
