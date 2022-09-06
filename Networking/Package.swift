@@ -27,6 +27,9 @@ let package = Package(
             name: "Networking",
             dependencies: [
                 "Alamofire",
+            ],
+            resources: [
+                .process("Mocks/ReviewsMock.json")
             ]
         ),
         .testTarget(
