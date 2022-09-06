@@ -11,13 +11,17 @@ import UIKit
 class ProductDetailsViewController: UIViewController {
 
     // MARK: Outlets
-
+    
+    @IBOutlet private weak var buttonsView: ButtonsView!
     @IBOutlet private weak var InfoSellerView: InfoSellerView!
     @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
 
     // MARK: Properties
-
+    
     private let viewModel: ProductDetailsViewModelType
+    private var addedToCart = false
+    private var addedToFavorite = false
+    
     private var navigationBarBehavior: ProductDetailsNavigationBarBehavior?
 
     // MARK: Init
@@ -31,7 +35,7 @@ class ProductDetailsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -39,6 +43,7 @@ class ProductDetailsViewController: UIViewController {
         InfoSellerView.delegate = self
         configureDescriptionTextView()
         configureNavBar()
+        configureButtonsView()
     }
 }
 
@@ -47,9 +52,14 @@ class ProductDetailsViewController: UIViewController {
 extension ProductDetailsViewController {}
 
 // MARK: - Configurations
-
+//
 private extension ProductDetailsViewController {
-
+    
+    func configureButtonsView() {
+        buttonsView.addToCartButton.addTarget(self, action: #selector(addToCartButtonTapped), for: .touchUpInside)
+        buttonsView.addToFavoriteButton.addTarget(self, action: #selector(addToFavoriteButtonTapped), for: .touchUpInside)
+    }
+    
     func configureDescriptionTextView() {
         descriptionTextView.shouldTrim = true
         descriptionTextView.maximumNumberOfLines = 3
@@ -69,9 +79,21 @@ private extension ProductDetailsViewController {
 }
 
 // MARK: - Actions
-
 //
-private extension ProductDetailsViewController {}
+private extension ProductDetailsViewController {
+    @objc func addToCartButtonTapped() {
+        buttonsView.addToCartButton.buttonTapped {
+            #warning("Implement tapping the add to cart button")
+        }
+    }
+    
+    @objc func addToFavoriteButtonTapped() {
+        
+        buttonsView.addToFavoriteButton.buttonTapped {
+            #warning("Implement tapping the add to favorite button")
+        }
+    }
+}
 
 // MARK: - InfoSellerViewDelegate Protocol
 
