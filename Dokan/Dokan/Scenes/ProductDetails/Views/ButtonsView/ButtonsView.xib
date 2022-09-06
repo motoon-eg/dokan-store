@@ -25,17 +25,13 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="396-Wp-c7V" customClass="LoadingButton" customModule="Dokan" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="153" height="48"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Add to favorite">
-                                <color key="baseBackgroundColor" red="0.9137254901960784" green="0.29960992930000002" blue="0.2391737401" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </buttonConfiguration>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Add to favorite"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOy-DG-YeJ" customClass="LoadingButton" customModule="Dokan" customModuleProvider="target">
                             <rect key="frame" x="173" y="0.0" width="153" height="48"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Add to cart">
-                                <color key="baseBackgroundColor" red="0.26178964970000002" green="0.40757322309999999" blue="0.76081919669999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </buttonConfiguration>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Add to cart"/>
                         </button>
                     </subviews>
                     <constraints>
