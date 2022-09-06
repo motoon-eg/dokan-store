@@ -60,7 +60,7 @@ extension CategoryListViewController {
 
     private func setupCollectionview() {
         categoriesCollectionview.register(CategoryCollectionViewCell.self)
-        categoriesCollectionview.register(CategoryFooterReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.identifier)
+        categoriesCollectionview.register(CategoryFooterReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.reuseIdentifier)
         categoriesCollectionview.delegate = self
         categoriesCollectionview.dataSource = self
     }
@@ -85,11 +85,11 @@ extension CategoryListViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: (collectionView.bounds.width / 2) - 20, height: 280)
+        return CGSize(width: (collectionView.bounds.width / 2) - 20, height: Metrics.height)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.identifier, for: indexPath) as! CategoryFooterReusableView
+        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CategoryFooterReusableView.reuseIdentifier, for: indexPath) as! CategoryFooterReusableView
         return footer
     }
 
@@ -105,5 +105,11 @@ extension CategoryListViewController: UICollectionViewDelegateFlowLayout {
 extension CategoryListViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         #warning("update search results")
+    }
+}
+
+private extension CategoryListViewController {
+    enum Metrics {
+        static let height: CGFloat = 280
     }
 }

@@ -5,11 +5,11 @@
 //  Created by Ahmed Nagy on 26/08/2022.
 //
 
+import UIDokan
 import UIKit
 
-class CategoryFooterReusableView: UICollectionReusableView {
-
-    static let identifier = "CategoryFooterReusableView"
+class CategoryFooterReusableView: UICollectionReusableView, IdentifiableView {
+    
     private let button: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -21,16 +21,17 @@ class CategoryFooterReusableView: UICollectionReusableView {
         button.setTitle("Filter & Sorting", for: .normal)
         return button
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private func configure() {
         addSubview(button)
     }
