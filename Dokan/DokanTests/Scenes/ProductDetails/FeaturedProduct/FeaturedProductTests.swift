@@ -62,33 +62,33 @@ class FeaturedProductTests: XCTestCase {
         XCTAssertEqual(targets?.count, 1)
     }
 
-    func testViewCollectionViewCell() {
-
-        // Given
-        guard let view = sut else {
-            return XCTFail("Could not instantiate ViewController")
-        }
-
-        sut.featuredProducts = ["A", "B"] // mock [objs] from data model
-
-        let expectedCell = Bundle(for: FeaturedProductCollectionViewCell.self)
-            .loadNibNamed("FeaturedProductCollectionViewCell", owner: nil)?
-            .first as! FeaturedProductCollectionViewCell
-
-        let actualCollectionViewCell = view.featuredProductCollectionView?.dataSource?.collectionView(
-            view.featuredProductCollectionView,
-            cellForItemAt: IndexPath(row: 0, section: 0)
-        )
-
-        guard let actualCell = actualCollectionViewCell as? FeaturedProductCollectionViewCell else {
-            XCTFail("Expected \(FeaturedProductCollectionViewCell.self), but was \(String(describing: actualCollectionViewCell))")
-            return
-        }
-
-        // When
-        expectedCell.productName.text = sut.featuredProducts.first as? String
-
-        // Then
-        XCTAssertEqual(actualCell.productName.text, sut.featuredProducts.first as? String)
-    }
+//    func testViewCollectionViewCell() {
+//
+//        // Given
+//        guard let view = sut else {
+//            return XCTFail("Could not instantiate ViewController")
+//        }
+//
+//        sut.featuredProducts = ["A", "B"] // mock [objs] from data model
+//
+//        let expectedCell = Bundle(for: FeaturedProductCollectionViewCell.self)
+//            .loadNibNamed("FeaturedProductCollectionViewCell", owner: nil)?
+//            .first as! FeaturedProductCollectionViewCell
+//
+//        let actualCollectionViewCell = view.featuredProductCollectionView?.dataSource?.collectionView(
+//            view.featuredProductCollectionView,
+//            cellForItemAt: IndexPath(row: 0, section: 0)
+//        )
+//
+//        guard let actualCell = actualCollectionViewCell as? FeaturedProductCollectionViewCell else {
+//            XCTFail("Expected \(FeaturedProductCollectionViewCell.self), but was \(String(describing: actualCollectionViewCell))")
+//            return
+//        }
+//
+//        // When
+//        expectedCell.productName.text = sut.featuredProducts.first as? String
+//
+//        // Then
+//        XCTAssertEqual(actualCell.productName.text, sut.featuredProducts.first as? String)
+//    }
 }
