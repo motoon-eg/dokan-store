@@ -125,7 +125,7 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
     func fetchFeaturedProducts() {
         featuredProductsState = .loading
-        
+
         repository.loadProducts(at: 1) { result in
             switch result {
 
@@ -157,11 +157,10 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
     func getFeaturedProduct(indexPath: IndexPath) -> FeaturedProduct {
         return featuredProducts[indexPath.row]
     }
-    
-    
+
     func reloadData() {
-        self.fetchProduct()
-        self.fetchFeaturedProducts()
+        fetchProduct()
+        fetchFeaturedProducts()
     }
 }
 

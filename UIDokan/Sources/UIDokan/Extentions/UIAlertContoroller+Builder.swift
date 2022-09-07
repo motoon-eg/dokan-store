@@ -29,7 +29,7 @@ public extension UIAlertController {
     }
 
     /// Builder Pattern to show
-     class Builder {
+    class Builder {
         public init() {}
         var preferredStyle: UIAlertController.Style = .alert
         var title: String?

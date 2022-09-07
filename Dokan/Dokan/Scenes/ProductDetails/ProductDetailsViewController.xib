@@ -20,11 +20,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="1501"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1991"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wou-MM-10Z">
-                    <rect key="frame" x="0.0" y="944" width="414" height="493"/>
+                    <rect key="frame" x="0.0" y="1294" width="414" height="493"/>
                     <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -33,10 +33,10 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHs-9r-A9B">
-                    <rect key="frame" x="20" y="64" width="374" height="1383"/>
+                    <rect key="frame" x="20" y="64" width="374" height="1873"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-gD-2z3">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="1373"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="1723"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-ec-rsE" userLabel="SliderView" customClass="SliderView" customModule="Dokan" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
@@ -93,29 +93,29 @@
                                         <constraint firstAttribute="bottom" secondItem="owe-WV-VX7" secondAttribute="bottom" id="sMZ-NX-4tW"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-ct-O8i" userLabel="ReviewsView">
-                                    <rect key="frame" x="0.0" y="610" width="374" height="250"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-ct-O8i" userLabel="ReviewsView" customClass="ReviewsSectionView" customModule="Dokan" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="610" width="374" height="600"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" priority="250" constant="250" id="cPa-9n-Hm8"/>
+                                        <constraint firstAttribute="height" priority="250" constant="515" id="cPa-9n-Hm8"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auT-ob-9ds" userLabel="FeaturedView" customClass="FeaturedProductView" customModule="Dokan" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="880" width="374" height="320"/>
+                                    <rect key="frame" x="0.0" y="1230" width="374" height="320"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="320" id="hcM-eU-p4e"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzg-3K-yhd">
-                                    <rect key="frame" x="0.0" y="1220" width="374" height="5"/>
+                                    <rect key="frame" x="0.0" y="1570" width="374" height="5"/>
                                     <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="jjt-6P-U1f"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="sqs-7W-PR8" userLabel="ButtonsView" customClass="ButtonsView" customModule="Dokan" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="1245" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="1595" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="48" id="wMX-Bb-fpF"/>
@@ -146,7 +146,7 @@
                 <constraint firstAttribute="bottomMargin" secondItem="zHs-9r-A9B" secondAttribute="bottom" constant="20" id="wGY-iq-Wqb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="91.304347826086968" y="219.30803571428569"/>
+            <point key="canvasLocation" x="91.304347826086968" y="383.37053571428572"/>
         </view>
     </objects>
     <resources>

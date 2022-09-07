@@ -18,7 +18,7 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet private weak var InfoSellerView: InfoSellerView!
     @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
     @IBOutlet weak var featuredView: FeaturedProductView!
-    
+
     // MARK: Properties
 
     private let viewModel: ProductDetailsViewModelType
@@ -58,7 +58,7 @@ extension ProductDetailsViewController {}
 
 //
 private extension ProductDetailsViewController {
-    
+
     func configureDelegates() {
         InfoSellerView.delegate = self
         titleQuantityView.delagate = self
@@ -114,20 +114,18 @@ extension ProductDetailsViewController: InfoSellerViewDelegate {
     }
 }
 
-
 // MARK: - ShowAlertDelegate Protocol
 
 extension ProductDetailsViewController: ShowAlertDelegate {
     func showError(error: Error) {
         UIAlertController.Builder()
-        .title(ProductDetailsConstants.errorTitle)
-        .message(error.localizedDescription)
-        .addCancelActionWithTitle(ProductDetailsConstants.errorAlertBackButton)
-        .addActionWithTitle(ProductDetailsConstants.errorAlertTryAgainButton, style: .default) { [weak self] _ in
-            guard let self = self else {return}
-            self.viewModel.reloadData()
-        }
-        .show(in: self)
+            .title(ProductDetailsConstants.errorTitle)
+            .message(error.localizedDescription)
+            .addCancelActionWithTitle(ProductDetailsConstants.errorAlertBackButton)
+            .addActionWithTitle(ProductDetailsConstants.errorAlertTryAgainButton, style: .default) { [weak self] _ in
+                guard let self = self else { return }
+                self.viewModel.reloadData()
+            }
+            .show(in: self)
     }
-    
 }

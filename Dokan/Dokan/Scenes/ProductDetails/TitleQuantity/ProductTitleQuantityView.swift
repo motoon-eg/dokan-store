@@ -64,7 +64,7 @@ class ProductTitleQuantityView: UIView {
             }
         }
     }
-    
+
     private func initModelView() {
         let pTViewModel = productViewModel.getproductViewModel() ?? ProductDetailsViewModel.dummyData
         configureView(viewModel: pTViewModel)

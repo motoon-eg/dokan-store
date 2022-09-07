@@ -78,7 +78,7 @@ private extension FeaturedProductView {
 
             case .loading, .empty:
                 self.startSkeletonView()
-            case .error(let error):
+            case let .error(error):
                 self.delegate?.showError(error: error)
                 self.stopSkeletonView()
             case .populated:

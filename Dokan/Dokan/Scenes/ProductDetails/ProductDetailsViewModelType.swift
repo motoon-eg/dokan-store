@@ -32,9 +32,9 @@ protocol ProductDetailsViewModelOutput {
     func fetchFeaturedProducts()
     func processFetchProducts(products: [Product])
     func getFeaturedProduct(indexPath: IndexPath) -> FeaturedProduct
-    
+
     // reload data
-    
+
     func reloadData()
 }
 
