@@ -500,6 +500,8 @@
 				E2F353F428B8E45E00E47566 /* CategoryFooterReusableView.swift */,
 			);
 			path = CategoryListFooterView;
+			sourceTree = "<group>";
+		};
 		E2DADBAA288A53D9005E483A /* ButtonsView */ = {
 			isa = PBXGroup;
 			children = (
