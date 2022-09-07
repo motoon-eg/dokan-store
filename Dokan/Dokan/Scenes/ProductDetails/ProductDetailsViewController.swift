@@ -94,7 +94,7 @@ private extension ProductDetailsViewController {
 private extension ProductDetailsViewController {
     @objc func addToCartButtonTapped() {
         buttonsView.addToCartButton.buttonTapped {
-            #warning("Implement tapping the add to cart button")
+            navigationBarBehavior?.updateCartButton()
         }
     }
 
