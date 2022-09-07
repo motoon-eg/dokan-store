@@ -80,7 +80,7 @@ extension UIView {
                            attribute: .leading,
                            multiplier: 1.0,
                            constant: 0).isActive = true
-        
+
         NSLayoutConstraint(item: self,
                            attribute: .trailing,
                            relatedBy: .equal,
@@ -88,7 +88,7 @@ extension UIView {
                            attribute: .trailing,
                            multiplier: 1.0,
                            constant: 0).isActive = true
-        
+
         NSLayoutConstraint(item: self,
                            attribute: .top,
                            relatedBy: .equal,
@@ -96,7 +96,7 @@ extension UIView {
                            attribute: .top,
                            multiplier: 1.0,
                            constant: 0).isActive = true
-        
+
         NSLayoutConstraint(item: self,
                            attribute: .bottom,
                            relatedBy: .equal,

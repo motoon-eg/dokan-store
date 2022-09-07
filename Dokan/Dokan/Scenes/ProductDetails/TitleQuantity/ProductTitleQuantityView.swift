@@ -23,6 +23,7 @@ class ProductTitleQuantityView: UIView {
     // MARK: Properities
 
     private var productViewModel = ProductDetailsViewModel()
+    weak var delagate: ShowAlertDelegate?
 
     // MARK: Init
 
@@ -43,39 +44,39 @@ class ProductTitleQuantityView: UIView {
         titleContentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 
         stylingProductDetails()
-        initViewModel()
+        updateState()
+        bindToView()
     }
 
-    func initView() {
-        let model: TQViewModel = productViewModel.getproductViewModel() ?? ProductDetailsViewModel.dummyData
-        configureView(viewModel: model)
-        changeStockBackGroundColor(stockCount: model.stockCount)
-    }
-
-    func initViewModel() {
-
+    func updateState() {
         productViewModel.onStateUpdate = { [weak self] () in
             guard let self = self else { return }
 
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
+            switch self.productViewModel.productDetailsState {
 
-                switch self.productViewModel.productDetailsState {
-
-                case .loading, .error, .empty:
-                    self.startSkeletonView()
-                case .populated:
-                    self.stopSkeletonView()
-                }
+            case .loading, .empty:
+                self.startSkeletonView()
+            case let .error(error):
+                self.delagate?.showError(error: error)
+                self.stopSkeletonView()
+            case .populated:
+                self.stopSkeletonView()
             }
         }
+    }
+    
+    private func initModelView() {
+        let pTViewModel = productViewModel.getproductViewModel() ?? ProductDetailsViewModel.dummyData
+        configureView(viewModel: pTViewModel)
+        changeStockBackGroundColor(stockCount: pTViewModel.stockCount)
+    }
 
+    func bindToView() {
         productViewModel.reloadViewClosure = { [weak self] () in
             DispatchQueue.main.async { [weak self] in
-                self?.initView()
+                self?.initModelView()
             }
         }
-
         productViewModel.fetchProduct()
     }
 

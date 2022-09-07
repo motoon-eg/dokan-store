@@ -29,7 +29,7 @@ let package = Package(
                 "Alamofire",
             ],
             resources: [
-                .process("Mocks/ReviewsMock.json")
+                .process("Mocks/ReviewsMock.json"),
             ]
         ),
         .testTarget(

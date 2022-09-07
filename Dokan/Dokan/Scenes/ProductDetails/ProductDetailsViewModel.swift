@@ -89,7 +89,7 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
                 self.processFetchProduct(product: product)
                 self.productDetailsState = .populated
             case let .failure(error):
-                self.productDetailsState = .error
+                self.productDetailsState = .error(error)
                 LogError(error.localizedDescription)
             }
         }
@@ -124,6 +124,8 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
     /// Fetch featured products function
 
     func fetchFeaturedProducts() {
+        featuredProductsState = .loading
+        
         repository.loadProducts(at: 1) { result in
             switch result {
 
@@ -132,7 +134,7 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
                 self.featuredProductsState = .populated
             case let .failure(error):
                 LogError(error.localizedDescription)
-                self.featuredProductsState = .error
+                self.featuredProductsState = .error(error)
             }
         }
     }
@@ -154,6 +156,12 @@ extension ProductDetailsViewModel: ProductDetailsViewModelOutput {
 
     func getFeaturedProduct(indexPath: IndexPath) -> FeaturedProduct {
         return featuredProducts[indexPath.row]
+    }
+    
+    
+    func reloadData() {
+        self.fetchProduct()
+        self.fetchFeaturedProducts()
     }
 }
 

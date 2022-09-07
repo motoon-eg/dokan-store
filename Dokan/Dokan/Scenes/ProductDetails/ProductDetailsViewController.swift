@@ -13,10 +13,12 @@ class ProductDetailsViewController: UIViewController {
 
     // MARK: Outlets
 
+    @IBOutlet weak var titleQuantityView: ProductTitleQuantityView!
     @IBOutlet private weak var buttonsView: ButtonsView!
     @IBOutlet private weak var InfoSellerView: InfoSellerView!
     @IBOutlet private weak var descriptionTextView: ReadMoreTextView!
-
+    @IBOutlet weak var featuredView: FeaturedProductView!
+    
     // MARK: Properties
 
     private let viewModel: ProductDetailsViewModelType
@@ -41,7 +43,7 @@ class ProductDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        InfoSellerView.delegate = self
+        configureDelegates()
         configureDescriptionTextView()
         configureNavBar()
         configureButtonsView()
@@ -56,6 +58,12 @@ extension ProductDetailsViewController {}
 
 //
 private extension ProductDetailsViewController {
+    
+    func configureDelegates() {
+        InfoSellerView.delegate = self
+        titleQuantityView.delagate = self
+        featuredView.delegate = self
+    }
 
     func configureButtonsView() {
         buttonsView.addToCartButton.addTarget(self, action: #selector(addToCartButtonTapped), for: .touchUpInside)
@@ -104,4 +112,22 @@ extension ProductDetailsViewController: InfoSellerViewDelegate {
     func didInfoSellerViewTapped() {
         print("Info seller view is tapped")
     }
+}
+
+
+// MARK: - ShowAlertDelegate Protocol
+
+extension ProductDetailsViewController: ShowAlertDelegate {
+    func showError(error: Error) {
+        UIAlertController.Builder()
+        .title(ProductDetailsConstants.errorTitle)
+        .message(error.localizedDescription)
+        .addCancelActionWithTitle(ProductDetailsConstants.errorAlertBackButton)
+        .addActionWithTitle(ProductDetailsConstants.errorAlertTryAgainButton, style: .default) { [weak self] _ in
+            guard let self = self else {return}
+            self.viewModel.reloadData()
+        }
+        .show(in: self)
+    }
+    
 }

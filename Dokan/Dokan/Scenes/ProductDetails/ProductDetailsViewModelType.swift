@@ -32,11 +32,25 @@ protocol ProductDetailsViewModelOutput {
     func fetchFeaturedProducts()
     func processFetchProducts(products: [Product])
     func getFeaturedProduct(indexPath: IndexPath) -> FeaturedProduct
+    
+    // reload data
+    
+    func reloadData()
 }
 
-public enum ProductDetailsState {
+protocol ShowAlertDelegate: AnyObject {
+    func showError(error: Error)
+}
+
+enum ProductDetailsState {
     case loading
-    case error
+    case error(Error)
     case empty
     case populated
+}
+
+enum ProductDetailsConstants {
+    static let errorTitle = "Ops!"
+    static let errorAlertBackButton = "Back"
+    static let errorAlertTryAgainButton = "Try again"
 }

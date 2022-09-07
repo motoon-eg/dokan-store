@@ -13,6 +13,8 @@
                 <outlet property="InfoSellerView" destination="Wcb-vx-s8d" id="fTl-ay-tlx"/>
                 <outlet property="buttonsView" destination="sqs-7W-PR8" id="AE4-9h-feB"/>
                 <outlet property="descriptionTextView" destination="owe-WV-VX7" id="UDC-4d-5av"/>
+                <outlet property="featuredView" destination="auT-ob-9ds" id="MdT-Yl-DXG"/>
+                <outlet property="titleQuantityView" destination="U6P-mJ-zfW" id="ntG-BQ-4C1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

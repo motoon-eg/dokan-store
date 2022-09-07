@@ -20,6 +20,7 @@ class FeaturedProductView: UIView {
     // MARK: - Properties
 
     var productsViewModel = ProductDetailsViewModel()
+    weak var delegate: ShowAlertDelegate?
 
     // MARK: - initializer
 
@@ -43,7 +44,7 @@ private extension FeaturedProductView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        contentView.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
+        contentView.backgroundColor = Constants.backGroundColor
         collectionViewSetup()
         bindSeeAllButton()
         updateViewState()
@@ -66,23 +67,22 @@ private extension FeaturedProductView {
         layout.minimumLineSpacing = Constants.collectionViewLayoutLineSpacing
         layout.scrollDirection = .horizontal
         featuredProductCollectionView.collectionViewLayout = layout
-        featuredProductCollectionView.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
+        featuredProductCollectionView.backgroundColor = Constants.backGroundColor
     }
-    
+
     func updateViewState() {
         productsViewModel.onFeaturedProductsStateUpdate = { [weak self] () in
             guard let self = self else { return }
 
-            DispatchQueue.main.async { [weak self] () in
-                guard let self = self else { return }
+            switch self.productsViewModel.featuredProductsState {
 
-                switch self.productsViewModel.featuredProductsState {
-
-                case .loading, .error, .empty:
-                    self.startSkeletonView()
-                case .populated:
-                    self.stopSkeletonView()
-                }
+            case .loading, .empty:
+                self.startSkeletonView()
+            case .error(let error):
+                self.delegate?.showError(error: error)
+                self.stopSkeletonView()
+            case .populated:
+                self.stopSkeletonView()
             }
         }
     }
@@ -144,6 +144,7 @@ extension FeaturedProductView {
         static let collectionViewLayoutSectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         static let collectionViewLayoutInteritemSpacing = 15.0
         static let collectionViewLayoutLineSpacing = 15.0
+        static let backGroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
     }
 }
 
