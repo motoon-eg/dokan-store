@@ -10,22 +10,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailsViewController" customModule="Dokan" customModuleProvider="target">
             <connections>
-                <outlet property="buttonsView" destination="sqs-7W-PR8" id="AE4-9h-feB"/>
                 <outlet property="InfoSellerView" destination="Wcb-vx-s8d" id="fTl-ay-tlx"/>
+                <outlet property="buttonsView" destination="sqs-7W-PR8" id="AE4-9h-feB"/>
                 <outlet property="descriptionTextView" destination="owe-WV-VX7" id="UDC-4d-5av"/>
+                <outlet property="featuredView" destination="auT-ob-9ds" id="MdT-Yl-DXG"/>
+                <outlet property="titleQuantityView" destination="U6P-mJ-zfW" id="ntG-BQ-4C1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="1501"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1991"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHs-9r-A9B">
-                    <rect key="frame" x="20" y="64" width="374" height="1383"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wou-MM-10Z">
+                    <rect key="frame" x="0.0" y="1294" width="414" height="493"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHs-9r-A9B">
+                    <rect key="frame" x="20" y="64" width="374" height="1873"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-gD-2z3">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="1034"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="1723"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-ec-rsE" userLabel="SliderView" customClass="SliderView" customModule="Dokan" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
@@ -34,7 +45,7 @@
                                         <constraint firstAttribute="height" priority="250" constant="128" id="vFA-wY-lIi"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-mJ-zfW" userLabel="TitleView">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-mJ-zfW" userLabel="TitleView" customClass="ProductTitleQuantityView" customModule="Dokan" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="148" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -68,7 +79,7 @@
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="owe-WV-VX7" customClass="ReadMoreTextView" customModule="UIDokan">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                            <color key="textColor" systemColor="labelColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -82,22 +93,29 @@
                                         <constraint firstAttribute="bottom" secondItem="owe-WV-VX7" secondAttribute="bottom" id="sMZ-NX-4tW"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-ct-O8i" userLabel="ReviewsView">
-                                    <rect key="frame" x="0.0" y="610" width="374" height="128"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-ct-O8i" userLabel="ReviewsView" customClass="ReviewsSectionView" customModule="Dokan" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="610" width="374" height="600"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" priority="250" constant="128" id="cPa-9n-Hm8"/>
+                                        <constraint firstAttribute="height" priority="250" constant="515" id="cPa-9n-Hm8"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auT-ob-9ds" userLabel="FeaturedView">
-                                    <rect key="frame" x="0.0" y="758" width="374" height="128"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auT-ob-9ds" userLabel="FeaturedView" customClass="FeaturedProductView" customModule="Dokan" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="1230" width="374" height="320"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" priority="250" constant="128" id="hcM-eU-p4e"/>
+                                        <constraint firstAttribute="height" priority="250" constant="320" id="hcM-eU-p4e"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzg-3K-yhd">
+                                    <rect key="frame" x="0.0" y="1570" width="374" height="5"/>
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5" id="jjt-6P-U1f"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="sqs-7W-PR8" userLabel="ButtonsView" customClass="ButtonsView" customModule="Dokan" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="930" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="1595" width="374" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" priority="250" constant="48" id="wMX-Bb-fpF"/>
@@ -119,17 +137,21 @@
             <constraints>
                 <constraint firstItem="zHs-9r-A9B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="20" id="4Ye-9g-gjY"/>
                 <constraint firstItem="zHs-9r-A9B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="BtZ-ud-JLK"/>
+                <constraint firstItem="wou-MM-10Z" firstAttribute="bottom" secondItem="sqs-7W-PR8" secondAttribute="bottom" id="CUl-aG-hiG"/>
+                <constraint firstItem="wou-MM-10Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SqR-jw-8fl"/>
+                <constraint firstAttribute="trailing" secondItem="wou-MM-10Z" secondAttribute="trailing" id="bp9-yV-Hd3"/>
                 <constraint firstItem="pOd-gD-2z3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="1" id="ixN-vX-Rsw"/>
                 <constraint firstAttribute="trailing" secondItem="zHs-9r-A9B" secondAttribute="trailing" constant="20" id="kNN-lQ-bdK"/>
+                <constraint firstItem="wou-MM-10Z" firstAttribute="top" secondItem="auT-ob-9ds" secondAttribute="top" id="oEc-uV-Yjw"/>
                 <constraint firstAttribute="bottomMargin" secondItem="zHs-9r-A9B" secondAttribute="bottom" constant="20" id="wGY-iq-Wqb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="91.304347826086968" y="219.30803571428569"/>
+            <point key="canvasLocation" x="91.304347826086968" y="383.37053571428572"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

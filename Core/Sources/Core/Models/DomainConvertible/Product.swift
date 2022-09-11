@@ -13,6 +13,7 @@ extension Networking.Product: DomainConvertible {
     func toDomain() -> Domain.Product {
         return Domain.Product(id: String(id),
                               title: title,
+                              price: String(price),
                               description: String(),
                               thumbnailUrl: image,
                               imagesListUrls: [])

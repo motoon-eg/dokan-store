@@ -25,7 +25,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ds3-nj-67T">
                     <rect key="frame" x="0.0" y="0.0" width="325" height="0.66666666666666663"/>
-                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.72750046079999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemGrayColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="0.5" id="xXI-cv-1wi"/>
                     </constraints>
@@ -35,6 +35,7 @@
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7it-TY-ddr">
                             <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                            <color key="backgroundColor" red="1" green="0.71953410110000005" blue="0.2066434469" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="45" id="7vu-ef-m6u"/>
@@ -90,7 +91,7 @@
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8FT-F8-IzE">
                     <rect key="frame" x="0.0" y="103.66666666666667" width="325" height="0.3333333333333286"/>
-                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.72217807389999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemGrayColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="0.5" id="Zbf-gW-Cmk"/>
                     </constraints>
@@ -118,6 +119,9 @@
         <image name="vector" width="7" height="12"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

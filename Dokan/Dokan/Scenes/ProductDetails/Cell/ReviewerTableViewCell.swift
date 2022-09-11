@@ -4,6 +4,7 @@
 //
 //  Created by raniazeid on 28/07/2022.
 //
+import UIDokan
 import UIKit
 
 class ReviewerTableViewCell: UITableViewCell {
@@ -12,6 +13,7 @@ class ReviewerTableViewCell: UITableViewCell {
     @IBOutlet private(set) weak var reviewerImageView: UIImageView!
     @IBOutlet private(set) weak var reviewerNameLabel: UILabel!
     @IBOutlet private(set) weak var reviewerComment: UITextView!
+    @IBOutlet var reviewerRatingStars: StarsView!
 
     // MARK: Lifecycle
 

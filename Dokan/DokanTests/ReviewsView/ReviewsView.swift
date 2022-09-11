@@ -5,12 +5,12 @@
 //  Created by Clara Mounir Adly on 19/08/2022.
 //
 
-import Foundation
+import UIDokan
 import UIKit
 
 // MARK: - ReviewsView
 
-final class ReviewsView: UIView {
+final class ReviewsView: UIViewFromNib {
 
     // MARK: Outlets
 
@@ -19,18 +19,13 @@ final class ReviewsView: UIView {
     @IBOutlet private(set) weak var ratingLabel: UILabel!
     @IBOutlet private(set) weak var tableView: UITableView!
     @IBOutlet private(set) weak var seeAllReviewsButton: UIButton!
-    @IBOutlet private(set) weak var reviewImageView: UIImageView!
+//    @IBOutlet private(set) weak var reviewImageView: UIImageView!
 
     // MARK: Properties
 
     private var viewModel: ReviewsUiModel?
 
     // MARK: Lifecycle
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -39,10 +34,13 @@ final class ReviewsView: UIView {
 
     private func commonInit() {
         Bundle.main.loadNibNamed("ReviewsView", owner: self, options: nil)
-        contentView.fixInView(self)
+        addSubview(contentView)
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        contentView.fixInView(self)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(ReviewerTableViewCell.self, forCellReuseIdentifier: "\(ReviewerTableViewCell.self)")
+        tableView.register(ReviewerTableViewCell.self, forCellReuseIdentifier: "ReviewerTableViewCell")
     }
 }
 
@@ -55,7 +53,7 @@ extension ReviewsView: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(ReviewerTableViewCell.self)") as? ReviewerTableViewCell,
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewerTableViewCell") as? ReviewerTableViewCell,
               let viewModel = viewModel else {
             return UITableViewCell()
         }
@@ -74,9 +72,35 @@ extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         frame = container.frame
         container.addSubview(self)
-        NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: container, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self,
+                           attribute: .leading,
+                           relatedBy: .equal, toItem: container,
+                           attribute: .leading,
+                           multiplier: 1.0,
+                           constant: 0).isActive = true
+
+        NSLayoutConstraint(item: self,
+                           attribute: .trailing,
+                           relatedBy: .equal,
+                           toItem: container,
+                           attribute: .trailing,
+                           multiplier: 1.0,
+                           constant: 0).isActive = true
+
+        NSLayoutConstraint(item: self,
+                           attribute: .top,
+                           relatedBy: .equal,
+                           toItem: container,
+                           attribute: .top,
+                           multiplier: 1.0,
+                           constant: 0).isActive = true
+
+        NSLayoutConstraint(item: self,
+                           attribute: .bottom,
+                           relatedBy: .equal,
+                           toItem: container,
+                           attribute: .bottom,
+                           multiplier: 1.0,
+                           constant: 0).isActive = true
     }
 }

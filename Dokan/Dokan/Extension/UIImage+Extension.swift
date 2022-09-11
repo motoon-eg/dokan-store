@@ -10,11 +10,11 @@ import Kingfisher
 import UIKit
 
 protocol ImageSetable {
-    func setImage(with urlString: String, placeholderImage: UIImage)
+    func setImage(with urlString: String, placeholderImage: UIImage?)
 }
 
 extension UIImageView: ImageSetable {
-    func setImage(with urlString: String, placeholderImage: UIImage) {
+    func setImage(with urlString: String, placeholderImage: UIImage? = nil) {
         let url = URL(string: urlString)
         kf.setImage(with: url,
                     placeholder: placeholderImage,

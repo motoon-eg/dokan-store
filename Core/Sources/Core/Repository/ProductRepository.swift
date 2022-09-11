@@ -29,4 +29,16 @@ struct ProductRepository: Domain.ProductRepository {
             }
         }
     }
+
+    func loadSingleProduct(productID: Int, completion: @escaping (Result<Domain.Product, Error>) -> Void) {
+        remote.loadSingleProduct(productID: productID) { result in
+            switch result {
+            case let .success(product):
+                let prod = product.toDomain()
+                completion(.success(prod))
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

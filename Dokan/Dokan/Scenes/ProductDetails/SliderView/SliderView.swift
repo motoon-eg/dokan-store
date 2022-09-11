@@ -7,6 +7,7 @@
 
 import UIDokan
 import UIKit
+
 class SliderView: UIView {
 
     // MARK: - Outlet
@@ -16,7 +17,7 @@ class SliderView: UIView {
 
     // MARK: - Properties
 
-    private var viewModel: [SliderCollectionViewCell.sliderViewModel]?
+    var viewModel: ProductDetailsViewModel?
 
     // MARK: - initializer
 
@@ -28,8 +29,36 @@ class SliderView: UIView {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-
         collectionViewSetup()
+    }
+
+    func initViewModel() {
+
+        viewModel?.onStateUpdate = { [weak self] () in
+            guard let self = self else { return }
+
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+
+                switch self.viewModel?.productDetailsState {
+
+                case .loading, .error, .empty:
+                    self.startSkeletonView()
+                case .populated:
+                    self.stopSkeletonView()
+                case .none:
+                    self.stopSkeletonView()
+                }
+            }
+        }
+
+        viewModel?.reloadImageViewClosure = { [weak self] () in
+            DispatchQueue.main.async { [weak self] in
+                self?.productSliderCollectionView.reloadData()
+            }
+        }
+
+        viewModel?.fetchProduct()
     }
 }
 
@@ -45,6 +74,7 @@ extension SliderView {
         productSliderCollectionView.delegate = self
         productSliderCollectionView.dataSource = self
         collectionViewLayout()
+        initViewModel()
     }
 
     func collectionViewLayout() {
@@ -63,13 +93,14 @@ extension SliderView {
 extension SliderView: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel?.count ?? 0
+        return viewModel?.numberOfCells ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SliderCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        guard let model = viewModel else { return UICollectionViewCell() }
-        cell.configureCellData(viewModel: model[indexPath.row])
+
+        let viewModel = viewModel?.getImageview(indexPath: indexPath)
+        cell.sliderViewModel = viewModel
         return cell
     }
 }
