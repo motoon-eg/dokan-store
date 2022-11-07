@@ -11,12 +11,10 @@ import UIKit
 public extension UITextField {
 
     func applyRoundedtextFieldStyle() {
-        // TODO: - offGrey.color
-        backgroundColor = UIColor.lightGray
+        backgroundColor = UIColor.offGrey
         layer.cornerRadius = 12
         layer.masksToBounds = true
-        // TODO: - navyBlack.color
-        textColor = UIColor.black
+        textColor = UIColor.navyBlack
         // TODO: - ProductTitle_Btn_TF.font
         font = UIFont(name: UIFont.familyNames[0], size: 20)
         NSLayoutConstraint.activate([
