@@ -46,22 +46,19 @@ public extension UILabel {
 extension UILabel {
 
     private func titleLabel() {
-        // TODO: - navyBlack.color
-        textColor = UIColor.black
+        textColor = UIColor.navyBlack
         // TODO: - RegisterTitle.font
         font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
 
     private func bodyLabel() {
-        // TODO: - darkGrey.color
-        textColor = UIColor.darkGray
+        textColor = UIColor.darkGrey
         // TODO: - Body.font
         font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
 
     private func textFieldTitleLabel() {
-        // TODO: - navyBlack.color
-        textColor = UIColor.black
+        textColor = UIColor.navyBlack
         // TODO: - Body.font
         font = UIFont(name: UIFont.familyNames[0], size: 20)
         NSLayoutConstraint.activate([
@@ -70,36 +67,31 @@ extension UILabel {
     }
 
     private func categoriesTitleLabel() {
-        // TODO: - navyBlack.color
-        textColor = UIColor.black
+        textColor = UIColor.navyBlack
         // TODO: - CategoriesTitle.font
         font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
 
     private func productTitleLabel() {
-        // TODO: - navyBlack.color
-        textColor = UIColor.black
+        textColor = UIColor.navyBlack
         // TODO: - ProductTitle_Btn_TF.font
         font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
 
     private func productPriceLabel() {
-        // TODO: - redVelvet.color
-        textColor = UIColor.red
+        textColor = UIColor.redVelvet
         // TODO: - ProductPrice.font
         font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
 
     private func reviewsLabel() {
-        // TODO: - navyBlack.color
-        textColor = UIColor.black
+        textColor = UIColor.navyBlack
         // TODO: - Reviews.font
         font = UIFont(name: UIFont.familyNames[0], size: 20)
     }
 
     private func coverTitleLabel() {
-        // TODO: - pureWhite.color
-        textColor = UIColor.white
+        textColor = UIColor.pureWhite
         // TODO: - CoverTitle.font
         font = UIFont(name: UIFont.familyNames[0], size: 20)
     }

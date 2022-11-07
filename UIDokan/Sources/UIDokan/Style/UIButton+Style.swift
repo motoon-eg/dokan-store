@@ -51,8 +51,7 @@ extension UIButton {
     private func filledPrimaryStyle() {
         // TODO: - ProductTitle_Btn_TF.font
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20)
-        // TODO: - pureWhite.color
-        tintColor = UIColor.white
+        tintColor = UIColor.pureWhite
         layer.cornerRadius = 12.0
         layer.masksToBounds = true
         NSLayoutConstraint.activate([
@@ -62,20 +61,17 @@ extension UIButton {
 
     private func filledBlueStyle() {
         filledPrimaryStyle()
-        // TODO: - blueOcean.color
-        backgroundColor = UIColor.blue
+        backgroundColor = UIColor.blueOcean
     }
 
     private func filledGrayStyle() {
         filledPrimaryStyle()
-        // TODO: - halfGrey.color
-        backgroundColor = UIColor.lightGray
+        backgroundColor = UIColor.halfGrey
     }
 
     private func filledRedStyle() {
         filledPrimaryStyle()
-        // TODO: - redVelvet.color
-        backgroundColor = UIColor.red
+        backgroundColor = UIColor.redVelvet
         contentHorizontalAlignment = .left
     }
 }
@@ -96,16 +92,14 @@ extension UIButton {
         plainStyle()
         // TODO: - ProductTitle_Btn_TF.font
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20)
-        // TODO: - blueOcean.color
-        tintColor = UIColor.blue
+        tintColor = UIColor.blueOcean
         contentHorizontalAlignment = .right
     }
 
     private func plainBlueStylesmallButton() {
         plainStyle()
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20) // smallBtn.font
-        // TODO: - blueOcean.color
-        tintColor = UIColor.blue
+        tintColor = UIColor.blueOcean
         contentHorizontalAlignment = .left
     }
 
@@ -113,8 +107,7 @@ extension UIButton {
         plainStyle()
         // TODO: - ProductTitle_Btn_TF.font
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20)
-        // TODO: - navyBlack.color
-        tintColor = UIColor.black
+        tintColor = UIColor.navyBlack
         contentHorizontalAlignment = .right
     }
 }
@@ -130,11 +123,9 @@ extension UIButton {
         ])
         // TODO: - ProductTitle_Btn_TF.font
         titleLabel?.font = UIFont(name: UIFont.familyNames[0], size: 20)
-        // TODO: - navyBlack.color
-        tintColor = UIColor.black
+        tintColor = UIColor.navyBlack
         layer.borderWidth = 1
-        // TODO: - navyBlack.color.cgColor
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor.navyBlack.cgColor
         layer.cornerRadius = 12.0
         layer.masksToBounds = true
     }
