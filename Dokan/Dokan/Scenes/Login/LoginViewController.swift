@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
 
     // MARK: Properties
 
+    weak var coordinator: AuthenticationCoordinator?
     private let viewModel: LoginViewModelType
 
     // MARK: Init
@@ -45,7 +46,12 @@ class LoginViewController: UIViewController {
 
 // MARK: - Actions
 
-extension LoginViewController {}
+private extension LoginViewController {
+
+    @IBAction func signUpWasTapped(_ sender: UIButton) {
+        coordinator?.showRegistration()
+    }
+}
 
 // MARK: - Configurations
 

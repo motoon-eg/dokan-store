@@ -16,6 +16,7 @@ class VerificationViewController: UIViewController {
 
     // MARK: Properties
 
+    weak var coordinator: AuthenticationCoordinator?
     private let viewModel: VerificationViewModelType
 
     // MARK: Init
@@ -53,6 +54,7 @@ extension VerificationViewController {
     @IBAction func confirmVerificationCode(_ sender: Any) {
         // show error message if code number wrong
         // navigate to home page if right code number
+        coordinator?.didVerifyPhoneNumber()
     }
 }
 
