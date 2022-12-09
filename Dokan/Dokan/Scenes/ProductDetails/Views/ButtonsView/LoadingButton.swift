@@ -31,7 +31,8 @@ class LoadingButton: UIButton {
             completed()
         }
     }
-
+    
+    #warning("this method should be modified")
     private func configureButtonState(isTapped: Bool) {
         if isTapped {
             setTitle("Remove from Cart", for: .normal)
